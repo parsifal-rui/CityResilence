@@ -1,0 +1,9 @@
+{
+  "kb_excel_path": "/root/data/CityResilence/data/graph_database_export.xlsx",
+  "kb_excel_sha256": "a3393a2d5d12acdc52e143ea977201191955c8dcc9a6fdc0ece01d628fc3f9e2",
+  "kb_excel_mtime": 1770688225.654194,
+  "model_path": "/root/data/CityResilence/models/bge-m3",
+  "max_length": 512,
+  "num_triples": 454,
+  "embedding_dim": 1024
+}
