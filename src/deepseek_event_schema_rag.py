@@ -12,8 +12,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
 
 import httpx
+import numpy as np
 import pandas as pd
-# 不再需要 sklearn，改用实体匹配检索
+from FlagEmbedding import BGEM3FlagModel
 
 
 # ====== 配置（复用 deepseek_event_schema） ======
@@ -43,7 +44,7 @@ def query_deepseek(prompt: str, api_key: str, *, model: str, base_url: str, prox
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0,
-        "max_tokens": 3000,
+        "max_tokens": 6000,#3000 not enough
     }
 
     with _httpx_client(proxy) as client:
@@ -63,17 +64,39 @@ def query_deepseek(prompt: str, api_key: str, *, model: str, base_url: str, prox
 
 # ====== RAG 检索逻辑 ======
 
+def _cosine_similarity(q: np.ndarray, kb: np.ndarray) -> np.ndarray:
+    """q: (d,) 或 (1, d)，kb: (n, d)；返回 (n,) 的相似度"""
+    q = np.asarray(q).reshape(-1)
+    if q.ndim != 1:
+        q = q.ravel()
+    nq = np.linalg.norm(q)
+    if nq <= 1e-12:
+        return np.zeros(kb.shape[0])
+    scores = (kb @ q) / (np.linalg.norm(kb, axis=1) * nq + 1e-12)
+    return scores
+
+
 class LocalKnowledgeRetriever:
     """
     本地知识库检索器
     - 从 graph_database_export.xlsx 加载三元组
-    - 用实体匹配检索相关三元组（模仿原始 module.py 的逻辑）
+    - 若提供 bge_model：用 BGE-M3 向量化 + 余弦相似度检索；否则回退到实体匹配
     """
-    def __init__(self, kb_path: Path):
+    def __init__(self, kb_path: Path, bge_model: Optional[Any] = None):
         self.kb_path = kb_path
+        self.bge_model = bge_model
         self.triples = []
+        self.kb_embeddings: Optional[np.ndarray] = None
         self._load_knowledge_base()
-    
+        if self.bge_model is not None and self.triples:
+            self._encode_kb()
+
+    def _encode_kb(self):
+        texts = [t["text"] for t in self.triples]
+        out = self.bge_model.encode(texts, max_length=512, return_dense=True)
+        self.kb_embeddings = np.array(out["dense_vecs"], dtype=np.float32)
+        print(f"知识库向量化完成：{self.kb_embeddings.shape}")
+
     def _load_knowledge_base(self):
         """加载知识库"""
         df = pd.read_excel(self.kb_path)
@@ -99,7 +122,17 @@ class LocalKnowledgeRetriever:
                 })
         
         print(f"知识库加载完成：共 {len(self.triples)} 条三元组")
-    
+
+    def retrieve_by_embedding(self, query_text: str, top_k: int = 20) -> List[Dict[str, str]]:
+        """【2】向量化查询 + 余弦相似度检索，返回 top_k 三元组"""
+        if self.kb_embeddings is None or self.bge_model is None:
+            return self.retrieve_by_entity_matching(query_text, top_k=top_k)
+        out = self.bge_model.encode([query_text], max_length=512, return_dense=True)
+        query_emb = np.array(out["dense_vecs"][0], dtype=np.float32)
+        scores = _cosine_similarity(query_emb, self.kb_embeddings)
+        top_k_indices = np.argsort(scores)[::-1][:top_k]
+        return [self.triples[i] for i in top_k_indices]
+
     def retrieve_by_entity_matching(self, query_text: str, top_k: int = 20) -> List[Dict[str, str]]:
         """
         模仿原始 module.py 的检索逻辑（本地版本）：
@@ -182,77 +215,70 @@ def generate_event_schema_prompt_with_rag(news_article: str, retrieved_knowledge
 """ if retrieved_knowledge else ""
     
     return f"""
-你是一名信息抽取专家。请从以下新闻稿中抽取「事件图谱」：
-
-**事件类型定义：**
-- **驱动因素 (Driver)**：导致气候/灾害事件的直接驱动因子（例如：大气阻塞、重度降水、暴雨、台风）
-- **调节因素 (Modulator)**：调节灾害强度/频率的背景因素（例如：海洋表面温度、气候变化、厄尔尼诺）
-- **灾害 (Hazard)**：可能造成负面影响的现象/事件（例如：洪水、滑坡、干旱、热浪、积水）
-- **影响 (Impact)**：灾害造成的负面后果（例如：人员伤亡、财产损失、交通中断、建筑倒塌）
-
-**关系类型定义：**
-- **引发**：一个事件直接导致另一个事件发生
-- **加剧**：一个事件使另一个事件恶化
-- **削弱**：一个事件减弱另一个事件的强度
-- **增强**：一个事件增强另一个事件的强度
-- **缓解**：一个事件缓解另一个事件的负面影响
-- **抑制**：一个事件抑制另一个事件的发生
-
-**新闻稿：**
-{news_article}
-{rag_section}
-**抽取要求：**
-1. **仅抽取来源于新闻稿的事件和关系**，不得引入外部信息。相关知识仅供参考事件类型和关系类型的分类。
-2. **每个事件必须给出**：
-   - `event_id`（唯一标识，如 E1, E2...）
-   - `event_text`（简短描述）
-   - `event_type`（从上述四类中选择）
-   - `time`（时间信息，包含原文表述、标准化格式、证据句子；若无时间信息，`time` 字段填 `null`）
-     - `time.text` 只填时间表述本身（如"9月14日"），不要填"受...影响"等上下文
-   - `location`（地点信息，包含原文表述、推断城市、行政层级、证据句子；若无地点信息，`location` 字段填 `null`）
-     - **城市推断规则**：若出现区/街道/县（如"龙岗区"），需补全到城市（"深圳"）；若只有省/国家或无地点，`city_inferred` 填 `null`
-   - `attributes`（事件属性，如人数/金额/强度等，根据事件类型灵活填写；若无属性可填空字典 `{{}}`）
-   - `evidence_sentences`（支持该事件的原文句子列表）
-3. **每个关系必须给出**：
-   - `source_event_id`、`target_event_id`（关联的事件 ID）
-   - `relation_type`（从上述关系类型中选择）
-   - `evidence_sentence`（支持该关系的原文句子）
-4. **所有证据句子必须能在新闻稿原文中找到**，否则不要输出该事件/关系。
-5. **证据句子必须是单行文本**，不能包含换行符；若原文有换行，请用空格替代。
-6. **语义相近的事件需合并**。
-
-**输出格式（纯 JSON，不要 markdown 代码块）：**
-{{
-  "events": [
+    你是一名信息抽取专家。请从以下新闻稿中抽取「事件图谱」：
+    
+    **事件类型定义：**
+    - **驱动因素 (Driver)**：导致气候/灾害事件的直接驱动因子（例如：大气阻塞、重度降水、暴雨、台风）
+    - **调节因素 (Modulator)**：调节灾害强度/频率的背景因素（例如：海洋表面温度、气候变化、厄尔尼诺）
+    - **灾害 (Hazard)**：可能造成负面影响的现象/事件（例如：洪水、滑坡、干旱、热浪、积水）
+    - **影响 (Impact)**：灾害造成的负面后果（例如：人员伤亡、财产损失、交通中断、建筑倒塌）
+    
+    **关系类型定义：**
+    - **引发**：一个事件直接导致另一个事件发生
+    - **加剧**：一个事件使另一个事件恶化
+    - **削弱**：一个事件减弱另一个事件的强度
+    - **增强**：一个事件增强另一个事件的强度
+    - **缓解**：一个事件缓解另一个事件的负面影响
+    - **抑制**：一个事件抑制另一个事件的发生
+    
+    **新闻稿：**
+    {news_article}
+    {rag_section}
+    **抽取要求：**
+    1. **仅抽取来源于新闻稿的事件和关系**，不得引入外部信息。相关知识仅供参考事件类型和关系类型的分类。
+    2. **每个事件必须给出**：
+       - `event_id`（唯一标识，如 E1, E2...）
+       - `event_text`（简短描述）
+       - `event_type`（从上述四类中选择）
+       - `time`（时间信息，包含原文表述、标准化格式；若无时间信息，`time` 字段填 `null`）
+         - `time.text` 只填时间表述本身（如"9月14日"），不要填"受...影响"等上下文
+       - `location`（地点信息，包含原文表述、推断城市、行政层级；若无地点信息，`location` 字段填 `null`）
+         - **城市推断规则**：若出现区/街道/县（如"龙岗区"），需补全到城市（"深圳"）；若只有省/国家或无地点，`city_inferred` 填 `null`
+       - `attributes`（事件属性，如人数/金额/强度等，根据事件类型灵活填写；若无属性可填空字典 `{{}}`）
+    3. 在决定 `time`、`location` 和事件/关系是否输出时，你必须在新闻稿中找到对应的证据句并据此判断，但**最终 JSON 中不要输出任何证据句字段**。
+    4. **所有用于内部判断的证据句必须能在新闻稿原文中找到**，否则不要输出该事件/关系。
+    5. **语义相近的事件需合并**。
+    
+    **输出格式（纯 JSON，不要 markdown 代码块）：**
     {{
-      "event_id": "E1",
-      "event_text": "...",
-      "event_type": "Driver|Modulator|Hazard|Impact",
-      "time": {{
-        "text": "...",
-        "normalized": "YYYY-MM-DD 或 null",
-        "evidence_sentence": "..."
-      }} 或 null,
-      "location": {{
-        "text": "...",
-        "city_inferred": "城市名 或 null",
-        "admin_hierarchy": ["省", "市", "区", "街道"],
-        "evidence_sentence": "..."
-      }} 或 null,
-      "attributes": {{}},
-      "evidence_sentences": ["..."]
+      "events": [
+        {{
+          "event_id": "E1",
+          "event_text": "...",
+          "event_type": "Driver|Modulator|Hazard|Impact",
+          "time": {{
+            "text": "...",
+            "normalized": "YYYY-MM-DD 或 null"
+          }} 或 null,
+          "location": {{
+            "text": "...",
+            "city_inferred": "城市名 或 null",
+            "admin_hierarchy": ["省", "市", "区", "街道"]
+          }} 或 null,
+          "attributes": {{}}
+        }}
+      ],
+      "relations": [
+        {{
+          "source_event_id": "E1",
+          "relation_type": "引发|加剧|削弱|增强|缓解|抑制",
+          "target_event_id": "E2"
+        }}
+      ]
     }}
-  ],
-  "relations": [
-    {{
-      "source_event_id": "E1",
-      "relation_type": "引发|加剧|削弱|增强|缓解|抑制",
-      "target_event_id": "E2",
-      "evidence_sentence": "..."
-    }}
-  ]
-}}
-""".strip()
+    
+    **重要：最终 JSON 中不要包含任何名为 `evidence_sentence` 或 `evidence_sentences` 的字段。**
+    """.strip()
 
 
 def _try_load_json(text: str) -> Optional[Dict[str, Any]]:
@@ -307,8 +333,8 @@ def extract_events_and_relations_with_rag(
         retriever: 知识库检索器
         top_k: 检索 Top-K 个三元组（默认 20 条）
     """
-    # 1. 检索相关知识（用实体匹配检索）
-    retrieved_triples = retriever.retrieve_by_entity_matching(news_article, top_k=top_k)
+    # 1. 检索相关知识：BGE-M3 向量化 + 余弦相似度 Top-K（无 BGE 时回退实体匹配）
+    retrieved_triples = retriever.retrieve_by_embedding(news_article, top_k=top_k)
     retrieved_knowledge = format_retrieved_knowledge(retrieved_triples)
     
     # 2. 生成 prompt
@@ -330,12 +356,15 @@ def extract_events_and_relations_with_rag(
 
 def main():
     root = Path(__file__).resolve().parent
-    csv_path = (root.parent / "articles_playwright.csv").resolve()
-    kb_path = root / "graph_database_export.xlsx"
+    data_dir = root.parent / "data"
+    csv_path = (data_dir / "articles_cleaned.csv").resolve()
+    kb_path = (data_dir / "graph_database_export.xlsx").resolve()
     
-    # 加载知识库检索器
+    # 加载 BGE-M3（GPU）+ 知识库检索器
+    print("正在加载 BGE-M3...")
+    bge_model = BGEM3FlagModel("/root/data/CityResilence/models/bge-m3", device="cuda", use_fp16=True)
     print("正在加载知识库...")
-    retriever = LocalKnowledgeRetriever(kb_path)
+    retriever = LocalKnowledgeRetriever(kb_path, bge_model=bge_model)
     
     # 加载新闻样本
     df = pd.read_csv(csv_path)
@@ -361,7 +390,7 @@ def main():
             })
             # 每处理 10 条打印一次进度
             if (i + 1) % 10 == 0 or i == 0:
-                print(f"已处理 {i+1}/{len(texts[:1])} 条（检索到 {out.get('retrieved_knowledge_count', 0)} 条相关知识）", flush=True)
+                print(f"已处理 {i+1}/{len(texts[:10])} 条（检索到 {out.get('retrieved_knowledge_count', 0)} 条相关知识）", flush=True)
         except Exception as e:
             print(f"第 {i} 条处理失败：{e}", flush=True)
             results.append({

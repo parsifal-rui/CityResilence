@@ -1,0 +1,1966 @@
+[
+  {
+    "index": 0,
+    "content_preview": "深圳商报·读创客户端记者 文灿\n有一群人，为了守护更多人的安全，他们逆风雨而行，迎艰难而上，坚守在一线，用实际行动诠释忠诚与担当。\n近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。为保障群",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "突降暴雨",
+          "event_type": "Hazard",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "深圳市坪山区",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E2",
+          "event_text": "多处出行积水",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "深圳市坪山区",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E3",
+          "event_text": "阻碍群众出行",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "深圳市坪山区",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E4",
+          "event_text": "金碧路积水严重",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "碧岭街道金碧路",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "碧岭街道"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E5",
+          "event_text": "下水口被树叶等杂物堵塞",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "碧岭街道金碧路",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "碧岭街道"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E6",
+          "event_text": "狂风暴雨导致坪山大道路边树木倒地",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "坪山大道",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E7",
+          "event_text": "树木倒地阻碍交通通行",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "坪山大道",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E8",
+          "event_text": "丹梓大道路积水严重",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "丹梓大道",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E9",
+          "event_text": "车辆缓慢通行",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "丹梓大道",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E10",
+          "event_text": "车被大树砸到，司机被困且受伤",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": null,
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E11",
+          "event_text": "荔景路树木倾倒影响交通",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "荔景路",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E12",
+          "event_text": "交警清理排水口杂物",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "碧岭街道金碧路",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "碧岭街道"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E13",
+          "event_text": "交警清理排水口杂物",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "丹梓大道",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E14",
+          "event_text": "交警将倒地树木拖移",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "坪山大道",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E15",
+          "event_text": "交警将阻碍车辆的树枝拖移并解救司机",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": null,
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E16",
+          "event_text": "交警驾驶警车送当事人前往医院救治",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": null,
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E17",
+          "event_text": "交警加入抢险、疏导交通",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": {
+            "text": "荔景路",
+            "city_inferred": "深圳",
+            "admin_hierarchy": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ]
+          },
+          "attributes": {}
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E2",
+          "relation_type": "引发",
+          "target_event_id": "E3"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E4"
+        },
+        {
+          "source_event_id": "E5",
+          "relation_type": "加剧",
+          "target_event_id": "E4"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E6"
+        },
+        {
+          "source_event_id": "E6",
+          "relation_type": "引发",
+          "target_event_id": "E7"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E8"
+        },
+        {
+          "source_event_id": "E8",
+          "relation_type": "引发",
+          "target_event_id": "E9"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E10"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E11"
+        },
+        {
+          "source_event_id": "E12",
+          "relation_type": "缓解",
+          "target_event_id": "E4"
+        },
+        {
+          "source_event_id": "E13",
+          "relation_type": "缓解",
+          "target_event_id": "E8"
+        },
+        {
+          "source_event_id": "E14",
+          "relation_type": "缓解",
+          "target_event_id": "E7"
+        },
+        {
+          "source_event_id": "E15",
+          "relation_type": "缓解",
+          "target_event_id": "E10"
+        },
+        {
+          "source_event_id": "E16",
+          "relation_type": "缓解",
+          "target_event_id": "E10"
+        },
+        {
+          "source_event_id": "E17",
+          "relation_type": "缓解",
+          "target_event_id": "E11"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  },
+  {
+    "index": 1,
+    "content_preview": "最新发布：\n广州市气象灾害应急指挥部办公室\n2024年8月29日20时55分：\n据市气象台监测，广州市达到解除气象灾害（暴雨和雷雨大风）应急响应标准。市气象灾害应急指挥部决定从29日20时55分起解除",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "中到强雷雨",
+          "event_type": "Hazard",
+          "time": {
+            "text": "今天白天",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "我市",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E2",
+          "event_text": "局部出现大暴雨",
+          "event_type": "Hazard",
+          "time": {
+            "text": "今天白天",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "我市",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E3",
+          "event_text": "南沙区东涌镇录得全市最大雨量187.5毫米",
+          "event_type": "Hazard",
+          "time": {
+            "text": "截至19时",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "南沙区东涌镇",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市",
+              "南沙区",
+              "东涌镇"
+            ]
+          },
+          "attributes": {
+            "雨量": "187.5毫米"
+          }
+        },
+        {
+          "event_id": "E4",
+          "event_text": "花都区梯面镇录得全市最大阵风21.7米/秒(9级)",
+          "event_type": "Hazard",
+          "time": {
+            "text": "截至19时",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "花都区梯面镇",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市",
+              "花都区",
+              "梯面镇"
+            ]
+          },
+          "attributes": {
+            "风速": "21.7米/秒",
+            "风力等级": "9级"
+          }
+        },
+        {
+          "event_id": "E5",
+          "event_text": "副高加强",
+          "event_type": "Modulator",
+          "time": {
+            "text": "30-31日",
+            "normalized": "2024-08-30 至 2024-08-31"
+          },
+          "location": null,
+          "attributes": {}
+        },
+        {
+          "event_id": "E6",
+          "event_text": "降水减弱",
+          "event_type": "Hazard",
+          "time": {
+            "text": "30-31日",
+            "normalized": "2024-08-30 至 2024-08-31"
+          },
+          "location": null,
+          "attributes": {}
+        },
+        {
+          "event_id": "E7",
+          "event_text": "有雷阵雨局部大雨",
+          "event_type": "Hazard",
+          "time": {
+            "text": "30-31日",
+            "normalized": "2024-08-30 至 2024-08-31"
+          },
+          "location": null,
+          "attributes": {}
+        },
+        {
+          "event_id": "E8",
+          "event_text": "需注意防御短时强降水及8-11级短时大风、局地龙卷、强雷电等强对流天气及其引发的次生灾害",
+          "event_type": "Impact",
+          "time": {
+            "text": "近期",
+            "normalized": null
+          },
+          "location": null,
+          "attributes": {}
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E5",
+          "relation_type": "削弱",
+          "target_event_id": "E6"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E8"
+        },
+        {
+          "source_event_id": "E2",
+          "relation_type": "引发",
+          "target_event_id": "E8"
+        },
+        {
+          "source_event_id": "E3",
+          "relation_type": "引发",
+          "target_event_id": "E8"
+        },
+        {
+          "source_event_id": "E4",
+          "relation_type": "引发",
+          "target_event_id": "E8"
+        },
+        {
+          "source_event_id": "E7",
+          "relation_type": "引发",
+          "target_event_id": "E8"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  },
+  {
+    "index": 2,
+    "content_preview": "根据广州市气象台监测，广州市达到启动气象灾害（暴雨和雷雨大风）Ⅳ级应急响应标准。市气象灾害应急指挥部决定从8月29日17时21分起启动广州市气象灾害（暴雨和雷雨大风）Ⅳ级应急响应。请按照预案规定做好防",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "启动气象灾害（暴雨和雷雨大风）Ⅳ级应急响应",
+          "event_type": "Impact",
+          "time": {
+            "text": "8月29日17时21分",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "广州市",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市"
+            ]
+          },
+          "attributes": {
+            "响应级别": "Ⅳ级"
+          }
+        },
+        {
+          "event_id": "E2",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "time": {
+            "text": "8月29日17时29分",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "南沙黄阁、番禺石楼",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市",
+              "南沙区",
+              "黄阁镇"
+            ]
+          },
+          "attributes": {
+            "预警信号": "红色"
+          }
+        },
+        {
+          "event_id": "E3",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "time": {
+            "text": "8月29日17时29分",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "荔湾",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市",
+              "荔湾区"
+            ]
+          },
+          "attributes": {
+            "预警信号": "橙色"
+          }
+        },
+        {
+          "event_id": "E4",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "time": {
+            "text": "8月29日17时29分",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "越秀、海珠、天河、白云、增城",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市",
+              "越秀区"
+            ]
+          },
+          "attributes": {
+            "预警信号": "黄色"
+          }
+        },
+        {
+          "event_id": "E5",
+          "event_text": "雷雨大风",
+          "event_type": "Hazard",
+          "time": {
+            "text": "8月29日17时29分",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "除荔湾和从化外，广州其余各区",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市"
+            ]
+          },
+          "attributes": {
+            "预警信号": "黄色"
+          }
+        },
+        {
+          "event_id": "E6",
+          "event_text": "高温",
+          "event_type": "Hazard",
+          "time": {
+            "text": "8月29日17时29分",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "除南沙外，广州其余各区",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市"
+            ]
+          },
+          "attributes": {
+            "预警信号": "黄色"
+          }
+        },
+        {
+          "event_id": "E7",
+          "event_text": "中雷雨局部雨势较大",
+          "event_type": "Hazard",
+          "time": {
+            "text": "当天17-19时",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "广州市区",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市"
+            ]
+          },
+          "attributes": {
+            "时段": "下班高峰期",
+            "伴随现象": "5-7级阵风和雷电"
+          }
+        },
+        {
+          "event_id": "E8",
+          "event_text": "市民需注意交通安全",
+          "event_type": "Impact",
+          "time": {
+            "text": "当天17-19时",
+            "normalized": "2024-08-29"
+          },
+          "location": {
+            "text": "广州市区",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东省",
+              "广州市"
+            ]
+          },
+          "attributes": {}
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E2",
+          "relation_type": "引发",
+          "target_event_id": "E1"
+        },
+        {
+          "source_event_id": "E3",
+          "relation_type": "引发",
+          "target_event_id": "E1"
+        },
+        {
+          "source_event_id": "E4",
+          "relation_type": "引发",
+          "target_event_id": "E1"
+        },
+        {
+          "source_event_id": "E5",
+          "relation_type": "引发",
+          "target_event_id": "E1"
+        },
+        {
+          "source_event_id": "E7",
+          "relation_type": "引发",
+          "target_event_id": "E8"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  },
+  {
+    "index": 3,
+    "content_preview": "无论是城还是乡，各地居民均向往着“水更清”的环境。\n党的二十届三中全会提出，“完善精准治污、科学治污、依法治污制度机制，落实以排污许可制为核心的固定污染源监管制度，建立新污染物协同治理和环境风险管控体",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "生活污水未经收集流向边沟",
+          "event_type": "Driver",
+          "time": null,
+          "location": {
+            "text": "方石村",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州",
+              "白云区",
+              "人和镇"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E2",
+          "event_text": "民居周边常闻黑臭",
+          "event_type": "Hazard",
+          "time": null,
+          "location": {
+            "text": "方石村",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州",
+              "白云区",
+              "人和镇"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E3",
+          "event_text": "水受到污染",
+          "event_type": "Hazard",
+          "time": null,
+          "location": {
+            "text": "方石村",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州",
+              "白云区",
+              "人和镇"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E4",
+          "event_text": "影响农产品种植、销售",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "方石村",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州",
+              "白云区",
+              "人和镇"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E5",
+          "event_text": "广州发布第1号总河长令，目标消除水体黑臭",
+          "event_type": "Modulator",
+          "time": {
+            "text": "2018年9月",
+            "normalized": "2018-09"
+          },
+          "location": {
+            "text": "广州",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E6",
+          "event_text": "推进污水处理厂建设",
+          "event_type": "Modulator",
+          "time": {
+            "text": "2019年至2020年",
+            "normalized": null
+          },
+          "location": {
+            "text": "广州",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E7",
+          "event_text": "方石村新建污水收集管网并实施雨污分流",
+          "event_type": "Modulator",
+          "time": null,
+          "location": {
+            "text": "方石村",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州",
+              "白云区",
+              "人和镇"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E8",
+          "event_text": "民居边沟黑臭不再",
+          "event_type": "Impact",
+          "time": {
+            "text": "2024年8月",
+            "normalized": "2024-08"
+          },
+          "location": {
+            "text": "方石村",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州",
+              "白云区",
+              "人和镇"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E9",
+          "event_text": "风水塘环境好转成为村民休憩场所",
+          "event_type": "Impact",
+          "time": {
+            "text": "2024年8月",
+            "normalized": "2024-08"
+          },
+          "location": {
+            "text": "方石村",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州",
+              "白云区",
+              "人和镇"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E10",
+          "event_text": "方石坑水质清澈见底",
+          "event_type": "Impact",
+          "time": {
+            "text": "2024年8月",
+            "normalized": "2024-08"
+          },
+          "location": {
+            "text": "方石村",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州",
+              "白云区",
+              "人和镇"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E11",
+          "event_text": "排水管网获得定期维护清疏",
+          "event_type": "Modulator",
+          "time": null,
+          "location": {
+            "text": "方石村",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州",
+              "白云区",
+              "人和镇"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E12",
+          "event_text": "广州发布2024年第1号总河长令，明确农村生活污水治理目标",
+          "event_type": "Modulator",
+          "time": {
+            "text": "2024年3月",
+            "normalized": "2024-03"
+          },
+          "location": {
+            "text": "广州",
+            "city_inferred": "广州",
+            "admin_hierarchy": [
+              "广东",
+              "广州"
+            ]
+          },
+          "attributes": {}
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E3",
+          "relation_type": "引发",
+          "target_event_id": "E4"
+        },
+        {
+          "source_event_id": "E5",
+          "relation_type": "缓解",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E6",
+          "relation_type": "缓解",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E7",
+          "relation_type": "缓解",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E7",
+          "relation_type": "缓解",
+          "target_event_id": "E3"
+        },
+        {
+          "source_event_id": "E11",
+          "relation_type": "抑制",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E12",
+          "relation_type": "缓解",
+          "target_event_id": "E3"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  },
+  {
+    "index": 4,
+    "content_preview": "“蕉岭县是‘世界长寿之乡’，生态优美，土壤肥沃，水土富含硒元素……”一场义卖直播活动上，广州工程技术职业学院九岭突击队成员化身助农小主播，通过现场讲解、试吃分享等形式吸引了粉丝朋友们的大量点赞、留言互",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "特大暴雨",
+          "event_type": "Driver",
+          "time": {
+            "text": "6·16",
+            "normalized": "2024-06-16"
+          },
+          "location": {
+            "text": "蕉岭县",
+            "city_inferred": "梅州",
+            "admin_hierarchy": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E2",
+          "event_text": "洪涝灾害",
+          "event_type": "Hazard",
+          "time": {
+            "text": "6·16",
+            "normalized": "2024-06-16"
+          },
+          "location": {
+            "text": "蕉岭县",
+            "city_inferred": "梅州",
+            "admin_hierarchy": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E3",
+          "event_text": "山洪暴发",
+          "event_type": "Hazard",
+          "time": {
+            "text": "6·16",
+            "normalized": "2024-06-16"
+          },
+          "location": {
+            "text": "蕉岭县",
+            "city_inferred": "梅州",
+            "admin_hierarchy": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E4",
+          "event_text": "山体滑坡",
+          "event_type": "Hazard",
+          "time": {
+            "text": "6·16",
+            "normalized": "2024-06-16"
+          },
+          "location": {
+            "text": "蕉岭县",
+            "city_inferred": "梅州",
+            "admin_hierarchy": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E5",
+          "event_text": "林地遭受巨大损失",
+          "event_type": "Impact",
+          "time": {
+            "text": "6·16",
+            "normalized": "2024-06-16"
+          },
+          "location": {
+            "text": "蕉岭县一些乡镇",
+            "city_inferred": "梅州",
+            "admin_hierarchy": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E6",
+          "event_text": "农作物遭受巨大损失",
+          "event_type": "Impact",
+          "time": {
+            "text": "6·16",
+            "normalized": "2024-06-16"
+          },
+          "location": {
+            "text": "蕉岭县一些乡镇",
+            "city_inferred": "梅州",
+            "admin_hierarchy": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E7",
+          "event_text": "灾后重建",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "蕉岭县",
+            "city_inferred": "梅州",
+            "admin_hierarchy": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E8",
+          "event_text": "水土流失",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "红星村",
+            "city_inferred": "梅州",
+            "admin_hierarchy": [
+              "广东省",
+              "梅州市",
+              "蕉岭县",
+              "文福镇",
+              "红星村"
+            ]
+          },
+          "attributes": {}
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E3"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E4"
+        },
+        {
+          "source_event_id": "E2",
+          "relation_type": "引发",
+          "target_event_id": "E5"
+        },
+        {
+          "source_event_id": "E2",
+          "relation_type": "引发",
+          "target_event_id": "E6"
+        },
+        {
+          "source_event_id": "E2",
+          "relation_type": "引发",
+          "target_event_id": "E7"
+        },
+        {
+          "source_event_id": "E3",
+          "relation_type": "引发",
+          "target_event_id": "E7"
+        },
+        {
+          "source_event_id": "E4",
+          "relation_type": "引发",
+          "target_event_id": "E7"
+        },
+        {
+          "source_event_id": "E2",
+          "relation_type": "加剧",
+          "target_event_id": "E8"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  },
+  {
+    "index": 5,
+    "content_preview": "4日下午17时45分，高州市气象台发布台风蓝色预警。\n据悉，台风“摩羯”（台风级，13级），预计将于6日以强台风级或超强台风级在海南万宁到阳江阳西一带沿海登陆。\n受台风“摩羯”影响，预计高州5日夜间到",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "台风“摩羯”预计在海南万宁到阳江阳西一带沿海登陆",
+          "event_type": "Driver",
+          "time": {
+            "text": "6日",
+            "normalized": "null"
+          },
+          "location": {
+            "text": "海南万宁到阳江阳西一带沿海",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              "海南",
+              "广东",
+              null,
+              null
+            ]
+          },
+          "attributes": {
+            "强度": "台风级，13级，预计强台风级或超强台风级"
+          }
+        },
+        {
+          "event_id": "E2",
+          "event_text": "高州有一次暴雨到大暴雨、局部特大暴雨的降水过程",
+          "event_type": "Hazard",
+          "time": {
+            "text": "5日夜间到7日",
+            "normalized": "null"
+          },
+          "location": {
+            "text": "高州",
+            "city_inferred": "高州",
+            "admin_hierarchy": [
+              "广东",
+              "茂名",
+              "高州",
+              null
+            ]
+          },
+          "attributes": {
+            "降水强度": "暴雨到大暴雨、局部特大暴雨"
+          }
+        },
+        {
+          "event_id": "E3",
+          "event_text": "高州平均风力9到10级、阵风11到13级",
+          "event_type": "Hazard",
+          "time": {
+            "text": "5日夜间到7日",
+            "normalized": "null"
+          },
+          "location": {
+            "text": "高州",
+            "city_inferred": "高州",
+            "admin_hierarchy": [
+              "广东",
+              "茂名",
+              "高州",
+              null
+            ]
+          },
+          "attributes": {
+            "风力": "平均9到10级，阵风11到13级"
+          }
+        },
+        {
+          "event_id": "E4",
+          "event_text": "高州市气象台发布台风蓝色预警",
+          "event_type": "Impact",
+          "time": {
+            "text": "4日下午17时45分",
+            "normalized": "null"
+          },
+          "location": {
+            "text": "高州",
+            "city_inferred": "高州",
+            "admin_hierarchy": [
+              "广东",
+              "茂名",
+              "高州",
+              null
+            ]
+          },
+          "attributes": {
+            "预警类型": "台风蓝色预警"
+          }
+        },
+        {
+          "event_id": "E5",
+          "event_text": "台风白色预警信号升级为蓝色",
+          "event_type": "Impact",
+          "time": {
+            "text": "4日下午17时45分",
+            "normalized": "null"
+          },
+          "location": {
+            "text": null,
+            "city_inferred": null,
+            "admin_hierarchy": []
+          },
+          "attributes": {
+            "预警变化": "白色升级为蓝色"
+          }
+        },
+        {
+          "event_id": "E6",
+          "event_text": "高州市三防部门提醒市民迅速做好防御台风工作",
+          "event_type": "Impact",
+          "time": {
+            "text": null,
+            "normalized": null
+          },
+          "location": {
+            "text": "高州",
+            "city_inferred": "高州",
+            "admin_hierarchy": [
+              "广东",
+              "茂名",
+              "高州",
+              null
+            ]
+          },
+          "attributes": {}
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E3"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E4"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E5"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E6"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  },
+  {
+    "index": 6,
+    "content_preview": "鉴于今年第11号台风“摩羯”强度进一步增强，未来几天给广东省带来的风雨影响进一步加大。根据《广东省防汛防旱防风防冻应急预案》和省防总有关规定，广东省防汛防旱防风总指挥部已于9月4日10时将防风Ⅳ级应急",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "台风“摩羯”强度进一步增强",
+          "event_type": "Driver",
+          "time": null,
+          "location": {
+            "text": "广东省",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              "广东省"
+            ]
+          },
+          "attributes": {
+            "名称": "摩羯",
+            "编号": "第11号",
+            "强度变化": "增强"
+          }
+        },
+        {
+          "event_id": "E2",
+          "event_text": "给广东省带来的风雨影响进一步加大",
+          "event_type": "Hazard",
+          "time": {
+            "text": "未来几天",
+            "normalized": null
+          },
+          "location": {
+            "text": "广东省",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              "广东省"
+            ]
+          },
+          "attributes": {
+            "影响类型": "风雨",
+            "变化趋势": "加大"
+          }
+        },
+        {
+          "event_id": "E3",
+          "event_text": "防风应急响应提升为Ⅲ级",
+          "event_type": "Impact",
+          "time": {
+            "text": "9月4日10时",
+            "normalized": "2024-09-04"
+          },
+          "location": {
+            "text": "广东省",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              "广东省"
+            ]
+          },
+          "attributes": {
+            "响应级别": "Ⅲ级",
+            "原级别": "Ⅳ级",
+            "类型": "防风应急响应"
+          }
+        },
+        {
+          "event_id": "E4",
+          "event_text": "强化海上防风和陆上防风防汛措施",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "各地",
+            "city_inferred": null,
+            "admin_hierarchy": []
+          },
+          "attributes": {
+            "措施类型": [
+              "海上防风",
+              "陆上防风防汛"
+            ],
+            "目的": "保障人民群众生命财产安全"
+          }
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E2",
+          "relation_type": "引发",
+          "target_event_id": "E3"
+        },
+        {
+          "source_event_id": "E2",
+          "relation_type": "引发",
+          "target_event_id": "E4"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  },
+  {
+    "index": 7,
+    "content_preview": "记者从江门市台山有关部门获悉，台风“摩羯”强度进一步增强，台山市新宁体育馆应急避难场所开放，台山市应急管理局迅速召集避难场所安置小组10名工作人员和市应急救援大队20名队员，到新宁体育馆提前预置床垫、",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "台风“摩羯”强度进一步增强",
+          "event_type": "Driver",
+          "time": null,
+          "location": {
+            "text": "江门市台山",
+            "city_inferred": "江门",
+            "admin_hierarchy": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ]
+          },
+          "attributes": {
+            "强度": "增强"
+          }
+        },
+        {
+          "event_id": "E2",
+          "event_text": "台山市新宁体育馆应急避难场所开放",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "台山市新宁体育馆",
+            "city_inferred": "江门",
+            "admin_hierarchy": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E3",
+          "event_text": "台山市交通领域6个在建项目实现全面停工",
+          "event_type": "Impact",
+          "time": {
+            "text": "目前",
+            "normalized": null
+          },
+          "location": {
+            "text": "台山市",
+            "city_inferred": "江门",
+            "admin_hierarchy": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ]
+          },
+          "attributes": {
+            "数量": "6个"
+          }
+        },
+        {
+          "event_id": "E4",
+          "event_text": "海上施工作业、临时工棚居住人员已全部撤离转移",
+          "event_type": "Impact",
+          "time": {
+            "text": "目前",
+            "normalized": null
+          },
+          "location": {
+            "text": "台山市",
+            "city_inferred": "江门",
+            "admin_hierarchy": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E5",
+          "event_text": "川岛水路客运航线停航、客船全部回港避风",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "川岛",
+            "city_inferred": "江门",
+            "admin_hierarchy": [
+              "广东省",
+              "江门市",
+              "台山市",
+              "川岛"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E6",
+          "event_text": "辖区内渡口渡船停渡",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "台山市",
+            "city_inferred": "江门",
+            "admin_hierarchy": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E7",
+          "event_text": "客运班线以及高铁列车班次停运",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "台城至山咀码头、川岛内、台城至香港等；湛江、茂名、阳江方向",
+            "city_inferred": "江门",
+            "admin_hierarchy": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E8",
+          "event_text": "对存在风险隐患路段实施临时交通管控措施",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "省道S386端芬福安至三洞段、省道S275线上川琴冲至沙堤",
+            "city_inferred": "江门",
+            "admin_hierarchy": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ]
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E9",
+          "event_text": "台山市消防救援大队派出救援队前置执勤",
+          "event_type": "Impact",
+          "time": null,
+          "location": {
+            "text": "上川岛和下川岛旅游区",
+            "city_inferred": "江门",
+            "admin_hierarchy": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ]
+          },
+          "attributes": {
+            "人数": "20人",
+            "装备": "10套水域救援装备"
+          }
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E3"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E4"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E5"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E6"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E7"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E8"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E9"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  },
+  {
+    "index": 8,
+    "content_preview": "南都讯 记者蒋臻 深中通道管理中心9月5日发布消息，中山市气象台2024年9月5日17时13分将全市台风预警信号升级为黄色，预计深中通道将于9月5日晚上进入七级风圈，桥面阵风将达到7～9级。\n受第11",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "第11号台风“摩羯”影响",
+          "event_type": "Driver",
+          "time": {
+            "text": "9月5日",
+            "normalized": "2024-09-05"
+          },
+          "location": {
+            "text": "深中通道",
+            "city_inferred": null,
+            "admin_hierarchy": []
+          },
+          "attributes": {}
+        },
+        {
+          "event_id": "E2",
+          "event_text": "深中通道进入七级风圈，桥面阵风7～9级",
+          "event_type": "Hazard",
+          "time": {
+            "text": "9月5日晚上",
+            "normalized": "2024-09-05"
+          },
+          "location": {
+            "text": "深中通道",
+            "city_inferred": null,
+            "admin_hierarchy": []
+          },
+          "attributes": {
+            "风力": "7～9级"
+          }
+        },
+        {
+          "event_id": "E3",
+          "event_text": "深中通道实行减速通行，车速控制在70公里/小时及以下",
+          "event_type": "Impact",
+          "time": {
+            "text": "9月5日21时起",
+            "normalized": "2024-09-05"
+          },
+          "location": {
+            "text": "深中通道",
+            "city_inferred": null,
+            "admin_hierarchy": []
+          },
+          "attributes": {
+            "限速": "70公里/小时及以下"
+          }
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E3"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  },
+  {
+    "index": 9,
+    "content_preview": "记者从应急管理部获悉，据气象部门预报，今年第11号台风“摩羯”将于6日下午至夜间在海南琼海到广东电白一带沿海登陆（强台风级或超强台风级，15～17级，50～58米每秒），7日凌晨移入北部湾海面。未来三",
+    "extraction": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_text": "台风“摩羯”在海南琼海到广东电白一带沿海登陆",
+          "event_type": "Driver",
+          "time": {
+            "text": "6日下午至夜间",
+            "normalized": null
+          },
+          "location": {
+            "text": "海南琼海到广东电白一带沿海",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              "海南",
+              "琼海",
+              null,
+              null
+            ]
+          },
+          "attributes": {
+            "强度": "强台风级或超强台风级，15～17级，50～58米每秒"
+          }
+        },
+        {
+          "event_id": "E2",
+          "event_text": "南海北部、北部湾部分海域及华南沿海部分地区风力可达8级以上",
+          "event_type": "Hazard",
+          "time": {
+            "text": "未来三天",
+            "normalized": null
+          },
+          "location": {
+            "text": "南海北部、北部湾部分海域及华南沿海部分地区",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "attributes": {
+            "风力": "8级以上"
+          }
+        },
+        {
+          "event_id": "E3",
+          "event_text": "“摩羯”中心经过附近海域风力可达13～17级，阵风17级以上",
+          "event_type": "Hazard",
+          "time": {
+            "text": null,
+            "normalized": null
+          },
+          "location": {
+            "text": "“摩羯”中心经过附近海域",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "attributes": {
+            "风力": "13～17级，阵风17级以上"
+          }
+        },
+        {
+          "event_id": "E4",
+          "event_text": "广东南部、广西中南部等地有大到暴雨，部分地区特大暴雨",
+          "event_type": "Hazard",
+          "time": {
+            "text": "未来三天",
+            "normalized": null
+          },
+          "location": {
+            "text": "广东南部、广西中南部等地",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              "广东",
+              null,
+              null,
+              null
+            ]
+          },
+          "attributes": {
+            "降水强度": "大到暴雨，部分地区特大暴雨"
+          }
+        },
+        {
+          "event_id": "E5",
+          "event_text": "国家防总将针对广东的防汛防台风四级应急响应提升至三级",
+          "event_type": "Impact",
+          "time": {
+            "text": "9月5日9时",
+            "normalized": null
+          },
+          "location": {
+            "text": "广东",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              "广东",
+              null,
+              null,
+              null
+            ]
+          },
+          "attributes": {
+            "响应级别": "从四级提升至三级"
+          }
+        },
+        {
+          "event_id": "E6",
+          "event_text": "国家防总针对广西启动防汛防台风四级应急响应",
+          "event_type": "Impact",
+          "time": {
+            "text": "9月5日9时",
+            "normalized": null
+          },
+          "location": {
+            "text": "广西",
+            "city_inferred": null,
+            "admin_hierarchy": [
+              "广西",
+              null,
+              null,
+              null
+            ]
+          },
+          "attributes": {
+            "响应级别": "四级"
+          }
+        }
+      ],
+      "relations": [
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E2"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E3"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E4"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E5"
+        },
+        {
+          "source_event_id": "E1",
+          "relation_type": "引发",
+          "target_event_id": "E6"
+        }
+      ],
+      "retrieved_knowledge_count": 20
+    }
+  }
+]
