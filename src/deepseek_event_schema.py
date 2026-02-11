@@ -8,8 +8,9 @@
 import os
 import json
 import re
+import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 import httpx
 import pandas as pd
@@ -32,8 +33,8 @@ def _httpx_client(proxy: Optional[str]) -> httpx.Client:
         return httpx.Client(proxy=proxy)
 
 
-def query_deepseek(prompt: str, api_key: str, *, model: str, base_url: str, proxy: Optional[str], timeout: float = 90) -> str:
-    """复用 deepseek_only_chat 的请求逻辑"""
+def query_deepseek(prompt: str, api_key: str, *, model: str, base_url: str, proxy: Optional[str], timeout: float = 90) -> Tuple[str, Dict[str, int]]:
+    """复用 deepseek_only_chat 的请求逻辑。返回 (content, usage)。"""
     if not api_key:
         raise ValueError("DEEPSEEK_API_KEY 为空：请先设置环境变量 DEEPSEEK_API_KEY。")
 
@@ -57,7 +58,13 @@ def query_deepseek(prompt: str, api_key: str, *, model: str, base_url: str, prox
         )
         resp.raise_for_status()
         data = resp.json()
-    return data["choices"][0]["message"]["content"]
+    usage = data.get("usage") or {}
+    out = {
+        "prompt_tokens": int(usage.get("prompt_tokens", 0)),
+        "completion_tokens": int(usage.get("completion_tokens", 0)),
+        "total_tokens": int(usage.get("total_tokens", 0)),
+    }
+    return data["choices"][0]["message"]["content"], out
 
 
 def generate_event_schema_prompt(news_article: str, article_id: str = "", publish_date: str = "") -> str:
@@ -225,6 +232,7 @@ def generate_event_schema_prompt(news_article: str, article_id: str = "", publis
 应拆分为 2 个独立事件（不同地点）：
 - E1: event_text="树木倒地", location=["广东省","深圳市","坪山区","坪山大道"]
 - E2: event_text="树木倒地", location=["广东省","深圳市","坪山区","荔景路"]
+ **重要：最终 JSON 中不要包含任何名为 `evidence_sentence` 或 `evidence_sentences` 的字段。**
 """.strip()
 
 
@@ -294,12 +302,7 @@ def extract_events_and_relations(
         包含 events 和 relations 的字典
     """
     prompt = generate_event_schema_prompt(news_article, article_id=article_id, publish_date=publish_date)
-    result_text = query_deepseek(prompt, api_key, model=model, base_url=base_url, proxy=proxy)
-
-    # 可选：多轮自检修订（暂时不实现，先确保单次输出稳定）
-    # for _ in range(max(0, revise_rounds)):
-    #     follow = generate_follow_up_prompt(result_text, news_article)
-    #     result_text = query_deepseek(follow, api_key, model=model, base_url=base_url, proxy=proxy)
+    result_text, usage = query_deepseek(prompt, api_key, model=model, base_url=base_url, proxy=proxy)
 
     parsed = _try_load_json(result_text)
     if parsed is None:
@@ -307,24 +310,27 @@ def extract_events_and_relations(
     
     parsed.setdefault("events", [])
     parsed.setdefault("relations", [])
-    return parsed
+    return parsed, usage
 
 
 def main():
     root = Path(__file__).resolve().parent
-    csv_path = Path("./kg-llm-new/data/articles_cleaned.csv").resolve()
+    data_dir = root.parent / "data"
+    results_dir = root.parent / "results"
+    csv_path = (data_dir / "articles_cleaned.csv").resolve()
     df = pd.read_csv(csv_path)
 
     texts = df.head(100)["content"].fillna("").tolist()
     publish_dates = df.head(100)["publish_time"].fillna("").apply(lambda x: x.split()[0] if x and len(x.split()) > 0 else "").tolist()
 
+    total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
     results = []
-    # 先跑前 1 条测试，确认可用；再改成 texts[:10] 或 texts[:100]
+    t0 = time.perf_counter()
     for i, text in enumerate(texts[:20]):
         article_id = f"A{i:03d}"
         publish_date = publish_dates[i] if i < len(publish_dates) else ""
         try:
-            out = extract_events_and_relations(
+            out, usage = extract_events_and_relations(
                 text,
                 api_key=DEEPSEEK_API_KEY,
                 base_url=DEEPSEEK_BASE_URL,
@@ -334,6 +340,8 @@ def main():
                 publish_date=publish_date,
                 revise_rounds=0,
             )
+            for k in total_usage:
+                total_usage[k] += usage.get(k, 0)
             results.append({
                 "index": i,
                 "article_id": article_id,
@@ -341,7 +349,6 @@ def main():
                 "content_preview": text[:100] if text else "",
                 "extraction": out
             })
-            # 每处理 10 条打印一次进度
             if (i + 1) % 10 == 0 or i == 0:
                 print(f"已处理 {i+1}/{len(texts[:10])} 条", flush=True)
         except Exception as e:
@@ -353,15 +360,21 @@ def main():
                 "content_preview": text[:100] if text else "",
                 "error": str(e)
             })
-    
-    # 保存结果到 JSON 文件
-    output_path = Path("./kg-llm-new/deepseek_event_schema_results.json").resolve()
+    runtime_seconds = time.perf_counter() - t0
+    run_stats = {
+        "total_runtime_seconds": round(runtime_seconds, 2),
+        "total_prompt_tokens": total_usage["prompt_tokens"],
+        "total_completion_tokens": total_usage["completion_tokens"],
+        "total_tokens": total_usage["total_tokens"],
+    }
+
+    output_path = (results_dir / "deepseek_event_schema_results.json").resolve()
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
-    
+        json.dump({"run_stats": run_stats, "results": results}, f, ensure_ascii=False, indent=2)
+
     print(f"\n结果已保存到：{output_path}")
-    print(f"成功处理：{sum(1 for r in results if 'extraction' in r)} 条")
-    print(f"失败：{sum(1 for r in results if 'error' in r)} 条")
+    print(f"成功：{sum(1 for r in results if 'extraction' in r)} 条，失败：{sum(1 for r in results if 'error' in r)} 条")
+    print(f"run_stats: runtime={run_stats['total_runtime_seconds']}s, tokens={run_stats['total_tokens']} (prompt={run_stats['total_prompt_tokens']}, completion={run_stats['total_completion_tokens']})")
 
 
 if __name__ == "__main__":

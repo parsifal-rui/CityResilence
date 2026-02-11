@@ -1,0 +1,8 @@
+withrag:
+成功：20 条，失败：0 条
+run_stats: runtime=930.57s, tokens=87845 (prompt=49784, completion=38061)
+without rag:
+结果已保存到：/root/data/CityResilence/results/deepseek_event_schema_results.json
+成功：19 条，失败：1 条
+run_stats: runtime=814.18s, tokens=68294 (prompt=39728, completion=28566)
+失败原因：输出token超出限额

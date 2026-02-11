@@ -1,0 +1,469 @@
+对比: deepseek_event_schema_results.json (A) vs deepseek_event_schema_rag_results.json (B)
+关注: event_text, event_type, time(date_from/date_to), location
+============================================================
+
+--- Article 0 (article_id=A000, publish_date=2024-08-23) ---
+  【数量不同】 A=10 条，B=11 条
+  [0] 一致 — event_text='暴雨', type=Driver, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区
+  [1] 一致 — event_text='积水', type=Hazard, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区/金碧路
+  [2] 一致 — event_text='积水', type=Hazard, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区/丹梓大道
+  [3] 一致 — event_text='树木倒地', type=Hazard, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区/坪山大道
+  [4] 一致 — event_text='树木倒地', type=Hazard, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区/荔景路
+  [5] 一致 — event_text='交通受阻', type=Impact, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区/金碧路
+  [6] 一致 — event_text='交通受阻', type=Impact, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区/坪山大道
+  [7] 一致 — event_text='交通受阻', type=Impact, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区/丹梓大道
+  [8] 一致 — event_text='交通受阻', type=Impact, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区/荔景路
+  [9] E10 vs E10 —— 差异:
+      • event_text: A='人员受伤' | B='车辆被困'
+  【仅B多出】 共 1 条:
+      [10] event_text='人员受伤', type=Impact, date=2024-08-23~2024-08-23, location=广东省/深圳市/坪山区
+
+--- Article 1 (article_id=A001, publish_date=2024-08-29) ---
+  【数量不同】 A=13 条，B=12 条
+  [0] E1 vs E1 —— 差异:
+      • event_text: A='雷雨' | B='强对流天气'
+  [1] E2 vs E2 —— 差异:
+      • event_text: A='暴雨' | B='雷雨'
+      • location: A=[广东省/广州市/南沙区/东涌镇] | B=[广东省/广州市]
+  [2] E3 vs E3 —— 差异:
+      • event_text: A='大风' | B='暴雨'
+      • location: A=[广东省/广州市/花都区/梯面镇] | B=[广东省/广州市/南沙区/东涌镇]
+  [3] E4 vs E4 —— 差异:
+      • event_text: A='副高加强' | B='大风'
+      • event_type: A='Modulator' | B='Hazard'
+      • date_from: A='2024-08-30' | B='2024-08-29'
+      • date_to: A='2024-08-31' | B='2024-08-29'
+      • location: A=[广东省/广州市] | B=[广东省/广州市/花都区/梯面镇]
+  [4] E5 vs E5 —— 差异:
+      • event_text: A='降水减弱' | B='高温'
+      • date_from: A='2024-08-30' | B='2024-08-29'
+      • date_to: A='2024-08-31' | B='2024-08-29'
+  [5] E6 vs E6 —— 差异:
+      • event_text: A='雷阵雨' | B='副高加强'
+      • event_type: A='Hazard' | B='Modulator'
+  [6] E7 vs E7 —— 差异:
+      • event_text: A='炎热' | B='雷阵雨'
+      • date_from: A='2024-09-01' | B='2024-08-30'
+      • date_to: A='2024-09-01' | B='2024-08-31'
+  [7] E8 vs E8 —— 差异:
+      • event_text: A='强对流天气' | B='炎热'
+      • date_from: A='2024-08-29' | B='2024-09-01'
+      • date_to: A='2024-08-29' | B='2024-09-01'
+  [8] 一致 — event_text='短时强降水', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市
+  [9] 一致 — event_text='短时大风', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市
+  [10] 一致 — event_text='龙卷', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市
+  [11] 一致 — event_text='强雷电', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市
+  【仅A多出】 共 1 条:
+      [12] event_text='次生灾害', type=Impact, date=2024-08-29~2024-08-29, location=广东省/广州市
+
+--- Article 2 (article_id=A002, publish_date=2024-08-29) ---
+  【数量不同】 A=28 条，B=14 条
+  [0] 一致 — event_text='暴雨', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/南沙区/黄阁镇
+  [1] 一致 — event_text='暴雨', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/番禺区/石楼镇
+  [2] 一致 — event_text='暴雨', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/荔湾区
+  [3] 一致 — event_text='暴雨', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/越秀区
+  [4] 一致 — event_text='暴雨', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/海珠区
+  [5] 一致 — event_text='暴雨', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/天河区
+  [6] 一致 — event_text='暴雨', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/白云区
+  [7] 一致 — event_text='暴雨', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/增城区
+  [8] E9 vs E9 —— 差异:
+      • location: A=[广东省/广州市/越秀区] | B=[广东省/广州市]
+  [9] E10 vs E10 —— 差异:
+      • event_text: A='雷雨大风' | B='高温'
+      • location: A=[广东省/广州市/海珠区] | B=[广东省/广州市]
+  [10] E11 vs E11 —— 差异:
+      • event_text: A='雷雨大风' | B='中雷雨'
+      • location: A=[广东省/广州市/天河区] | B=[广东省/广州市]
+  [11] E12 vs E12 —— 差异:
+      • event_text: A='雷雨大风' | B='阵风'
+      • event_type: A='Hazard' | B='Driver'
+      • location: A=[广东省/广州市/白云区] | B=[广东省/广州市]
+  [12] E13 vs E13 —— 差异:
+      • event_text: A='雷雨大风' | B='雷电'
+      • location: A=[广东省/广州市/黄埔区] | B=[广东省/广州市]
+  [13] E14 vs E14 —— 差异:
+      • event_text: A='雷雨大风' | B='交通安全风险'
+      • event_type: A='Hazard' | B='Impact'
+      • location: A=[广东省/广州市/番禺区] | B=[广东省/广州市]
+  【仅A多出】 共 14 条:
+      [14] event_text='雷雨大风', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/花都区
+      [15] event_text='雷雨大风', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/南沙区
+      [16] event_text='雷雨大风', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/增城区
+      [17] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/越秀区
+      [18] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/海珠区
+      [19] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/天河区
+      [20] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/白云区
+      [21] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/黄埔区
+      [22] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/番禺区
+      [23] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/花都区
+      [24] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/荔湾区
+      [25] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/从化区
+      [26] event_text='高温', type=Hazard, date=2024-08-29~2024-08-29, location=广东省/广州市/增城区
+      [27] event_text='应急响应启动', type=Impact, date=2024-08-29~2024-08-29, location=广东省/广州市
+
+--- Article 3 (article_id=A003, publish_date=2024-08-30) ---
+  【数量不同】 A=11 条，B=14 条
+  [0] E1 vs E1 —— 差异:
+      • event_text: A='生活污水直排' | B='生活污水排放'
+  [1] E2 vs E2 —— 差异:
+      • event_text: A='水体黑臭' | B='水污染'
+  [2] E3 vs E3 —— 差异:
+      • event_text: A='农产品种植受影响' | B='水体黑臭'
+      • event_type: A='Impact' | B='Hazard'
+  [3] E4 vs E4 —— 差异:
+      • event_text: A='污水处理厂建设' | B='农产品种植受影响'
+      • event_type: A='Modulator' | B='Impact'
+      • date_from: A='2019-01-01' | B='2024-08-30'
+      • date_to: A='2020-12-31' | B='2024-08-30'
+      • location: A=[广东省/广州市] | B=[广东省/广州市/白云区/人和镇/方石村]
+  [4] E5 vs E5 —— 差异:
+      • event_text: A='污水收集管网建设' | B='污水处理厂建设'
+      • event_type: A='Modulator' | B='Driver'
+      • date_from: A='2024-08-30' | B='2019-01-01'
+      • date_to: A='2024-08-30' | B='2020-12-31'
+      • location: A=[广东省/广州市/白云区/人和镇/方石村] | B=[广东省/广州市]
+  [5] E6 vs E6 —— 差异:
+      • event_text: A='水环境好转' | B='污水收集管网建设'
+      • event_type: A='Impact' | B='Driver'
+  [6] E7 vs E7 —— 差异:
+      • event_text: A='排水管网维护' | B='雨污分流'
+      • event_type: A='Modulator' | B='Driver'
+  [7] E8 vs E8 —— 差异:
+      • event_text: A='农村生活污水治理提升工程' | B='水环境修复'
+      • event_type: A='Modulator' | B='Driver'
+      • location: A=[广东省/广州市/花都区/赤坭镇] | B=[广东省/广州市/白云区/人和镇/方石村]
+  [8] E9 vs E9 —— 差异:
+      • event_text: A='农村生活污水治理提升工程' | B='排水管网维护'
+      • event_type: A='Modulator' | B='Driver'
+      • location: A=[广东省/广州市/从化区/吕田镇] | B=[广东省/广州市/白云区/人和镇/方石村]
+  [9] E10 vs E10 —— 差异:
+      • event_type: A='Modulator' | B='Driver'
+      • location: A=[广东省/广州市/从化区/良口镇] | B=[广东省/广州市/花都区/赤坭镇]
+  [10] E11 vs E11 —— 差异:
+      • event_type: A='Modulator' | B='Driver'
+      • location: A=[广东省/广州市/从化区/温泉镇] | B=[广东省/广州市/从化区/吕田镇]
+  【仅B多出】 共 3 条:
+      [11] event_text='农村生活污水治理提升工程', type=Driver, date=2024-08-30~2024-08-30, location=广东省/广州市/从化区/良口镇
+      [12] event_text='农村生活污水治理提升工程', type=Driver, date=2024-08-30~2024-08-30, location=广东省/广州市/从化区/温泉镇
+      [13] event_text='农村黑臭水体整治', type=Driver, date=2024-01-01~2024-12-31, location=广东省
+
+--- Article 4 (article_id=A004, publish_date=2024-09-02) ---
+  数量: 7 条（一致）
+  [0] 一致 — event_text='暴雨', type=Driver, date=2024-06-16~2024-06-16, location=广东省/梅州市/蕉岭县
+  [1] 一致 — event_text='洪涝灾害', type=Hazard, date=2024-06-16~2024-06-16, location=广东省/梅州市/蕉岭县
+  [2] 一致 — event_text='山洪暴发', type=Hazard, date=2024-06-16~2024-06-16, location=广东省/梅州市/蕉岭县
+  [3] 一致 — event_text='山体滑坡', type=Hazard, date=2024-06-16~2024-06-16, location=广东省/梅州市/蕉岭县
+  [4] 一致 — event_text='林地损失', type=Impact, date=2024-06-16~2024-06-16, location=广东省/梅州市/蕉岭县
+  [5] 一致 — event_text='农作物损失', type=Impact, date=2024-06-16~2024-06-16, location=广东省/梅州市/蕉岭县
+  [6] E7 vs E7 —— 差异:
+      • event_text: A='灾后重建' | B='水土流失'
+      • date_from: A='2024-09-02' | B='2024-06-16'
+      • date_to: A='2024-09-02' | B='2024-06-16'
+      • location: A=[广东省/梅州市/蕉岭县] | B=[广东省/梅州市/蕉岭县/文福镇/红星村]
+
+--- Article 5 (article_id=A005, publish_date=2024-09-04) ---
+  数量: 4 条（一致）
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-06~2024-09-06, location=广东省/茂名市/高州市
+  [1] 一致 — event_text='暴雨', type=Hazard, date=2024-09-05~2024-09-07, location=广东省/茂名市/高州市
+  [2] 一致 — event_text='大风', type=Hazard, date=2024-09-05~2024-09-07, location=广东省/茂名市/高州市
+  [3] E4 vs E4 —— 差异:
+      • event_text: A='台风蓝色预警' | B='台风预警'
+      • event_type: A='Hazard' | B='Impact'
+
+--- Article 6 (article_id=A006, publish_date=2024-09-04) ---
+  【数量不同】 A=4 条，B=3 条
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-04~2024-09-04, location=
+  [1] E2 vs E2 —— 差异:
+      • event_text: A='风' | B='风雨影响'
+  [2] E3 vs E3 —— 差异:
+      • event_text: A='雨' | B='应急响应'
+      • event_type: A='Hazard' | B='Impact'
+  【仅A多出】 共 1 条:
+      [3] event_text='应急响应', type=Impact, date=2024-09-04~2024-09-04, location=广东省
+
+--- Article 7 (article_id=A007, publish_date=2024-09-05) ---
+  数量: 10 条（一致）
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-05~2024-09-05, location=广东省/江门市/台山市
+  [1] 一致 — event_text='停工', type=Impact, date=2024-09-05~2024-09-05, location=广东省/江门市/台山市
+  [2] 一致 — event_text='撤离转移', type=Impact, date=2024-09-05~2024-09-05, location=广东省/江门市/台山市
+  [3] E4 vs E4 —— 差异:
+      • location: A=[广东省/江门市/台山市] | B=[广东省/江门市/台山市/川岛]
+  [4] 一致 — event_text='停渡', type=Impact, date=2024-09-05~2024-09-05, location=广东省/江门市/台山市
+  [5] 一致 — event_text='停运', type=Impact, date=2024-09-05~2024-09-05, location=广东省/江门市/台山市
+  [6] E7 vs E7 —— 差异:
+      • location: A=[广东省/江门市/台山市/省道S386端芬福安至三洞段] | B=[广东省/江门市/台山市/端芬镇/省道S386福安至三洞段]
+  [7] E8 vs E8 —— 差异:
+      • location: A=[广东省/江门市/台山市/省道S275线上川琴冲至沙堤] | B=[广东省/江门市/台山市/上川岛/省道S275琴冲至沙堤段]
+  [8] 一致 — event_text='前置执勤', type=Impact, date=2024-09-05~2024-09-05, location=广东省/江门市/台山市/上川岛旅游区
+  [9] 一致 — event_text='前置执勤', type=Impact, date=2024-09-05~2024-09-05, location=广东省/江门市/台山市/下川岛旅游区
+
+--- Article 8 (article_id=A008, publish_date=2024-09-05) ---
+  数量: 3 条（一致）
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-05~2024-09-05, location=广东省/中山市
+  [1] E2 vs E2 —— 差异:
+      • event_text: A='台风预警' | B='大风'
+  [2] 一致 — event_text='交通管制', type=Impact, date=2024-09-05~2024-09-05, location=广东省/中山市/深中通道
+
+--- Article 9 (article_id=A009, publish_date=2024-09-05) ---
+  【数量不同】 A=12 条，B=6 条
+  [0] E1 vs E1 —— 差异:
+      • location: A=[海南省/琼海市] | B=[]
+  [1] E2 vs E2 —— 差异:
+      • event_text: A='台风' | B='暴雨'
+      • event_type: A='Driver' | B='Hazard'
+      • date_to: A='2024-09-06' | B='2024-09-08'
+      • location: A=[广东省/电白县] | B=[广东省/南部]
+  [2] E3 vs E3 —— 差异:
+      • event_text: A='大风' | B='暴雨'
+      • date_from: A='2024-09-05' | B='2024-09-06'
+      • date_to: A='2024-09-07' | B='2024-09-08'
+      • location: A=[南海北部] | B=[广西壮族自治区/中南部]
+  [3] E4 vs E4 —— 差异:
+      • date_from: A='2024-09-05' | B='2024-09-06'
+      • date_to: A='2024-09-07' | B='2024-09-08'
+      • location: A=[北部湾/部分海域] | B=[南海北部/北部湾/华南沿海]
+  [4] E5 vs E5 —— 差异:
+      • event_text: A='大风' | B='应急响应'
+      • event_type: A='Hazard' | B='Impact'
+      • date_to: A='2024-09-07' | B='2024-09-05'
+      • location: A=[华南沿海/部分地区] | B=[广东省]
+  [5] E6 vs E6 —— 差异:
+      • event_text: A='大风' | B='应急响应'
+      • event_type: A='Hazard' | B='Impact'
+      • date_from: A='2024-09-06' | B='2024-09-05'
+      • date_to: A='2024-09-06' | B='2024-09-05'
+      • location: A=[] | B=[广西壮族自治区]
+  【仅A多出】 共 6 条:
+      [6] event_text='暴雨', type=Hazard, date=2024-09-05~2024-09-07, location=广东省/南部
+      [7] event_text='暴雨', type=Hazard, date=2024-09-05~2024-09-07, location=广西壮族自治区/中南部
+      [8] event_text='特大暴雨', type=Hazard, date=2024-09-05~2024-09-07, location=广东省/南部/部分地区
+      [9] event_text='特大暴雨', type=Hazard, date=2024-09-05~2024-09-07, location=广西壮族自治区/中南部/部分地区
+      [10] event_text='应急响应', type=Impact, date=2024-09-05~2024-09-05, location=广东省
+      [11] event_text='应急响应', type=Impact, date=2024-09-05~2024-09-05, location=广西壮族自治区
+
+--- Article 10 (article_id=A010, publish_date=2024-09-06) ---
+  【数量不同】 A=5 条，B=4 条
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-06~2024-09-06, location=
+  [1] E2 vs E2 —— 差异:
+      • event_text: A='风雨' | B='强风'
+      • event_type: A='Driver' | B='Hazard'
+  [2] E3 vs E3 —— 差异:
+      • event_text: A='横风' | B='降雨'
+      • location: A=[] | B=[广东省]
+  [3] E4 vs E4 —— 差异:
+      • event_text: A='雨天' | B='交通中断'
+      • event_type: A='Hazard' | B='Impact'
+  【仅A多出】 共 1 条:
+      [4] event_text='交通中断', type=Impact, date=2024-09-06~2024-09-06, location=
+
+--- Article 11 (article_id=A011, publish_date=2024-09-06) ---
+  【数量不同】 A=9 条，B=19 条
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-06~2024-09-07, location=
+  [1] 一致 — event_text='大风', type=Hazard, date=2024-09-06~2024-09-07, location=南海
+  [2] E3 vs E3 —— 差异:
+      • location: A=[南海/北部湾/琼州海峡] | B=[南海/北部]
+  [3] E4 vs E4 —— 差异:
+      • location: A=[广东西部沿海] | B=[南海/中部]
+  [4] E5 vs E5 —— 差异:
+      • location: A=[海南岛北部和东部沿海] | B=[北部湾]
+  [5] E6 vs E6 —— 差异:
+      • location: A=[南海大部/广东西南部及广东沿海/海南岛及其沿海/广西南部及其沿海] | B=[琼州海峡]
+  [6] E7 vs E7 —— 差异:
+      • event_text: A='暴雨' | B='大风'
+      • location: A=[广西东南部/广东西南部/海南岛] | B=[广东省/西部沿海]
+  [7] E8 vs E8 —— 差异:
+      • event_text: A='大暴雨' | B='大风'
+      • location: A=[广西东南部/广东西南部/海南岛] | B=[海南岛/北部沿海]
+  [8] E9 vs E9 —— 差异:
+      • event_text: A='特大暴雨' | B='大风'
+      • location: A=[广东西南部沿海/海南岛中西部和北部] | B=[海南岛/东部沿海]
+  【仅B多出】 共 10 条:
+      [9] event_text='大风', type=Hazard, date=2024-09-06~2024-09-07, location=
+      [10] event_text='暴雨', type=Hazard, date=2024-09-06~2024-09-07, location=广西壮族自治区/防城港市
+      [11] event_text='暴雨', type=Hazard, date=2024-09-06~2024-09-07, location=广东省/西南部
+      [12] event_text='暴雨', type=Hazard, date=2024-09-06~2024-09-07, location=海南岛
+      [13] event_text='大暴雨', type=Hazard, date=2024-09-06~2024-09-07, location=广东省/西南部沿海
+      [14] event_text='大暴雨', type=Hazard, date=2024-09-06~2024-09-07, location=海南岛/中西部
+      [15] event_text='大暴雨', type=Hazard, date=2024-09-06~2024-09-07, location=海南岛/北部
+      [16] event_text='特大暴雨', type=Hazard, date=2024-09-06~2024-09-07, location=广东省/西南部沿海
+      [17] event_text='特大暴雨', type=Hazard, date=2024-09-06~2024-09-07, location=海南岛/中西部
+      [18] event_text='特大暴雨', type=Hazard, date=2024-09-06~2024-09-07, location=海南岛/北部
+
+--- Article 12 (article_id=A012, publish_date=2024-09-06) ---
+  【数量不同】 A=6 条，B=5 条
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-06~2024-09-06, location=广东省/江门市
+  [1] E2 vs E2 —— 差异:
+      • event_text: A='灾害风险' | B='前置执勤'
+      • event_type: A='Hazard' | B='Impact'
+  [2] E3 vs E3 —— 差异:
+      • location: A=[广东省/江门市] | B=[广东省/江门市/台山市/上川岛旅游区]
+  [3] E4 vs E4 —— 差异:
+      • location: A=[广东省/江门市/台山市/上川岛旅游区] | B=[广东省/江门市/台山市/下川岛旅游区]
+  [4] E5 vs E5 —— 差异:
+      • event_text: A='前置执勤' | B='巡逻防控'
+      • location: A=[广东省/江门市/台山市/下川岛旅游区] | B=[广东省/江门市]
+  【仅A多出】 共 1 条:
+      [5] event_text='巡逻防控', type=Impact, date=2024-09-06~2024-09-06, location=广东省/江门市
+
+--- Article 13 (article_id=A013, publish_date=2024-09-06) ---
+  【数量不同】 A=14 条，B=15 条
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-06~2024-09-06, location=广东省/湛江市
+  [1] 一致 — event_text='交通管制', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市/湛徐高速/麻章站
+  [2] 一致 — event_text='交通管制', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市/湛徐高速/城月站
+  [3] 一致 — event_text='交通管制', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市/湛徐高速/雷州站
+  [4] 一致 — event_text='交通管制', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市/湛徐高速/雷城站
+  [5] 一致 — event_text='交通管制', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市/湛徐高速/松竹站
+  [6] 一致 — event_text='交通管制', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市/湛徐高速/龙门站
+  [7] 一致 — event_text='交通管制', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市/湛徐高速/英利站
+  [8] 一致 — event_text='交通管制', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市/湛徐高速/下桥站
+  [9] 一致 — event_text='交通管制', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市/徐闻港支线/徐城西站
+  [10] E11 vs E11 —— 差异:
+      • event_text: A='积水' | B='港口停航'
+      • event_type: A='Hazard' | B='Impact'
+      • location: A=[] | B=[广东省/湛江市]
+  [11] E12 vs E12 —— 差异:
+      • event_text: A='强暴雨' | B='车辆滞留'
+      • event_type: A='Hazard' | B='Impact'
+      • location: A=[] | B=[广东省/湛江市]
+  [12] E13 vs E13 —— 差异:
+      • event_text: A='车辆滞留' | B='积水'
+      • event_type: A='Impact' | B='Hazard'
+      • location: A=[广东省/湛江市] | B=[]
+  [13] E14 vs E14 —— 差异:
+      • event_text: A='防风准备' | B='强暴雨'
+      • event_type: A='Impact' | B='Hazard'
+      • date_from: A='2024-09-05' | B='2024-09-06'
+      • location: A=[广东省/湛江市] | B=[]
+  【仅B多出】 共 1 条:
+      [14] event_text='强横风', type=Hazard, date=2024-09-06~2024-09-06, location=
+
+Article 14 (A 报错): 模型输出不是可解析 JSON：
+{
+  "events": [
+    {
+      "event_id": "E1",
+      "event_text"...
+
+--- Article 15 (article_id=A015, publish_date=2024-09-07) ---
+  数量: 11 条（一致）
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-06~2024-09-06, location=广东省/东莞市
+  [1] E2 vs E2 —— 差异:
+      • event_text: A='降水' | B='大风'
+      • event_type: A='Driver' | B='Hazard'
+  [2] E3 vs E3 —— 差异:
+      • event_type: A='Driver' | B='Hazard'
+      • date_from: A='2024-09-07' | B='2024-09-06'
+      • date_to: A='2024-09-07' | B='2024-09-06'
+  [3] E4 vs E4 —— 差异:
+      • event_text: A='降水' | B='强降水'
+      • event_type: A='Driver' | B='Hazard'
+      • date_from: A='2024-09-08' | B='2024-09-06'
+      • date_to: A='2024-09-08' | B='2024-09-06'
+  [4] E5 vs E5 —— 差异:
+      • event_type: A='Driver' | B='Hazard'
+      • date_from: A='2024-09-09' | B='2024-09-07'
+      • date_to: A='2024-09-11' | B='2024-09-07'
+  [5] E6 vs E6 —— 差异:
+      • event_text: A='降水' | B='雷雨'
+      • event_type: A='Driver' | B='Hazard'
+      • date_from: A='2024-09-12' | B='2024-09-08'
+      • date_to: A='2024-09-15' | B='2024-09-08'
+  [6] E7 vs E7 —— 差异:
+      • event_text: A='大风' | B='雷阵雨'
+      • event_type: A='Driver' | B='Hazard'
+      • date_from: A='2024-09-06' | B='2024-09-09'
+      • date_to: A='2024-09-06' | B='2024-09-11'
+  [7] E8 vs E8 —— 差异:
+      • event_text: A='积涝' | B='阵雨或雷阵雨'
+      • date_from: A='2024-09-07' | B='2024-09-12'
+  [8] E9 vs E9 —— 差异:
+      • event_text: A='山体滑坡' | B='积涝'
+  [9] E10 vs E10 —— 差异:
+      • event_text: A='雷击' | B='山体滑坡'
+  [10] 一致 — event_text='倒塌', type=Impact, date=2024-09-07~2024-09-15, location=广东省/东莞市
+
+--- Article 16 (article_id=A016, publish_date=2024-09-07) ---
+  【数量不同】 A=6 条，B=7 条
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-07~2024-09-07, location=
+  [1] E2 vs E2 —— 差异:
+      • event_type: A='Driver' | B='Hazard'
+  [2] E3 vs E3 —— 差异:
+      • event_text: A='供电中断' | B='电力中断'
+      • date_from: A='2024-09-07' | B='2024-09-06'
+      • location: A=[广东省] | B=[广东省/湛江市/徐闻县/人民医院]
+  [3] E4 vs E4 —— 差异:
+      • event_text: A='设备损坏' | B='电力中断'
+      • date_from: A='2024-09-06' | B='2024-09-07'
+      • date_to: A='2024-09-06' | B='2024-09-07'
+      • location: A=[广东省/湛江市/徐闻县] | B=[广东省]
+  [4] E5 vs E5 —— 差异:
+      • event_text: A='道路受阻' | B='设备受损'
+      • date_from: A='2024-09-07' | B='2024-09-06'
+      • date_to: A='2024-09-07' | B='2024-09-06'
+      • location: A=[海南省/文昌市] | B=[广东省/湛江市/徐闻县/人民医院]
+  [5] E6 vs E6 —— 差异:
+      • event_text: A='触电风险' | B='道路受阻'
+      • event_type: A='Hazard' | B='Impact'
+      • location: A=[广东省] | B=[海南省/文昌市]
+  【仅B多出】 共 1 条:
+      [6] event_text='港口暂停作业', type=Impact, date=2024-09-07~2024-09-07, location=广东省/湛江市/徐闻港
+
+--- Article 17 (article_id=A017, publish_date=2024-09-08) ---
+  【数量不同】 A=3 条，B=4 条
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-06~2024-09-06, location=广东省/湛江市
+  [1] 一致 — event_text='损失', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市
+  [2] 一致 — event_text='理赔', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市
+  【仅B多出】 共 1 条:
+      [3] event_text='灾后复产', type=Impact, date=2024-09-06~2024-09-06, location=广东省/湛江市
+
+--- Article 18 (article_id=A018, publish_date=2024-09-08) ---
+  【数量不同】 A=11 条，B=12 条
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-08~2024-09-08, location=
+  [1] E2 vs E2 —— 差异:
+      • event_text: A='山洪' | B='暴雨'
+  [2] E3 vs E3 —— 差异:
+      • event_text: A='地质灾害' | B='山洪'
+  [3] E4 vs E4 —— 差异:
+      • event_text: A='洪水' | B='地质灾害'
+  [4] E5 vs E5 —— 差异:
+      • event_text: A='交通中断' | B='洪水'
+      • event_type: A='Impact' | B='Hazard'
+      • location: A=[海南省] | B=[]
+  [5] E6 vs E6 —— 差异:
+      • event_text: A='电力中断' | B='交通中断'
+      • location: A=[海南省] | B=[]
+  [6] E7 vs E7 —— 差异:
+      • event_text: A='通信中断' | B='电力中断'
+      • location: A=[海南省] | B=[]
+  [7] E8 vs E8 —— 差异:
+      • event_text: A='交通中断' | B='通信中断'
+      • location: A=[广东省] | B=[]
+  [8] E9 vs E9 —— 差异:
+      • event_text: A='电力中断' | B='群众转移'
+      • location: A=[广东省] | B=[]
+  [9] E10 vs E10 —— 差异:
+      • event_text: A='通信中断' | B='搜救解困'
+      • location: A=[广东省] | B=[]
+  [10] E11 vs E11 —— 差异:
+      • event_text: A='暴雨' | B='险情处置'
+      • event_type: A='Driver' | B='Impact'
+  【仅B多出】 共 1 条:
+      [11] event_text='救灾救助', type=Impact, date=2024-09-08~2024-09-08, location=
+
+--- Article 19 (article_id=A019, publish_date=2024-09-08) ---
+  数量: 11 条（一致）
+  [0] 一致 — event_text='台风', type=Driver, date=2024-09-07~2024-09-08, location=
+  [1] 一致 — event_text='暴雨', type=Hazard, date=2024-09-08~2024-09-08, location=广东省/江门市/恩平市/沙湖镇
+  [2] 一致 — event_text='暴雨', type=Hazard, date=2024-09-08~2024-09-08, location=广东省/湛江市/雷州市/杨家镇
+  [3] 一致 — event_text='暴雨', type=Hazard, date=2024-09-08~2024-09-08, location=广东省/揭阳市/惠来县/神泉镇
+  [4] 一致 — event_text='暴雨', type=Hazard, date=2024-09-08~2024-09-08, location=广东省/云浮市/新兴县/稔村镇
+  [5] 一致 — event_text='暴雨', type=Hazard, date=2024-09-08~2024-09-08, location=广东省/河源市/连平县/元善镇
+  [6] 一致 — event_text='高温', type=Hazard, date=2024-09-08~2024-09-08, location=广东省/梅州市/蕉岭县
+  [7] 一致 — event_text='暴雨', type=Hazard, date=2024-09-07~2024-09-08, location=广东省/广州市/南沙区/万顷沙镇
+  [8] E9 vs E9 —— 差异:
+      • event_text: A='阵雨' | B='雷阵雨'
+  [9] 一致 — event_text='阵雨', type=Hazard, date=2024-09-10~2024-09-11, location=广东省/广州市
+  [10] 一致 — event_text='高温', type=Hazard, date=2024-09-10~2024-09-11, location=广东省
+
+============================================================
+【需人工校验的文章 index】共 19 篇: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19]

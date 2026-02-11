@@ -2,13 +2,16 @@
 import os
 import json
 import re
+import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 import httpx
 import numpy as np
 import pandas as pd
 from FlagEmbedding import BGEM3FlagModel
+
+from deepseek_event_schema import generate_event_schema_prompt
 
 
 # ====== 配置 ======
@@ -38,7 +41,7 @@ def query_deepseek(
     base_url: str,
     proxy: Optional[str],
     timeout: float = 90,
-) -> str:
+) -> Tuple[str, Dict[str, int]]:
     if not api_key:
         raise ValueError("DEEPSEEK_API_KEY 为空：请先设置环境变量 DEEPSEEK_API_KEY。")
 
@@ -47,7 +50,7 @@ def query_deepseek(
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0,
-        "max_tokens": 6000,#之前是3000 不太够
+        "max_tokens": 6000,
     }
 
     with _httpx_client(proxy) as client:
@@ -62,7 +65,13 @@ def query_deepseek(
         )
         resp.raise_for_status()
         data = resp.json()
-    return data["choices"][0]["message"]["content"]
+    usage = data.get("usage") or {}
+    out = {
+        "prompt_tokens": int(usage.get("prompt_tokens", 0)),
+        "completion_tokens": int(usage.get("completion_tokens", 0)),
+        "total_tokens": int(usage.get("total_tokens", 0)),
+    }
+    return data["choices"][0]["message"]["content"], out
 
 
 # ====== RAG 检索逻辑 ======
@@ -100,81 +109,20 @@ def format_retrieved_knowledge(triples: List[Dict[str, str]]) -> str:
     return "\n".join(lines)
 
 
-def generate_event_schema_prompt_with_rag(news_article: str, retrieved_knowledge: str) -> str:
-    rag_section = (
-        f"""
-**相关知识（仅供参考，不可引入新闻外信息）：**
-{retrieved_knowledge if retrieved_knowledge else "（无相关知识）"}
-"""
-        if retrieved_knowledge
-        else ""
-    )
-
-    return f"""
-    你是一名信息抽取专家。请从以下新闻稿中抽取「事件图谱」：
-    
-    **事件类型定义：**
-    - **驱动因素 (Driver)**：导致气候/灾害事件的直接驱动因子（例如：大气阻塞、重度降水、暴雨、台风）
-    - **调节因素 (Modulator)**：调节灾害强度/频率的背景因素（例如：海洋表面温度、气候变化、厄尔尼诺）
-    - **灾害 (Hazard)**：可能造成负面影响的现象/事件（例如：洪水、滑坡、干旱、热浪、积水）
-    - **影响 (Impact)**：灾害造成的负面后果（例如：人员伤亡、财产损失、交通中断、建筑倒塌）
-    
-    **关系类型定义：**
-    - **引发**：一个事件直接导致另一个事件发生
-    - **加剧**：一个事件使另一个事件恶化
-    - **削弱**：一个事件减弱另一个事件的强度
-    - **增强**：一个事件增强另一个事件的强度
-    - **缓解**：一个事件缓解另一个事件的负面影响
-    - **抑制**：一个事件抑制另一个事件的发生
-    
-    **新闻稿：**
-    {news_article}
-    {rag_section}
-    **抽取要求：**
-    1. **仅抽取来源于新闻稿的事件和关系**，不得引入外部信息。相关知识仅供参考事件类型和关系类型的分类。
-    2. **每个事件必须给出**：
-       - `event_id`（唯一标识，如 E1, E2...）
-       - `event_text`（简短描述）
-       - `event_type`（从上述四类中选择）
-       - `time`（时间信息，包含原文表述、标准化格式；若无时间信息，`time` 字段填 `null`）
-         - `time.text` 只填时间表述本身（如"9月14日"），不要填"受...影响"等上下文
-       - `location`（地点信息，包含原文表述、推断城市、行政层级；若无地点信息，`location` 字段填 `null`）
-         - **城市推断规则**：若出现区/街道/县（如"龙岗区"），需补全到城市（"深圳"）；若只有省/国家或无地点，`city_inferred` 填 `null`
-       - `attributes`（事件属性，如人数/金额/强度等，根据事件类型灵活填写；若无属性可填空字典 `{{}}`）
-    3. 在决定 `time`、`location` 和事件/关系是否输出时，你必须在新闻稿中找到对应的证据句并据此判断，但**最终 JSON 中不要输出任何证据句字段**。
-    4. **所有用于内部判断的证据句必须能在新闻稿原文中找到**，否则不要输出该事件/关系。
-    5. **语义相近的事件需合并**。
-    
-    **输出格式（纯 JSON，不要 markdown 代码块）：**
-    {{
-      "events": [
-        {{
-          "event_id": "E1",
-          "event_text": "...",
-          "event_type": "Driver|Modulator|Hazard|Impact",
-          "time": {{
-            "text": "...",
-            "normalized": "YYYY-MM-DD 或 null"
-          }} 或 null,
-          "location": {{
-            "text": "...",
-            "city_inferred": "城市名 或 null",
-            "admin_hierarchy": ["省", "市", "区", "街道"]
-          }} 或 null,
-          "attributes": {{}}
-        }}
-      ],
-      "relations": [
-        {{
-          "source_event_id": "E1",
-          "relation_type": "引发|加剧|削弱|增强|缓解|抑制",
-          "target_event_id": "E2"
-        }}
-      ]
-    }}
-    
-    **重要：最终 JSON 中不要包含任何名为 `evidence_sentence` 或 `evidence_sentences` 的字段。**
-    """.strip()
+def generate_event_schema_prompt_with_rag(
+    news_article: str,
+    retrieved_knowledge: str,
+    article_id: str = "",
+    publish_date: str = "",
+) -> str:
+    base = generate_event_schema_prompt(news_article, article_id=article_id, publish_date=publish_date)
+    rag_block = "\n\n**相关知识（仅供参考，不可引入新闻外信息）：**\n" + (
+        retrieved_knowledge if retrieved_knowledge else "（无相关知识）"
+    ) + "\n\n"
+    marker = "\n\n**抽取要求（核心）：**"
+    if marker in base:
+        return base.replace(marker, rag_block + marker, 1)
+    return base + rag_block
 
 
 def _try_load_json(text: str) -> Optional[Dict[str, Any]]:
@@ -234,6 +182,8 @@ def extract_events_and_relations_with_rag(
     llm_model: str,
     proxy: Optional[str],
     top_k: int = 20,
+    article_id: str = "",
+    publish_date: str = "",
 ) -> Dict[str, Any]:
     retrieved_triples = retrieve_top_k(
         news_article,
@@ -244,9 +194,11 @@ def extract_events_and_relations_with_rag(
     )
     retrieved_knowledge = format_retrieved_knowledge(retrieved_triples)
 
-    prompt = generate_event_schema_prompt_with_rag(news_article, retrieved_knowledge)
+    prompt = generate_event_schema_prompt_with_rag(
+        news_article, retrieved_knowledge, article_id=article_id, publish_date=publish_date
+    )
 
-    result_text = query_deepseek(
+    result_text, usage = query_deepseek(
         prompt,
         api_key,
         model=llm_model,
@@ -261,12 +213,13 @@ def extract_events_and_relations_with_rag(
     parsed.setdefault("events", [])
     parsed.setdefault("relations", [])
     parsed["retrieved_knowledge_count"] = len(retrieved_triples)
-    return parsed
+    return parsed, usage
 
 
 def main() -> None:
     root = Path(__file__).resolve().parent
     data_dir = root.parent / "data"
+    results_dir = root.parent / "results"
 
     csv_path = (data_dir / "articles_cleaned.csv").resolve()
     kb_triples_path = (data_dir / "kb_triples.jsonl").resolve()
@@ -284,11 +237,18 @@ def main() -> None:
     print(f"读取新闻 CSV：{csv_path}")
     df = pd.read_csv(csv_path)
     texts = df.head(100)["content"].fillna("").tolist()
+    publish_dates = df.head(100)["publish_time"].fillna("").apply(
+        lambda x: x.split()[0] if x and len(x.split()) > 0 else ""
+    ).tolist()
 
+    total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
     results: List[Dict[str, Any]] = []
-    for i, text in enumerate(texts[:10]):
+    t0 = time.perf_counter()
+    for i, text in enumerate(texts[:20]):
+        article_id = f"A{i:03d}"
+        publish_date = publish_dates[i] if i < len(publish_dates) else ""
         try:
-            out = extract_events_and_relations_with_rag(
+            out, usage = extract_events_and_relations_with_rag(
                 text,
                 model=bge_model,
                 kb_embeddings=kb_embeddings,
@@ -298,10 +258,16 @@ def main() -> None:
                 llm_model=DEEPSEEK_MODEL,
                 proxy=HTTP_PROXY or None,
                 top_k=20,
+                article_id=article_id,
+                publish_date=publish_date,
             )
+            for k in total_usage:
+                total_usage[k] += usage.get(k, 0)
             results.append(
                 {
                     "index": i,
+                    "article_id": article_id,
+                    "publish_date": publish_date,
                     "content_preview": text[:100] if text else "",
                     "extraction": out,
                 }
@@ -316,18 +282,27 @@ def main() -> None:
             results.append(
                 {
                     "index": i,
+                    "article_id": article_id,
+                    "publish_date": publish_date,
                     "content_preview": text[:100] if text else "",
                     "error": str(e),
                 }
             )
+    runtime_seconds = time.perf_counter() - t0
+    run_stats = {
+        "total_runtime_seconds": round(runtime_seconds, 2),
+        "total_prompt_tokens": total_usage["prompt_tokens"],
+        "total_completion_tokens": total_usage["completion_tokens"],
+        "total_tokens": total_usage["total_tokens"],
+    }
 
-    output_path = root / "deepseek_event_schema_rag_results.json"
+    output_path = results_dir / "deepseek_event_schema_rag_results.json"
     with output_path.open("w", encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
+        json.dump({"run_stats": run_stats, "results": results}, f, ensure_ascii=False, indent=2)
 
     print(f"\n结果已保存到：{output_path}")
-    print(f"成功处理：{sum(1 for r in results if 'extraction' in r)} 条")
-    print(f"失败：{sum(1 for r in results if 'error' in r)} 条")
+    print(f"成功：{sum(1 for r in results if 'extraction' in r)} 条，失败：{sum(1 for r in results if 'error' in r)} 条")
+    print(f"run_stats: runtime={run_stats['total_runtime_seconds']}s, tokens={run_stats['total_tokens']} (prompt={run_stats['total_prompt_tokens']}, completion={run_stats['total_completion_tokens']})")
 
 
 if __name__ == "__main__":
