@@ -1,0 +1,22 @@
+# 忽略 models 下所有内容
+models/**
+
+# 但保留子目录结构
+!models/**/
+
+# 保留配置和说明类小文件
+!models/**/*.json
+!models/**/*.md
+!models/**/.gitattributes
+!models/**/*.txt
+
+# 重新忽略常见大模型权重 / 参数文件
+models/**/*.bin
+models/**/*.pt
+models/**/*.onnx
+models/**/*.onnx_data
+models/**/*.npy
+models/**/*.npz
+models/**/*.h5
+models/**/*.safetensors
+models/**/sentencepiece*.model
