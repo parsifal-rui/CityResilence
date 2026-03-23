@@ -1,0 +1,2532 @@
+{
+  "counts": {
+    "records": 100,
+    "events": 877,
+    "relations": 721,
+    "articles_with_events": 95
+  },
+  "allowed_sets": {
+    "event_types": [
+      "Driver",
+      "Hazard",
+      "Impact",
+      "Modulator"
+    ],
+    "relation_types_size": 28
+  },
+  "missing": {
+    "by_field": {
+      "article_id": 877,
+      "city": 214,
+      "date_from": 2,
+      "date_to": 3
+    },
+    "rates": {
+      "article_id": 1.0,
+      "city": 0.24401368301026224,
+      "date_from": 0.002280501710376283,
+      "date_to": 0.0034207525655644243,
+      "relation_source_or_target_missing": 0.0
+    }
+  },
+  "type_errors": {},
+  "norm_errors": {
+    "severity_out_of_set": 15,
+    "relation_type_out_of_set": 75
+  },
+  "suspicious_stats": {
+    "time_uncertain_true": 171,
+    "event_text_too_short": 744,
+    "location_empty_list": 119,
+    "city_missing": 214,
+    "severity_out_of_set": 15,
+    "dup_event_text_norm_in_article": 44
+  },
+  "anchor_checks": {
+    "enabled": false,
+    "sample_events": 0,
+    "anchor_total": 0,
+    "event_text_not_in_article": 0,
+    "city_not_in_article": 0,
+    "location_item_not_in_article": 0,
+    "evidence_checks_done": 0,
+    "evidence_sentence_not_in_article": 0
+  },
+  "top_examples": {
+    "by_issue": {
+      "event_text_too_short": [
+        {
+          "article_id": "A000",
+          "event_id": "E1",
+          "len": 2,
+          "event_text": "暴雨",
+          "event": {
+            "event_id": "E1",
+            "event_text": "暴雨",
+            "event_type": "Driver",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ],
+            "attributes": {
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "近期，深圳市坪山区突降暴雨"
+            ]
+          }
+        },
+        {
+          "article_id": "A000",
+          "event_id": "E2",
+          "len": 2,
+          "event_text": "积水",
+          "event": {
+            "event_id": "E2",
+            "event_text": "积水",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "金碧路"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "坪山中队警力巡逻至碧岭街道金碧路时，发现该路段积水严重。"
+            ]
+          }
+        },
+        {
+          "article_id": "A000",
+          "event_id": "E3",
+          "len": 2,
+          "event_text": "积水",
+          "event": {
+            "event_id": "E3",
+            "event_text": "积水",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "丹梓大道"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "坪山区丹梓大道路积水严重，车辆缓慢通行。"
+            ]
+          }
+        },
+        {
+          "article_id": "A000",
+          "event_id": "E4",
+          "len": 4,
+          "event_text": "树木倒地",
+          "event": {
+            "event_id": "E4",
+            "event_text": "树木倒地",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "坪山大道"
+            ],
+            "attributes": {
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "狂风暴雨导致坪山大道路边树木倒地"
+            ]
+          }
+        },
+        {
+          "article_id": "A000",
+          "event_id": "E5",
+          "len": 4,
+          "event_text": "树木倒地",
+          "event": {
+            "event_id": "E5",
+            "event_text": "树木倒地",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "荔景路"
+            ],
+            "attributes": {
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通"
+            ]
+          }
+        },
+        {
+          "article_id": "A000",
+          "event_id": "E6",
+          "len": 4,
+          "event_text": "交通受阻",
+          "event": {
+            "event_id": "E6",
+            "event_text": "交通受阻",
+            "event_type": "Impact",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "坪山大道"
+            ],
+            "attributes": {
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "坪山中队警力巡逻到该路面后发现树木倒地阻碍交通通行"
+            ]
+          }
+        },
+        {
+          "article_id": "A000",
+          "event_id": "E7",
+          "len": 4,
+          "event_text": "交通受阻",
+          "event": {
+            "event_id": "E7",
+            "event_text": "交通受阻",
+            "event_type": "Impact",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "荔景路"
+            ],
+            "attributes": {
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通"
+            ]
+          }
+        },
+        {
+          "article_id": "A000",
+          "event_id": "E8",
+          "len": 4,
+          "event_text": "车辆被砸",
+          "event": {
+            "event_id": "E8",
+            "event_text": "车辆被砸",
+            "event_type": "Impact",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ],
+            "attributes": {
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "坪山大队合成作战室接到报警求助，称其车被大树砸到"
+            ]
+          }
+        },
+        {
+          "article_id": "A000",
+          "event_id": "E9",
+          "len": 4,
+          "event_text": "人员受伤",
+          "event": {
+            "event_id": "E9",
+            "event_text": "人员受伤",
+            "event_type": "Impact",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ],
+            "attributes": {
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "坪山大队合成作战室接到报警求助，称其车被大树砸到，其本人被困在车辆并且受伤需到医院救治。"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E1",
+          "len": 2,
+          "event_text": "雷雨",
+          "event": {
+            "event_id": "E1",
+            "event_text": "雷雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "intensity": "中到强",
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "今天白天我市普遍出现中到强雷雨"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E2",
+          "len": 2,
+          "event_text": "暴雨",
+          "event": {
+            "event_id": "E2",
+            "event_text": "暴雨",
+            "event_type": "Hazard",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "南沙区",
+              "东涌镇"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "intensity": "大暴雨",
+              "scope": "局部",
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "局部出现大暴雨",
+              "南沙区东涌镇录得全市最大雨量187.5毫米"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E3",
+          "len": 2,
+          "event_text": "大风",
+          "event": {
+            "event_id": "E3",
+            "event_text": "大风",
+            "event_type": "Hazard",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "花都区",
+              "梯面镇"
+            ],
+            "attributes": {
+              "intensity": "9级",
+              "scope": "短时",
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "花都区梯面镇录得全市最大阵风21.7米/秒(9级)"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E4",
+          "len": 2,
+          "event_text": "高温",
+          "event": {
+            "event_id": "E4",
+            "event_text": "高温",
+            "event_type": "Hazard",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "intensity": "33～35℃",
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "白天各区最高气温33～35℃"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E5",
+          "len": 4,
+          "event_text": "副高加强",
+          "event": {
+            "event_id": "E5",
+            "event_text": "副高加强",
+            "event_type": "Modulator",
+            "city": "广州",
+            "date_from": "2024-08-30",
+            "date_to": "2024-08-31",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "30-31日副高加强"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E6",
+          "len": 4,
+          "event_text": "降水减弱",
+          "event": {
+            "event_id": "E6",
+            "event_text": "降水减弱",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-30",
+            "date_to": "2024-08-31",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "30-31日副高加强，降水减弱"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E7",
+          "len": 3,
+          "event_text": "雷阵雨",
+          "event": {
+            "event_id": "E7",
+            "event_text": "雷阵雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-30",
+            "date_to": "2024-08-31",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "scope": "局部大雨",
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "30-31日副高加强，降水减弱，有雷阵雨局部大雨"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E8",
+          "len": 2,
+          "event_text": "炎热",
+          "event": {
+            "event_id": "E8",
+            "event_text": "炎热",
+            "event_type": "Hazard",
+            "city": "广州",
+            "date_from": "2024-09-01",
+            "date_to": "2024-09-01",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "9月1日，多云间晴，天气炎热"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E11",
+          "len": 4,
+          "event_text": "短时大风",
+          "event": {
+            "event_id": "E11",
+            "event_text": "短时大风",
+            "event_type": "Hazard",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "intensity": "8-11级",
+              "scope": "近期",
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "需注意防御短时强降水及8-11级短时大风、局地龙卷、强雷电等强对流天气及其引发的次生灾害"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E12",
+          "len": 2,
+          "event_text": "龙卷",
+          "event": {
+            "event_id": "E12",
+            "event_text": "龙卷",
+            "event_type": "Hazard",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "scope": "局地，近期",
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "需注意防御短时强降水及8-11级短时大风、局地龙卷、强雷电等强对流天气及其引发的次生灾害"
+            ]
+          }
+        },
+        {
+          "article_id": "A001",
+          "event_id": "E13",
+          "len": 3,
+          "event_text": "强雷电",
+          "event": {
+            "event_id": "E13",
+            "event_text": "强雷电",
+            "event_type": "Hazard",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "scope": "近期",
+              "time_uncertain": true
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "需注意防御短时强降水及8-11级短时大风、局地龙卷、强雷电等强对流天气及其引发的次生灾害"
+            ]
+          }
+        }
+      ],
+      "location_empty_list": [
+        {
+          "article_id": "A006",
+          "event_id": "E1",
+          "event": {
+            "event_id": "E1",
+            "event_text": "台风",
+            "event_type": "Driver",
+            "city": null,
+            "date_from": "2024-09-04",
+            "date_to": "2024-09-04",
+            "location": [],
+            "attributes": {
+              "intensity": "增强",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A009",
+          "event_id": "E1",
+          "event": {
+            "event_id": "E1",
+            "event_text": "台风",
+            "event_type": "Driver",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "intensity": "强台风级或超强台风级",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A009",
+          "event_id": "E2",
+          "event": {
+            "event_id": "E2",
+            "event_text": "大风",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-08",
+            "location": [],
+            "attributes": {
+              "intensity": "8级以上",
+              "scope": "南海北部、北部湾部分海域及华南沿海部分地区",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A009",
+          "event_id": "E3",
+          "event": {
+            "event_id": "E3",
+            "event_text": "大风",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "intensity": "13～17级，阵风17级以上",
+              "scope": "台风中心经过附近海域",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A010",
+          "event_id": "E1",
+          "event": {
+            "event_id": "E1",
+            "event_text": "台风",
+            "event_type": "Driver",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "time_uncertain": false,
+              "name": "摩羯"
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A010",
+          "event_id": "E3",
+          "event": {
+            "event_id": "E3",
+            "event_text": "横风",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "time_uncertain": false,
+              "location_context": "桥面"
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A010",
+          "event_id": "E4",
+          "event": {
+            "event_id": "E4",
+            "event_text": "雨天",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A011",
+          "event_id": "E1",
+          "event": {
+            "event_id": "E1",
+            "event_text": "台风",
+            "event_type": "Driver",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [],
+            "attributes": {
+              "intensity": "超强台风级",
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A011",
+          "event_id": "E2",
+          "event": {
+            "event_id": "E2",
+            "event_text": "大风",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [],
+            "attributes": {
+              "intensity": "13-17级以上",
+              "scope": "南海大部、广东西南部及广东沿海、海南岛及其沿海、广西南部及其沿海",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A011",
+          "event_id": "E3",
+          "event": {
+            "event_id": "E3",
+            "event_text": "降水",
+            "event_type": "Driver",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [],
+            "attributes": {
+              "intensity": "大到暴雨、大暴雨、特大暴雨",
+              "scope": "广西东南部、广东西南部和海南岛等地",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E3",
+          "event": {
+            "event_id": "E3",
+            "event_text": "风暴增水",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [],
+            "attributes": {
+              "scope": "深圳至雷州半岛东岸沿海",
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E4",
+          "event": {
+            "event_id": "E4",
+            "event_text": "风暴增水",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [],
+            "attributes": {
+              "scope": "茂名至徐闻沿海",
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E5",
+          "event": {
+            "event_id": "E5",
+            "event_text": "高潮位",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [],
+            "attributes": {
+              "scope": "深圳至雷州半岛东岸沿海大部分潮位站",
+              "severity": "接近或超过警戒水位",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E7",
+          "event": {
+            "event_id": "E7",
+            "event_text": "高潮位",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [],
+            "attributes": {
+              "severity": "历史第三高潮位",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E24",
+          "event": {
+            "event_id": "E24",
+            "event_text": "水库动态调度",
+            "event_type": "Impact",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "target": "大水桥水库",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E25",
+          "event": {
+            "event_id": "E25",
+            "event_text": "水库蓄水",
+            "event_type": "Impact",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "target": "大河水库、高州水库、罗坑水库（电白）",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E26",
+          "event": {
+            "event_id": "E26",
+            "event_text": "工作组派出",
+            "event_type": "Impact",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "number": 19,
+              "scope": "省级工作组、专家组",
+              "target_region": "粤西3市",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E27",
+          "event": {
+            "event_id": "E27",
+            "event_text": "应急通信队预置",
+            "event_type": "Impact",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "number": 1,
+              "scope": "省级",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E28",
+          "event": {
+            "event_id": "E28",
+            "event_text": "抢险队预置",
+            "event_type": "Impact",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "number": 681,
+              "scope": "省级专业抢险队18支小分队",
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E29",
+          "event": {
+            "event_id": "E29",
+            "event_text": "救灾物资调派",
+            "event_type": "Impact",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "unit": "万",
+              "value": 457,
+              "time_uncertain": false
+            },
+            "article_id": null
+          }
+        }
+      ],
+      "severity_out_of_set": [
+        {
+          "article_id": "A014",
+          "event_id": "E5",
+          "severity": "接近或超过警戒水位",
+          "event": {
+            "event_id": "E5",
+            "event_text": "高潮位",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [],
+            "attributes": {
+              "scope": "深圳至雷州半岛东岸沿海大部分潮位站",
+              "severity": "接近或超过警戒水位",
+              "time_uncertain": false
+            },
+            "article_id": null
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E6",
+          "severity": "历史第二高潮位",
+          "event": {
+            "event_id": "E6",
+            "event_text": "高潮位",
+            "event_type": "Hazard",
+            "city": "湛江",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [
+              "广东省",
+              "湛江市"
+            ],
+            "attributes": {
+              "severity": "历史第二高潮位",
+              "time_uncertain": false
+            },
+            "article_id": null
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A014",
+          "event_id": "E7",
+          "severity": "历史第三高潮位",
+          "event": {
+            "event_id": "E7",
+            "event_text": "高潮位",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [],
+            "attributes": {
+              "severity": "历史第三高潮位",
+              "time_uncertain": false
+            },
+            "article_id": null
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A031",
+          "event_id": "E5",
+          "severity": "滞后性",
+          "event": {
+            "event_id": "E5",
+            "event_text": "地质灾害",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市"
+            ],
+            "attributes": {
+              "severity": "滞后性",
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "前期我市多降雨，土壤含水量高，请注意防范强降雨对地质灾害滞后性的影响。",
+              "降雨减弱后仍需注意地质灾害滞后性"
+            ]
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A040",
+          "event_id": "E2",
+          "severity": "high",
+          "event": {
+            "event_id": "E2",
+            "event_text": "高温",
+            "event_type": "Hazard",
+            "city": "广州",
+            "date_from": "2024-09-04",
+            "date_to": "2024-09-04",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "severity": "high",
+              "temperature": "36℃",
+              "time_uncertain": false
+            },
+            "article_id": null
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A047",
+          "event_id": "E4",
+          "severity": "IV级",
+          "event": {
+            "event_id": "E4",
+            "event_text": "防台风响应",
+            "event_type": "Impact",
+            "city": "佛山",
+            "date_from": "2024-09-04",
+            "date_to": "2024-09-06",
+            "location": [
+              "广东省",
+              "佛山市",
+              "顺德区",
+              "北滘镇"
+            ],
+            "attributes": {
+              "severity": "IV级",
+              "time_uncertain": false
+            },
+            "article_id": null
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A058",
+          "event_id": "E8",
+          "severity": "重大",
+          "event": {
+            "event_id": "E8",
+            "event_text": "农作物损失",
+            "event_type": "Impact",
+            "city": "湛江",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-10",
+            "location": [
+              "广东省",
+              "湛江市"
+            ],
+            "attributes": {
+              "scope": "千万",
+              "severity": "重大",
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "千万农作物遭遇重大损失",
+              "田间大海里，作物倒伏、鱼虾伤亡，农户损失亟须补救，保险必须及时到位。",
+              "在广东农垦湛江垦区，9万余亩甘蔗受到台风影响。"
+            ]
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A059",
+          "event_id": "E4",
+          "severity": "local",
+          "event": {
+            "event_id": "E4",
+            "event_text": "暴雨",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-14",
+            "date_to": "2024-09-14",
+            "location": [
+              "广东省",
+              "粤东市县"
+            ],
+            "attributes": {
+              "severity": "local"
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "其中14日粤东、珠江三角洲、韶关和河源市县多云到阴天，有中到强雷雨，局部暴雨或大暴雨"
+            ]
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A059",
+          "event_id": "E5",
+          "severity": "local",
+          "event": {
+            "event_id": "E5",
+            "event_text": "暴雨",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-14",
+            "date_to": "2024-09-14",
+            "location": [
+              "广东省",
+              "珠江三角洲市县"
+            ],
+            "attributes": {
+              "severity": "local"
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "其中14日粤东、珠江三角洲、韶关和河源市县多云到阴天，有中到强雷雨，局部暴雨或大暴雨"
+            ]
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A059",
+          "event_id": "E6",
+          "severity": "local",
+          "event": {
+            "event_id": "E6",
+            "event_text": "暴雨",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-14",
+            "date_to": "2024-09-14",
+            "location": [
+              "广东省",
+              "韶关市"
+            ],
+            "attributes": {
+              "severity": "local"
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "其中14日粤东、珠江三角洲、韶关和河源市县多云到阴天，有中到强雷雨，局部暴雨或大暴雨"
+            ]
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A059",
+          "event_id": "E7",
+          "severity": "local",
+          "event": {
+            "event_id": "E7",
+            "event_text": "暴雨",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-14",
+            "date_to": "2024-09-14",
+            "location": [
+              "广东省",
+              "河源市"
+            ],
+            "attributes": {
+              "severity": "local"
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "其中14日粤东、珠江三角洲、韶关和河源市县多云到阴天，有中到强雷雨，局部暴雨或大暴雨"
+            ]
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A059",
+          "event_id": "E8",
+          "severity": "local",
+          "event": {
+            "event_id": "E8",
+            "event_text": "暴雨",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-15",
+            "date_to": "2024-09-15",
+            "location": [
+              "广东省",
+              "清远市"
+            ],
+            "attributes": {
+              "severity": "local"
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "预计15日清远、珠江三角洲和粤西市县多云间阴天有中（雷）阵雨局部暴雨或大暴雨"
+            ]
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A059",
+          "event_id": "E9",
+          "severity": "local",
+          "event": {
+            "event_id": "E9",
+            "event_text": "暴雨",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-15",
+            "date_to": "2024-09-15",
+            "location": [
+              "广东省",
+              "珠江三角洲市县"
+            ],
+            "attributes": {
+              "severity": "local"
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "预计15日清远、珠江三角洲和粤西市县多云间阴天有中（雷）阵雨局部暴雨或大暴雨"
+            ]
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A059",
+          "event_id": "E10",
+          "severity": "local",
+          "event": {
+            "event_id": "E10",
+            "event_text": "暴雨",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-15",
+            "date_to": "2024-09-15",
+            "location": [
+              "广东省",
+              "粤西市县"
+            ],
+            "attributes": {
+              "severity": "local"
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "预计15日清远、珠江三角洲和粤西市县多云间阴天有中（雷）阵雨局部暴雨或大暴雨"
+            ]
+          },
+          "_score": 2
+        },
+        {
+          "article_id": "A089",
+          "event_id": "E4",
+          "severity": "接近或略超警戒",
+          "event": {
+            "event_id": "E4",
+            "event_text": "高潮位",
+            "event_type": "Hazard",
+            "city": "广州",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "广东省",
+              "广州市",
+              "珠江口沿岸"
+            ],
+            "attributes": {
+              "severity": "接近或略超警戒",
+              "time_uncertain": false
+            },
+            "article_id": null,
+            "evidence_sentences": [
+              "预计9月6日珠江口沿岸各潮位站将出现接近或略超警戒的高潮位"
+            ]
+          },
+          "_score": 2
+        }
+      ],
+      "dup_event_text_norm_in_article": [
+        {
+          "article_id": "A000",
+          "dup_norm_text_count": 6,
+          "top_norm_texts": [
+            [
+              "积水",
+              2
+            ],
+            [
+              "树木倒地",
+              2
+            ],
+            [
+              "交通受阻",
+              2
+            ],
+            [
+              "暴雨",
+              1
+            ],
+            [
+              "车辆被砸",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A002",
+          "dup_norm_text_count": 27,
+          "top_norm_texts": [
+            [
+              "高温",
+              10
+            ],
+            [
+              "雷雨大风",
+              9
+            ],
+            [
+              "暴雨",
+              8
+            ],
+            [
+              "应急响应启动",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A003",
+          "dup_norm_text_count": 4,
+          "top_norm_texts": [
+            [
+              "农村生活污水治理提升工程",
+              4
+            ],
+            [
+              "生活污水直排",
+              1
+            ],
+            [
+              "水体黑臭",
+              1
+            ],
+            [
+              "农产品种植受影响",
+              1
+            ],
+            [
+              "污水处理厂建设",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A007",
+          "dup_norm_text_count": 4,
+          "top_norm_texts": [
+            [
+              "交通管控",
+              2
+            ],
+            [
+              "前置执勤",
+              2
+            ],
+            [
+              "台风",
+              1
+            ],
+            [
+              "停工",
+              1
+            ],
+            [
+              "撤离转移",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A009",
+          "dup_norm_text_count": 6,
+          "top_norm_texts": [
+            [
+              "大风",
+              2
+            ],
+            [
+              "暴雨",
+              2
+            ],
+            [
+              "应急响应",
+              2
+            ],
+            [
+              "台风",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A011",
+          "dup_norm_text_count": 10,
+          "top_norm_texts": [
+            [
+              "大风",
+              6
+            ],
+            [
+              "降水",
+              4
+            ],
+            [
+              "台风",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A012",
+          "dup_norm_text_count": 3,
+          "top_norm_texts": [
+            [
+              "前置执勤",
+              3
+            ],
+            [
+              "台风",
+              1
+            ],
+            [
+              "巡逻防控",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A013",
+          "dup_norm_text_count": 9,
+          "top_norm_texts": [
+            [
+              "交通管制",
+              9
+            ],
+            [
+              "台风",
+              1
+            ],
+            [
+              "积水",
+              1
+            ],
+            [
+              "强暴雨",
+              1
+            ],
+            [
+              "强横风",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A014",
+          "dup_norm_text_count": 24,
+          "top_norm_texts": [
+            [
+              "应急响应",
+              15
+            ],
+            [
+              "高潮位",
+              3
+            ],
+            [
+              "台风",
+              2
+            ],
+            [
+              "风暴增水",
+              2
+            ],
+            [
+              "工作组派出",
+              2
+            ]
+          ]
+        },
+        {
+          "article_id": "A015",
+          "dup_norm_text_count": 5,
+          "top_norm_texts": [
+            [
+              "降水",
+              5
+            ],
+            [
+              "台风",
+              1
+            ],
+            [
+              "大风",
+              1
+            ],
+            [
+              "强降水",
+              1
+            ],
+            [
+              "积涝",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A016",
+          "dup_norm_text_count": 4,
+          "top_norm_texts": [
+            [
+              "供电中断",
+              2
+            ],
+            [
+              "抢修",
+              2
+            ],
+            [
+              "台风",
+              1
+            ],
+            [
+              "狂风",
+              1
+            ],
+            [
+              "重物坠落",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A018",
+          "dup_norm_text_count": 8,
+          "top_norm_texts": [
+            [
+              "交通中断",
+              2
+            ],
+            [
+              "电力中断",
+              2
+            ],
+            [
+              "通信中断",
+              2
+            ],
+            [
+              "群众受灾",
+              2
+            ],
+            [
+              "台风",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A019",
+          "dup_norm_text_count": 10,
+          "top_norm_texts": [
+            [
+              "降水",
+              8
+            ],
+            [
+              "高温",
+              2
+            ],
+            [
+              "台风",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A020",
+          "dup_norm_text_count": 14,
+          "top_norm_texts": [
+            [
+              "雷雨",
+              4
+            ],
+            [
+              "暴雨",
+              4
+            ],
+            [
+              "雷阵雨",
+              4
+            ],
+            [
+              "台风",
+              2
+            ],
+            [
+              "风灾",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A025",
+          "dup_norm_text_count": 2,
+          "top_norm_texts": [
+            [
+              "暴雨",
+              2
+            ],
+            [
+              "冷空气",
+              1
+            ],
+            [
+              "季风槽",
+              1
+            ],
+            [
+              "大暴雨",
+              1
+            ],
+            [
+              "地质灾害",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A027",
+          "dup_norm_text_count": 10,
+          "top_norm_texts": [
+            [
+              "狂风",
+              5
+            ],
+            [
+              "暴雨",
+              5
+            ],
+            [
+              "台风",
+              1
+            ],
+            [
+              "交通中断",
+              1
+            ],
+            [
+              "供电中断",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A033",
+          "dup_norm_text_count": 27,
+          "top_norm_texts": [
+            [
+              "高温",
+              10
+            ],
+            [
+              "雷雨大风",
+              9
+            ],
+            [
+              "暴雨",
+              8
+            ],
+            [
+              "应急响应",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A035",
+          "dup_norm_text_count": 2,
+          "top_norm_texts": [
+            [
+              "积水",
+              2
+            ],
+            [
+              "降水",
+              1
+            ],
+            [
+              "强降雨",
+              1
+            ],
+            [
+              "出行不便",
+              1
+            ],
+            [
+              "出行难",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A037",
+          "dup_norm_text_count": 2,
+          "top_norm_texts": [
+            [
+              "高温",
+              2
+            ],
+            [
+              "热带低压",
+              1
+            ],
+            [
+              "台风",
+              1
+            ],
+            [
+              "降雨",
+              1
+            ],
+            [
+              "中雨",
+              1
+            ]
+          ]
+        },
+        {
+          "article_id": "A040",
+          "dup_norm_text_count": 9,
+          "top_norm_texts": [
+            [
+              "台风白色预警",
+              4
+            ],
+            [
+              "台风蓝色预警",
+              3
+            ],
+            [
+              "大风",
+              2
+            ],
+            [
+              "台风",
+              1
+            ],
+            [
+              "高温",
+              1
+            ]
+          ]
+        }
+      ],
+      "relation_type_out_of_set": [
+        {
+          "article_id": "A001",
+          "relation": {
+            "source_event_id": "E5",
+            "relation_type": "削弱",
+            "target_event_id": "E6",
+            "evidence_sentence": "30-31日副高加强，降水减弱"
+          }
+        },
+        {
+          "article_id": "A003",
+          "relation": {
+            "source_event_id": "E4",
+            "relation_type": "缓解",
+            "target_event_id": "E2",
+            "evidence_sentence": "2019年至2020年，广州市水务局牵头奋力推进16座污水处理厂建设；位于白云区的龙归污水处理厂扩建工程（三期），是16座污水处理厂之一。"
+          }
+        },
+        {
+          "article_id": "A003",
+          "relation": {
+            "source_event_id": "E5",
+            "relation_type": "缓解",
+            "target_event_id": "E2",
+            "evidence_sentence": "方石村新建39.26公里污水收集管网，接管到户全面收集村民生活污水，并精准实施“雨污分流”，村内分离“雨水”后的生活污水统一经管网接驳至周边市政污水管网输送至龙归污水处理厂集中处理。"
+          }
+        },
+        {
+          "article_id": "A003",
+          "relation": {
+            "source_event_id": "E6",
+            "relation_type": "缓解",
+            "target_event_id": "E2",
+            "evidence_sentence": "科技力量加持，让方石村的排水管网获得了和广州中心城区市政排水管网标准一致的管养维护，持续保障村内绿美水环境。"
+          }
+        },
+        {
+          "article_id": "A003",
+          "relation": {
+            "source_event_id": "E6",
+            "relation_type": "增强",
+            "target_event_id": "E7",
+            "evidence_sentence": "科技力量加持，让方石村的排水管网获得了和广州中心城区市政排水管网标准一致的管养维护，持续保障村内绿美水环境。"
+          }
+        },
+        {
+          "article_id": "A017",
+          "relation": {
+            "source_event_id": "E3",
+            "relation_type": "缓解",
+            "target_event_id": "E2",
+            "evidence_sentence": "高效的理赔服务充分发挥了农业保险及时补偿损失，助力灾后复产的积极作用。"
+          }
+        },
+        {
+          "article_id": "A020",
+          "relation": {
+            "source_event_id": "E10",
+            "relation_type": "削弱",
+            "target_event_id": "E11"
+          }
+        },
+        {
+          "article_id": "A020",
+          "relation": {
+            "source_event_id": "E10",
+            "relation_type": "增强",
+            "target_event_id": "E12"
+          }
+        },
+        {
+          "article_id": "A021",
+          "relation": {
+            "source_event_id": "E3",
+            "relation_type": "缓解",
+            "target_event_id": "E2"
+          }
+        },
+        {
+          "article_id": "A021",
+          "relation": {
+            "source_event_id": "E3",
+            "relation_type": "缓解",
+            "target_event_id": "E4"
+          }
+        },
+        {
+          "article_id": "A021",
+          "relation": {
+            "source_event_id": "E3",
+            "relation_type": "缓解",
+            "target_event_id": "E5"
+          }
+        },
+        {
+          "article_id": "A022",
+          "relation": {
+            "source_event_id": "E3",
+            "relation_type": "抑制",
+            "target_event_id": "E1"
+          }
+        },
+        {
+          "article_id": "A022",
+          "relation": {
+            "source_event_id": "E3",
+            "relation_type": "缓解",
+            "target_event_id": "E4"
+          }
+        },
+        {
+          "article_id": "A029",
+          "relation": {
+            "source_event_id": "E2",
+            "relation_type": "缓解",
+            "target_event_id": "E3"
+          }
+        },
+        {
+          "article_id": "A031",
+          "relation": {
+            "source_event_id": "E2",
+            "relation_type": "抑制",
+            "target_event_id": "E1",
+            "evidence_sentence": "随着副热带高压重新控场 本次强降雨过程就基本结束了"
+          }
+        },
+        {
+          "article_id": "A031",
+          "relation": {
+            "source_event_id": "E6",
+            "relation_type": "削弱",
+            "target_event_id": "E1",
+            "evidence_sentence": "对广东没有直接影响。"
+          }
+        },
+        {
+          "article_id": "A037",
+          "relation": {
+            "source_event_id": "E5",
+            "relation_type": "削弱",
+            "target_event_id": "E3"
+          }
+        },
+        {
+          "article_id": "A037",
+          "relation": {
+            "source_event_id": "E6",
+            "relation_type": "削弱",
+            "target_event_id": "E3"
+          }
+        },
+        {
+          "article_id": "A037",
+          "relation": {
+            "source_event_id": "E7",
+            "relation_type": "削弱",
+            "target_event_id": "E3"
+          }
+        },
+        {
+          "article_id": "A040",
+          "relation": {
+            "source_event_id": "E2",
+            "relation_type": "削弱",
+            "target_event_id": "E3"
+          }
+        }
+      ]
+    },
+    "top_suspicious": [
+      {
+        "article_id": "A014",
+        "event_id": "E5",
+        "severity": "接近或超过警戒水位",
+        "event": {
+          "event_id": "E5",
+          "event_text": "高潮位",
+          "event_type": "Hazard",
+          "city": null,
+          "date_from": "2024-09-06",
+          "date_to": "2024-09-07",
+          "location": [],
+          "attributes": {
+            "scope": "深圳至雷州半岛东岸沿海大部分潮位站",
+            "severity": "接近或超过警戒水位",
+            "time_uncertain": false
+          },
+          "article_id": null
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A014",
+        "event_id": "E6",
+        "severity": "历史第二高潮位",
+        "event": {
+          "event_id": "E6",
+          "event_text": "高潮位",
+          "event_type": "Hazard",
+          "city": "湛江",
+          "date_from": "2024-09-06",
+          "date_to": "2024-09-07",
+          "location": [
+            "广东省",
+            "湛江市"
+          ],
+          "attributes": {
+            "severity": "历史第二高潮位",
+            "time_uncertain": false
+          },
+          "article_id": null
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A014",
+        "event_id": "E7",
+        "severity": "历史第三高潮位",
+        "event": {
+          "event_id": "E7",
+          "event_text": "高潮位",
+          "event_type": "Hazard",
+          "city": null,
+          "date_from": "2024-09-06",
+          "date_to": "2024-09-07",
+          "location": [],
+          "attributes": {
+            "severity": "历史第三高潮位",
+            "time_uncertain": false
+          },
+          "article_id": null
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A031",
+        "event_id": "E5",
+        "severity": "滞后性",
+        "event": {
+          "event_id": "E5",
+          "event_text": "地质灾害",
+          "event_type": "Hazard",
+          "city": "深圳",
+          "date_from": "2024-08-23",
+          "date_to": "2024-08-23",
+          "location": [
+            "广东省",
+            "深圳市"
+          ],
+          "attributes": {
+            "severity": "滞后性",
+            "time_uncertain": false
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "前期我市多降雨，土壤含水量高，请注意防范强降雨对地质灾害滞后性的影响。",
+            "降雨减弱后仍需注意地质灾害滞后性"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A040",
+        "event_id": "E2",
+        "severity": "high",
+        "event": {
+          "event_id": "E2",
+          "event_text": "高温",
+          "event_type": "Hazard",
+          "city": "广州",
+          "date_from": "2024-09-04",
+          "date_to": "2024-09-04",
+          "location": [
+            "广东省",
+            "广州市"
+          ],
+          "attributes": {
+            "severity": "high",
+            "temperature": "36℃",
+            "time_uncertain": false
+          },
+          "article_id": null
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A047",
+        "event_id": "E4",
+        "severity": "IV级",
+        "event": {
+          "event_id": "E4",
+          "event_text": "防台风响应",
+          "event_type": "Impact",
+          "city": "佛山",
+          "date_from": "2024-09-04",
+          "date_to": "2024-09-06",
+          "location": [
+            "广东省",
+            "佛山市",
+            "顺德区",
+            "北滘镇"
+          ],
+          "attributes": {
+            "severity": "IV级",
+            "time_uncertain": false
+          },
+          "article_id": null
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A058",
+        "event_id": "E8",
+        "severity": "重大",
+        "event": {
+          "event_id": "E8",
+          "event_text": "农作物损失",
+          "event_type": "Impact",
+          "city": "湛江",
+          "date_from": "2024-09-06",
+          "date_to": "2024-09-10",
+          "location": [
+            "广东省",
+            "湛江市"
+          ],
+          "attributes": {
+            "scope": "千万",
+            "severity": "重大",
+            "time_uncertain": false
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "千万农作物遭遇重大损失",
+            "田间大海里，作物倒伏、鱼虾伤亡，农户损失亟须补救，保险必须及时到位。",
+            "在广东农垦湛江垦区，9万余亩甘蔗受到台风影响。"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A059",
+        "event_id": "E4",
+        "severity": "local",
+        "event": {
+          "event_id": "E4",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "city": null,
+          "date_from": "2024-09-14",
+          "date_to": "2024-09-14",
+          "location": [
+            "广东省",
+            "粤东市县"
+          ],
+          "attributes": {
+            "severity": "local"
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "其中14日粤东、珠江三角洲、韶关和河源市县多云到阴天，有中到强雷雨，局部暴雨或大暴雨"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A059",
+        "event_id": "E5",
+        "severity": "local",
+        "event": {
+          "event_id": "E5",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "city": null,
+          "date_from": "2024-09-14",
+          "date_to": "2024-09-14",
+          "location": [
+            "广东省",
+            "珠江三角洲市县"
+          ],
+          "attributes": {
+            "severity": "local"
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "其中14日粤东、珠江三角洲、韶关和河源市县多云到阴天，有中到强雷雨，局部暴雨或大暴雨"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A059",
+        "event_id": "E6",
+        "severity": "local",
+        "event": {
+          "event_id": "E6",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "city": null,
+          "date_from": "2024-09-14",
+          "date_to": "2024-09-14",
+          "location": [
+            "广东省",
+            "韶关市"
+          ],
+          "attributes": {
+            "severity": "local"
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "其中14日粤东、珠江三角洲、韶关和河源市县多云到阴天，有中到强雷雨，局部暴雨或大暴雨"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A059",
+        "event_id": "E7",
+        "severity": "local",
+        "event": {
+          "event_id": "E7",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "city": null,
+          "date_from": "2024-09-14",
+          "date_to": "2024-09-14",
+          "location": [
+            "广东省",
+            "河源市"
+          ],
+          "attributes": {
+            "severity": "local"
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "其中14日粤东、珠江三角洲、韶关和河源市县多云到阴天，有中到强雷雨，局部暴雨或大暴雨"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A059",
+        "event_id": "E8",
+        "severity": "local",
+        "event": {
+          "event_id": "E8",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "city": null,
+          "date_from": "2024-09-15",
+          "date_to": "2024-09-15",
+          "location": [
+            "广东省",
+            "清远市"
+          ],
+          "attributes": {
+            "severity": "local"
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "预计15日清远、珠江三角洲和粤西市县多云间阴天有中（雷）阵雨局部暴雨或大暴雨"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A059",
+        "event_id": "E9",
+        "severity": "local",
+        "event": {
+          "event_id": "E9",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "city": null,
+          "date_from": "2024-09-15",
+          "date_to": "2024-09-15",
+          "location": [
+            "广东省",
+            "珠江三角洲市县"
+          ],
+          "attributes": {
+            "severity": "local"
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "预计15日清远、珠江三角洲和粤西市县多云间阴天有中（雷）阵雨局部暴雨或大暴雨"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A059",
+        "event_id": "E10",
+        "severity": "local",
+        "event": {
+          "event_id": "E10",
+          "event_text": "暴雨",
+          "event_type": "Hazard",
+          "city": null,
+          "date_from": "2024-09-15",
+          "date_to": "2024-09-15",
+          "location": [
+            "广东省",
+            "粤西市县"
+          ],
+          "attributes": {
+            "severity": "local"
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "预计15日清远、珠江三角洲和粤西市县多云间阴天有中（雷）阵雨局部暴雨或大暴雨"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A089",
+        "event_id": "E4",
+        "severity": "接近或略超警戒",
+        "event": {
+          "event_id": "E4",
+          "event_text": "高潮位",
+          "event_type": "Hazard",
+          "city": "广州",
+          "date_from": "2024-09-06",
+          "date_to": "2024-09-06",
+          "location": [
+            "广东省",
+            "广州市",
+            "珠江口沿岸"
+          ],
+          "attributes": {
+            "severity": "接近或略超警戒",
+            "time_uncertain": false
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "预计9月6日珠江口沿岸各潮位站将出现接近或略超警戒的高潮位"
+          ]
+        },
+        "_score": 2,
+        "_issue": "severity_out_of_set"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E1",
+        "len": 2,
+        "event_text": "暴雨",
+        "event": {
+          "event_id": "E1",
+          "event_text": "暴雨",
+          "event_type": "Driver",
+          "city": "深圳",
+          "date_from": "2024-08-23",
+          "date_to": "2024-08-23",
+          "location": [
+            "广东省",
+            "深圳市",
+            "坪山区"
+          ],
+          "attributes": {
+            "time_uncertain": true
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "近期，深圳市坪山区突降暴雨"
+          ]
+        },
+        "_issue": "event_text_too_short",
+        "_score": 1
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E2",
+        "len": 2,
+        "event_text": "积水",
+        "event": {
+          "event_id": "E2",
+          "event_text": "积水",
+          "event_type": "Hazard",
+          "city": "深圳",
+          "date_from": "2024-08-23",
+          "date_to": "2024-08-23",
+          "location": [
+            "广东省",
+            "深圳市",
+            "坪山区",
+            "金碧路"
+          ],
+          "attributes": {
+            "severity": "severe",
+            "time_uncertain": true
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "坪山中队警力巡逻至碧岭街道金碧路时，发现该路段积水严重。"
+          ]
+        },
+        "_issue": "event_text_too_short",
+        "_score": 1
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E3",
+        "len": 2,
+        "event_text": "积水",
+        "event": {
+          "event_id": "E3",
+          "event_text": "积水",
+          "event_type": "Hazard",
+          "city": "深圳",
+          "date_from": "2024-08-23",
+          "date_to": "2024-08-23",
+          "location": [
+            "广东省",
+            "深圳市",
+            "坪山区",
+            "丹梓大道"
+          ],
+          "attributes": {
+            "severity": "severe",
+            "time_uncertain": true
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "坪山区丹梓大道路积水严重，车辆缓慢通行。"
+          ]
+        },
+        "_issue": "event_text_too_short",
+        "_score": 1
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E4",
+        "len": 4,
+        "event_text": "树木倒地",
+        "event": {
+          "event_id": "E4",
+          "event_text": "树木倒地",
+          "event_type": "Hazard",
+          "city": "深圳",
+          "date_from": "2024-08-23",
+          "date_to": "2024-08-23",
+          "location": [
+            "广东省",
+            "深圳市",
+            "坪山区",
+            "坪山大道"
+          ],
+          "attributes": {
+            "time_uncertain": true
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "狂风暴雨导致坪山大道路边树木倒地"
+          ]
+        },
+        "_issue": "event_text_too_short",
+        "_score": 1
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E5",
+        "len": 4,
+        "event_text": "树木倒地",
+        "event": {
+          "event_id": "E5",
+          "event_text": "树木倒地",
+          "event_type": "Hazard",
+          "city": "深圳",
+          "date_from": "2024-08-23",
+          "date_to": "2024-08-23",
+          "location": [
+            "广东省",
+            "深圳市",
+            "坪山区",
+            "荔景路"
+          ],
+          "attributes": {
+            "time_uncertain": true
+          },
+          "article_id": null,
+          "evidence_sentences": [
+            "坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通"
+          ]
+        },
+        "_issue": "event_text_too_short",
+        "_score": 1
+      }
+    ]
+  }
+}

@@ -319,62 +319,259 @@ def main():
     results_dir = root.parent / "results"
     csv_path = (data_dir / "articles_cleaned.csv").resolve()
     df = pd.read_csv(csv_path)
+    results_dir.mkdir(parents=True, exist_ok=True)
 
-    texts = df.head(100)["content"].fillna("").tolist()
-    publish_dates = df.head(100)["publish_time"].fillna("").apply(lambda x: x.split()[0] if x and len(x.split()) > 0 else "").tolist()
+    batch_size = 100
+    n_rows = len(df)
 
     total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
-    results = []
+    all_results = []
     t0 = time.perf_counter()
-    for i, text in enumerate(texts[:20]):
-        article_id = f"A{i:03d}"
-        publish_date = publish_dates[i] if i < len(publish_dates) else ""
-        try:
-            out, usage = extract_events_and_relations(
-                text,
-                api_key=DEEPSEEK_API_KEY,
-                base_url=DEEPSEEK_BASE_URL,
-                model=DEEPSEEK_MODEL,
-                proxy=HTTP_PROXY or None,
-                article_id=article_id,
-                publish_date=publish_date,
-                revise_rounds=0,
+
+    for batch_idx, start in enumerate(range(0, n_rows, batch_size), start=1):
+        end = min(start + batch_size, n_rows)
+        run_name = f"run{batch_idx}"
+        run_dir = results_dir / run_name
+        run_dir.mkdir(parents=True, exist_ok=True)
+
+        usage_txt_path = run_dir / "usage_tokens.txt"
+        run_json_path = run_dir / "results.json"
+
+        if usage_txt_path.exists() and run_json_path.exists():
+            try:
+                with open(run_json_path, "r", encoding="utf-8") as f:
+                    prev_data = json.load(f)
+                prev_results = prev_data.get("results", [])
+                prev_stats = prev_data.get("run_stats", {})
+                total_usage["prompt_tokens"] += int(prev_stats.get("total_prompt_tokens", 0))
+                total_usage["completion_tokens"] += int(prev_stats.get("total_completion_tokens", 0))
+                total_usage["total_tokens"] += int(prev_stats.get("total_tokens", 0))
+            except Exception:
+                print(f"{run_name} 已存在但结果无法加载，重新处理第 {start}~{end-1} 条", flush=True)
+                prev_results = None
+
+            if prev_results is not None:
+                failed_txt_path = run_dir / "failed_indices.txt"
+                fail_again_path = run_dir / "failAgain.txt"
+
+                if fail_again_path.exists():
+                    print(f"{run_name} 已完成重试（failAgain.txt 已存在），直接载入", flush=True)
+                    all_results.extend(prev_results)
+                    continue
+
+                if not failed_txt_path.exists():
+                    print(f"{run_name} 已存在且无失败，跳过第 {start}~{end-1} 条", flush=True)
+                    all_results.extend(prev_results)
+                    continue
+
+                failed_indices = set()
+                with open(failed_txt_path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if line.isdigit():
+                            failed_indices.add(int(line))
+
+                if not failed_indices:
+                    print(f"{run_name} failed_indices.txt 为空，跳过", flush=True)
+                    all_results.extend(prev_results)
+                    continue
+
+                print(f"{run_name} 发现 {len(failed_indices)} 条失败，开始重试: {sorted(failed_indices)}", flush=True)
+                results_by_idx = {r["index"]: r for r in prev_results}
+                retry_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+                still_failed = []
+
+                for gidx in sorted(failed_indices):
+                    offset = gidx - start
+                    row = df.iloc[gidx]
+                    text = str(row["content"]) if pd.notna(row["content"]) else ""
+                    raw_pt = row["publish_time"] if pd.notna(row.get("publish_time")) else ""
+                    publish_date = str(raw_pt).split()[0] if raw_pt and len(str(raw_pt).split()) > 0 else ""
+                    article_id = f"A{gidx:03d}"
+                    try:
+                        out, usage = extract_events_and_relations(
+                            text,
+                            api_key=DEEPSEEK_API_KEY,
+                            base_url=DEEPSEEK_BASE_URL,
+                            model=DEEPSEEK_MODEL,
+                            proxy=HTTP_PROXY or None,
+                            article_id=article_id,
+                            publish_date=publish_date,
+                            revise_rounds=0,
+                        )
+                        for k in retry_usage:
+                            v = int(usage.get(k, 0))
+                            retry_usage[k] += v
+                            total_usage[k] += v
+                        results_by_idx[gidx] = {
+                            "index": int(gidx),
+                            "article_id": article_id,
+                            "publish_date": publish_date,
+                            "content_preview": text[:100] if text else "",
+                            "extraction": out,
+                        }
+                        print(f"{run_name} 重试: 第 {gidx} 条成功", flush=True)
+                    except Exception as e:
+                        print(f"{run_name} 重试: 第 {gidx} 条仍然失败：{e}", flush=True)
+                        still_failed.append(gidx)
+
+                updated_results = [results_by_idx[r["index"]] for r in prev_results if r["index"] in results_by_idx]
+                prev_stats["total_prompt_tokens"] = int(prev_stats.get("total_prompt_tokens", 0)) + retry_usage["prompt_tokens"]
+                prev_stats["total_completion_tokens"] = int(prev_stats.get("total_completion_tokens", 0)) + retry_usage["completion_tokens"]
+                prev_stats["total_tokens"] = int(prev_stats.get("total_tokens", 0)) + retry_usage["total_tokens"]
+                with open(run_json_path, "w", encoding="utf-8") as f:
+                    json.dump(
+                        {"run_id": run_name, "run_stats": prev_stats, "results": updated_results},
+                        f, ensure_ascii=False, indent=2,
+                    )
+                with open(usage_txt_path, "w", encoding="utf-8") as f:
+                    f.write(
+                        f"batch_index: {prev_stats.get('batch_index', batch_idx)}\n"
+                        f"start_index: {prev_stats.get('start_index', start)}\n"
+                        f"end_index: {prev_stats.get('end_index', end)}\n"
+                        f"total_prompt_tokens: {prev_stats['total_prompt_tokens']}\n"
+                        f"total_completion_tokens: {prev_stats['total_completion_tokens']}\n"
+                        f"total_tokens: {prev_stats['total_tokens']}\n"
+                    )
+
+                with open(fail_again_path, "w", encoding="utf-8") as f:
+                    if still_failed:
+                        f.write("\n".join(str(i) for i in sorted(still_failed)))
+                    else:
+                        f.write("0")
+
+                retry_ok = len(failed_indices) - len(still_failed)
+                print(
+                    f"{run_name} 重试完成：成功 {retry_ok} 条，仍失败 {len(still_failed)} 条 → failAgain.txt",
+                    flush=True,
+                )
+                all_results.extend(updated_results)
+                continue
+
+        batch_df = df.iloc[start:end]
+        texts = batch_df["content"].fillna("").tolist()
+        publish_dates = batch_df["publish_time"].fillna("").apply(
+            lambda x: x.split()[0] if x and isinstance(x, str) and len(x.split()) > 0 else ""
+        ).tolist()
+
+        batch_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+        batch_results = []
+        batch_failed_indices = []
+        batch_t0 = time.perf_counter()
+
+        for offset, text in enumerate(texts):
+            global_idx = start + offset
+            article_id = f"A{global_idx:03d}"
+            publish_date = publish_dates[offset] if offset < len(publish_dates) else ""
+            try:
+                out, usage = extract_events_and_relations(
+                    text,
+                    api_key=DEEPSEEK_API_KEY,
+                    base_url=DEEPSEEK_BASE_URL,
+                    model=DEEPSEEK_MODEL,
+                    proxy=HTTP_PROXY or None,
+                    article_id=article_id,
+                    publish_date=publish_date,
+                    revise_rounds=0,
+                )
+                for k in batch_usage:
+                    v = int(usage.get(k, 0))
+                    batch_usage[k] += v
+                    total_usage[k] += v
+                record = {
+                    "index": int(global_idx),
+                    "article_id": article_id,
+                    "publish_date": publish_date,
+                    "content_preview": text[:100] if text else "",
+                    "extraction": out,
+                }
+                batch_results.append(record)
+                all_results.append(record)
+                if (offset + 1) % 10 == 0 or offset == 0:
+                    print(
+                        f"{run_name}: 已处理本批 {offset + 1}/{len(texts)} 条（全局 {global_idx + 1}/{n_rows}）",
+                        flush=True,
+                    )
+            except Exception as e:
+                print(f"{run_name}: 第 {global_idx} 条处理失败，跳过：{e}", flush=True)
+                batch_failed_indices.append(global_idx)
+                record = {
+                    "index": int(global_idx),
+                    "article_id": article_id,
+                    "publish_date": publish_date,
+                    "content_preview": text[:100] if text else "",
+                    "error": str(e),
+                }
+                batch_results.append(record)
+                all_results.append(record)
+
+        batch_runtime_seconds = time.perf_counter() - batch_t0
+        run_stats = {
+            "batch_index": batch_idx,
+            "start_index": start,
+            "end_index": end,
+            "total_runtime_seconds": round(batch_runtime_seconds, 2),
+            "total_prompt_tokens": batch_usage["prompt_tokens"],
+            "total_completion_tokens": batch_usage["completion_tokens"],
+            "total_tokens": batch_usage["total_tokens"],
+        }
+
+        with open(run_json_path, "w", encoding="utf-8") as f:
+            json.dump(
+                {
+                    "run_id": run_name,
+                    "run_stats": run_stats,
+                    "results": batch_results,
+                },
+                f,
+                ensure_ascii=False,
+                indent=2,
             )
-            for k in total_usage:
-                total_usage[k] += usage.get(k, 0)
-            results.append({
-                "index": i,
-                "article_id": article_id,
-                "publish_date": publish_date,
-                "content_preview": text[:100] if text else "",
-                "extraction": out
-            })
-            if (i + 1) % 10 == 0 or i == 0:
-                print(f"已处理 {i+1}/{len(texts[:10])} 条", flush=True)
-        except Exception as e:
-            print(f"第 {i} 条处理失败：{e}", flush=True)
-            results.append({
-                "index": i,
-                "article_id": article_id,
-                "publish_date": publish_date,
-                "content_preview": text[:100] if text else "",
-                "error": str(e)
-            })
+
+        with open(usage_txt_path, "w", encoding="utf-8") as f:
+            f.write(
+                f"batch_index: {batch_idx}\n"
+                f"start_index: {start}\n"
+                f"end_index: {end}\n"
+                f"total_prompt_tokens: {batch_usage['prompt_tokens']}\n"
+                f"total_completion_tokens: {batch_usage['completion_tokens']}\n"
+                f"total_tokens: {batch_usage['total_tokens']}\n"
+                f"total_runtime_seconds: {round(batch_runtime_seconds, 2)}\n"
+            )
+
+        if batch_failed_indices:
+            failed_path = run_dir / "failed_indices.txt"
+            with open(failed_path, "w", encoding="utf-8") as f:
+                f.write("\n".join(str(i) for i in sorted(batch_failed_indices)))
+
+        print(
+            f"{run_name} 完成：第 {start}~{end-1} 条，"
+            f"tokens={batch_usage['total_tokens']} "
+            f"(prompt={batch_usage['prompt_tokens']}, completion={batch_usage['completion_tokens']})，"
+            f"runtime={round(batch_runtime_seconds, 2)}s",
+            flush=True,
+        )
+
     runtime_seconds = time.perf_counter() - t0
-    run_stats = {
+    global_run_stats = {
         "total_runtime_seconds": round(runtime_seconds, 2),
         "total_prompt_tokens": total_usage["prompt_tokens"],
-        "total_completion_tokens": total_usage["completion_tokens"],
+        "total_completion_tokens": total_usage["total_completion_tokens"],
         "total_tokens": total_usage["total_tokens"],
     }
 
     output_path = (results_dir / "deepseek_event_schema_results.json").resolve()
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump({"run_stats": run_stats, "results": results}, f, ensure_ascii=False, indent=2)
+        json.dump({"run_stats": global_run_stats, "results": all_results}, f, ensure_ascii=False, indent=2)
 
-    print(f"\n结果已保存到：{output_path}")
-    print(f"成功：{sum(1 for r in results if 'extraction' in r)} 条，失败：{sum(1 for r in results if 'error' in r)} 条")
-    print(f"run_stats: runtime={run_stats['total_runtime_seconds']}s, tokens={run_stats['total_tokens']} (prompt={run_stats['total_prompt_tokens']}, completion={run_stats['total_completion_tokens']})")
+    print(f"\n结果汇总已保存到：{output_path}")
+    print(f"成功：{sum(1 for r in all_results if 'extraction' in r)} 条，失败：{sum(1 for r in all_results if 'error' in r)} 条")
+    print(
+        f"run_stats: runtime={global_run_stats['total_runtime_seconds']}s, "
+        f"tokens={global_run_stats['total_tokens']} "
+        f"(prompt={global_run_stats['total_prompt_tokens']}, "
+        f"completion={global_run_stats['total_completion_tokens']})"
+    )
 
 
 if __name__ == "__main__":

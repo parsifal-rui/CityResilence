@@ -1,0 +1,8 @@
+
+然后进行time + space + semantic 的三维聚类（DBSCAN 或等价方法均可），合并为时空上连续、语义一致的同一事件，并输出：
+- clustered events（event_id、覆盖城市集合、时间范围、代表性 event_text/type、关联 article_ids 数量等）
+
+
+已有的DBSCAN一般是一维或者二维（ST-DBSCAN）的， 但是扩展到三维也不难，就创造一个能综合反映时空语义距离的 distance measure就行了。你可以先给一个可运行的 distance 设计与参数范围，看看跑出来的效果，我们再一起调。
+
+做完第三步后，看下cluster的时空分布再确定下一步的行动。

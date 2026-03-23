@@ -1,0 +1,7 @@
+batch_index: 6
+start_index: 500
+end_index: 600
+total_prompt_tokens: 214211
+total_completion_tokens: 118357
+total_tokens: 332568
+total_runtime_seconds: 3075.58

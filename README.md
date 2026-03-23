@@ -36,3 +36,13 @@ export DEEPSEEK_API_KEY="your_api_key_here"
 # 4. 运行抽取（20 条测试样本）
 
 python src/deepseek_event_schema.py
+
+# 5. 评估脚本
+python CityResilence/src/eval_schema.py --results_json CityResilence/results/run1/results.json --out_json CityResilence/results/run1/eval_summary.json
+
+# 6. DBSCAN聚类
+数据清洗：去除"location":[]的部分
+
+如果要做“证据/原文 contains”：
+
+python CityResilence/src/eval_schema.py --results_json CityResilence/results/run1/results.json --articles_csv CityResilence/data/articles_cleaned.csv --out_json CityResilence/results/run1/eval_summary_with_anchor.json
