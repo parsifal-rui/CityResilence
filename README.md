@@ -39,10 +39,22 @@ python src/deepseek_event_schema.py
 
 # 5. 评估脚本
 python CityResilence/src/eval_schema.py --results_json CityResilence/results/run1/results.json --out_json CityResilence/results/run1/eval_summary.json
-
-# 6. DBSCAN聚类
-数据清洗：去除"location":[]的部分
-
 如果要做“证据/原文 contains”：
 
 python CityResilence/src/eval_schema.py --results_json CityResilence/results/run1/results.json --articles_csv CityResilence/data/articles_cleaned.csv --out_json CityResilence/results/run1/eval_summary_with_anchor.json
+# 6. 时空语义聚类（DBSCAN）
+python src/cluster_events.py results/run1/results.json results/run1/clustered_events.json
+cd /root/data/CityResilence
+
+for i in {1..21}; do
+    INPUT_FILE="results/run${i}/results.json"
+    OUTPUT_FILE="results/run${i}/clustered_events.json"
+    
+    if [ -f "$INPUT_FILE" ]; then
+        echo "========================================"
+        echo "Processing run${i}..."
+        python src/cluster_events.py "$INPUT_FILE" "$OUTPUT_FILE"
+    else
+        echo "Skipping run${i}: $INPUT_FILE not found"
+    fi
+done

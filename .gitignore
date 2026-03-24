@@ -20,3 +20,14 @@ models/**/*.npz
 models/**/*.h5
 models/**/*.safetensors
 models/**/sentencepiece*.model
+
+# Python 虚拟环境与缓存
+.venv/
+**/__pycache__/
+*.pyc
+
+# 批量聚类结果（可按需移除）
+results/run*/clustered_events.json
+
+# 完全忽略本地模型目录（含大权重）
+models/
