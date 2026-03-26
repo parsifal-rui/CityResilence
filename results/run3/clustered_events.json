@@ -1,0 +1,466 @@
+[
+  {
+    "cluster_id": 0,
+    "representative_event_text": "台风",
+    "event_type": "Driver",
+    "cities": [
+      "东莞",
+      "中山",
+      "广州",
+      "徐闻",
+      "文昌",
+      "江门",
+      "海南",
+      "深圳",
+      "清远",
+      "湛江",
+      "茂名",
+      "防城港",
+      "高州"
+    ],
+    "date_start": "2024-08-23",
+    "date_end": "2024-09-08",
+    "article_ids": [
+      "A200",
+      "A209",
+      "A218",
+      "A220",
+      "A221",
+      "A222",
+      "A223",
+      "A226",
+      "A234",
+      "A235",
+      "A236",
+      "A237",
+      "A238",
+      "A239",
+      "A242",
+      "A270",
+      "A272",
+      "A274",
+      "A278",
+      "A280",
+      "A282",
+      "A283",
+      "A285",
+      "A287",
+      "A288",
+      "A289",
+      "A291",
+      "A292",
+      "A293",
+      "A294",
+      "A295",
+      "A296"
+    ],
+    "n_records": 63,
+    "n_articles": 32
+  },
+  {
+    "cluster_id": 1,
+    "representative_event_text": "降水",
+    "event_type": "Driver",
+    "cities": [
+      "广州",
+      "深圳",
+      "湛江",
+      "韶关"
+    ],
+    "date_start": "2024-09-16",
+    "date_end": "2024-10-01",
+    "article_ids": [
+      "A201",
+      "A203",
+      "A205",
+      "A211",
+      "A212",
+      "A213",
+      "A215",
+      "A254",
+      "A257",
+      "A259",
+      "A260",
+      "A263",
+      "A265"
+    ],
+    "n_records": 50,
+    "n_articles": 13
+  },
+  {
+    "cluster_id": 2,
+    "representative_event_text": "细菌感染",
+    "event_type": "Driver",
+    "cities": [
+      "广州",
+      "潮州",
+      "莫斯科"
+    ],
+    "date_start": "2024-09-12",
+    "date_end": "2024-09-14",
+    "article_ids": [
+      "A202",
+      "A248",
+      "A250"
+    ],
+    "n_records": 7,
+    "n_articles": 3
+  },
+  {
+    "cluster_id": 3,
+    "representative_event_text": "餐饮油烟排放",
+    "event_type": "Driver",
+    "cities": [
+      "东莞",
+      "广州",
+      "珠海"
+    ],
+    "date_start": "2024-08-03",
+    "date_end": "2024-08-06",
+    "article_ids": [
+      "A227",
+      "A268",
+      "A269"
+    ],
+    "n_records": 4,
+    "n_articles": 3
+  },
+  {
+    "cluster_id": 4,
+    "representative_event_text": "应急响应",
+    "event_type": "Impact",
+    "cities": [
+      "东莞",
+      "中山",
+      "云浮",
+      "佛山",
+      "信宜",
+      "儋州",
+      "南宁",
+      "吴川",
+      "巴黎",
+      "广州",
+      "徐闻",
+      "梅州",
+      "江门",
+      "海口",
+      "深圳",
+      "清远",
+      "湛江",
+      "潮州",
+      "珠海",
+      "茂名",
+      "莫斯科",
+      "阳江",
+      "高州"
+    ],
+    "date_start": "2024-08-29",
+    "date_end": "2024-09-15",
+    "article_ids": [
+      "A200",
+      "A202",
+      "A209",
+      "A218",
+      "A219",
+      "A220",
+      "A223",
+      "A227",
+      "A228",
+      "A229",
+      "A234",
+      "A235",
+      "A236",
+      "A237",
+      "A238",
+      "A239",
+      "A240",
+      "A242",
+      "A243",
+      "A245",
+      "A246",
+      "A248",
+      "A251",
+      "A252",
+      "A273",
+      "A274",
+      "A278",
+      "A280",
+      "A281",
+      "A283",
+      "A286",
+      "A288",
+      "A289",
+      "A291",
+      "A292",
+      "A293",
+      "A295",
+      "A296"
+    ],
+    "n_records": 122,
+    "n_articles": 38
+  },
+  {
+    "cluster_id": 5,
+    "representative_event_text": "道路湿滑",
+    "event_type": "Impact",
+    "cities": [
+      "云浮",
+      "佛山",
+      "广州",
+      "深圳",
+      "湛江"
+    ],
+    "date_start": "2024-09-23",
+    "date_end": "2024-10-01",
+    "article_ids": [
+      "A211",
+      "A213",
+      "A214",
+      "A215",
+      "A259",
+      "A260",
+      "A261",
+      "A264",
+      "A265"
+    ],
+    "n_records": 39,
+    "n_articles": 9
+  },
+  {
+    "cluster_id": 6,
+    "representative_event_text": "农业生产损失",
+    "event_type": "Impact",
+    "cities": [
+      "东莞"
+    ],
+    "date_start": "2024-08-23",
+    "date_end": "2024-08-23",
+    "article_ids": [
+      "A270"
+    ],
+    "n_records": 8,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 7,
+    "representative_event_text": "交通违法",
+    "event_type": "Impact",
+    "cities": [
+      "云浮"
+    ],
+    "date_start": "2024-01-01",
+    "date_end": "2024-01-01",
+    "article_ids": [
+      "A297"
+    ],
+    "n_records": 5,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 8,
+    "representative_event_text": "暴雨",
+    "event_type": "Hazard",
+    "cities": [
+      "东莞",
+      "中山",
+      "云浮",
+      "佛山",
+      "广州",
+      "徐闻",
+      "惠州",
+      "文昌",
+      "梅州",
+      "江门",
+      "河源",
+      "海口",
+      "深圳",
+      "清远",
+      "湛江",
+      "潮州",
+      "澄迈",
+      "珠海",
+      "福州",
+      "茂名",
+      "莆田",
+      "莫斯科",
+      "郑州",
+      "长沙",
+      "阳江",
+      "韶关"
+    ],
+    "date_start": "2024-08-24",
+    "date_end": "2024-10-01",
+    "article_ids": [
+      "A201",
+      "A202",
+      "A203",
+      "A205",
+      "A206",
+      "A208",
+      "A211",
+      "A212",
+      "A213",
+      "A217",
+      "A218",
+      "A219",
+      "A220",
+      "A221",
+      "A222",
+      "A223",
+      "A224",
+      "A226",
+      "A227",
+      "A228",
+      "A234",
+      "A235",
+      "A236",
+      "A237",
+      "A242",
+      "A243",
+      "A248",
+      "A250",
+      "A252",
+      "A253",
+      "A254",
+      "A257",
+      "A258",
+      "A259",
+      "A261",
+      "A263",
+      "A264",
+      "A265",
+      "A271",
+      "A272",
+      "A273",
+      "A274",
+      "A276",
+      "A277",
+      "A278",
+      "A280",
+      "A282",
+      "A283",
+      "A285",
+      "A287",
+      "A288",
+      "A289",
+      "A291",
+      "A293",
+      "A295",
+      "A297"
+    ],
+    "n_records": 272,
+    "n_articles": 56
+  },
+  {
+    "cluster_id": 9,
+    "representative_event_text": "油烟污染",
+    "event_type": "Hazard",
+    "cities": [
+      "东莞",
+      "广州",
+      "深圳",
+      "珠海"
+    ],
+    "date_start": "2024-08-01",
+    "date_end": "2024-08-11",
+    "article_ids": [
+      "A227",
+      "A258",
+      "A268",
+      "A269"
+    ],
+    "n_records": 16,
+    "n_articles": 4
+  },
+  {
+    "cluster_id": 10,
+    "representative_event_text": "灾害",
+    "event_type": "Hazard",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2022-01-01",
+    "date_end": "2022-01-01",
+    "article_ids": [
+      "A258"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 11,
+    "representative_event_text": "气候变化",
+    "event_type": "Modulator",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2024-09-21",
+    "date_end": "2024-09-25",
+    "article_ids": [
+      "A206",
+      "A213"
+    ],
+    "n_records": 2,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 12,
+    "representative_event_text": "副高加强",
+    "event_type": "Modulator",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2024-08-30",
+    "date_end": "2024-09-01",
+    "article_ids": [
+      "A222"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 13,
+    "representative_event_text": "清单式管理",
+    "event_type": "调节因素",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-09-30",
+    "date_end": "2024-09-30",
+    "article_ids": [
+      "A266"
+    ],
+    "n_records": 8,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 14,
+    "representative_event_text": "VOCs排放",
+    "event_type": "灾害",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-09-30",
+    "date_end": "2024-09-30",
+    "article_ids": [
+      "A266"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 15,
+    "representative_event_text": "企业成本",
+    "event_type": "影响",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-09-30",
+    "date_end": "2024-09-30",
+    "article_ids": [
+      "A266"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  }
+]

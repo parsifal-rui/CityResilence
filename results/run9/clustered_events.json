@@ -1,0 +1,494 @@
+[
+  {
+    "cluster_id": 0,
+    "representative_event_text": "车流量变化",
+    "event_type": "Driver",
+    "cities": [
+      "东莞",
+      "广州",
+      "揭阳",
+      "深圳",
+      "阳江"
+    ],
+    "date_start": "2024-09-14",
+    "date_end": "2024-09-29",
+    "article_ids": [
+      "A800",
+      "A801",
+      "A807",
+      "A808",
+      "A812",
+      "A814",
+      "A849",
+      "A855",
+      "A856",
+      "A858",
+      "A897"
+    ],
+    "n_records": 27,
+    "n_articles": 11
+  },
+  {
+    "cluster_id": 1,
+    "representative_event_text": "台风",
+    "event_type": "Driver",
+    "cities": [
+      "中山",
+      "佛山",
+      "广州",
+      "徐闻",
+      "惠州",
+      "文昌",
+      "江门",
+      "河源",
+      "深圳",
+      "清远",
+      "湛江",
+      "珠海",
+      "茂名",
+      "阳江"
+    ],
+    "date_start": "2024-08-27",
+    "date_end": "2024-09-09",
+    "article_ids": [
+      "A818",
+      "A819",
+      "A822",
+      "A823",
+      "A825",
+      "A826",
+      "A827",
+      "A828",
+      "A829",
+      "A831",
+      "A832",
+      "A834",
+      "A836",
+      "A837",
+      "A838",
+      "A840",
+      "A843",
+      "A844",
+      "A845",
+      "A846",
+      "A847",
+      "A850",
+      "A862",
+      "A863",
+      "A866",
+      "A870",
+      "A871",
+      "A872",
+      "A873",
+      "A874",
+      "A875",
+      "A876",
+      "A878",
+      "A884",
+      "A885",
+      "A886",
+      "A887",
+      "A888",
+      "A891"
+    ],
+    "n_records": 76,
+    "n_articles": 39
+  },
+  {
+    "cluster_id": 2,
+    "representative_event_text": "台风",
+    "event_type": "Driver",
+    "cities": [
+      "佛山"
+    ],
+    "date_start": "2024-07-09",
+    "date_end": "2024-07-09",
+    "article_ids": [
+      "A819"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 3,
+    "representative_event_text": "台风",
+    "event_type": "Driver",
+    "cities": [
+      "上海"
+    ],
+    "date_start": "2024-09-16",
+    "date_end": "2024-09-16",
+    "article_ids": [
+      "A894",
+      "A895"
+    ],
+    "n_records": 2,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 4,
+    "representative_event_text": "设备特巡特维",
+    "event_type": "Modulator",
+    "cities": [
+      "东莞"
+    ],
+    "date_start": "2024-09-14",
+    "date_end": "2024-09-14",
+    "article_ids": [
+      "A800"
+    ],
+    "n_records": 4,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 5,
+    "representative_event_text": "大风",
+    "event_type": "Hazard",
+    "cities": [
+      "东莞",
+      "佛山",
+      "广东",
+      "广州",
+      "惠州",
+      "揭阳",
+      "文昌",
+      "梅州",
+      "江门",
+      "河源",
+      "海南",
+      "深圳",
+      "深圳市",
+      "清远",
+      "湛江",
+      "珠海",
+      "琼海",
+      "防城港",
+      "阳江",
+      "雷州"
+    ],
+    "date_start": "2024-08-24",
+    "date_end": "2024-09-30",
+    "article_ids": [
+      "A801",
+      "A804",
+      "A806",
+      "A808",
+      "A809",
+      "A812",
+      "A814",
+      "A815",
+      "A816",
+      "A819",
+      "A822",
+      "A823",
+      "A824",
+      "A826",
+      "A827",
+      "A828",
+      "A829",
+      "A831",
+      "A833",
+      "A835",
+      "A844",
+      "A847",
+      "A850",
+      "A855",
+      "A856",
+      "A859",
+      "A860",
+      "A861",
+      "A862",
+      "A863",
+      "A864",
+      "A866",
+      "A869",
+      "A870",
+      "A871",
+      "A872",
+      "A874",
+      "A875",
+      "A876",
+      "A878",
+      "A880",
+      "A883",
+      "A884",
+      "A888",
+      "A891",
+      "A892",
+      "A893",
+      "A897"
+    ],
+    "n_records": 169,
+    "n_articles": 48
+  },
+  {
+    "cluster_id": 6,
+    "representative_event_text": "风暴增水",
+    "event_type": "Hazard",
+    "cities": [
+      "湛江市",
+      "茂名市",
+      "阳江市"
+    ],
+    "date_start": "2024-09-06",
+    "date_end": "2024-09-06",
+    "article_ids": [
+      "A827"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 7,
+    "representative_event_text": "高温",
+    "event_type": "Hazard",
+    "cities": [
+      "杭州",
+      "武汉"
+    ],
+    "date_start": "2024-01-01",
+    "date_end": "2024-01-01",
+    "article_ids": [
+      "A833",
+      "A888"
+    ],
+    "n_records": 3,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 8,
+    "representative_event_text": "电动自行车乱停放",
+    "event_type": "Hazard",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-06-01",
+    "date_end": "2024-06-01",
+    "article_ids": [
+      "A868"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 9,
+    "representative_event_text": "交通管制",
+    "event_type": "Impact",
+    "cities": [
+      "东莞",
+      "中山",
+      "佛冈",
+      "佛山",
+      "南通",
+      "台山",
+      "和平",
+      "宁波",
+      "常州",
+      "广州",
+      "惠州",
+      "扬州",
+      "揭阳",
+      "文昌",
+      "无锡",
+      "杭州",
+      "梅州",
+      "汕头",
+      "江苏",
+      "江门",
+      "江门市",
+      "河源",
+      "浙江",
+      "海南",
+      "海口",
+      "深圳",
+      "清城",
+      "清新",
+      "清远",
+      "湛江",
+      "珠海",
+      "舟山",
+      "英德",
+      "茂名",
+      "连山",
+      "阳山",
+      "阳江",
+      "阳西",
+      "韶关",
+      "香港"
+    ],
+    "date_start": "2024-08-27",
+    "date_end": "2024-09-30",
+    "article_ids": [
+      "A804",
+      "A807",
+      "A809",
+      "A810",
+      "A814",
+      "A815",
+      "A817",
+      "A818",
+      "A819",
+      "A824",
+      "A825",
+      "A826",
+      "A827",
+      "A828",
+      "A829",
+      "A831",
+      "A832",
+      "A834",
+      "A836",
+      "A837",
+      "A838",
+      "A842",
+      "A843",
+      "A844",
+      "A845",
+      "A846",
+      "A847",
+      "A848",
+      "A850",
+      "A852",
+      "A853",
+      "A855",
+      "A856",
+      "A858",
+      "A859",
+      "A860",
+      "A861",
+      "A862",
+      "A864",
+      "A868",
+      "A869",
+      "A870",
+      "A871",
+      "A872",
+      "A874",
+      "A875",
+      "A876",
+      "A877",
+      "A878",
+      "A881",
+      "A882",
+      "A883",
+      "A884",
+      "A885",
+      "A886",
+      "A891",
+      "A892",
+      "A893",
+      "A895",
+      "A897"
+    ],
+    "n_records": 250,
+    "n_articles": 60
+  },
+  {
+    "cluster_id": 10,
+    "representative_event_text": "桥梁冲毁",
+    "event_type": "Impact",
+    "cities": [
+      "茂名"
+    ],
+    "date_start": "2023-12-01",
+    "date_end": "2023-12-01",
+    "article_ids": [
+      "A817"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 11,
+    "representative_event_text": "交通中断",
+    "event_type": "Impact",
+    "cities": [
+      "佛山"
+    ],
+    "date_start": "2024-07-09",
+    "date_end": "2024-07-09",
+    "article_ids": [
+      "A819"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 12,
+    "representative_event_text": "列车停运",
+    "event_type": "Impact",
+    "cities": [
+      "上海"
+    ],
+    "date_start": "2024-09-15",
+    "date_end": "2024-09-16",
+    "article_ids": [
+      "A848",
+      "A852",
+      "A895"
+    ],
+    "n_records": 5,
+    "n_articles": 3
+  },
+  {
+    "cluster_id": 13,
+    "representative_event_text": "交通压力",
+    "event_type": "Impact",
+    "cities": [
+      "北京"
+    ],
+    "date_start": "2024-09-15",
+    "date_end": "2024-09-17",
+    "article_ids": [
+      "A849"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 14,
+    "representative_event_text": "右上臂离断",
+    "event_type": "Impact",
+    "cities": [
+      "广州",
+      "汕尾"
+    ],
+    "date_start": "2023-07-07",
+    "date_end": "2023-07-07",
+    "article_ids": [
+      "A854"
+    ],
+    "n_records": 9,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 15,
+    "representative_event_text": "交通秩序不畅",
+    "event_type": "Impact",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-06-01",
+    "date_end": "2024-06-01",
+    "article_ids": [
+      "A868"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 16,
+    "representative_event_text": "环境保护考核良好",
+    "event_type": "Impact",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2023-01-01",
+    "date_end": "2023-01-01",
+    "article_ids": [
+      "A890"
+    ],
+    "n_records": 17,
+    "n_articles": 1
+  }
+]

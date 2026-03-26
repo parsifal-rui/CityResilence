@@ -1,0 +1,517 @@
+[
+  {
+    "cluster_id": 0,
+    "representative_event_text": "台风",
+    "event_type": "Driver",
+    "cities": [
+      "万宁",
+      "东莞",
+      "中山",
+      "佛山",
+      "巴黎",
+      "广东",
+      "广州",
+      "徐闻",
+      "文昌",
+      "河源",
+      "海南",
+      "海口",
+      "深圳",
+      "清远",
+      "湛江",
+      "珠海",
+      "琼海",
+      "电白",
+      "阳江",
+      "阳西"
+    ],
+    "date_start": "2024-08-31",
+    "date_end": "2024-09-27",
+    "article_ids": [
+      "A700",
+      "A703",
+      "A705",
+      "A709",
+      "A712",
+      "A718",
+      "A723",
+      "A727",
+      "A728",
+      "A730",
+      "A732",
+      "A733",
+      "A734",
+      "A735",
+      "A736",
+      "A737",
+      "A738",
+      "A742",
+      "A744",
+      "A745",
+      "A747",
+      "A753",
+      "A756",
+      "A768",
+      "A771",
+      "A773",
+      "A774",
+      "A775",
+      "A776",
+      "A779",
+      "A780",
+      "A781",
+      "A782",
+      "A784",
+      "A786",
+      "A787",
+      "A788",
+      "A789",
+      "A790",
+      "A791",
+      "A794",
+      "A796",
+      "A798",
+      "A799"
+    ],
+    "n_records": 89,
+    "n_articles": 44
+  },
+  {
+    "cluster_id": 1,
+    "representative_event_text": "锂电池热失控",
+    "event_type": "Driver",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-06-29",
+    "date_end": "2024-07-01",
+    "article_ids": [
+      "A715",
+      "A767"
+    ],
+    "n_records": 2,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 2,
+    "representative_event_text": "气温回升",
+    "event_type": "Driver",
+    "cities": [
+      "广州",
+      "惠州"
+    ],
+    "date_start": "2024-08-15",
+    "date_end": "2024-08-24",
+    "article_ids": [
+      "A716",
+      "A740",
+      "A765"
+    ],
+    "n_records": 5,
+    "n_articles": 3
+  },
+  {
+    "cluster_id": 3,
+    "representative_event_text": "副高控制",
+    "event_type": "Driver",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2024-08-08",
+    "date_end": "2024-08-10",
+    "article_ids": [
+      "A763"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 4,
+    "representative_event_text": "赤道气流",
+    "event_type": "Modulator",
+    "cities": [],
+    "date_start": "2024-09-01",
+    "date_end": "2024-09-01",
+    "article_ids": [
+      "A700"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 5,
+    "representative_event_text": "管理混乱",
+    "event_type": "Modulator",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-09-24",
+    "date_end": "2024-09-24",
+    "article_ids": [
+      "A709",
+      "A758"
+    ],
+    "n_records": 2,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 6,
+    "representative_event_text": "企业转型",
+    "event_type": "Modulator",
+    "cities": [
+      "佛山",
+      "深圳"
+    ],
+    "date_start": "2024-09-27",
+    "date_end": "2024-09-27",
+    "article_ids": [
+      "A712",
+      "A761"
+    ],
+    "n_records": 5,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 7,
+    "representative_event_text": "副热带高压加强",
+    "event_type": "Modulator",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2024-08-23",
+    "date_end": "2024-08-23",
+    "article_ids": [
+      "A716"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 8,
+    "representative_event_text": "台风预警",
+    "event_type": "Impact",
+    "cities": [
+      "三亚",
+      "东莞",
+      "中山",
+      "佛山",
+      "广州",
+      "徐闻",
+      "惠州",
+      "文昌",
+      "杭州",
+      "梅州",
+      "汕尾",
+      "河源",
+      "海南",
+      "海口",
+      "深圳",
+      "清远",
+      "湛江",
+      "珠海",
+      "阳江"
+    ],
+    "date_start": "2024-08-29",
+    "date_end": "2024-09-28",
+    "article_ids": [
+      "A701",
+      "A703",
+      "A704",
+      "A705",
+      "A708",
+      "A709",
+      "A720",
+      "A721",
+      "A724",
+      "A725",
+      "A726",
+      "A727",
+      "A730",
+      "A731",
+      "A732",
+      "A733",
+      "A734",
+      "A735",
+      "A737",
+      "A740",
+      "A746",
+      "A748",
+      "A749",
+      "A753",
+      "A754",
+      "A756",
+      "A758",
+      "A760",
+      "A762",
+      "A766",
+      "A768",
+      "A773",
+      "A774",
+      "A776",
+      "A777",
+      "A780",
+      "A781",
+      "A782",
+      "A786",
+      "A787",
+      "A789",
+      "A791",
+      "A792",
+      "A794",
+      "A795",
+      "A796",
+      "A799"
+    ],
+    "n_records": 136,
+    "n_articles": 47
+  },
+  {
+    "cluster_id": 9,
+    "representative_event_text": "用电量增长",
+    "event_type": "Impact",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-01-01",
+    "date_end": "2024-01-01",
+    "article_ids": [
+      "A706"
+    ],
+    "n_records": 13,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 10,
+    "representative_event_text": "伤亡",
+    "event_type": "Impact",
+    "cities": [
+      "梅州"
+    ],
+    "date_start": "2024-05-01",
+    "date_end": "2024-05-01",
+    "article_ids": [
+      "A714"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 11,
+    "representative_event_text": "财产损失",
+    "event_type": "Impact",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-06-29",
+    "date_end": "2024-07-01",
+    "article_ids": [
+      "A715",
+      "A767"
+    ],
+    "n_records": 3,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 12,
+    "representative_event_text": "行政拘留",
+    "event_type": "Impact",
+    "cities": [
+      "汕头",
+      "深圳",
+      "潮州"
+    ],
+    "date_start": "2024-08-06",
+    "date_end": "2024-08-09",
+    "article_ids": [
+      "A715",
+      "A717",
+      "A764"
+    ],
+    "n_records": 3,
+    "n_articles": 3
+  },
+  {
+    "cluster_id": 13,
+    "representative_event_text": "道路施工",
+    "event_type": "Impact",
+    "cities": [
+      "惠州",
+      "深圳"
+    ],
+    "date_start": "2024-08-01",
+    "date_end": "2024-08-01",
+    "article_ids": [
+      "A740",
+      "A797"
+    ],
+    "n_records": 8,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 14,
+    "representative_event_text": "旅游市场下滑",
+    "event_type": "Impact",
+    "cities": [
+      "上海"
+    ],
+    "date_start": "2024-09-18",
+    "date_end": "2024-09-18",
+    "article_ids": [
+      "A748"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 15,
+    "representative_event_text": "受损",
+    "event_type": "Impact",
+    "cities": [
+      "梅州"
+    ],
+    "date_start": "2024-06-16",
+    "date_end": "2024-06-16",
+    "article_ids": [
+      "A754"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 16,
+    "representative_event_text": "高温",
+    "event_type": "Hazard",
+    "cities": [
+      "万宁",
+      "东莞",
+      "东部市县",
+      "中山",
+      "佛山",
+      "南宁",
+      "广东",
+      "广宁",
+      "广州",
+      "徐闻",
+      "惠州",
+      "揭阳",
+      "文昌",
+      "昆明",
+      "梅州",
+      "汕尾",
+      "河源",
+      "海南",
+      "海南岛",
+      "海口",
+      "海法",
+      "深圳",
+      "清远",
+      "湛江",
+      "潮州",
+      "珠三角南部沿海",
+      "珠江三角洲",
+      "珠海",
+      "电白",
+      "肇庆",
+      "茂名",
+      "防城港",
+      "阳江",
+      "雷州半岛",
+      "韶关"
+    ],
+    "date_start": "2024-08-18",
+    "date_end": "2024-10-05",
+    "article_ids": [
+      "A703",
+      "A704",
+      "A705",
+      "A707",
+      "A709",
+      "A711",
+      "A712",
+      "A713",
+      "A716",
+      "A718",
+      "A720",
+      "A722",
+      "A724",
+      "A725",
+      "A726",
+      "A727",
+      "A734",
+      "A735",
+      "A736",
+      "A738",
+      "A740",
+      "A741",
+      "A744",
+      "A745",
+      "A746",
+      "A747",
+      "A749",
+      "A752",
+      "A753",
+      "A755",
+      "A756",
+      "A757",
+      "A758",
+      "A759",
+      "A761",
+      "A762",
+      "A765",
+      "A766",
+      "A768",
+      "A771",
+      "A772",
+      "A774",
+      "A777",
+      "A779",
+      "A780",
+      "A781",
+      "A782",
+      "A783",
+      "A786",
+      "A788",
+      "A789",
+      "A790",
+      "A791",
+      "A798"
+    ],
+    "n_records": 221,
+    "n_articles": 54
+  },
+  {
+    "cluster_id": 17,
+    "representative_event_text": "火灾",
+    "event_type": "Hazard",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-06-29",
+    "date_end": "2024-07-01",
+    "article_ids": [
+      "A715",
+      "A767"
+    ],
+    "n_records": 2,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 18,
+    "representative_event_text": "高温天气",
+    "event_type": "Hazard",
+    "cities": [
+      "广州",
+      "汕头",
+      "潮州"
+    ],
+    "date_start": "2024-08-06",
+    "date_end": "2024-08-10",
+    "article_ids": [
+      "A717",
+      "A763",
+      "A764"
+    ],
+    "n_records": 5,
+    "n_articles": 3
+  }
+]

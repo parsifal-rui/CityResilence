@@ -1,0 +1,226 @@
+[
+  {
+    "cluster_id": 0,
+    "representative_event_text": "水上救援",
+    "event_type": "Impact",
+    "cities": [
+      "中山",
+      "佛山",
+      "宫崎",
+      "广州",
+      "汕尾",
+      "江门",
+      "海丰",
+      "深圳",
+      "湛江",
+      "潮州",
+      "阳江",
+      "陆丰",
+      "陆河"
+    ],
+    "date_start": "2024-08-27",
+    "date_end": "2024-09-15",
+    "article_ids": [
+      "A2000",
+      "A2007",
+      "A2009",
+      "A2010",
+      "A2011",
+      "A2013",
+      "A2016",
+      "A2020",
+      "A2021",
+      "A2022",
+      "A2025",
+      "A2029",
+      "A2034",
+      "A2035",
+      "A2036"
+    ],
+    "n_records": 67,
+    "n_articles": 15
+  },
+  {
+    "cluster_id": 1,
+    "representative_event_text": "考核良好",
+    "event_type": "Impact",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2023-01-01",
+    "date_end": "2023-01-01",
+    "article_ids": [
+      "A2015"
+    ],
+    "n_records": 21,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 2,
+    "representative_event_text": "伤亡",
+    "event_type": "Impact",
+    "cities": [
+      "东莞",
+      "清远"
+    ],
+    "date_start": "2024-09-19",
+    "date_end": "2024-09-22",
+    "article_ids": [
+      "A2022",
+      "A2023",
+      "A2024"
+    ],
+    "n_records": 8,
+    "n_articles": 3
+  },
+  {
+    "cluster_id": 3,
+    "representative_event_text": "专家帮扶",
+    "event_type": "Impact",
+    "cities": [
+      "珠海"
+    ],
+    "date_start": "2024-09-26",
+    "date_end": "2024-09-26",
+    "article_ids": [
+      "A2026"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 4,
+    "representative_event_text": "调查取证",
+    "event_type": "Impact",
+    "cities": [
+      "肇庆"
+    ],
+    "date_start": "2023-05-29",
+    "date_end": "2023-06-01",
+    "article_ids": [
+      "A2031"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 5,
+    "representative_event_text": "台风",
+    "event_type": "Driver",
+    "cities": [
+      "中山",
+      "广州",
+      "徐闻",
+      "文昌",
+      "深圳",
+      "湛江"
+    ],
+    "date_start": "2024-08-28",
+    "date_end": "2024-09-16",
+    "article_ids": [
+      "A2001",
+      "A2002",
+      "A2005",
+      "A2008",
+      "A2009",
+      "A2011",
+      "A2014",
+      "A2017",
+      "A2019",
+      "A2022",
+      "A2025",
+      "A2027",
+      "A2032",
+      "A2033",
+      "A2034"
+    ],
+    "n_records": 32,
+    "n_articles": 15
+  },
+  {
+    "cluster_id": 6,
+    "representative_event_text": "飓风",
+    "event_type": "Driver",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-06-01",
+    "date_end": "2024-06-01",
+    "article_ids": [
+      "A2022",
+      "A2030"
+    ],
+    "n_records": 2,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 7,
+    "representative_event_text": "污水排放",
+    "event_type": "Driver",
+    "cities": [
+      "肇庆"
+    ],
+    "date_start": "2023-04-01",
+    "date_end": "2023-04-01",
+    "article_ids": [
+      "A2031"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 8,
+    "representative_event_text": "高温",
+    "event_type": "Hazard",
+    "cities": [
+      "东莞",
+      "中山",
+      "广州",
+      "惠州",
+      "河内",
+      "深圳",
+      "清远",
+      "湛江",
+      "珠海",
+      "肇庆"
+    ],
+    "date_start": "2024-08-28",
+    "date_end": "2024-09-26",
+    "article_ids": [
+      "A2001",
+      "A2002",
+      "A2005",
+      "A2009",
+      "A2013",
+      "A2014",
+      "A2017",
+      "A2019",
+      "A2022",
+      "A2023",
+      "A2024",
+      "A2025",
+      "A2026",
+      "A2029",
+      "A2032",
+      "A2033",
+      "A2034"
+    ],
+    "n_records": 102,
+    "n_articles": 17
+  },
+  {
+    "cluster_id": 9,
+    "representative_event_text": "副高加强",
+    "event_type": "Modulator",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2024-08-30",
+    "date_end": "2024-09-01",
+    "article_ids": [
+      "A2001"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  }
+]

@@ -1,0 +1,575 @@
+[
+  {
+    "cluster_id": 0,
+    "representative_event_text": "高温",
+    "event_type": "Hazard",
+    "cities": [
+      "广东",
+      "广州",
+      "深圳",
+      "湛江"
+    ],
+    "date_start": "2024-08-05",
+    "date_end": "2024-08-09",
+    "article_ids": [
+      "A1800",
+      "A1849",
+      "A1898",
+      "A1899"
+    ],
+    "n_records": 10,
+    "n_articles": 4
+  },
+  {
+    "cluster_id": 1,
+    "representative_event_text": "高温",
+    "event_type": "Hazard",
+    "cities": [
+      "东莞",
+      "中山",
+      "佛山",
+      "兰州",
+      "兴宁",
+      "台山",
+      "合肥",
+      "广东",
+      "广州",
+      "成都",
+      "梅州",
+      "江西",
+      "江门",
+      "河源",
+      "海南",
+      "深圳",
+      "清远",
+      "湛江",
+      "珠三角中南部",
+      "珠江三角洲东部",
+      "珠海",
+      "福建",
+      "粤东",
+      "粤北",
+      "茂名",
+      "阳春",
+      "阳江",
+      "韶关",
+      "顺德"
+    ],
+    "date_start": "2024-08-26",
+    "date_end": "2024-09-28",
+    "article_ids": [
+      "A1802",
+      "A1803",
+      "A1804",
+      "A1807",
+      "A1808",
+      "A1809",
+      "A1810",
+      "A1813",
+      "A1814",
+      "A1816",
+      "A1817",
+      "A1819",
+      "A1821",
+      "A1823",
+      "A1824",
+      "A1825",
+      "A1830",
+      "A1835",
+      "A1836",
+      "A1837",
+      "A1839",
+      "A1840",
+      "A1843",
+      "A1844",
+      "A1845",
+      "A1847",
+      "A1848",
+      "A1851",
+      "A1852",
+      "A1856",
+      "A1857",
+      "A1859",
+      "A1860",
+      "A1863",
+      "A1865",
+      "A1866",
+      "A1867",
+      "A1869",
+      "A1870",
+      "A1871",
+      "A1872",
+      "A1875",
+      "A1877",
+      "A1879",
+      "A1884",
+      "A1887",
+      "A1888",
+      "A1889",
+      "A1890",
+      "A1893",
+      "A1894",
+      "A1895"
+    ],
+    "n_records": 232,
+    "n_articles": 52
+  },
+  {
+    "cluster_id": 2,
+    "representative_event_text": "大客流",
+    "event_type": "Hazard",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-07-01",
+    "date_end": "2024-07-01",
+    "article_ids": [
+      "A1806"
+    ],
+    "n_records": 4,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 3,
+    "representative_event_text": "义务植树",
+    "event_type": "Hazard",
+    "cities": [
+      "珠海"
+    ],
+    "date_start": "2024-01-01",
+    "date_end": "2024-01-01",
+    "article_ids": [
+      "A1854"
+    ],
+    "n_records": 4,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 4,
+    "representative_event_text": "高空抛物",
+    "event_type": "Hazard",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2022-10-18",
+    "date_end": "2022-10-18",
+    "article_ids": [
+      "A1882"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 5,
+    "representative_event_text": "桥梁冲毁",
+    "event_type": "Impact",
+    "cities": [
+      "茂名"
+    ],
+    "date_start": "2023-12-01",
+    "date_end": "2023-12-01",
+    "article_ids": [
+      "A1801"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 6,
+    "representative_event_text": "交通管制",
+    "event_type": "Impact",
+    "cities": [
+      "东莞",
+      "佛山",
+      "兰州",
+      "兴宁",
+      "台山",
+      "广东",
+      "广州",
+      "梅州",
+      "汕尾",
+      "江门",
+      "河源",
+      "海南",
+      "海口",
+      "深圳",
+      "清远",
+      "湛江",
+      "珠海",
+      "肇庆",
+      "阳春",
+      "阳江",
+      "韶关"
+    ],
+    "date_start": "2024-08-28",
+    "date_end": "2024-09-16",
+    "article_ids": [
+      "A1801",
+      "A1802",
+      "A1803",
+      "A1804",
+      "A1808",
+      "A1811",
+      "A1812",
+      "A1813",
+      "A1814",
+      "A1815",
+      "A1816",
+      "A1817",
+      "A1818",
+      "A1819",
+      "A1820",
+      "A1821",
+      "A1822",
+      "A1824",
+      "A1826",
+      "A1831",
+      "A1835",
+      "A1844",
+      "A1852",
+      "A1853",
+      "A1861",
+      "A1863",
+      "A1864",
+      "A1865",
+      "A1867",
+      "A1869",
+      "A1872",
+      "A1874",
+      "A1876",
+      "A1877",
+      "A1878",
+      "A1879",
+      "A1880",
+      "A1881",
+      "A1885",
+      "A1887",
+      "A1889"
+    ],
+    "n_records": 135,
+    "n_articles": 41
+  },
+  {
+    "cluster_id": 7,
+    "representative_event_text": "河流水质提升",
+    "event_type": "Impact",
+    "cities": [
+      "东莞"
+    ],
+    "date_start": "2017-01-01",
+    "date_end": "2017-01-01",
+    "article_ids": [
+      "A1803"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 8,
+    "representative_event_text": "突发疾病",
+    "event_type": "Impact",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-06-30",
+    "date_end": "2024-07-01",
+    "article_ids": [
+      "A1806",
+      "A1850"
+    ],
+    "n_records": 3,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 9,
+    "representative_event_text": "经营亏损",
+    "event_type": "Impact",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2012-01-01",
+    "date_end": "2012-01-01",
+    "article_ids": [
+      "A1826"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 10,
+    "representative_event_text": "鲜菜价格上涨",
+    "event_type": "Impact",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-08-01",
+    "date_end": "2024-08-01",
+    "article_ids": [
+      "A1828"
+    ],
+    "n_records": 5,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 11,
+    "representative_event_text": "水土流失",
+    "event_type": "Impact",
+    "cities": [
+      "佛山",
+      "杭州",
+      "深圳",
+      "珠海"
+    ],
+    "date_start": "2024-09-18",
+    "date_end": "2024-09-19",
+    "article_ids": [
+      "A1836",
+      "A1838",
+      "A1839",
+      "A1888"
+    ],
+    "n_records": 6,
+    "n_articles": 4
+  },
+  {
+    "cluster_id": 12,
+    "representative_event_text": "生态系统退化",
+    "event_type": "Impact",
+    "cities": [
+      "广东",
+      "广州"
+    ],
+    "date_start": "2024-09-22",
+    "date_end": "2024-09-24",
+    "article_ids": [
+      "A1847",
+      "A1890",
+      "A1893"
+    ],
+    "n_records": 4,
+    "n_articles": 3
+  },
+  {
+    "cluster_id": 13,
+    "representative_event_text": "智慧渔船监管系统",
+    "event_type": "Impact",
+    "cities": [
+      "湛江"
+    ],
+    "date_start": "2024-08-08",
+    "date_end": "2024-08-08",
+    "article_ids": [
+      "A1849"
+    ],
+    "n_records": 6,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 14,
+    "representative_event_text": "新能源汽车产业成为经济增长新支柱",
+    "event_type": "Impact",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-08-23",
+    "date_end": "2024-08-23",
+    "article_ids": [
+      "A1850"
+    ],
+    "n_records": 7,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 15,
+    "representative_event_text": "新能源汽车产量超170万台",
+    "event_type": "Impact",
+    "cities": [
+      "惠州",
+      "深圳",
+      "珠海"
+    ],
+    "date_start": "2023-12-31",
+    "date_end": "2024-01-01",
+    "article_ids": [
+      "A1850",
+      "A1854",
+      "A1862"
+    ],
+    "n_records": 6,
+    "n_articles": 3
+  },
+  {
+    "cluster_id": 16,
+    "representative_event_text": "财物损失",
+    "event_type": "Impact",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2022-10-18",
+    "date_end": "2022-10-18",
+    "article_ids": [
+      "A1882"
+    ],
+    "n_records": 2,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 17,
+    "representative_event_text": "台风",
+    "event_type": "Driver",
+    "cities": [
+      "万宁",
+      "佛山",
+      "兴宁",
+      "台山",
+      "广东",
+      "广州",
+      "徐闻",
+      "成都",
+      "文昌",
+      "汕尾",
+      "江门",
+      "海口",
+      "深圳",
+      "清远",
+      "湛江",
+      "珠海",
+      "琼海",
+      "电白",
+      "茂名",
+      "阳春",
+      "阳江"
+    ],
+    "date_start": "2024-08-28",
+    "date_end": "2024-09-28",
+    "article_ids": [
+      "A1802",
+      "A1804",
+      "A1807",
+      "A1808",
+      "A1809",
+      "A1811",
+      "A1812",
+      "A1813",
+      "A1814",
+      "A1815",
+      "A1817",
+      "A1819",
+      "A1820",
+      "A1821",
+      "A1822",
+      "A1824",
+      "A1825",
+      "A1830",
+      "A1835",
+      "A1836",
+      "A1837",
+      "A1840",
+      "A1841",
+      "A1844",
+      "A1845",
+      "A1847",
+      "A1848",
+      "A1852",
+      "A1858",
+      "A1859",
+      "A1864",
+      "A1865",
+      "A1868",
+      "A1869",
+      "A1871",
+      "A1874",
+      "A1875",
+      "A1876",
+      "A1877",
+      "A1878",
+      "A1879",
+      "A1880",
+      "A1881",
+      "A1884",
+      "A1885",
+      "A1887",
+      "A1889",
+      "A1894"
+    ],
+    "n_records": 106,
+    "n_articles": 48
+  },
+  {
+    "cluster_id": 18,
+    "representative_event_text": "台风",
+    "event_type": "Driver",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-07-01",
+    "date_end": "2024-07-01",
+    "article_ids": [
+      "A1806"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 19,
+    "representative_event_text": "台风",
+    "event_type": "Driver",
+    "cities": [
+      "上海"
+    ],
+    "date_start": "2024-09-16",
+    "date_end": "2024-09-16",
+    "article_ids": [
+      "A1834",
+      "A1841"
+    ],
+    "n_records": 2,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 20,
+    "representative_event_text": "新能源汽车产业发展",
+    "event_type": "Driver",
+    "cities": [
+      "深圳"
+    ],
+    "date_start": "2024-08-23",
+    "date_end": "2024-08-23",
+    "article_ids": [
+      "A1850"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  },
+  {
+    "cluster_id": 21,
+    "representative_event_text": "气候变化",
+    "event_type": "Modulator",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2024-09-24",
+    "date_end": "2024-09-24",
+    "article_ids": [
+      "A1847",
+      "A1894"
+    ],
+    "n_records": 2,
+    "n_articles": 2
+  },
+  {
+    "cluster_id": 22,
+    "representative_event_text": "后汛期",
+    "event_type": "Modulator",
+    "cities": [
+      "广州"
+    ],
+    "date_start": "2024-09-28",
+    "date_end": "2024-09-28",
+    "article_ids": [
+      "A1848"
+    ],
+    "n_records": 3,
+    "n_articles": 1
+  }
+]

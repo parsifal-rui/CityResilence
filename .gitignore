@@ -26,8 +26,6 @@ models/**/sentencepiece*.model
 **/__pycache__/
 *.pyc
 
-# 批量聚类结果（可按需移除）
-results/run*/clustered_events.json
 
 # 完全忽略本地模型目录（含大权重）
 models/
