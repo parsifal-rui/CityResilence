@@ -1,50 +1,122 @@
 run1
-"article_id": "A069" 底价
+"article_id": "A069" 
+"article_id": "A067"
+"article_id": "A068"
 run2
-"article_id": "A113"睡眠噪音
-"article_id": "A170"土地纠纷
+"article_id": "A113"
+"article_id": "A170"
 run3
+"article_id": "A202"
+"article_id": "A218"
 run4
-"article_id": "A364"百草枯自杀
+"article_id": "A364"
+"article_id": "A340"
+"article_id": "A347"
+"article_id": "A361"
 run5
-"article_id": "A400"送清凉活动
-"article_id": "A418"负债
+"article_id": "A400"
+"article_id": "A418"
+"article_id": "A456"
 run6
+"article_id": "A514"
 run7
 "article_id": "A638"
+"article_id": "A612"
+"article_id": "A648"
+"article_id": "A696"
+run8
+"article_id": "A715"
+"article_id": "A720"
+"article_id": "A740"
+"article_id": "A761"
+"article_id": "A711"
+"article_id": "A758"
+"article_id": "A768"
 run9
 "article_id": "A854"
+"article_id": "A818"
+"article_id": "A812"
+"article_id": "A892"
 run10
 "article_id": "A911"
 "article_id": "A980"
 "article_id": "A991"
+"article_id": "A939"
+"article_id": "A952"
 "article_id": "A996"
 run11
 "article_id": "A1074"
+"article_id": "A1083"
 "article_id": "A1060"
 run12
 "article_id": "A1187"
 "article_id": "A1131"
+"article_id": "A1197"
+"article_id": "A1124"
+"article_id": "A1147"
 run13
 "article_id": "A1232"
 "article_id": "A1233"
+"article_id": "A1280"
+"article_id": "A1231"
 run14
 "article_id": "A1344"
+"article_id": "A1332"
 "article_id": "A1367"
+"article_id": "A1372"
 "article_id": "A1399"
+"article_id": "A1375"
 run15
 "article_id": "A1441"
+"article_id": "A1439"
 run16
 "article_id": "A1522"
 "article_id": "A1563"
+"article_id": "A1517"
 run17
 "article_id": "A1682"
 "article_id": "A1605"
 "article_id": "A1622"
 run18
 "article_id": "A1738"
+"article_id": "A1754"
+"article_id": "A1758"
+"article_id": "A1792"
+"article_id": "A1761"
 run19
 "article_id": "A1882"
 "article_id": "A1826"
 run20
 "article_id": "A1929"
+"article_id": "A1955"
+dedupe_candidates
+"article_id": "A347"
+"article_id": "A361"
+"article_id": "A648"
+"article_id": "A864"
+"article_id": "A908"
+"article_id": "A934"
+"article_id": "A995"
+"article_id": "A1188"
+"article_id": "A1244"
+"article_id": "A1246"
+"article_id": "A1277"
+"article_id": "A1286"
+"article_id": "A1401"
+"article_id": "A1412"
+"article_id": "A1430"
+"article_id": "A1452"
+"article_id": "A1483"
+"article_id": "A1518"
+"article_id": "A1600"
+"article_id": "A1618"
+"article_id": "A1623"
+"article_id": "A1715"
+"article_id": "A1793"
+"article_id": "A1797"
+"article_id": "A1804"
+"article_id": "A1837"
+"article_id": "A1894"
+"article_id": "A1930"
+"article_id": "A2015"
+"article_id": "A2016"

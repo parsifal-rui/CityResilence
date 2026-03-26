@@ -2,3 +2,28 @@ dbscan聚类，参数不好调
 先按照默认参数跑一轮，然后人工看cluster是否合理，整理不要的article到discard.txt
 必须要人工检查，比如一篇文章报道了公安的典型案例，涉及纵火等，是灾害，但不是那时候发生的，会影响
 event text提取得不是很好，简直和神经病一样
+
+3.25
+① load_discard_ids（新增） 用正则 "article_id": "AXxx" 逐行解析 discard.txt，返回 Set[str]，路径不存在时静默跳过。
+
+② flatten_records 增加 discard_ids 参数
+单 run 模式，过滤命中 discard 的 article，并在 record 里附带 run_id 字段。
+
+③ flatten_records_multi（新增）
+多 run 合并展平，以 article_id 为 key 去重（相同文章跨 run 重复出现只保留首次），同时过滤 discard。
+
+④ 代表文本改为距质心最近（repr_strategy="centroid"）
+⑤ 超参调整
+
+参数	旧值	新值	原因
+w_s	0.50	0.65	语义是主判据，↑ 压制时空桥连
+w_t	0.25	0.20	
+w_p	0.25	0.15	
+eps	0.35	0.28	收紧簇边界，减少链式连通
+eps 是最敏感的参数，建议跑完全局聚类后打印各类型的 clusters/noise 比例，若大量记录变噪声则调回 0.30~0.32。
+
+问题：
+某些抽象行为“指引编制”会被反复报道，但本身article是没问题的，可能是光污染
+有时候是重复报道，忘记跑去重了
+去重方法
+这样，先判断cluster里的n_articles要小于5才考虑是否来源于相同报道的可能，然后对这部分，去对应的results run里找results.json,比如article id：A561,就去run6的resluts json搜索到对应的 content并且比对，我要的是content级别的比对@results/run6/results.json:9341-9343 按照这个思路修改@dequpe_from_global.py

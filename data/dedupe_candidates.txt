@@ -1,0 +1,41 @@
+# checked_pairs=213
+# matched_pairs(sim>=0.92)=72
+# total_suggested_drop=34
+# already_in_discard=4
+# new_candidates=30
+# rule: cluster_n_articles<= 4
+
+"article_id": "A347"  # cluster=212 sim=1.000 A157(run2) vs A347(run4)
+
+"article_id": "A361"  # cluster=153 sim=0.968 A173(run2) vs A361(run4) | cluster=171 sim=0.968 A173(run2) vs A361(run4)
+
+"article_id": "A648"  # cluster=180 sim=1.000 A561(run6) vs A648(run7) | cluster=181 sim=1.000 A561(run6) vs A648(run7) | cluster=182 sim=1.000 A561(run6) vs A648(run7) | cluster=183 sim=1.000 A561(run6) vs A648(run7)
+
+"article_id": "A864"  # cluster=153 sim=0.968 A173(run2) vs A864(run9) | cluster=153 sim=1.000 A361(run4) vs A864(run9) | cluster=171 sim=0.968 A173(run2) vs A864(run9) | cluster=171 sim=1.000 A361(run4) vs A864(run9)
+
+"article_id": "A908"  # cluster=62 sim=0.940 A817(run9) vs A908(run10) | cluster=121 sim=0.940 A817(run9) vs A908(run10)
+"article_id": "A934"  # cluster=65 sim=1.000 A467(run5) vs A934(run10)
+"article_id": "A995"  # cluster=71 sim=1.000 A218(run3) vs A995(run10)
+"article_id": "A1188"  # cluster=135 sim=0.963 A890(run9) vs A1188(run12)
+"article_id": "A1244"  # cluster=20 sim=1.000 A314(run4) vs A1244(run13)
+"article_id": "A1246"  # cluster=21 sim=1.000 A223(run3) vs A1246(run13)
+"article_id": "A1277"  # cluster=196 sim=1.000 A519(run6) vs A1277(run13)
+"article_id": "A1286"  # cluster=4 sim=1.000 A958(run10) vs A1286(run13) | cluster=5 sim=1.000 A958(run10) vs A1286(run13) | cluster=6 sim=1.000 A958(run10) vs A1286(run13)
+"article_id": "A1401"  # cluster=150 sim=1.000 A522(run6) vs A1401(run15) | cluster=151 sim=1.000 A522(run6) vs A1401(run15)
+"article_id": "A1412"  # cluster=64 sim=1.000 A917(run10) vs A1412(run15)
+"article_id": "A1430"  # cluster=86 sim=1.000 A888(run9) vs A1430(run15)
+"article_id": "A1452"  # cluster=88 sim=1.000 A038(run1) vs A1452(run15)
+"article_id": "A1483"  # cluster=7 sim=1.000 A438(run5) vs A1483(run15)
+"article_id": "A1518"  # cluster=153 sim=0.968 A173(run2) vs A1518(run16) | cluster=153 sim=1.000 A361(run4) vs A1518(run16) | cluster=153 sim=1.000 A864(run9) vs A1518(run16)
+"article_id": "A1600"  # cluster=78 sim=1.000 A1105(run12) vs A1600(run17)
+"article_id": "A1618"  # cluster=30 sim=1.000 A711(run8) vs A1618(run17)
+"article_id": "A1623"  # cluster=73 sim=1.000 A1034(run11) vs A1623(run17) | cluster=74 sim=1.000 A1034(run11) vs A1623(run17) | cluster=75 sim=1.000 A1034(run11) vs A1623(run17) | cluster=76 sim=1.000 A1034(run11) vs A1623(run17) | cluster=130 sim=1.000 A1034(run11) vs A1623(run17)
+"article_id": "A1715"  # cluster=62 sim=0.946 A817(run9) vs A1715(run18) | cluster=62 sim=0.995 A908(run10) vs A1715(run18) | cluster=121 sim=0.946 A817(run9) vs A1715(run18) | cluster=121 sim=0.995 A908(run10) vs A1715(run18) | cluster=159 sim=0.946 A817(run9) vs A1715(run18)
+"article_id": "A1793"  # cluster=104 sim=1.000 A346(run4) vs A1793(run18)
+"article_id": "A1797"  # cluster=97 sim=1.000 A1706(run18) vs A1797(run18) | cluster=98 sim=1.000 A1706(run18) vs A1797(run18) | cluster=99 sim=1.000 A1706(run18) vs A1797(run18) | cluster=100 sim=1.000 A1706(run18) vs A1797(run18) | cluster=101 sim=1.000 A1706(run18) vs A1797(run18)
+"article_id": "A1804"  # cluster=105 sim=1.000 A035(run1) vs A1804(run19)
+"article_id": "A1837"  # cluster=107 sim=0.965 A305(run4) vs A1837(run19)
+"article_id": "A1894"  # cluster=32 sim=0.953 A1708(run18) vs A1894(run19)
+"article_id": "A1930"  # cluster=80 sim=1.000 A1192(run12) vs A1930(run20)
+"article_id": "A2015"  # cluster=135 sim=0.963 A890(run9) vs A2015(run21) | cluster=135 sim=0.975 A1188(run12) vs A2015(run21)
+"article_id": "A2016"  # cluster=95 sim=1.000 A1646(run17) vs A2016(run21) | cluster=157 sim=1.000 A1646(run17) vs A2016(run21) | cluster=158 sim=1.000 A1646(run17) vs A2016(run21)

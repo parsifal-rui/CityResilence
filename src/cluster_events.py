@@ -1,17 +1,18 @@
 """
 时空语义三维联合聚类（DBSCAN）
-输入：JSON 中展平的事件记录列表，每条记录 = {event_text, event_type, city, date, article_id}
-输出：clustered_events 列表
+支持：多 run 合并全局聚类（dedup by article_id）、discard.txt 过滤、
+      簇代表文本距质心最近（centroid）或高频词（most_common）
 """
 from __future__ import annotations
 
 import json
+import re
 import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Set
 
 import numpy as np
 import torch
@@ -23,16 +24,33 @@ from sklearn.cluster import DBSCAN
 
 @dataclass
 class Cfg:
-    T_max: int        = 7          # 时间阈值（天）
-    S_max: float      = 150.0      # 空间阈值（km）
-    w_s: float        = 0.5        # 语义权重
-    w_t: float        = 0.25       # 时间权重
-    w_p: float        = 0.25       # 空间权重
-    eps: float        = 0.35       # DBSCAN epsilon
-    min_samples: int  = 2          # DBSCAN min_samples
-    model_path: str   = "models/bge-m3"
-    lating_path: str  = "data/lating.json"
-    device: str       = field(default_factory=lambda: "cuda" if torch.cuda.is_available() else "cpu")
+    T_max: int         = 7          # 时间阈值（天）
+    S_max: float       = 150.0      # 空间阈值（km）
+    w_s: float         = 0.65       # 语义权重（原 0.50，↑ 减少链式连通）
+    w_t: float         = 0.20       # 时间权重
+    w_p: float         = 0.15       # 空间权重
+    eps: float         = 0.28       # DBSCAN epsilon（原 0.35，↓ 收紧簇边界）
+    min_samples: int   = 2          # DBSCAN min_samples
+    repr_strategy: str = "centroid" # "centroid" | "most_common"
+    model_path: str    = "models/bge-m3"
+    lating_path: str   = "data/lating.json"
+    discard_path: str  = "data/discard.txt"
+    device: str        = field(default_factory=lambda: "cuda" if torch.cuda.is_available() else "cpu")
+
+
+# ─── discard.txt 解析 ─────────────────────────────────────────────────────────
+
+def load_discard_ids(path: str) -> Set[str]:
+    ids: Set[str] = set()
+    try:
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                m = re.search(r'"article_id":\s*"([^"]+)"', line)
+                if m:
+                    ids.add(m.group(1))
+    except FileNotFoundError:
+        pass
+    return ids
 
 
 # ─── 城市经纬度加载 ────────────────────────────────────────────────────────────
@@ -145,19 +163,16 @@ def build_dist_matrix(
 
 # ─── 预处理：展平 results.json → 事件记录列表 ──────────────────────────────────
 
-def flatten_records(data: dict) -> List[dict]:
-    """
-    从 results.json 的顶层 dict 展平为事件记录列表。
-    过滤条件：location 为空列表的事件。
-    date 优先取 date_from，缺失时回退到文章 publish_date。
-    article_id 取父级文章的 article_id（事件内字段固定为 null）。
-    """
+def flatten_records(data: dict, discard_ids: Set[str] = frozenset()) -> List[dict]:
+    """单 run：从 results.json 展平为事件记录列表，过滤 discard_ids 和空 location。"""
     records = []
     for art in data.get("results", []):
-        art_id       = art["article_id"]
+        art_id = art["article_id"]
+        if art_id in discard_ids:
+            continue
         publish_date = art.get("publish_date", "")
         for ev in art.get("extraction", {}).get("events", []):
-            if not ev.get("location"):          # 过滤 location 为空
+            if not ev.get("location"):
                 continue
             date = ev.get("date_from") or publish_date
             if not date:
@@ -168,7 +183,39 @@ def flatten_records(data: dict) -> List[dict]:
                 "city":       ev.get("city", ""),
                 "date":       date,
                 "article_id": art_id,
+                "run_id":     data.get("run_id", ""),
             })
+    return records
+
+
+def flatten_records_multi(data_list: List[dict], discard_ids: Set[str] = frozenset()) -> List[dict]:
+    """
+    多 run 合并展平：按 article_id 去重（同一篇文章只保留首次出现的抽取结果），
+    过滤 discard_ids 和空 location。
+    """
+    seen: Set[str] = set()
+    records = []
+    for data in data_list:
+        for art in data.get("results", []):
+            art_id = art["article_id"]
+            if art_id in discard_ids or art_id in seen:
+                continue
+            seen.add(art_id)
+            publish_date = art.get("publish_date", "")
+            for ev in art.get("extraction", {}).get("events", []):
+                if not ev.get("location"):
+                    continue
+                date = ev.get("date_from") or publish_date
+                if not date:
+                    continue
+                records.append({
+                    "event_text": ev["event_text"],
+                    "event_type": ev["event_type"],
+                    "city":       ev.get("city", ""),
+                    "date":       date,
+                    "article_id": art_id,
+                    "run_id":     data.get("run_id", ""),
+                })
     return records
 
 
@@ -249,9 +296,20 @@ def cluster_events(records: List[dict], cfg: Cfg | None = None, base_dir: str = 
         m_cities = [cities[i]   for i in members]
         m_aids   = [art_ids[i]  for i in members]
 
+        if cfg.repr_strategy == "centroid":
+            # 取各成员 embedding，选余弦距质心最近的文本
+            m_emb_rows = [emb_rows[i] for i in members]
+            vecs = all_embs[m_emb_rows].to(cfg.device)   # (K, D) 已归一化
+            centroid = vecs.mean(0)
+            centroid = centroid / centroid.norm().clamp(min=1e-8)
+            best_local = int((vecs @ centroid).argmax())
+            repr_text = m_texts[best_local]
+        else:
+            repr_text = Counter(m_texts).most_common(1)[0][0]
+
         clustered_events.append({
             "cluster_id":               cid,
-            "representative_event_text": Counter(m_texts).most_common(1)[0][0],
+            "representative_event_text": repr_text,
             "event_type":               Counter(m_types).most_common(1)[0][0],
             "cities":                   sorted({c for c in m_cities if c}),
             "date_start":               days_to_str(min(m_days)),
@@ -265,18 +323,40 @@ def cluster_events(records: List[dict], cfg: Cfg | None = None, base_dir: str = 
 
 
 # ─── 入口 ──────────────────────────────────────────────────────────────────────
+# 用法：
+#   单 run:  python cluster_events.py results/run1/results.json out.json
+#   全局:    python cluster_events.py results/run*/results.json out.json
+#            （shell glob 展开多个路径，最后一个参数为输出路径）
 
 if __name__ == "__main__":
-    input_path  = sys.argv[1] if len(sys.argv) > 1 else "results/run1/results.json"
-    output_path = sys.argv[2] if len(sys.argv) > 2 else "results/run1/clustered_events.json"
-    base_dir    = str(Path(__file__).parent.parent)
+    if len(sys.argv) < 2:
+        print("Usage: cluster_events.py <input1.json> [input2.json ...] <output.json>")
+        sys.exit(1)
 
-    with open(input_path, encoding="utf-8") as f:
-        raw = json.load(f)
-    records = flatten_records(raw)
-    print(f"Loaded {len(records)} records (after filtering empty-location events), device={Cfg().device}")
+    *input_paths, output_path = sys.argv[1:]
+    if not input_paths:
+        input_paths = ["results/run1/results.json"]
+        output_path = "results/run1/clustered_events.json"
 
-    clustered = cluster_events(records, base_dir=base_dir)
+    base_dir = str(Path(__file__).parent.parent)
+    cfg = Cfg()
+
+    discard_ids = load_discard_ids(str(Path(base_dir) / cfg.discard_path))
+    print(f"Discard list: {len(discard_ids)} article_ids")
+
+    data_list = []
+    for p in input_paths:
+        with open(p, encoding="utf-8") as f:
+            data_list.append(json.load(f))
+
+    if len(data_list) == 1:
+        records = flatten_records(data_list[0], discard_ids)
+    else:
+        records = flatten_records_multi(data_list, discard_ids)
+
+    print(f"Loaded {len(records)} records from {len(data_list)} run(s), device={cfg.device}")
+
+    clustered = cluster_events(records, cfg=cfg, base_dir=base_dir)
     print(f"Clusters: {len(clustered)}")
 
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
