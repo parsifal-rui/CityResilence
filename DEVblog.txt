@@ -27,3 +27,8 @@ eps 是最敏感的参数，建议跑完全局聚类后打印各类型的 cluste
 有时候是重复报道，忘记跑去重了
 去重方法
 这样，先判断cluster里的n_articles要小于5才考虑是否来源于相同报道的可能，然后对这部分，去对应的results run里找results.json,比如article id：A561,就去run6的resluts json搜索到对应的 content并且比对，我要的是content级别的比对@results/run6/results.json:9341-9343 按照这个思路修改@dequpe_from_global.py
+
+4.18
+1. data preprocess去重 
+python ./data/article/deduplicate.py 
+原始数量: 1944, 去重后数量: 1796

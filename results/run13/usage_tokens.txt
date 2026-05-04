@@ -1,7 +1,6 @@
 batch_index: 13
 start_index: 1200
 end_index: 1300
-total_prompt_tokens: 223678
-total_completion_tokens: 143253
-total_tokens: 366931
-total_runtime_seconds: 2926.61
+total_prompt_tokens: 329702
+total_completion_tokens: 90525
+total_tokens: 420227

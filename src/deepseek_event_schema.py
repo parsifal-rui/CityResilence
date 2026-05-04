@@ -43,7 +43,7 @@ def query_deepseek(prompt: str, api_key: str, *, model: str, base_url: str, prox
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0,
-        "max_tokens": 6000,  # 事件 schema 更复杂，token 上限提高到 6000
+        "max_tokens": 8000,  # 防止截断，提高到 8000
     }
 
     with _httpx_client(proxy) as client:
@@ -67,43 +67,39 @@ def query_deepseek(prompt: str, api_key: str, *, model: str, base_url: str, prox
     return data["choices"][0]["message"]["content"], out
 
 
-def generate_event_schema_prompt(news_article: str, article_id: str = "", publish_date: str = "") -> str:
+def build_taxonomy_reference_text(taxonomy: Optional[Dict[str, List[str]]], limit_per_type: int = 120) -> str:
+    if not taxonomy:
+        return ""
+    parts = []
+    for t in ["Driver", "Modulator", "Hazard", "Impact"]:
+        items = taxonomy.get(t, [])
+        if not items:
+            continue
+        uniq_items = []
+        seen = set()
+        for x in items:
+            x = str(x).strip()
+            if not x or x in seen:
+                continue
+            seen.add(x)
+            uniq_items.append(x)
+            if len(uniq_items) >= limit_per_type:
+                break
+        if uniq_items:
+            parts.append(f"- {t}: {'、'.join(uniq_items)}")
+    if not parts:
+        return ""
+    return "\n**事件命名参考词表（用于语义对齐，非硬匹配）：**\n" + "\n".join(parts) + "\n"
+
+
+def generate_event_schema_prompt(
+    news_article: str,
+    article_id: str = "",
+    publish_date: str = "",
+    taxonomy_reference_text: str = "",
+) -> str:
     """
     生成事件图谱 schema 的 prompt
-    
-    Args:
-        news_article: 新闻正文
-        article_id: 文章 ID（可选）
-        publish_date: 新闻发布日期 YYYY-MM-DD（可选，用于时间回填）
-    
-    输出结构示例：
-    {
-      "events": [
-        {
-          "event_id": "E1",
-          "event_text": "积水",
-          "event_type": "Hazard",
-          "city": "深圳",
-          "date_from": "2024-09-01",
-          "date_to": "2024-09-01",
-          "location": ["广东省", "深圳市", "龙岗区", "金碧街"],
-          "attributes": {
-            "severity": "severe",
-            "time_uncertain": false
-          },
-          "article_id": "001",
-          "evidence_sentences": ["..."]
-        }
-      ],
-      "relations": [
-        {
-          "source_event_id": "E1",
-          "relation_type": "引发",
-          "target_event_id": "E2",
-          "evidence_sentence": "..."
-        }
-      ]
-    }
     """
     publish_date_hint = f"\n**新闻发布日期：**\n{publish_date}\n（若正文中时间模糊如'近期/近日'，使用该日期，并在 attributes 里标注 time_uncertain=true）" if publish_date else ""
     
@@ -116,6 +112,12 @@ def generate_event_schema_prompt(news_article: str, article_id: str = "", publis
 - **灾害 (Hazard)**：可能造成负面影响的现象/事件（例如：洪水、滑坡、干旱、热浪、积水）
 - **影响 (Impact)**：灾害造成的负面后果（例如：伤亡、损失、中断、倒塌）
 
+**城市应急相关性过滤（极其重要）：**
+- 本次抽取仅保留确属 urban / weather / climate hazards, modulators, drivers 的事件
+- 对城市事件重点关注：噪音、高温、火灾、爆炸、污染、停水停电、食物中毒、传染病，以及其他直接造成社会经济影响、需要城市应急管理关注的事件
+- 明显与城市应急无关的事件不保留
+- 每个候选事件都要先给出判断理由，再给出是否保留
+
 **关系类型定义：**
 - **引发**：一个事件直接导致另一个事件发生
 - **加剧**：一个事件使另一个事件恶化
@@ -127,6 +129,7 @@ def generate_event_schema_prompt(news_article: str, article_id: str = "", publis
 **新闻稿：**
 {news_article}
 {publish_date_hint}
+{taxonomy_reference_text}
 
 **抽取要求（核心）：**
 1. **event_text / event_type 保持简洁**：
@@ -156,24 +159,23 @@ def generate_event_schema_prompt(news_article: str, article_id: str = "", publis
      - scope（影响范围）
    - 若无额外属性可填空字典 {{}}
 
-6. **evidence_sentences**：
-   - 每个事件必须提供支持该事件的原文句子列表
-   - 所有证据句子必须能在新闻稿原文中找到
-   - 证据句子必须是单行文本，不能包含换行符；若原文有换行，用空格替代
-
-7. **关系抽取**：
+6. **关系抽取**：
    - source_event_id / target_event_id 关联已抽取的事件 ID
    - relation_type 从上述关系类型中选择
-   - evidence_sentence 支持该关系的原文句子
 
-8. **事件拆分规则（重要）**：
+7. **事件拆分规则（重要）**：
    - 同类事件但发生在**不同地点**（区/街道级别）时，必须拆分为独立事件
    - 同类事件但**严重程度不同**（如红色/橙色/黄色预警）时，必须拆分为独立事件
    - 每个事件的 location 只能包含**一个具体地点**（一条街道/一个区域），不能合并多个地点
 
-9. **语义去重**：
+8. **语义去重**：
    - 语义相近的事件需合并（例如"暴雨"和"强降雨"应合并为同一事件）
-   - 但若地点或严重程度不同，则不要合并（参见第8条）
+   - 但若地点或严重程度不同，则不要合并（参见第7条）
+
+9. **相关性判定字段（必须输出）**：
+   - relevance_reasoning：简短说明该事件为何属于（或不属于）城市/天气/气候风险事件。**必须在此处简要引用原文核心词句作为证据**（限50字以内，禁止大段摘抄）。
+   - is_target_event：布尔值。true 表示应保留；false 表示不属于目标范围
+   - 最终 events 中只保留 is_target_event=true 的事件
 
 **输出格式（纯 JSON，不要 markdown 代码块）：**
 {{
@@ -182,6 +184,8 @@ def generate_event_schema_prompt(news_article: str, article_id: str = "", publis
       "event_id": "E1",
       "event_text": "积水",
       "event_type": "Hazard",
+      "relevance_reasoning": "原文称'金碧街出现严重积水'，直接影响交通，属城市应急管理关注范围。",
+      "is_target_event": true,
       "city": "深圳",
       "date_from": "2024-09-01",
       "date_to": "2024-09-01",
@@ -190,16 +194,14 @@ def generate_event_schema_prompt(news_article: str, article_id: str = "", publis
         "severity": "severe",
         "time_uncertain": false
       }},
-      "article_id": "{article_id}",
-      "evidence_sentences": ["..."]
+      "article_id": "{article_id}"
     }}
   ],
   "relations": [
     {{
       "source_event_id": "E1",
       "relation_type": "引发",
-      "target_event_id": "E2",
-      "evidence_sentence": "..."
+      "target_event_id": "E2"
     }}
   ]
 }}
@@ -232,7 +234,6 @@ def generate_event_schema_prompt(news_article: str, article_id: str = "", publis
 应拆分为 2 个独立事件（不同地点）：
 - E1: event_text="树木倒地", location=["广东省","深圳市","坪山区","坪山大道"]
 - E2: event_text="树木倒地", location=["广东省","深圳市","坪山区","荔景路"]
- **重要：最终 JSON 中不要包含任何名为 `evidence_sentence` 或 `evidence_sentences` 的字段。**
 """.strip()
 
 
@@ -288,6 +289,7 @@ def extract_events_and_relations(
     article_id: str = "",
     publish_date: str = "",
     revise_rounds: int = 0,
+    taxonomy_reference_text: str = "",
 ) -> Dict[str, Any]:
     """
     抽取事件图谱（events + relations）
@@ -301,7 +303,12 @@ def extract_events_and_relations(
     Returns:
         包含 events 和 relations 的字典
     """
-    prompt = generate_event_schema_prompt(news_article, article_id=article_id, publish_date=publish_date)
+    prompt = generate_event_schema_prompt(
+        news_article,
+        article_id=article_id,
+        publish_date=publish_date,
+        taxonomy_reference_text=taxonomy_reference_text,
+    )
     result_text, usage = query_deepseek(prompt, api_key, model=model, base_url=base_url, proxy=proxy)
 
     parsed = _try_load_json(result_text)
@@ -310,6 +317,10 @@ def extract_events_and_relations(
     
     parsed.setdefault("events", [])
     parsed.setdefault("relations", [])
+    parsed["events"] = [
+        e for e in parsed["events"]
+        if isinstance(e, dict) and e.get("is_target_event") is True
+    ]
     return parsed, usage
 
 
@@ -317,9 +328,18 @@ def main():
     root = Path(__file__).resolve().parent
     data_dir = root.parent / "data"
     results_dir = root.parent / "results"
-    csv_path = (data_dir / "articles_cleaned.csv").resolve()
+    csv_path = (data_dir / "article" /"articles_deduped.csv").resolve()
+    taxonomy_path = (data_dir / "background" / "entities_by_type.json").resolve()
     df = pd.read_csv(csv_path)
     results_dir.mkdir(parents=True, exist_ok=True)
+    taxonomy_reference_text = ""
+    if taxonomy_path.exists():
+        try:
+            with open(taxonomy_path, "r", encoding="utf-8") as f:
+                taxonomy_data = json.load(f)
+            taxonomy_reference_text = build_taxonomy_reference_text(taxonomy_data, limit_per_type=120)
+        except Exception as e:
+            print(f"加载事件词表失败，继续无词表模式：{e}", flush=True)
 
     batch_size = 100
     n_rows = len(df)
@@ -398,6 +418,7 @@ def main():
                             article_id=article_id,
                             publish_date=publish_date,
                             revise_rounds=0,
+                            taxonomy_reference_text=taxonomy_reference_text,
                         )
                         for k in retry_usage:
                             v = int(usage.get(k, 0))
@@ -473,6 +494,7 @@ def main():
                     article_id=article_id,
                     publish_date=publish_date,
                     revise_rounds=0,
+                    taxonomy_reference_text=taxonomy_reference_text,
                 )
                 for k in batch_usage:
                     v = int(usage.get(k, 0))

@@ -1,6 +1,6 @@
 batch_index: 1
 start_index: 0
 end_index: 100
-total_prompt_tokens: 211153
-total_completion_tokens: 151413
-total_tokens: 362566
+total_prompt_tokens: 341192
+total_completion_tokens: 110274
+total_tokens: 451466

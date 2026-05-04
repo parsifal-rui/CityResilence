@@ -1,0 +1,225 @@
+{
+  "counts": {
+    "records": 100,
+    "events": 67,
+    "relations": 0,
+    "articles_with_events": 53
+  },
+  "allowed_sets": {
+    "event_types": [
+      "Driver",
+      "Hazard",
+      "Impact",
+      "Modulator"
+    ],
+    "relation_types_size": 28
+  },
+  "missing": {
+    "by_field": {
+      "date_to": 1
+    },
+    "rates": {
+      "date_to": 0.014925373134328358,
+      "relation_source_or_target_missing": 0.0
+    }
+  },
+  "type_errors": {},
+  "norm_errors": {},
+  "suspicious_stats": {
+    "event_text_too_short": 4
+  },
+  "anchor_checks": {
+    "enabled": true,
+    "sample_events": 50,
+    "anchor_total": 0,
+    "event_text_not_in_article": 0,
+    "city_not_in_article": 0,
+    "location_item_not_in_article": 0,
+    "evidence_checks_done": 0,
+    "evidence_sentence_not_in_article": 0
+  },
+  "top_examples": {
+    "by_issue": {
+      "event_text_too_short": [
+        {
+          "article_id": "A031",
+          "event_id": "E1",
+          "len": 4,
+          "event_text": "高温天气",
+          "event": {
+            "event_id": "E1",
+            "event_text": "高温天气",
+            "event_type": "Hazard",
+            "relevance_reasoning": "新闻提到天气渐趋炎热，气温回升，属于城市高温风险。",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-25",
+            "location": [
+              "深圳"
+            ],
+            "attributes": {},
+            "article_id": "A031"
+          }
+        },
+        {
+          "article_id": "A063",
+          "event_id": "E2",
+          "len": 4,
+          "event_text": "城市积涝",
+          "event": {
+            "event_id": "E2",
+            "event_text": "城市积涝",
+            "event_type": "Impact",
+            "relevance_reasoning": "暴雨可能导致城市积涝，影响交通和居民生活。证据：'注意防范暴雨造成的城市积涝'",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-09-24",
+            "date_to": "2024-09-24",
+            "location": [
+              "深圳"
+            ],
+            "attributes": {},
+            "article_id": "A063"
+          }
+        },
+        {
+          "article_id": "A077",
+          "event_id": "E1",
+          "len": 4,
+          "event_text": "山体滑坡",
+          "event": {
+            "event_id": "E1",
+            "event_text": "山体滑坡",
+            "event_type": "Hazard",
+            "relevance_reasoning": "新闻明确报道蕉岭县皇佑村突发山体滑坡。",
+            "is_target_event": true,
+            "city": "蕉岭县",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "蕉岭县南磜镇皇佑村"
+            ],
+            "attributes": {},
+            "article_id": "A077"
+          }
+        },
+        {
+          "article_id": "A096",
+          "event_id": "E1",
+          "len": 4,
+          "event_text": "内涝风险",
+          "event": {
+            "event_id": "E1",
+            "event_text": "内涝风险",
+            "event_type": "Hazard",
+            "relevance_reasoning": "强降雨可能导致城市内涝，威胁群众安全。",
+            "is_target_event": true,
+            "city": "阳江市",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [
+              "阳江市主城区"
+            ],
+            "attributes": {},
+            "article_id": "A096"
+          }
+        }
+      ]
+    },
+    "top_suspicious": [
+      {
+        "article_id": "A031",
+        "event_id": "E1",
+        "len": 4,
+        "event_text": "高温天气",
+        "event": {
+          "event_id": "E1",
+          "event_text": "高温天气",
+          "event_type": "Hazard",
+          "relevance_reasoning": "新闻提到天气渐趋炎热，气温回升，属于城市高温风险。",
+          "is_target_event": true,
+          "city": "深圳",
+          "date_from": "2024-08-23",
+          "date_to": "2024-08-25",
+          "location": [
+            "深圳"
+          ],
+          "attributes": {},
+          "article_id": "A031"
+        },
+        "_issue": "event_text_too_short",
+        "_score": 1
+      },
+      {
+        "article_id": "A063",
+        "event_id": "E2",
+        "len": 4,
+        "event_text": "城市积涝",
+        "event": {
+          "event_id": "E2",
+          "event_text": "城市积涝",
+          "event_type": "Impact",
+          "relevance_reasoning": "暴雨可能导致城市积涝，影响交通和居民生活。证据：'注意防范暴雨造成的城市积涝'",
+          "is_target_event": true,
+          "city": "深圳",
+          "date_from": "2024-09-24",
+          "date_to": "2024-09-24",
+          "location": [
+            "深圳"
+          ],
+          "attributes": {},
+          "article_id": "A063"
+        },
+        "_issue": "event_text_too_short",
+        "_score": 1
+      },
+      {
+        "article_id": "A077",
+        "event_id": "E1",
+        "len": 4,
+        "event_text": "山体滑坡",
+        "event": {
+          "event_id": "E1",
+          "event_text": "山体滑坡",
+          "event_type": "Hazard",
+          "relevance_reasoning": "新闻明确报道蕉岭县皇佑村突发山体滑坡。",
+          "is_target_event": true,
+          "city": "蕉岭县",
+          "date_from": "2024-08-29",
+          "date_to": "2024-08-29",
+          "location": [
+            "蕉岭县南磜镇皇佑村"
+          ],
+          "attributes": {},
+          "article_id": "A077"
+        },
+        "_issue": "event_text_too_short",
+        "_score": 1
+      },
+      {
+        "article_id": "A096",
+        "event_id": "E1",
+        "len": 4,
+        "event_text": "内涝风险",
+        "event": {
+          "event_id": "E1",
+          "event_text": "内涝风险",
+          "event_type": "Hazard",
+          "relevance_reasoning": "强降雨可能导致城市内涝，威胁群众安全。",
+          "is_target_event": true,
+          "city": "阳江市",
+          "date_from": "2024-09-06",
+          "date_to": "2024-09-07",
+          "location": [
+            "阳江市主城区"
+          ],
+          "attributes": {},
+          "article_id": "A096"
+        },
+        "_issue": "event_text_too_short",
+        "_score": 1
+      }
+    ]
+  }
+}

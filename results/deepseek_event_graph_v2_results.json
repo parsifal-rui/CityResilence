@@ -1,0 +1,3676 @@
+{
+  "run_stats": {
+    "total_runtime_seconds": 946.42,
+    "total_prompt_tokens": 171653,
+    "total_completion_tokens": 71532,
+    "total_tokens": 243185,
+    "normalization_stats": {
+      "raw_events": 395,
+      "raw_relations": 310,
+      "events_kept": 67,
+      "events_dropped_non_target": 328,
+      "events_dropped_invalid": 0,
+      "events_reindexed": 67,
+      "relations_kept": 0,
+      "relations_dropped_missing_endpoints": 0,
+      "relations_dropped_unmapped": 304,
+      "relations_dropped_self_loop": 0,
+      "relations_dropped_type": 6,
+      "relations_deduped": 0,
+      "relations_evidence_empty": 0
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "article_id": "A000",
+      "publish_date": "2024-08-23",
+      "content_preview": "深圳商报·读创客户端记者 文灿\n有一群人，为了守护更多人的安全，他们逆风雨而行，迎艰难而上，坚守在一线，用实际行动诠释忠诚与担当。\n近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。为保障群",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 3,
+        "events_kept": 0,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 1,
+      "article_id": "A001",
+      "publish_date": "2024-08-29",
+      "content_preview": "最新发布：\n广州市气象灾害应急指挥部办公室\n2024年8月29日20时55分：\n据市气象台监测，广州市达到解除气象灾害（暴雨和雷雨大风）应急响应标准。市气象灾害应急指挥部决定从29日20时55分起解除",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "广州市出现中到强雷雨，局部大暴雨",
+            "event_type": "Hazard",
+            "relevance_reasoning": "强雷雨和大暴雨是城市应急管理关注的灾害事件。证据：全市普遍出现中到强雷雨，局部大暴雨。",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广州市",
+              "南沙区东涌镇",
+              "花都区梯面镇"
+            ],
+            "attributes": {
+              "最大雨量": "187.5毫米",
+              "最大阵风": "21.7米/秒(9级)"
+            },
+            "article_id": "A001"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 2,
+      "article_id": "A002",
+      "publish_date": "2024-08-29",
+      "content_preview": "根据广州市气象台监测，广州市达到启动气象灾害（暴雨和雷雨大风）Ⅳ级应急响应标准。市气象灾害应急指挥部决定从8月29日17时21分起启动广州市气象灾害（暴雨和雷雨大风）Ⅳ级应急响应。请按照预案规定做好防",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "下班高峰期有中雷雨",
+            "event_type": "Impact",
+            "relevance_reasoning": "预计17-19时下班高峰期有中雷雨，影响交通和市民安全",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广州市区"
+            ],
+            "attributes": {
+              "时段": "17-19时",
+              "天气": "中雷雨"
+            },
+            "article_id": "A002"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 7,
+        "raw_relations": 9,
+        "events_kept": 1,
+        "events_dropped_non_target": 6,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 9,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 3,
+      "article_id": "A003",
+      "publish_date": "2024-08-30",
+      "content_preview": "无论是城还是乡，各地居民均向往着“水更清”的环境。\n党的二十届三中全会提出，“完善精准治污、科学治污、依法治污制度机制，落实以排污许可制为核心的固定污染源监管制度，建立新污染物协同治理和环境风险管控体",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "水环境改善",
+            "event_type": "Impact",
+            "relevance_reasoning": "治水后水环境好转，黑臭消除，成为休憩场所。证据：'当年因污水排放散发黑臭的民居边沟，如今黑臭不再'",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-08-01",
+            "date_to": "2024-08-27",
+            "location": [
+              "广州市白云区人和镇方石村"
+            ],
+            "attributes": {
+              "改善指标": "黑臭消除",
+              "水体": "风水塘、方石坑"
+            },
+            "article_id": "A003"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 4,
+      "article_id": "A004",
+      "publish_date": "2024-09-02",
+      "content_preview": "“蕉岭县是‘世界长寿之乡’，生态优美，土壤肥沃，水土富含硒元素……”一场义卖直播活动上，广州工程技术职业学院九岭突击队成员化身助农小主播，通过现场讲解、试吃分享等形式吸引了粉丝朋友们的大量点赞、留言互",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "6·16特大暴雨引发洪涝和山体滑坡",
+            "event_type": "Hazard",
+            "relevance_reasoning": "新闻明确提及6·16特大暴雨导致洪涝和山体滑坡，属于城市应急事件。",
+            "is_target_event": true,
+            "city": "蕉岭县",
+            "date_from": "2024-06-16",
+            "date_to": "2024-06-16",
+            "location": [
+              "蕉岭县"
+            ],
+            "attributes": {},
+            "article_id": "A004"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 5,
+      "article_id": "A005",
+      "publish_date": "2024-09-04",
+      "content_preview": "4日下午17时45分，高州市气象台发布台风蓝色预警。\n据悉，台风“摩羯”（台风级，13级），预计将于6日以强台风级或超强台风级在海南万宁到阳江阳西一带沿海登陆。\n受台风“摩羯”影响，预计高州5日夜间到",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 7,
+        "events_kept": 0,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 7,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 6,
+      "article_id": "A006",
+      "publish_date": "2024-09-04",
+      "content_preview": "鉴于今年第11号台风“摩羯”强度进一步增强，未来几天给广东省带来的风雨影响进一步加大。根据《广东省防汛防旱防风防冻应急预案》和省防总有关规定，广东省防汛防旱防风总指挥部已于9月4日10时将防风Ⅳ级应急",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "防风应急响应提升至Ⅲ级",
+            "event_type": "Hazard",
+            "relevance_reasoning": "应急响应提升表明台风风险加剧，证据：防风Ⅳ级提升为防风Ⅲ级",
+            "is_target_event": true,
+            "city": "广东省",
+            "date_from": "2024-09-04",
+            "date_to": "2024-09-04",
+            "location": [
+              "广东省"
+            ],
+            "attributes": {},
+            "article_id": "A006"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 1,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 7,
+      "article_id": "A007",
+      "publish_date": "2024-09-05",
+      "content_preview": "记者从江门市台山有关部门获悉，台风“摩羯”强度进一步增强，台山市新宁体育馆应急避难场所开放，台山市应急管理局迅速召集避难场所安置小组10名工作人员和市应急救援大队20名队员，到新宁体育馆提前预置床垫、",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 10,
+        "raw_relations": 9,
+        "events_kept": 0,
+        "events_dropped_non_target": 10,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 9,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 8,
+      "article_id": "A008",
+      "publish_date": "2024-09-05",
+      "content_preview": "南都讯 记者蒋臻 深中通道管理中心9月5日发布消息，中山市气象台2024年9月5日17时13分将全市台风预警信号升级为黄色，预计深中通道将于9月5日晚上进入七级风圈，桥面阵风将达到7～9级。\n受第11",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "深中通道减速通行",
+            "event_type": "Impact",
+            "relevance_reasoning": "交通管制措施，影响交通安全，证据：实行减速通行，车速控制在70公里/小时及以下",
+            "is_target_event": true,
+            "city": "中山",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "深中通道"
+            ],
+            "attributes": {},
+            "article_id": "A008"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 9,
+      "article_id": "A009",
+      "publish_date": "2024-09-05",
+      "content_preview": "记者从应急管理部获悉，据气象部门预报，今年第11号台风“摩羯”将于6日下午至夜间在海南琼海到广东电白一带沿海登陆（强台风级或超强台风级，15～17级，50～58米每秒），7日凌晨移入北部湾海面。未来三",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "防汛防台风应急响应提升",
+            "event_type": "Impact",
+            "relevance_reasoning": "国家防总提升应急响应，应对台风影响。",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东",
+              "广西"
+            ],
+            "attributes": {
+              "响应级别": "三级"
+            },
+            "article_id": "A009"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 4,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 10,
+      "article_id": "A010",
+      "publish_date": "2024-09-06",
+      "content_preview": "9月6日10时，深中通道管理中心在官方微信公众号发布消息，深中通道已解除临时限速措施，恢复正常通行。\n深中通道管理中心提醒，台风“摩羯”对广东的风雨影响仍将继续，过往司乘人员请注意桥面横风和雨天影响，",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 0,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 11,
+      "article_id": "A011",
+      "publish_date": "2024-09-06",
+      "content_preview": "截至9月6日早晨，今年第11号台风“摩羯”的中心附近最大风力已达17级以上，该风力已达到“爆表等级”。中央气象台预计，9月6日早晨至9月7日早晨，海南、粤西及周边海域将有大风强降水等天气。\n9月6日8",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "台风摩羯登陆海南广东",
+            "event_type": "Hazard",
+            "relevance_reasoning": "台风登陆带来强风暴雨，是城市灾害，证据：预计下午至傍晚登陆",
+            "is_target_event": true,
+            "city": "文昌",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "海南琼海到广东湛江一带沿海"
+            ],
+            "attributes": {},
+            "article_id": "A011"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "台风摩羯再次登陆广西",
+            "event_type": "Hazard",
+            "relevance_reasoning": "二次登陆带来持续影响，证据：预计7日下午在广西防城港再次登陆",
+            "is_target_event": true,
+            "city": "防城港",
+            "date_from": "2024-09-07",
+            "date_to": "2024-09-07",
+            "location": [
+              "广西防城港到越南北部一带沿海"
+            ],
+            "attributes": {},
+            "article_id": "A011"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 4,
+        "events_kept": 2,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 2,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 1,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 12,
+      "article_id": "A012",
+      "publish_date": "2024-09-06",
+      "content_preview": "广东省气象台预报，台风“摩羯”将于9月6日下午到夜间在广东阳江到海南琼海一带沿海登陆，正面袭击雷州半岛。为有效应对台风“摩羯”对江门造成的影响，江门市消防救援支队提前谋划部署，加强值班战备，严格落实各",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 4,
+        "events_kept": 0,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 13,
+      "article_id": "A013",
+      "publish_date": "2024-09-06",
+      "content_preview": "9月6日07时，根据湛江市气象台消息，台风“摩羯”（超强台风级）中心位于湛江市区东南方约310公里的海面上，预计将于6日上半夜以超强台风级（16～17级）在徐闻登陆。广东省高速公路有限公司湛江分公司（",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 4,
+        "events_kept": 0,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 14,
+      "article_id": "A014",
+      "publish_date": "2024-09-06",
+      "content_preview": "今年第11号台风“摩羯”已于9月6日16时20分前后以超强台风级在海南文昌市沿海登陆，登陆时中心附近最大风力17级以上，达62米/秒，中心最低气压915百帕。预计“摩羯”将以15公里至20公里的时速继",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 6,
+        "events_kept": 0,
+        "events_dropped_non_target": 6,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 6,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 15,
+      "article_id": "A015",
+      "publish_date": "2024-09-07",
+      "content_preview": "台风“摩羯”已逐步远离，但风雨影响仍在！\n东莞市气象台9月6日23时20分解除台风蓝色预警：\n今年第11号台风“摩羯”已于9月6日22时20分前后以超强台风级在徐闻县角尾乡再次登陆，登陆时中心附近最大",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "东莞持续强降水",
+            "event_type": "Hazard",
+            "relevance_reasoning": "持续强降水导致地质灾害风险，证据：东莞已出现连续强降水",
+            "is_target_event": true,
+            "city": "东莞",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "东莞"
+            ],
+            "attributes": {
+              "max_precipitation": "24.8mm"
+            },
+            "article_id": "A015"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "东莞地质灾害风险",
+            "event_type": "Impact",
+            "relevance_reasoning": "强降水引发地质灾害风险，证据：地质灾害气象风险等级较高",
+            "is_target_event": true,
+            "city": "东莞",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "东莞"
+            ],
+            "attributes": {},
+            "article_id": "A015"
+          },
+          {
+            "event_id": "E3",
+            "event_text": "东莞大风风险",
+            "event_type": "Hazard",
+            "relevance_reasoning": "大风可能导致设施倒塌，证据：全市普遍出现6到7级阵风",
+            "is_target_event": true,
+            "city": "东莞",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "东莞"
+            ],
+            "attributes": {
+              "max_wind": "14.6m/s"
+            },
+            "article_id": "A015"
+          },
+          {
+            "event_id": "E4",
+            "event_text": "东莞城乡积涝风险",
+            "event_type": "Impact",
+            "relevance_reasoning": "持续性降水可能导致积涝，证据：请注意防御持续性降水导致的城乡积涝",
+            "is_target_event": true,
+            "city": "东莞",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "东莞"
+            ],
+            "attributes": {},
+            "article_id": "A015"
+          },
+          {
+            "event_id": "E5",
+            "event_text": "东莞山体滑坡风险",
+            "event_type": "Impact",
+            "relevance_reasoning": "强降水可能引发山体滑坡，证据：请注意防御山体滑坡等灾害",
+            "is_target_event": true,
+            "city": "东莞",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "东莞"
+            ],
+            "attributes": {},
+            "article_id": "A015"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 5,
+        "events_kept": 5,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 5,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 3,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 16,
+      "article_id": "A016",
+      "publish_date": "2024-09-07",
+      "content_preview": "超强台风“摩羯”已进入越南，广东电网于9月7日12时将防风防汛应急响应级别调整为Ⅲ级。截至9月7日16时，广东电网受台风影响的72.3万户用户超六成已恢复供电，累计出动抢修人员6936人次，抢修车辆1",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "台风导致用户停电",
+            "event_type": "Hazard",
+            "relevance_reasoning": "台风造成72.3万户用户停电，是城市停电事件",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [
+              "广东"
+            ],
+            "attributes": {},
+            "article_id": "A016"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 5,
+        "events_kept": 1,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 5,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 17,
+      "article_id": "A017",
+      "publish_date": "2024-09-08",
+      "content_preview": "南都讯 记者丁治加 9月6日20时，湛江人保财险预赔付“摩羯”台风首笔现代化海洋牧场保险款项360万元，因受“摩羯”影响，保单约定的气象站点录得平均风力达10级，触发保险责任，湛江人保财险立即启动海洋",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 0,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 18,
+      "article_id": "A018",
+      "publish_date": "2024-09-08",
+      "content_preview": "文/羊城晚报全媒体记者 刘克洪\n记者从应急管理部获悉，9月7日，国家防总办公室、应急管理部滚动组织有关部门联合会商，视频调度海南、广东、广西、云南等重点省份情况，安排部署海南、广东受损交通、电力、通信",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "交通电力通信受损",
+            "event_type": "Hazard",
+            "relevance_reasoning": "台风导致交通、电力、通信受损，需抢修",
+            "is_target_event": true,
+            "city": "海南,广东",
+            "date_from": "2024-09-07",
+            "date_to": "2024-09-08",
+            "location": [
+              "海南",
+              "广东"
+            ],
+            "attributes": {},
+            "article_id": "A018"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "山洪地质灾害风险",
+            "event_type": "Hazard",
+            "relevance_reasoning": "防范次生灾害，山洪、地质灾害为重点",
+            "is_target_event": true,
+            "city": "海南,广东,广西,云南",
+            "date_from": "2024-09-07",
+            "date_to": "2024-09-08",
+            "location": [
+              "海南",
+              "广东",
+              "广西",
+              "云南"
+            ],
+            "attributes": {},
+            "article_id": "A018"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 2,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 2,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 19,
+      "article_id": "A019",
+      "publish_date": "2024-09-08",
+      "content_preview": "“摩羯”对广东的影响是基本结束了，雨水还是那么不安分。周一广州仍有局部大雨，周二和周三则将有阵雨。\n今年第11号台风“摩羯”于7日15时30分前后以超强台风级在越南再次登陆，登陆后“摩羯”强度持续减弱",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 3,
+        "events_kept": 0,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 20,
+      "article_id": "A020",
+      "publish_date": "2024-09-09",
+      "content_preview": "南都讯 记者黎秀敏 9月8日17时，中央气象台对今年第11号台风“摩羯”停止编号。台风“摩羯”是今年第二个登陆广东的台风，也是秋季登陆我国的最强台风，先后以超强台风级登陆海南文昌、广东徐闻和越南广宁，",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 9,
+        "raw_relations": 8,
+        "events_kept": 0,
+        "events_dropped_non_target": 9,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 8,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 21,
+      "article_id": "A021",
+      "publish_date": "2024-09-10",
+      "content_preview": "改善办学条件，龙门再推新举措。9月10日，记者从龙门县教育局获悉，今年以来，龙门县委、县政府将学校空调配套项目列入民生实事，充分调动各方资源，发动社会各界爱心企业、社会团体和爱心人士投身教育公益事业，",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 22,
+      "article_id": "A022",
+      "publish_date": "2024-09-10",
+      "content_preview": "近日，茂名滨海新区消防救援大队联合区建设交通局、区经济发展局，电城镇政府等部门深入辖区开展电动自行车违规充电专项检查。\n检查中，检查组重点查看是否存在电动自行车违规停放充电、入户充电、“飞线”充电等行",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 0,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 23,
+      "article_id": "A023",
+      "publish_date": "2024-09-13",
+      "content_preview": "9月12日，梅州市委副书记、市长王晖到梅县区开展中秋节前安全生产和消防工作检查，强调要认真落实党中央、国务院决策部署和省委、省政府工作要求，坚持人民至上、生命至上，坚持底线思维、极限思维，坚决克服麻痹",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "安全生产检查",
+            "event_type": "Impact",
+            "relevance_reasoning": "市长开展安全生产检查，是应对风险的行动。证据：'开展中秋节前安全生产和消防工作检查'",
+            "is_target_event": true,
+            "city": "梅州",
+            "date_from": "2024-09-12",
+            "date_to": "2024-09-12",
+            "location": [
+              "梅县区"
+            ],
+            "attributes": {},
+            "article_id": "A023"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 5,
+        "events_kept": 1,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 5,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 24,
+      "article_id": "A024",
+      "publish_date": "2024-09-14",
+      "content_preview": "深圳商报•读创客户端首席记者 吴吉 通讯员 陈翠萍\n近日，因受台风“摩羯”影响，深圳全市中小学停课。但是，红岭实验小学四年级的孩子们却没有闲着，他们通过探究式学习完成了“台风”主题探究海报——色彩明丽",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "深圳全市中小学停课",
+            "event_type": "Impact",
+            "relevance_reasoning": "停课是台风导致的直接影响，属于城市应急管理事件",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-09-14",
+            "date_to": "2024-09-14",
+            "location": [
+              "深圳"
+            ],
+            "attributes": {},
+            "article_id": "A024"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 1,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 25,
+      "article_id": "A025",
+      "publish_date": "2024-09-22",
+      "content_preview": "记者从大埔县三防指挥部获悉，据气象部门预报，22—24日大埔县受冷空气和季风槽影响，有一次暴雨局部大暴雨降水过程，其中22日有大雨，部分镇（场）有暴雨；23—24日有暴雨，东部、南部部分镇（场）有大暴",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "启动防汛Ⅳ级应急响应",
+            "event_type": "Impact",
+            "relevance_reasoning": "三防指挥部启动应急响应，应对暴雨洪水风险",
+            "is_target_event": true,
+            "city": "大埔县",
+            "date_from": "2024-09-22",
+            "date_to": "2024-09-22",
+            "location": [
+              "大埔县"
+            ],
+            "attributes": {
+              "response_level": "Ⅳ级"
+            },
+            "article_id": "A025"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 26,
+      "article_id": "A026",
+      "publish_date": "2024-09-24",
+      "content_preview": "烈日高空，身着黄色绝缘服，佩戴绝缘手套，全神贯注投入带电作业操作……9月20—23日，2024年全国行业职业技能竞赛——第十五届全国电力行业职业技能竞赛（配电带电专业）初赛在东莞市莞电电力职业培训学校",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 27,
+      "article_id": "A027",
+      "publish_date": "2024-09-25",
+      "content_preview": "9月16日傍晚，梅州供电局支援队在海南省临高县抢修现场，伴着落日，开展架设导线等工作。王子帅 摄\n9月12日下午，梅州供电局支援队在临高多文镇利用吊车紧急抢修受台风影响倾斜的电杆。谢洪浪 摄\n9月14",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "梅州供电局支援队抢修复电",
+            "event_type": "Impact",
+            "relevance_reasoning": "应急响应行动，证据：梅州供电局支援队抢修47回线路",
+            "is_target_event": true,
+            "city": "临高",
+            "date_from": "2024-09-09",
+            "date_to": "2024-09-23",
+            "location": [
+              "临高县"
+            ],
+            "attributes": {
+              "team": "梅州供电局支援队",
+              "effort": "800余人"
+            },
+            "article_id": "A027"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 7,
+        "events_kept": 1,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 7,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 28,
+      "article_id": "A028",
+      "publish_date": "2024-09-25",
+      "content_preview": "记者获悉，为强化安全生产领域社会监督，鼓励人民群众积极提供和举报安全隐患信息，防范和遏制各类安全生产事故发生，筑牢防范化解重大风险的防线，宝安区应急管理局制定出台《宝安区安全生产领域举报处理办法》，进",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 0,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 29,
+      "article_id": "A029",
+      "publish_date": "2024-09-25",
+      "content_preview": "9月25日上午，平远深圳小镇安居工程（一期）项目全面封顶仪式暨冲刺交付誓师动员大会举行。梅州市政府副市长、秘书长陈亮，县委书记、县长周小勇，深圳市建筑工务署文体和水务工程管理中心副主任刘峰等参加活动。",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "6·16特大暴雨灾害",
+            "event_type": "Hazard",
+            "relevance_reasoning": "新闻提及'6·16特大暴雨灾害'，属于城市应急事件。",
+            "is_target_event": true,
+            "city": "平远",
+            "date_from": "2024-06-16",
+            "date_to": "2024-06-16",
+            "location": [
+              "平远"
+            ],
+            "attributes": {},
+            "article_id": "A029"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 1,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 30,
+      "article_id": "A030",
+      "publish_date": "2024-09-28",
+      "content_preview": "“你好，我是江城区消防救援大队防火监督员，刚才我们用无人机巡查时，发现你的车辆停放在消防车道上，请你立即驶离。”\n为加大解决占堵、封闭消防通道整治工作力度，9月27日，江城区消防救援大队联合辖区电信运",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "火灾救援受阻风险",
+            "event_type": "Impact",
+            "relevance_reasoning": "占用消防车道可能导致火灾救援延误，属于Impact。证据：火灾面前，生命以秒计数。",
+            "is_target_event": true,
+            "city": "江城区",
+            "date_from": "2024-09-27",
+            "date_to": "2024-09-27",
+            "location": [
+              "江城区"
+            ],
+            "attributes": {},
+            "article_id": "A030"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 31,
+      "article_id": "A031",
+      "publish_date": "2024-08-23",
+      "content_preview": "8月11日以来\n暴雨几乎天天来深报到\n不过从22日开始\n随着副热带高压重新控场\n本次强降雨过程就基本结束了\n深圳逐渐转为炎热与雷雨相伴的天气\n熟悉的“蒸笼模式”又回来了\n周末天气如何？\n台风还有新消息",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "高温天气",
+            "event_type": "Hazard",
+            "relevance_reasoning": "新闻提到天气渐趋炎热，气温回升，属于城市高温风险。",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-25",
+            "location": [
+              "深圳"
+            ],
+            "attributes": {},
+            "article_id": "A031"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 32,
+      "article_id": "A032",
+      "publish_date": "2024-08-26",
+      "content_preview": "深圳商报·读创客户端记者 陈燕青\n天际股份8月26日早间公告，公司全资子公司新泰材料发生火灾事故。公司表示，这次事故不会对生产经营和业绩产生大的影响。由于业绩不佳，今年以来公司股价大跌近五成。\n公告称",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "电气线路短路导致局部火灾",
+            "event_type": "Hazard",
+            "relevance_reasoning": "火灾事故，城市应急管理相关。证据：二车间四楼电气线路短路导致局部火灾。",
+            "is_target_event": true,
+            "city": "未知",
+            "date_from": "2024-08-24",
+            "date_to": "2024-08-24",
+            "location": [
+              "新泰材料二车间四楼"
+            ],
+            "attributes": {
+              "cause": "电气线路短路",
+              "impact": "六氟磷酸锂产能受影响"
+            },
+            "article_id": "A032"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 33,
+      "article_id": "A033",
+      "publish_date": "2024-08-29",
+      "content_preview": "广州市达到启动气象灾害（暴雨和雷雨大风）Ⅳ级应急响应标准。市气象灾害应急指挥部决定从8月29日17时21分起启动广州市气象灾害（暴雨和雷雨大风）Ⅳ级应急响应。\n截至8月29日17时29分，广州多区受到",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "暴雨和雷雨大风天气",
+            "event_type": "Hazard",
+            "relevance_reasoning": "暴雨和雷雨大风是城市应急管理相关灾害",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广州市"
+            ],
+            "attributes": {},
+            "article_id": "A033"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 8,
+        "raw_relations": 7,
+        "events_kept": 1,
+        "events_dropped_non_target": 7,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 7,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 34,
+      "article_id": "A034",
+      "publish_date": "2024-08-30",
+      "content_preview": "世界级的大湾区，从不缺现象级的产业风口。这一次，站上风口的是肇庆——粤港澳大湾区面积最大的城市。\n8月28日，一场高规格的低空经济推介会，将业界的聚焦点拉到了肇庆。这座新兴产业之城，也用一套力度空前的",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 35,
+      "article_id": "A035",
+      "publish_date": "2024-08-30",
+      "content_preview": "深圳商报·读创客户端记者 张钧政\n新学年即将到来，为切实做好校园安全防范工作，保障辖区学校安全有序开学开课，香蜜湖街道党工委、办事处高度重视，联合区教育局、市市市场监管局香蜜湖所、福田交警大队香蜜湖中",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "登革热传播风险",
+            "event_type": "Hazard",
+            "relevance_reasoning": "新闻提到为降低登革热在校园发生流行风险，进行蚊虫消杀",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-08-30",
+            "date_to": "2024-08-30",
+            "location": [
+              "香蜜湖街道"
+            ],
+            "attributes": {},
+            "article_id": "A035"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "暴雨导致道路积水",
+            "event_type": "Hazard",
+            "relevance_reasoning": "新闻提到友邻路地势低，强降雨时积水成水路，影响师生出行",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-08-30",
+            "date_to": "2024-08-30",
+            "location": [
+              "友邻路"
+            ],
+            "attributes": {},
+            "article_id": "A035"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 10,
+        "raw_relations": 2,
+        "events_kept": 2,
+        "events_dropped_non_target": 8,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 2,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 36,
+      "article_id": "A036",
+      "publish_date": "2024-08-30",
+      "content_preview": "据“广州消防”微信公众号消息，2024年6月1日至8月20日，广州市共发生电动自行车火灾265起，总损失753718元，其中涉及电动自行车品牌：飞利浦、爱玛、博技、格士玲、九号、凯瑞、绿源、瑞祖玛、上",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "电动自行车火灾频发",
+            "event_type": "Hazard",
+            "relevance_reasoning": "火灾是城市应急事件，直接威胁生命财产安全。证据：265起火灾，总损失753718元。",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-06-01",
+            "date_to": "2024-08-20",
+            "location": [
+              "广州市"
+            ],
+            "attributes": {
+              "火灾数量": 265,
+              "总损失": 753718,
+              "涉及品牌": [
+                "飞利浦",
+                "爱玛",
+                "博技",
+                "格士玲",
+                "九号",
+                "凯瑞",
+                "绿源",
+                "瑞祖玛",
+                "上海永久",
+                "深远",
+                "四季星",
+                "台铃",
+                "香豆",
+                "小牛",
+                "新大洲",
+                "雅迪"
+              ]
+            },
+            "article_id": "A036"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 1,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 37,
+      "article_id": "A037",
+      "publish_date": "2024-09-02",
+      "content_preview": "羊城晚报全媒体记者梁怿韬报道：9月1日下午，一个热带低压在菲律宾以东生成。截至1日夜间，该低压进一步加强为今年第11号台风“摩羯”，并预计5日前后进入南海北部。广东省、广州市气象部门提醒公众留意后期气",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "广东高温天气",
+            "event_type": "Hazard",
+            "relevance_reasoning": "广东大部日最高气温35-38℃，广州可达36℃，属于高温灾害。证据：广东沿海33-35℃，其余35-38℃。",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-09-02",
+            "date_to": "2024-09-04",
+            "location": [
+              "广东"
+            ],
+            "attributes": {},
+            "article_id": "A037"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "广州雨势加强",
+            "event_type": "Hazard",
+            "relevance_reasoning": "广州4-6日雨势加强，7-8日中到大雨，可能引发内涝。证据：4-6日雨势加强，7-8日中雨到大雨。",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-09-04",
+            "date_to": "2024-09-08",
+            "location": [
+              "广州市区"
+            ],
+            "attributes": {},
+            "article_id": "A037"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 2,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 2,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 38,
+      "article_id": "A038",
+      "publish_date": "2024-09-03",
+      "content_preview": "深圳商报·读创客户端记者 程茹欣\n日前，深圳瑞捷（300977）公布2024年上半年业绩，显示公司实现营业收入约2.09亿元，同比减少7.82%；归属于上市公司股东的净利润约1059万元，同比减少61",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "三亚市集中供冷项目火灾事故",
+            "event_type": "Hazard",
+            "relevance_reasoning": "火灾造成3人死亡，属于城市应急事件。证据：'2024年4月3日...发生火灾事故，造成3人死亡。'",
+            "is_target_event": true,
+            "city": "三亚",
+            "date_from": "2024-04-03",
+            "date_to": "2024-04-03",
+            "location": [
+              "海南省三亚崖州湾科技城南繁科技城区域集中供冷项目1号能源站"
+            ],
+            "attributes": {
+              "deaths": 3,
+              "type": "火灾"
+            },
+            "article_id": "A038"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 1,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 39,
+      "article_id": "A039",
+      "publish_date": "2024-09-03",
+      "content_preview": "“您好，我们是网格员，正在上门进行燃气安全隐患及火灾隐患排查！”日前，一群身着网格工作服的人员，利用夜间时间走街串巷、挨家挨户开展“敲门入户”排查行动，让精细化管理服务的触角延伸到千家万户。长安网格员",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 7,
+        "raw_relations": 4,
+        "events_kept": 0,
+        "events_dropped_non_target": 7,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 40,
+      "article_id": "A040",
+      "publish_date": "2024-09-04",
+      "content_preview": "广州市气象台在9月4日10时37分，对越秀、天河两区发布台风白色预警信号；在9月3日，位置更近海的番禺、南沙两区已提前发布台风白色预警信号；预计广州各区将陆续发布台风预警信号。\n广州市气象台9月4日上",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 3,
+        "events_kept": 0,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 41,
+      "article_id": "A041",
+      "publish_date": "2024-09-05",
+      "content_preview": "今年第11号台风“摩羯”预计将于9月6日下午在海南万宁到广东电白沿海一带登陆。经综合研判，湛江海事局已于9月5日早上8时将防抗热带气旋应急响应级别提升为I级。\n当前，湛江海事部门正密切关注台风最新动态",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 4,
+        "events_kept": 0,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 42,
+      "article_id": "A042",
+      "publish_date": "2024-09-05",
+      "content_preview": "【深圳市暴雨黄色预警信号】预计全市3小时内将出现强降水，深圳市气象台2024年09月05日21时10分在全市发布暴雨黄色预警信号，后期有升级暴雨橙色预警信号的可能，全市进入暴雨戒备状态，存在山洪风险，",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "深圳可能发生局部内涝和山洪",
+            "event_type": "Hazard",
+            "relevance_reasoning": "暴雨预警提示存在山洪风险，可能引发内涝。证据：存在山洪风险，请注意防御暴雨可能引发的局部内涝、山洪。",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "深圳市"
+            ],
+            "attributes": {},
+            "article_id": "A042"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 5,
+        "events_kept": 1,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 5,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 43,
+      "article_id": "A043",
+      "publish_date": "2024-09-05",
+      "content_preview": "随着今年第11号台风“摩羯”逐渐靠近，东莞市迎来了严峻的防汛防风考验。9月4日下午，虎门镇党委副书记莫国庆带队深入辖区关键地点，进行了严密的防汛防风督导检查，确保人民群众的生命财产安全。\n受“摩羯”影",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 7,
+        "raw_relations": 7,
+        "events_kept": 0,
+        "events_dropped_non_target": 7,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 7,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 44,
+      "article_id": "A044",
+      "publish_date": "2024-09-06",
+      "content_preview": "9月5日，阳江滨海新区（阳江高新区）党工委书记、管委会主任梁崇边，管委会副主任阮晓峰分别带队深入一线督导检查台风“摩羯”防御工作，强调要认真落实全省、全市防风工作部署会议精神，全面进入防御状态，以最高",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "超强台风摩羯来袭",
+            "event_type": "Hazard",
+            "relevance_reasoning": "超强台风是城市应急管理相关灾害，新闻描述其破坏力",
+            "is_target_event": true,
+            "city": "阳江",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-06",
+            "location": [
+              "阳江滨海新区"
+            ],
+            "attributes": {},
+            "article_id": "A044"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 4,
+        "events_kept": 1,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 45,
+      "article_id": "A045",
+      "publish_date": "2024-09-06",
+      "content_preview": "9月6日，国家防灾减灾救灾委员会针对第11号台风“摩羯”对广东造成的严重影响，启动国家四级救灾应急响应，派出工作组赴灾区实地查看灾情，指导和协助地方做好受灾群众基本生活保障等救灾救助工作。\n来源： 应",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "启动国家四级救灾应急响应",
+            "event_type": "Impact",
+            "relevance_reasoning": "应急响应是台风导致的政府应对措施，属于影响。证据：新闻首句。",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "广东"
+            ],
+            "attributes": {},
+            "article_id": "A045"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 1,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 46,
+      "article_id": "A046",
+      "publish_date": "2024-09-06",
+      "content_preview": "6日中午，湛江市发布最新台风紧急警报：6日12时，今年第11号台风“摩羯”（超强台风级）中心位于湛江市区东南方约250公里的海面上，也就是北纬19.5度、东经111.8度，中心附近最大风力17级（68",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 0,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 47,
+      "article_id": "A047",
+      "publish_date": "2024-09-06",
+      "content_preview": "据预报，今年第11号台风“摩羯”将于9月6日下午至夜间在海南琼海到广东电白一带沿海登陆，受其影响，顺德区预计有暴雨局部大暴雨，并有局地龙卷风险。为此，北滘镇已于9月4日启动防台风Ⅳ级响应，各相关职能部",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "暂未收到灾情上报",
+            "event_type": "Impact",
+            "relevance_reasoning": "目前无灾害影响，证据：暂未收到灾情上报",
+            "is_target_event": true,
+            "city": "顺德区北滘镇",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "北滘镇"
+            ],
+            "attributes": {},
+            "article_id": "A047"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 9,
+        "raw_relations": 11,
+        "events_kept": 1,
+        "events_dropped_non_target": 8,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 11,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 48,
+      "article_id": "A048",
+      "publish_date": "2024-09-07",
+      "content_preview": "台风二次登陆湛江徐闻不久后，便离开广东。\n截至9月6日23时，台风“摩羯”已经离开广东，移动到距离海南省儋州市北偏东方向约90公里的海上，强度保持超强台风级，但最大风力已经减弱至16级。预计，“摩羯”",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "粤西珠三角有明显风雨影响",
+            "event_type": "Impact",
+            "relevance_reasoning": "风雨影响是灾害后果，证据：粤西有暴雨到大暴雨，珠三角有大雨到暴雨",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-07",
+            "date_to": "2024-09-07",
+            "location": [
+              "粤西",
+              "珠三角中南部"
+            ],
+            "attributes": {},
+            "article_id": "A048"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "需防御强降水导致的中小河流洪水、城乡积涝、山体滑坡、山洪和泥石流",
+            "event_type": "Impact",
+            "relevance_reasoning": "次生灾害风险，证据：需注意防御强降水导致的中小河流洪水、城乡积涝、山体滑坡、山洪和泥石流等灾害",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [
+              "广东"
+            ],
+            "attributes": {},
+            "article_id": "A048"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 14,
+        "raw_relations": 12,
+        "events_kept": 2,
+        "events_dropped_non_target": 12,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 2,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 12,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 49,
+      "article_id": "A049",
+      "publish_date": "2024-09-07",
+      "content_preview": "据汕尾应急管理9月7日消息，鉴于今年第11号台风“摩羯”已远离汕尾市，对汕尾市的影响基本结束，全市台风预警信号已全部解除。根据《汕尾市防汛防旱防风防冻应急预案》，汕尾市防汛防旱防风指挥部决定于9月7日",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "结束防风应急响应",
+            "event_type": "Impact",
+            "relevance_reasoning": "应急响应结束是台风影响结束的直接结果。",
+            "is_target_event": true,
+            "city": "汕尾",
+            "date_from": "2024-09-07",
+            "date_to": "2024-09-07",
+            "location": [
+              "汕尾市"
+            ],
+            "attributes": {},
+            "article_id": "A049"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 4,
+        "events_kept": 1,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 50,
+      "article_id": "A050",
+      "publish_date": "2024-09-07",
+      "content_preview": "习近平对海南广东等地台风灾害作出重要指示\n要求抓紧组织力量救灾\n切实保障人民群众生命财产安全\n李强作出批示\n今年第11号超强台风“摩羯”9月6日16时20分、22时20分先后在海南文昌市、广东徐闻县登",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 6,
+        "events_kept": 0,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 6,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 51,
+      "article_id": "A051",
+      "publish_date": "2024-09-07",
+      "content_preview": "9月7日，南都记者从广东省防总获悉，台风“摩羯”已经过境，截至目前，全省暂未出现人员因灾死亡情况。据广东气象部门，台风过境后粤西区域周末仍有大暴雨。\n7日16时许广东省暴雨预警信息实时分布图。\n7日1",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 0,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 52,
+      "article_id": "A052",
+      "publish_date": "2024-09-07",
+      "content_preview": "新平台、新项目、新技术，一路向新；新连接、新价值、新魅力，共赴“媒”好。\n深化改革一年多来，佛山市新闻传媒中心全力推动一体化、数智化战略落地见效，展现出新型主流媒体的“新传播力”。\n9月6日，佛山传媒",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 53,
+      "article_id": "A053",
+      "publish_date": "2024-09-07",
+      "content_preview": "通告\n尊敬的市民游客：\n接上级通知，今年第11号台风“摩羯”预警已降级，结合景区工作实际，自2024年9月7日12时起，西樵山石燕岩“古洞探秘”、森吧飞越丛林探险乐园、瞧溪谷亲水溪谷恢复对外运营。听音",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 0,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 54,
+      "article_id": "A054",
+      "publish_date": "2024-09-07",
+      "content_preview": "记者从应急管理部获悉，针对超强台风“摩羯”及其暴雨洪涝灾害，财政部、应急管理部今日（7日）紧急预拨2.7亿元中央自然灾害救灾资金，重点支持海南、广东、广西、云南等省（区）做好防汛防台风、抗洪抢险救灾工",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 5,
+        "events_kept": 0,
+        "events_dropped_non_target": 6,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 5,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 55,
+      "article_id": "A055",
+      "publish_date": "2024-09-08",
+      "content_preview": "白露节气到来，在中国南方地区，此节气内还是夏暑之时，同时由于台风雨季渐去，天气更酷热，因而中医把从立秋起至秋分前这段日子称之为“长夏”。在广东，长夏时节的时长比较长，一般会延续到国庆长假之后，气候上往",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 56,
+      "article_id": "A056",
+      "publish_date": "2024-09-09",
+      "content_preview": "9月9日，广州市三防总指挥部办公室与市气象局、广东省水文局广州水文分局和自然资源部南海预报减灾中心对广州市未来七天的气象水文情况进行了会商。会商提出，未来7天广州市天气多云为主，有阵雨。\n预计，9日午",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "广州市可能发生城乡积涝、地质灾害等风险",
+            "event_type": "Hazard",
+            "relevance_reasoning": "强降雨可能引发积涝、山洪等灾害。证据：做好城乡积涝、中小河流洪水、山洪、地质灾害等的防御。",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-09-09",
+            "date_to": "2024-09-15",
+            "location": [
+              "广州"
+            ],
+            "attributes": {},
+            "article_id": "A056"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 4,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 57,
+      "article_id": "A057",
+      "publish_date": "2024-09-10",
+      "content_preview": "9月10日，广东省陶瓷行业转型金融标准发布暨银企融资对接会在全国陶瓷重镇佛山举行。会上发布了团体标准《广东省陶瓷行业转型金融实施指南》（以下简称《实施指南》），该标准兼具两个“第一”，是全国范围内针对",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 58,
+      "article_id": "A058",
+      "publish_date": "2024-09-12",
+      "content_preview": "9月8日中午，徐闻县南山镇关三村，徐闻县人民武装部的基干民兵和党员干部一起，将倒伏的树干齐力搬离道路。吴东俊 摄\n台风过境近一个星期，广东南部，县城徐闻的烟火气正在日渐恢复。\n9月6日下午，超强台风“",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "超强台风摩羯登陆徐闻",
+            "event_type": "Hazard",
+            "relevance_reasoning": "超强台风登陆，造成严重破坏，是城市应急事件。证据：'9月6日下午，超强台风“摩羯”登陆海南文昌，当晚再次登陆湛江徐闻'",
+            "is_target_event": true,
+            "city": "湛江",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "徐闻县"
+            ],
+            "attributes": {
+              "台风名称": "摩羯",
+              "强度": "超强台风"
+            },
+            "article_id": "A058"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 10,
+        "raw_relations": 9,
+        "events_kept": 1,
+        "events_dropped_non_target": 9,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 9,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 59,
+      "article_id": "A059",
+      "publish_date": "2024-09-13",
+      "content_preview": "中秋假期将至。广东省气象部门9月13日预计，9月14日放假前最后一个工作日至9月15日假期第一天广东雨势相对明显，9月16日至17日雨势相对收小，9月17日农历八月十五夜间广东大部有望可见月光。对于有",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 4,
+        "events_kept": 0,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 60,
+      "article_id": "A060",
+      "publish_date": "2024-09-13",
+      "content_preview": "南方财经全媒体记者谭海燕 广州报道\n记者从广铁集团获悉，今年中秋小长假铁路运输期限为9月14日至9月18日，共5天。中秋期间，旅客出行需求比较旺盛，广铁集团预计发送旅客980万人次，较2019年增加1",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 61,
+      "article_id": "A061",
+      "publish_date": "2024-09-19",
+      "content_preview": "2024年国庆放假安排来了。\n根据《国务院办公厅关于2024年部分节假日安排的通知》，10月1日至10月7日，国庆节放假调休共7天，9月29日（星期日）和10月12日（星期六）上班。\n2024年国庆节",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 62,
+      "article_id": "A062",
+      "publish_date": "2024-09-20",
+      "content_preview": "“来了就是深圳人，来了就做志愿者”。深圳作为志愿者之城，“红马甲”闪耀在城市的各个角落。为提高辖区志愿者素质和服务质量，建立健全志愿者工作管理和队伍建设体系，9月19日下午，深圳市福田区莲花街道福新社",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 63,
+      "article_id": "A063",
+      "publish_date": "2024-09-23",
+      "content_preview": "记者从深圳市气象台了解到，预计受南海北部季风槽逐渐北抬的影响，23日夜间至24日我市阴天，有暴雨局部大暴雨，沿海、高地和海区最大阵风8级左右，气温23-27℃；25日阵雨转阴天间多云；26-27日多云",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "暴雨局部大暴雨",
+            "event_type": "Hazard",
+            "relevance_reasoning": "暴雨是城市应急事件，可能导致内涝等灾害。证据：'有暴雨局部大暴雨'",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-09-23",
+            "date_to": "2024-09-24",
+            "location": [
+              "深圳"
+            ],
+            "attributes": {},
+            "article_id": "A063"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "城市积涝",
+            "event_type": "Impact",
+            "relevance_reasoning": "暴雨可能导致城市积涝，影响交通和居民生活。证据：'注意防范暴雨造成的城市积涝'",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-09-24",
+            "date_to": "2024-09-24",
+            "location": [
+              "深圳"
+            ],
+            "attributes": {},
+            "article_id": "A063"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 3,
+        "events_kept": 2,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 2,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 1,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 64,
+      "article_id": "A064",
+      "publish_date": "2024-09-23",
+      "content_preview": "深圳商报·读创客户端记者 李秀瑜\n为推动深圳市建筑光伏一体化发展，助力实现双碳目标，市住房建设局组织编制了《建筑光伏一体化技术标准》，向社会公开征求意见和建议。\n该《标准》旨在规范建筑光伏一体化的设计",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 65,
+      "article_id": "A065",
+      "publish_date": "2024-09-23",
+      "content_preview": "9月23日，2024中国环博会深圳展在深圳国际会展中心开幕，展览规模近3万平方米，来自9个国家与地区的317家展商“同场竞技”，50余种新技术现场首发，超过5,000项环境污染治理技术与解决方案集中亮",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 66,
+      "article_id": "A066",
+      "publish_date": "2024-09-24",
+      "content_preview": "9月23日，广东多地迎来降温降雨。图为深圳坪山街头，市民在雨中出行。南方日报记者 朱洪波 摄\n南方日报讯 （记者/张子俊 通讯员/杨国杰 屈凤秋）在冷空气叠加降雨的影响下，广东本轮高温天气结束，多地降",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "广东高温天气结束",
+            "event_type": "Hazard",
+            "relevance_reasoning": "高温天气结束是城市风险事件。证据：广东本轮高温天气结束。",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-23",
+            "date_to": "2024-09-23",
+            "location": [
+              "广东"
+            ],
+            "attributes": {},
+            "article_id": "A066"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "广东多地降温降雨",
+            "event_type": "Hazard",
+            "relevance_reasoning": "降温降雨是城市天气风险。证据：广东多地迎来降温降雨。",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-23",
+            "date_to": "2024-09-24",
+            "location": [
+              "广东"
+            ],
+            "attributes": {},
+            "article_id": "A066"
+          },
+          {
+            "event_id": "E3",
+            "event_text": "广东东部和南部沿海暴雨",
+            "event_type": "Hazard",
+            "relevance_reasoning": "暴雨是城市应急事件。证据：广东东部和南部沿海部分地区有大暴雨。",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-23",
+            "date_to": "2024-09-24",
+            "location": [
+              "广东东部和南部沿海"
+            ],
+            "attributes": {},
+            "article_id": "A066"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 3,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 3,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 67,
+      "article_id": "A067",
+      "publish_date": "2024-09-24",
+      "content_preview": "润丰园小区\n9月24日上午，深圳新闻网报道了福田区润丰园欠费停电一事，最新进展是，当天15时25分左右，润丰园已恢复供电。（此前相关报道：深圳福田一小区被供电局拉闸停电）\n记者了解到，当天14时30分",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "润丰园小区欠费停电",
+            "event_type": "Hazard",
+            "relevance_reasoning": "城市停电事件，直接相关城市应急管理。证据：新闻标题及内容。",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-09-24",
+            "date_to": "2024-09-24",
+            "location": [
+              "福田区润丰园小区"
+            ],
+            "attributes": {
+              "停电原因": "长期拖欠电费",
+              "恢复时间": "2024-09-24 15:25"
+            },
+            "article_id": "A067"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 5,
+        "events_kept": 1,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 5,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 68,
+      "article_id": "A068",
+      "publish_date": "2024-09-26",
+      "content_preview": "广州地铁又火了。近日，有网友发现广州地铁警察随身携带了女性服务包，并标明“内有止痛药、卫生巾及糖果可索取”，好评如潮。对此，广州地铁回应表示，这是由地铁公安提供的服务，目前广州地铁针对女性已设有专门的",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 69,
+      "article_id": "A069",
+      "publish_date": "2024-09-30",
+      "content_preview": "继溢价超35%深圳拿地后，保利又在广州拿地。\n9月29日，广州天河区一宗地块出让，经过148轮报价，最终由保利以总价117.55亿元竞得，成交楼面价66957元/㎡，溢价率高达33.35%。该地块成为",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 70,
+      "article_id": "A070",
+      "publish_date": "2024-08-23",
+      "content_preview": "南都讯记者谢萌 今年夏季，全国多地遭遇高温强降雨天气，拉动蔬菜价格行情上涨，市民生活必需品供应情况备受关注。深农集团旗下深圳海吉星积极落实市委、市政府部署，在市市场监管局、市国资委的指导下，加强货源组",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "蔬菜价格行情上涨",
+            "event_type": "Impact",
+            "relevance_reasoning": "高温强降雨导致蔬菜价格上涨，影响市民生活",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-08-10",
+            "date_to": "2024-08-20",
+            "location": [
+              "深圳"
+            ],
+            "attributes": {},
+            "article_id": "A070"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 71,
+      "article_id": "A071",
+      "publish_date": "2024-08-23",
+      "content_preview": "“这个我知道！我刚刚认真看了你们《一图带你读懂环境保护税法》的宣传小册子，大气污染物、水污染物、固体废物和噪声都是环境保护税的征税对象。”在生态宣传活动现场，一小朋友兴奋地说道。\n活动现场营造了推动生",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 72,
+      "article_id": "A072",
+      "publish_date": "2024-08-27",
+      "content_preview": "广东阳春一石场爆破后，周边数百栋民房出现裂缝，民房的裂痕是否与采石场的爆炸相关？这些民房后续又将如何处理？8月27日，广东省应急管理厅上线“广东民声热线”节目，就外界关注的问题回答疑问。\n阳春市矿产资",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "民房出现裂缝",
+            "event_type": "Impact",
+            "relevance_reasoning": "爆破导致民房裂缝，影响居民安全，证据：121间房屋裂痕",
+            "is_target_event": true,
+            "city": "阳春市",
+            "date_from": "2018-01-01",
+            "date_to": "2024-08-27",
+            "location": [
+              "河㙟镇茆窝村"
+            ],
+            "attributes": {},
+            "article_id": "A072"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 73,
+      "article_id": "A073",
+      "publish_date": "2024-08-28",
+      "content_preview": "加长版“三伏天”已经下线快4天了\n东北地区顺利开启秋天进程\n但广东还没挤进秋天的群聊\n炎热+雷雨这对“热辣CP”持续在线\n中北部的大部分市县\n有35℃～37℃的高温天气\n这样的天气还会有变吗？\n来看看",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 4,
+        "events_kept": 0,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 74,
+      "article_id": "A074",
+      "publish_date": "2024-08-29",
+      "content_preview": "广州市气象台8月29日11时55分发布雷雨天气提示：目前广州局部有雷雨云团生成发展，预计今天中午至下午，越秀区、天河区天气不稳定，有中雷雨，局部雨势较大，可能发布暴雨和雷雨大风预警信号，请及时做好防御",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "可能发布暴雨和雷雨大风预警信号",
+            "event_type": "Impact",
+            "relevance_reasoning": "预警信号发布是应急管理响应。证据：'可能发布暴雨和雷雨大风预警信号'",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "越秀区",
+              "天河区"
+            ],
+            "attributes": {},
+            "article_id": "A074"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 75,
+      "article_id": "A075",
+      "publish_date": "2024-08-29",
+      "content_preview": "在32度的气温里\n深圳的暴雨很“有温度”。\n请注意！\n深圳市分区暴雨黄色预警信号\n分区雷电预警信号生效中\n【深圳市分区暴雨黄色预警信号】预计宝安区、光明区和龙华区（大浪、龙华、观湖、福城、观澜街道）2",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "暴雨可能引发局部内涝和山洪",
+            "event_type": "Hazard",
+            "relevance_reasoning": "暴雨预警中提及内涝和山洪风险",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "宝安区",
+              "光明区",
+              "龙华区"
+            ],
+            "attributes": {
+              "风险类型": [
+                "内涝",
+                "山洪"
+              ]
+            },
+            "article_id": "A075"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 76,
+      "article_id": "A076",
+      "publish_date": "2024-08-29",
+      "content_preview": "深圳商报·读创客户端记者 张宇婷 通讯员 赖洁荃 叶滢滢\n今年7-8月，深圳市大鹏新区葵涌总工会在葵涌辖区范围内组织开展了“工会送清凉 防暑保安康”系列活动。\n聚焦重点人群，把清凉送到高温第一线。7月",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 0,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 77,
+      "article_id": "A077",
+      "publish_date": "2024-08-29",
+      "content_preview": "今年入汛以来，广东省境内多地遭遇多轮强降雨并引发灾情险情。近日，蕉岭县南磜镇皇佑村突发山体滑坡，部分群众受困，蕉岭县消防救援大队闻警而动，立即启动应急预案，迅速组织力量前往救援。\n为确保救援行动的安全",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "山体滑坡",
+            "event_type": "Hazard",
+            "relevance_reasoning": "新闻明确报道蕉岭县皇佑村突发山体滑坡。",
+            "is_target_event": true,
+            "city": "蕉岭县",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "蕉岭县南磜镇皇佑村"
+            ],
+            "attributes": {},
+            "article_id": "A077"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 6,
+        "events_kept": 1,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 6,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 78,
+      "article_id": "A078",
+      "publish_date": "2024-08-29",
+      "content_preview": "为深入排查和解决居民户外用电安全隐患问题，进一步提升公共安全水平，8月27日上午，深圳市坪山区人大常委会坪山街道工委组织开展居民用电安全专项视察调研活动。区人大代表、区供电局，坪山街道党政和人大办、应",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "降低火灾风险",
+            "event_type": "Impact",
+            "relevance_reasoning": "通过排查和整改，最终目标是降低火灾风险。",
+            "is_target_event": true,
+            "city": "深圳",
+            "date_from": "2024-08-27",
+            "date_to": null,
+            "location": [
+              "深圳市坪山区"
+            ],
+            "attributes": {},
+            "article_id": "A078"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 3,
+        "events_kept": 1,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 79,
+      "article_id": "A079",
+      "publish_date": "2024-08-30",
+      "content_preview": "酷热！撤下高温预警不到24小时，越秀、天河两区30日上午又发布了高温黄色预警信号。广州观测站录得的今天最高气温，也越过了35℃的高温线。未来一周广州大致都是多云到晴的天气，最高气温35℃左右，大家在户",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "高温黄色预警",
+            "event_type": "Hazard",
+            "relevance_reasoning": "越秀、天河两区发布高温黄色预警，气温超35℃",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-08-30",
+            "date_to": "2024-08-30",
+            "location": [
+              "越秀区",
+              "天河区"
+            ],
+            "attributes": {
+              "预警级别": "黄色"
+            },
+            "article_id": "A079"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "持续高温天气",
+            "event_type": "Hazard",
+            "relevance_reasoning": "未来一周广州最高气温35℃左右，天气炎热",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-08-30",
+            "date_to": "2024-09-02",
+            "location": [
+              "广州"
+            ],
+            "attributes": {
+              "最高气温": "35-36℃"
+            },
+            "article_id": "A079"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 3,
+        "events_kept": 2,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 2,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 1,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 80,
+      "article_id": "A080",
+      "publish_date": "2024-08-30",
+      "content_preview": "8月29日，深圳市光明区光明街道应急管理办联合相关部门及部分企业在研祥智谷科技园开展锂电池火灾事故综合应急救援实战演练。\n演练现场\n演练现场模拟研祥智谷科技园内某公司仓库存储的锂电池发生火灾，企业进行",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 1,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 81,
+      "article_id": "A081",
+      "publish_date": "2024-08-31",
+      "content_preview": "近日，华中师范大学附属光明勤诚达学校学子张源星与张梦晗，在全国青少年素养大赛的激烈角逐中脱颖而出，分别斩获全国一等奖与全国二等奖的殊荣（李钰茗老师荣获国家级优秀指导教师奖），学子许涵柳、罗浩蓝获得省级",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 0,
+        "raw_relations": 0,
+        "events_kept": 0,
+        "events_dropped_non_target": 0,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 0,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 82,
+      "article_id": "A082",
+      "publish_date": "2024-08-31",
+      "content_preview": "雷雨和晴热轮番上线的8月即将和我们说拜拜，接下来的9月热带气旋可能变得活跃。\n气象部门预计，9月广东将会偏多，将有2～3个热带气旋登陆或严重影响广东。\n气象部门预计，与历史同期相比，9月广东省降水总体",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 0,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 83,
+      "article_id": "A083",
+      "publish_date": "2024-09-02",
+      "content_preview": "据市气象台监测，广州市达到启动气象灾害（雷雨大风）Ⅳ级应急响应标准。市气象灾害应急指挥部决定从2日19时26分起启动广州市气象灾害（雷雨大风）Ⅳ级应急响应。请按照预案规定做好防御工作。\n截至9月2日1",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "雷雨大风Ⅳ级应急响应启动",
+            "event_type": "Hazard",
+            "relevance_reasoning": "气象灾害应急响应，城市应急管理相关",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-09-02",
+            "date_to": "2024-09-02",
+            "location": [
+              "广州市"
+            ],
+            "attributes": {
+              "响应级别": "Ⅳ级",
+              "类型": "雷雨大风"
+            },
+            "article_id": "A083"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 3,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 84,
+      "article_id": "A084",
+      "publish_date": "2024-09-03",
+      "content_preview": "9月2日，记者从佛山市气象台获悉，今年第11号台风“摩羯”（热带风暴级）已经生成。受其外围环流影响，6日起佛山强对流天气趋于明显，其中7至9日有明显风雨过程。\n9月1日23时，菲律宾以东洋面的热带低压",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 2,
+        "events_kept": 0,
+        "events_dropped_non_target": 5,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 85,
+      "article_id": "A085",
+      "publish_date": "2024-09-03",
+      "content_preview": "到9月3日17时，“摩羯”已从热带风暴增强为强热带风暴，最大风力10级，其中心位于距离海南省文昌市偏东方向约820公里的海上。预计，“摩羯”将以每小时5-10公里的速度向西偏北方向缓慢移动，强度逐渐增",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 6,
+        "raw_relations": 4,
+        "events_kept": 0,
+        "events_dropped_non_target": 6,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 86,
+      "article_id": "A086",
+      "publish_date": "2024-09-04",
+      "content_preview": "深圳商报·读创客户端驻穗记者 张莹 通讯员 粤水轩\n今年第11号台风“摩羯”持续增强，未来几天将给广东带来的风雨影响进一步加大，广东省水利厅于9月4日18时将水利防汛防台风Ⅲ级应急响应调整为水利防汛防",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 10,
+        "raw_relations": 11,
+        "events_kept": 0,
+        "events_dropped_non_target": 10,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 11,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 87,
+      "article_id": "A087",
+      "publish_date": "2024-09-05",
+      "content_preview": "台风“摩羯”不断逼近，9月4日18时，中央气象台升级发布最高级别的台风红色预警。预计“摩羯”的强度将在华南近海一带快速加强，极值强度可达超强台风级别，并将以鼎盛强度登陆海南至广东沿海，给当地带来严重风",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 2,
+        "events_kept": 0,
+        "events_dropped_non_target": 4,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 88,
+      "article_id": "A088",
+      "publish_date": "2024-09-05",
+      "content_preview": "记者从应急管理部获悉，今年第11号台风“摩羯”9月5日14时中心位于广东省湛江市徐闻县东偏南方向约540公里的海面上，中心附近最大风力17级（58米每秒，超强台风级）。预计台风“摩羯”将以每小时10～",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "防汛防台风应急响应提升至二级",
+            "event_type": "Impact",
+            "relevance_reasoning": "政府应对台风灾害的应急措施，证据：国家防总将应急响应提升至二级",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东",
+              "海南"
+            ],
+            "attributes": {
+              "响应级别": "二级"
+            },
+            "article_id": "A088"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 89,
+      "article_id": "A089",
+      "publish_date": "2024-09-05",
+      "content_preview": "9月5日，记者从广东省水文局广州水文分局（以下简称“广州水文分局”）获悉，受今年第 11 号台风“摩羯”的风暴增水和天文潮共同影响，预计9月6日珠江口沿岸各潮位站将出现接近或略超警戒的高潮位，高潮位时",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "强降水遭遇风暴潮顶托引起城市内涝",
+            "event_type": "Hazard",
+            "relevance_reasoning": "城市内涝是城市应急事件，证据：需防范台风带来的强降水遭遇风暴潮顶托引起的低洼地区的城市内涝",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-06",
+            "location": [
+              "广州中南部区",
+              "低洼地区"
+            ],
+            "attributes": {},
+            "article_id": "A089"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 90,
+      "article_id": "A090",
+      "publish_date": "2024-09-05",
+      "content_preview": "受台风影响，珠海市气象台于9月5日9时0分发布珠海市台风黄色预警信号，高温黄色预警仍然生效。市教育局下发通知，全市学校（含幼儿所、幼儿园）、校外培训机构停课。\n通知称，接珠海市气象局通知，“摩羯”已加",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "全市学校停课",
+            "event_type": "Impact",
+            "relevance_reasoning": "停课是台风影响下的应急措施，新闻明确提及",
+            "is_target_event": true,
+            "city": "珠海",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "珠海"
+            ],
+            "attributes": {},
+            "article_id": "A090"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 91,
+      "article_id": "A091",
+      "publish_date": "2024-09-05",
+      "content_preview": "据应急管理部消息，9月5日，国家防灾减灾救灾委员会办公室、应急管理部根据超强台风“摩羯”发展动态以及广东、海南两省台风防御和救灾工作需要，会同国家粮食和物资储备局向广东、海南两省紧急调拨折叠床、毛巾被",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "超强台风摩羯",
+            "event_type": "Hazard",
+            "relevance_reasoning": "超强台风是城市应急管理相关灾害事件。证据：超强台风“摩羯”",
+            "is_target_event": true,
+            "city": "广东",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东",
+              "海南"
+            ],
+            "attributes": {},
+            "article_id": "A091"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 1,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 92,
+      "article_id": "A092",
+      "publish_date": "2024-09-06",
+      "content_preview": "根据气象信息，今年第11号台风“摩羯”，继续往西北方向移动，七级风圈已移出深中通道所在区域。9月6日上午深中通道已解除临时限速措施，恢复正常通行。相关通行信息已同步在沿线广播、可变情报板、电子限速标志",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 0,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 93,
+      "article_id": "A093",
+      "publish_date": "2024-09-06",
+      "content_preview": "深圳商报·读创客户端驻穗记者 姚嘉莉\n根据气象信息，今年第11号台风“摩羯”，继续往西北方向移动，七级风圈已移出深中通道所在区域。深中通道已解除临时限速措施，恢复正常通行。相关通行信息已同步在沿线广播",
+      "extraction": {
+        "events": [],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 0,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 0,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 94,
+      "article_id": "A094",
+      "publish_date": "2024-09-06",
+      "content_preview": "●佛山天气●\n预计受“摩羯”外围环流影响，6到7日，有暴雨，平均风力5~6级，阵风8~9级、局部10级。需注意防御强降水、雷雨大风、龙卷等强对流天气及其引发的次生灾害，做好临时构筑物、龙门塔吊等的防风",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "佛山部分学校停课",
+            "event_type": "Impact",
+            "relevance_reasoning": "学校停课是台风影响，证据：顺德区、高明区、南海区九江镇、西樵镇学校停课。",
+            "is_target_event": true,
+            "city": "佛山",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [
+              "顺德区",
+              "高明区",
+              "南海区九江镇",
+              "南海区西樵镇"
+            ],
+            "attributes": {},
+            "article_id": "A094"
+          },
+          {
+            "event_id": "E2",
+            "event_text": "佛山西站广州南站部分列车停运",
+            "event_type": "Impact",
+            "relevance_reasoning": "列车停运是台风影响，证据：受台风摩羯影响，部分列车暂停开行。",
+            "is_target_event": true,
+            "city": "佛山",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-06",
+            "location": [
+              "佛山西站",
+              "广州南站"
+            ],
+            "attributes": {},
+            "article_id": "A094"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 5,
+        "raw_relations": 3,
+        "events_kept": 2,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 2,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 95,
+      "article_id": "A095",
+      "publish_date": "2024-09-06",
+      "content_preview": "发布业主公告、社区安全排查、准备沙袋……台风“摩羯”将至，笔者走访江门市内多个楼盘，发现不少项目都有提前做好应对台风的准备。\n防患于未然，预先排查很重要。粤海壹桂府工作人员黄小姐表示，9月5日，全体物",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "潜在人员伤亡和财产损失",
+            "event_type": "Impact",
+            "relevance_reasoning": "台风可能导致人员伤亡和财产损失，新闻提醒市民防灾避险",
+            "is_target_event": true,
+            "city": "江门",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [
+              "江门市"
+            ],
+            "attributes": {
+              "影响类型": [
+                "人员伤亡",
+                "财产损失"
+              ]
+            },
+            "article_id": "A095"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 4,
+        "raw_relations": 4,
+        "events_kept": 1,
+        "events_dropped_non_target": 3,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 4,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 96,
+      "article_id": "A096",
+      "publish_date": "2024-09-07",
+      "content_preview": "9月6日，记者从阳江市水务局获悉，通过科学调度，目前该市水情平稳，江河湖库底水较低，为防御台风带来的强降雨提供了有利条件。\n目前，阳江市江河总体上底水偏低，根据预测降雨量，阳西儒洞河、织河以及云廉河、",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "内涝风险",
+            "event_type": "Hazard",
+            "relevance_reasoning": "强降雨可能导致城市内涝，威胁群众安全。",
+            "is_target_event": true,
+            "city": "阳江市",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [
+              "阳江市主城区"
+            ],
+            "attributes": {},
+            "article_id": "A096"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 7,
+        "raw_relations": 6,
+        "events_kept": 1,
+        "events_dropped_non_target": 6,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 6,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 97,
+      "article_id": "A097",
+      "publish_date": "2024-09-07",
+      "content_preview": "9月7日，位于珠海斗门的广东省珠海粮油食品进出口有限公司斗门猪场装运点，拱北海关所属斗门海关关员照常对即将发往香港和澳门的219头活猪进行临床检查。\n受台风“摩羯”影响，大湾区多地亮起暴雨预警，外地活",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "活猪供应保障",
+            "event_type": "Impact",
+            "relevance_reasoning": "极端天气影响活猪运输，海关采取措施保障供应",
+            "is_target_event": true,
+            "city": "珠海",
+            "date_from": "2024-09-01",
+            "date_to": "2024-09-07",
+            "location": [
+              "珠海斗门"
+            ],
+            "attributes": {},
+            "article_id": "A097"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 2,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 2,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 98,
+      "article_id": "A098",
+      "publish_date": "2024-09-07",
+      "content_preview": "9月6日夜间至9月7日白天广州仍有大雨\n根据广州市气象台监测，广州市达到解除气象灾害（台风）应急响应标准。广州市气象灾害应急指挥部决定从9月6日23时25分起解除广州市气象灾害（台风）Ⅳ级应急响应。在",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "广州仍有大雨",
+            "event_type": "Hazard",
+            "relevance_reasoning": "大雨是城市应急管理相关事件，证据：'9月6日夜间至9月7日白天广州仍有大雨'",
+            "is_target_event": true,
+            "city": "广州",
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-07",
+            "location": [
+              "广州"
+            ],
+            "attributes": {},
+            "article_id": "A098"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 2,
+        "raw_relations": 1,
+        "events_kept": 1,
+        "events_dropped_non_target": 1,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 1,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    },
+    {
+      "index": 99,
+      "article_id": "A099",
+      "publish_date": "2024-09-07",
+      "content_preview": "9月7日，“摩羯”渐渐远离江门辖区，对江门沿海地区影响逐渐减弱，江门川山群岛海上客运航线将于9月7日16时后恢复部分营运与服务。山咀港至上、下川岛航班开出时间为16:30、17:30，上、下川岛至山咀",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E1",
+            "event_text": "海上客运航线恢复运营",
+            "event_type": "Impact",
+            "relevance_reasoning": "台风后航线恢复是应急管理响应，新闻明确恢复时间",
+            "is_target_event": true,
+            "city": "江门",
+            "date_from": "2024-09-07",
+            "date_to": "2024-09-08",
+            "location": [
+              "山咀港",
+              "上川岛",
+              "下川岛"
+            ],
+            "attributes": {},
+            "article_id": "A099"
+          }
+        ],
+        "relations": []
+      },
+      "normalization_stats": {
+        "raw_events": 3,
+        "raw_relations": 3,
+        "events_kept": 1,
+        "events_dropped_non_target": 2,
+        "events_dropped_invalid": 0,
+        "events_reindexed": 1,
+        "relations_kept": 0,
+        "relations_dropped_missing_endpoints": 0,
+        "relations_dropped_unmapped": 3,
+        "relations_dropped_self_loop": 0,
+        "relations_dropped_type": 0,
+        "relations_deduped": 0,
+        "relations_evidence_empty": 0
+      }
+    }
+  ]
+}

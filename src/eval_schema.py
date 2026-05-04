@@ -38,6 +38,16 @@ def _parse_yyyy_mm_dd(s: Any) -> Optional[date]:
         return None
 
 
+def _norm_article_id_token(x: Any) -> str:
+    if _is_missing(x):
+        return ""
+    s = str(x).strip()
+    m = re.fullmatch(r"[Aa]?0*(\d+)", s)
+    if m:
+        return str(int(m.group(1)))
+    return s.lower()
+
+
 def load_allowed_event_types(entities_by_type_json: str) -> List[str]:
     with open(entities_by_type_json, "r", encoding="utf-8") as f:
         obj = json.load(f)
@@ -168,6 +178,7 @@ def evaluate_records(
     per_article_events_norm_text: Dict[str, Counter] = defaultdict(Counter)
 
     events_by_article: Dict[str, Dict[str, Dict[str, Any]]] = defaultdict(dict)
+    relations_by_article: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
 
     # first pass: collect events & basic checks
     for rec in records:
@@ -195,7 +206,7 @@ def evaluate_records(
                 events_by_article[aid][eid] = ev
 
             # field completeness
-            for k in ["event_text", "event_type", "city", "date_from", "date_to", "location", "article_id"]:
+            for k in ["event_text", "event_type", "city", "date_from", "date_to", "location", "article_id", "relevance_reasoning"]:
                 if _is_missing(ev.get(k)):
                     field_missing[k] += 1
 
@@ -281,11 +292,22 @@ def evaluate_records(
 
             # cross-level article_id consistency (if both exist)
             top_aid = rec.get("article_id")
-            if aid and not _is_missing(top_aid) and str(top_aid).strip() != aid:
+            if aid and not _is_missing(top_aid):
+                top_aid_norm = _norm_article_id_token(top_aid)
+                aid_norm = _norm_article_id_token(aid)
+                if top_aid_norm == aid_norm:
+                    continue
                 field_norm_errors["event_article_id_mismatch"] += 1
                 score_add(
                     "event_article_id_mismatch",
-                    {"record_article_id": str(top_aid).strip(), "event_article_id": aid, "event_id": eid, "event": ev},
+                    {
+                        "record_article_id": str(top_aid).strip(),
+                        "event_article_id": aid,
+                        "record_article_id_norm": top_aid_norm,
+                        "event_article_id_norm": aid_norm,
+                        "event_id": eid,
+                        "event": ev,
+                    },
                     score=2,
                 )
 
@@ -311,6 +333,8 @@ def evaluate_records(
             if not isinstance(r, dict):
                 continue
             relation_count += 1
+            if aid_top:
+                relations_by_article[aid_top].append(r)
             src = r.get("source_event_id")
             tgt = r.get("target_event_id")
             rel_type = r.get("relation_type")
@@ -318,13 +342,19 @@ def evaluate_records(
             src = None if _is_missing(src) else str(src)
             tgt = None if _is_missing(tgt) else str(tgt)
             rel_type_s = None if _is_missing(rel_type) else str(rel_type).strip()
+            rel_quote = r.get("relation_evidence_quote")
 
             if rel_type_s and rel_type_s not in allowed_relation_types_set:
                 field_norm_errors["relation_type_out_of_set"] += 1
                 add_example("relation_type_out_of_set", {"article_id": aid_top, "relation": r})
 
+            if _is_missing(rel_quote):
+                suspicious_stats["relation_evidence_missing"] += 1
+                add_example("relation_evidence_missing", {"article_id": aid_top, "relation": r})
+
             if src is None or tgt is None:
                 field_missing["relation_source_or_target_missing"] += 1
+                suspicious_stats["relation_structure_invalid"] += 1
                 add_example("relation_source_or_target_missing", {"article_id": aid_top, "relation": r})
                 continue
 
@@ -334,12 +364,31 @@ def evaluate_records(
 
             if aid_top:
                 evmap = events_by_article.get(aid_top, {})
+                available_event_ids = sorted(evmap.keys())
                 if src not in evmap:
                     suspicious_stats["relation_src_not_found"] += 1
-                    add_example("relation_src_not_found", {"article_id": aid_top, "relation": r})
+                    suspicious_stats["relation_structure_invalid"] += 1
+                    add_example(
+                        "relation_src_not_found",
+                        {
+                            "article_id": aid_top,
+                            "relation": r,
+                            "missing_source_event_id": src,
+                            "available_event_ids": available_event_ids[:30],
+                        },
+                    )
                 if tgt not in evmap:
                     suspicious_stats["relation_tgt_not_found"] += 1
-                    add_example("relation_tgt_not_found", {"article_id": aid_top, "relation": r})
+                    suspicious_stats["relation_structure_invalid"] += 1
+                    add_example(
+                        "relation_tgt_not_found",
+                        {
+                            "article_id": aid_top,
+                            "relation": r,
+                            "missing_target_event_id": tgt,
+                            "available_event_ids": available_event_ids[:30],
+                        },
+                    )
 
     # evidence / anchor checks (optional)
     evidence_checks_done = 0
@@ -390,20 +439,44 @@ def evaluate_records(
                             location_anchor_fail += 1
                             add_example("location_item_not_in_article", {"article_id": aid, "event_id": eid, "location_item": loc_item})
 
-            # evidence sentence anchor (if exists)
-            evidences = ev.get("evidence_sentences")
-            if isinstance(evidences, list) and evidences:
-                rng.shuffle(evidences)
-                for es in evidences[:3]:
-                    if not isinstance(es, str) or not es.strip():
-                        continue
-                    evidence_checks_done += 1
-                    if _norm_text(es) not in text_n:
-                        evidence_anchor_fail += 1
-                        add_example(
-                            "evidence_sentence_not_in_article",
-                            {"article_id": aid, "event_id": eid, "evidence_sentence": es[:300]},
-                        )
+            # evidence sentence anchor (if exists) - disabled because we use relevance_reasoning now
+            # evidences = ev.get("evidence_sentences")
+            # if isinstance(evidences, list) and evidences:
+            #     rng.shuffle(evidences)
+            #     for es in evidences[:3]:
+            #         if not isinstance(es, str) or not es.strip():
+            #             continue
+            #         evidence_checks_done += 1
+            #         if _norm_text(es) not in text_n:
+            #             evidence_anchor_fail += 1
+            #             add_example(
+            #                 "evidence_sentence_not_in_article",
+            #                 {"article_id": aid, "event_id": eid, "evidence_sentence": es[:300]},
+            #             )
+
+        for aid, rels in relations_by_article.items():
+            text = articles_index.get(aid)
+            if not isinstance(text, str) or not text.strip():
+                continue
+            text_n = _norm_text(text)
+            for rel in rels:
+                quote = rel.get("relation_evidence_quote")
+                if _is_missing(quote):
+                    suspicious_stats["relation_evidence_missing"] += 1
+                    add_example("relation_evidence_missing", {"article_id": aid, "relation": rel})
+                    continue
+                q = str(quote).strip()
+                if len(q) == 0:
+                    suspicious_stats["relation_evidence_missing"] += 1
+                    add_example("relation_evidence_missing", {"article_id": aid, "relation": rel})
+                    continue
+                if _norm_text(q) not in text_n:
+                    suspicious_stats["relation_evidence_not_in_article"] += 1
+                    suspicious_stats["relation_semantic_suspicious"] += 1
+                    add_example(
+                        "relation_evidence_not_in_article",
+                        {"article_id": aid, "relation": rel, "relation_evidence_quote": q[:200]},
+                    )
 
     # build suspicious top examples (cross-issue)
     suspicious_items: List[Dict[str, Any]] = []
@@ -420,7 +493,7 @@ def evaluate_records(
     for aid, evset in per_article_event_ids.items():
         n_ev = len(evset)
         n_dup_ids = len(per_article_event_ids_dup.get(aid, set()))
-        n_rel = 0
+        n_rel = len(relations_by_article.get(aid, []))
         per_article_stats.append({"article_id": aid, "n_events": n_ev, "n_dup_event_ids": n_dup_ids, "n_relations": n_rel})
     per_article_stats.sort(key=lambda x: (x["n_dup_event_ids"], x["n_events"]), reverse=True)
 
@@ -464,8 +537,8 @@ def evaluate_records(
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--results_json", required=True, help="例如 CityResilence/results/run1/results.json")
-    ap.add_argument("--entities_by_type_json", default=str(Path(__file__).resolve().parents[1] / "data" / "entities_by_type.json"))
-    ap.add_argument("--graph_database_export_xlsx", default=str(Path(__file__).resolve().parents[1] / "data" / "graph_database_export.xlsx"))
+    ap.add_argument("--entities_by_type_json", default=str(Path(__file__).resolve().parents[1] / "data" / "background" / "entities_by_type.json"))
+    ap.add_argument("--graph_database_export_xlsx", default=str(Path(__file__).resolve().parents[1] / "data" / "background" / "graph_database_export.xlsx"))
     ap.add_argument("--articles_csv", default=None, help="可选：articles_cleaned.csv 路径；传了才会读（文件很大）")
     ap.add_argument("--out_json", default=None, help="可选：输出 summary.json 路径；不传则打印到 stdout")
     ap.add_argument("--seed", type=int, default=2026)

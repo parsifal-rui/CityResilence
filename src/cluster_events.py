@@ -24,13 +24,13 @@ from sklearn.cluster import DBSCAN
 
 @dataclass
 class Cfg:
-    T_max: int         = 7          # 时间阈值（天）
-    S_max: float       = 150.0      # 空间阈值（km）
-    w_s: float         = 0.65       # 语义权重（原 0.50，↑ 减少链式连通）
+    T_max: int         = 2          # 时间阈值（天）
+    S_max: float       = 200.0      # 空间阈值（km）
+    w_s: float         = 0.65       # 语义权重
     w_t: float         = 0.20       # 时间权重
     w_p: float         = 0.15       # 空间权重
-    eps: float         = 0.28       # DBSCAN epsilon（原 0.35，↓ 收紧簇边界）
-    min_samples: int   = 2          # DBSCAN min_samples
+    eps: float         = 0.28       # DBSCAN epsilon
+    min_samples: int   = 3          # DBSCAN min_samples
     repr_strategy: str = "centroid" # "centroid" | "most_common"
     model_path: str    = "models/bge-m3"
     lating_path: str   = "data/lating.json"
@@ -135,13 +135,19 @@ def build_dist_matrix(
     days:  torch.Tensor,    # (N,)  整型天数
     lats:  torch.Tensor,    # (N,)  纬度（度）
     lons:  torch.Tensor,    # (N,)  经度（度）
+    aids:  List[str],       # (N,)  article_ids
     cfg:   Cfg,
 ) -> np.ndarray:
     dev = cfg.device
     embs, days, lats, lons = embs.to(dev), days.to(dev), lats.to(dev), lons.to(dev)
 
-    # 语义距离：1 - cosine（embs 已归一化，点积 = cosine；clamp 消除浮点负值）
-    d_sem   = torch.clamp(1.0 - embs @ embs.T, 0.0, 2.0)                  # (N, N)
+    # 语义距离：同一篇文章距离为0，否则为1（根据教授要求）
+    N = len(aids)
+    d_sem = torch.ones((N, N), device=dev)
+    for i in range(N):
+        for j in range(N):
+            if aids[i] == aids[j]:
+                d_sem[i, j] = 0.0
 
     # 时间距离
     dt      = (days.unsqueeze(1) - days.unsqueeze(0)).abs().float()        # (N, N) 天数差
@@ -174,6 +180,8 @@ def flatten_records(data: dict, discard_ids: Set[str] = frozenset()) -> List[dic
         for ev in art.get("extraction", {}).get("events", []):
             if not ev.get("location"):
                 continue
+            if ev.get("event_type") == "impact":
+                continue
             date = ev.get("date_from") or publish_date
             if not date:
                 continue
@@ -204,6 +212,8 @@ def flatten_records_multi(data_list: List[dict], discard_ids: Set[str] = frozens
             publish_date = art.get("publish_date", "")
             for ev in art.get("extraction", {}).get("events", []):
                 if not ev.get("location"):
+                    continue
+                if ev.get("event_type") == "impact":
                     continue
                 date = ev.get("date_from") or publish_date
                 if not date:
@@ -248,39 +258,29 @@ def cluster_events(records: List[dict], cfg: Cfg | None = None, base_dir: str = 
     lons_all = torch.tensor([city_coords.get(c, _DEFAULT_COORD)[1] for c in cities], dtype=torch.float32)
     days_all = torch.tensor(days_raw, dtype=torch.float32)
 
-    # ── 按 event_type 分组聚类 ──
-    type_groups: Dict[str, List[int]] = defaultdict(list)
-    for i, t in enumerate(types):
-        type_groups[t].append(i)
+    # ── 不按 event_type 分组，统一聚类 ──
+    n = len(records)
+    if n < cfg.min_samples:
+        return []
 
-    global_labels = np.full(len(records), -1, dtype=np.int32)
-    global_offset = 0
+    sub_embs  = all_embs[emb_rows]
+    sub_days  = days_all
+    sub_lats  = lats_all
+    sub_lons  = lons_all
+    sub_aids  = art_ids
 
-    for etype, idxs_list in type_groups.items():
-        idxs = np.array(idxs_list)
-        n = len(idxs)
-        if n < cfg.min_samples:
-            continue
+    D = build_dist_matrix(sub_embs, sub_days, sub_lats, sub_lons, sub_aids, cfg)
+    D_finite = np.where(np.isinf(D), 1e9, D)   # DBSCAN 需要有限值
 
-        sub_embs  = all_embs[[emb_rows[i] for i in idxs]]
-        sub_days  = days_all[idxs]
-        sub_lats  = lats_all[idxs]
-        sub_lons  = lons_all[idxs]
+    local_labels = DBSCAN(
+        eps=cfg.eps, min_samples=cfg.min_samples, metric="precomputed"
+    ).fit_predict(D_finite)
 
-        D = build_dist_matrix(sub_embs, sub_days, sub_lats, sub_lons, cfg)
-        D_finite = np.where(np.isinf(D), 1e9, D)   # DBSCAN 需要有限值
+    global_labels = local_labels
 
-        local_labels = DBSCAN(
-            eps=cfg.eps, min_samples=cfg.min_samples, metric="precomputed"
-        ).fit_predict(D_finite)
-
-        valid = local_labels >= 0
-        if valid.any():
-            global_labels[idxs[valid]] = local_labels[valid] + global_offset
-            global_offset += int(local_labels[valid].max()) + 1
-
-        n_clusters = int(valid.any()) and (int(local_labels[valid].max()) + 1)
-        print(f"[{etype}] n={n}, clusters={n_clusters}, noise={int((~valid).sum())}")
+    valid = local_labels >= 0
+    n_clusters = int(valid.any()) and (int(local_labels[valid].max()) + 1)
+    print(f"[all_types] n={n}, clusters={n_clusters}, noise={int((~valid).sum())}")
 
     # ── 汇总输出 ──
     cluster_map: Dict[int, List[int]] = defaultdict(list)
@@ -296,21 +296,9 @@ def cluster_events(records: List[dict], cfg: Cfg | None = None, base_dir: str = 
         m_cities = [cities[i]   for i in members]
         m_aids   = [art_ids[i]  for i in members]
 
-        if cfg.repr_strategy == "centroid":
-            # 取各成员 embedding，选余弦距质心最近的文本
-            m_emb_rows = [emb_rows[i] for i in members]
-            vecs = all_embs[m_emb_rows].to(cfg.device)   # (K, D) 已归一化
-            centroid = vecs.mean(0)
-            centroid = centroid / centroid.norm().clamp(min=1e-8)
-            best_local = int((vecs @ centroid).argmax())
-            repr_text = m_texts[best_local]
-        else:
-            repr_text = Counter(m_texts).most_common(1)[0][0]
-
         clustered_events.append({
             "cluster_id":               cid,
-            "representative_event_text": repr_text,
-            "event_type":               Counter(m_types).most_common(1)[0][0],
+            "event_texts":              [text for text, count in Counter(m_texts).most_common()],
             "cities":                   sorted({c for c in m_cities if c}),
             "date_start":               days_to_str(min(m_days)),
             "date_end":                 days_to_str(max(m_days)),
