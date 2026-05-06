@@ -1,0 +1,3032 @@
+{
+  "run_stats": {
+    "total_runtime_seconds": 149.15,
+    "total_prompt_tokens": 65682,
+    "total_completion_tokens": 10076,
+    "total_tokens": 75758
+  },
+  "results": [
+    {
+      "index": 0,
+      "article_id": "A000",
+      "publish_date": "2024-08-23",
+      "content_preview": "深圳商报·读创客户端记者 文灿\r\n有一群人，为了守护更多人的安全，他们逆风雨而行，迎艰难而上，坚守在一线，用实际行动诠释忠诚与担当。\r\n近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。为保",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E01",
+            "event_text": "暴雨",
+            "event_name": "深圳市坪山区暴雨",
+            "event_type": "Driver",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "深圳市坪山区",
+            "evidence": "近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。",
+            "sentence_id": 3,
+            "paragraph_id": 3,
+            "char_start": 68,
+            "char_end": 98,
+            "confidence": 0.95,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E02",
+            "event_text": "积水",
+            "event_name": "坪山区多处出行积水",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "深圳市坪山区",
+            "evidence": "近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。",
+            "sentence_id": 3,
+            "paragraph_id": 3,
+            "char_start": 68,
+            "char_end": 98,
+            "confidence": 0.95,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E03",
+            "event_text": "积水",
+            "event_name": "碧岭街道金碧路积水严重",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "碧岭街道"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "碧岭街道金碧路",
+            "evidence": "坪山中队警力巡逻至碧岭街道金碧路时，发现该路段积水严重。",
+            "sentence_id": 5,
+            "paragraph_id": 4,
+            "char_start": 169,
+            "char_end": 197,
+            "confidence": 0.95,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E04",
+            "event_text": "排水系统堵塞",
+            "event_name": "金碧路下水口被树叶堵塞",
+            "event_type": "Modulator",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "碧岭街道"
+            ],
+            "attributes": {
+              "severity": "",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "碧岭街道金碧路",
+            "evidence": "经排查，该路段下水口被树叶等杂物堵塞导致积水无法排出。",
+            "sentence_id": 6,
+            "paragraph_id": 4,
+            "char_start": 197,
+            "char_end": 224,
+            "confidence": 0.9,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E05",
+            "event_text": "树木倒伏",
+            "event_name": "坪山大道路边树木倒地",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "坪山大道"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "坪山大道",
+            "evidence": "狂风暴雨导致坪山大道路边树木倒地，坪山中队警力巡逻到该路面后发现树木倒地阻碍交通通行。",
+            "sentence_id": 8,
+            "paragraph_id": 5,
+            "char_start": null,
+            "char_end": null,
+            "confidence": 0.95,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E06",
+            "event_text": "交通受阻",
+            "event_name": "坪山大道树木倒地阻碍交通",
+            "event_type": "Impact",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "坪山大道"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "坪山大道",
+            "evidence": "狂风暴雨导致坪山大道路边树木倒地，坪山中队警力巡逻到该路面后发现树木倒地阻碍交通通行。",
+            "sentence_id": 8,
+            "paragraph_id": 5,
+            "char_start": null,
+            "char_end": null,
+            "confidence": 0.95,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E07",
+            "event_text": "积水",
+            "event_name": "丹梓大道积水严重",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "丹梓大道"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "坪山区丹梓大道",
+            "evidence": "坪山区丹梓大道路积水严重，车辆缓慢通行。",
+            "sentence_id": 9,
+            "paragraph_id": 6,
+            "char_start": 374,
+            "char_end": 394,
+            "confidence": 0.95,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E08",
+            "event_text": "排水系统堵塞",
+            "event_name": "丹梓大道排水口被杂物堵塞",
+            "event_type": "Modulator",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "丹梓大道"
+            ],
+            "attributes": {
+              "severity": "",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "丹梓大道",
+            "evidence": "发现该路段排水口被杂物堵塞导致积水无法流出，民警立即清理堵塞排水口的杂物。",
+            "sentence_id": 11,
+            "paragraph_id": 6,
+            "char_start": null,
+            "char_end": null,
+            "confidence": 0.9,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E09",
+            "event_text": "树木倒伏",
+            "event_name": "车辆被大树砸到",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "坪山区",
+            "evidence": "坪山大队合成作战室接到报警求助，称其车被大树砸到，其本人被困在车辆并且受伤需到医院救治。",
+            "sentence_id": 12,
+            "paragraph_id": 7,
+            "char_start": 514,
+            "char_end": 558,
+            "confidence": 0.95,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E10",
+            "event_text": "人员受伤",
+            "event_name": "司机被大树砸伤",
+            "event_type": "Impact",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "坪山区",
+            "evidence": "称其车被大树砸到，其本人被困在车辆并且受伤需到医院救治。",
+            "sentence_id": 12,
+            "paragraph_id": 7,
+            "char_start": 530,
+            "char_end": 558,
+            "confidence": 0.95,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E11",
+            "event_text": "树木倒伏",
+            "event_name": "荔景路树木倾倒",
+            "event_type": "Hazard",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "荔景路"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "荔景路",
+            "evidence": "坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通。",
+            "sentence_id": 17,
+            "paragraph_id": 8,
+            "char_start": null,
+            "char_end": null,
+            "confidence": 0.95,
+            "article_id": "A000"
+          },
+          {
+            "event_id": "E12",
+            "event_text": "交通受阻",
+            "event_name": "荔景路树木倾倒影响交通",
+            "event_type": "Impact",
+            "city": "深圳",
+            "date_from": "2024-08-23",
+            "date_to": "2024-08-23",
+            "location": [
+              "广东省",
+              "深圳市",
+              "坪山区",
+              "荔景路"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": true
+            },
+            "time_text": "近期",
+            "location_text": "荔景路",
+            "evidence": "坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通。",
+            "sentence_id": 17,
+            "paragraph_id": 8,
+            "char_start": null,
+            "char_end": null,
+            "confidence": 0.95,
+            "article_id": "A000"
+          }
+        ],
+        "candidate_pairs": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "深圳市坪山区暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "坪山区多处出行积水",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "深圳市坪山区暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "碧岭街道金碧路积水严重",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "坪山区多处出行积水",
+            "source_event_type": "Hazard",
+            "target_event_id": "E03",
+            "target_event_name": "碧岭街道金碧路积水严重",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "碧岭街道金碧路积水严重",
+            "source_event_type": "Hazard",
+            "target_event_id": "E02",
+            "target_event_name": "坪山区多处出行积水",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "金碧路下水口被树叶堵塞",
+            "source_event_type": "Modulator",
+            "target_event_id": "E03",
+            "target_event_name": "碧岭街道金碧路积水严重",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "金碧路下水口被树叶堵塞",
+            "source_event_type": "Modulator",
+            "target_event_id": "E05",
+            "target_event_name": "坪山大道路边树木倒地",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "金碧路下水口被树叶堵塞",
+            "source_event_type": "Modulator",
+            "target_event_id": "E06",
+            "target_event_name": "坪山大道树木倒地阻碍交通",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "坪山大道路边树木倒地",
+            "source_event_type": "Hazard",
+            "target_event_id": "E06",
+            "target_event_name": "坪山大道树木倒地阻碍交通",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "坪山大道路边树木倒地",
+            "source_event_type": "Hazard",
+            "target_event_id": "E07",
+            "target_event_name": "丹梓大道积水严重",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "丹梓大道积水严重",
+            "source_event_type": "Hazard",
+            "target_event_id": "E05",
+            "target_event_name": "坪山大道路边树木倒地",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "丹梓大道积水严重",
+            "source_event_type": "Hazard",
+            "target_event_id": "E06",
+            "target_event_name": "坪山大道树木倒地阻碍交通",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "丹梓大道排水口被杂物堵塞",
+            "source_event_type": "Modulator",
+            "target_event_id": "E07",
+            "target_event_name": "丹梓大道积水严重",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "丹梓大道排水口被杂物堵塞",
+            "source_event_type": "Modulator",
+            "target_event_id": "E09",
+            "target_event_name": "车辆被大树砸到",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "丹梓大道排水口被杂物堵塞",
+            "source_event_type": "Modulator",
+            "target_event_id": "E10",
+            "target_event_name": "司机被大树砸伤",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "车辆被大树砸到",
+            "source_event_type": "Hazard",
+            "target_event_id": "E10",
+            "target_event_name": "司机被大树砸伤",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E11",
+            "source_event_name": "荔景路树木倾倒",
+            "source_event_type": "Hazard",
+            "target_event_id": "E12",
+            "target_event_name": "荔景路树木倾倒影响交通",
+            "target_event_type": "Impact"
+          }
+        ],
+        "relation_judgments": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "深圳市坪山区暴雨",
+            "target_event_id": "E02",
+            "target_event_name": "坪山区多处出行积水",
+            "relation_type": "引发",
+            "evidence": "近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。",
+            "confidence": 0.95
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "金碧路下水口被树叶堵塞",
+            "target_event_id": "E03",
+            "target_event_name": "碧岭街道金碧路积水严重",
+            "relation_type": "加剧",
+            "evidence": "经排查，该路段下水口被树叶等杂物堵塞导致积水无法排出。",
+            "confidence": 0.9
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "坪山大道路边树木倒地",
+            "target_event_id": "E06",
+            "target_event_name": "坪山大道树木倒地阻碍交通",
+            "relation_type": "引发",
+            "evidence": "狂风暴雨导致坪山大道路边树木倒地，坪山中队警力巡逻到该路面后发现树木倒地阻碍交通通行。",
+            "confidence": 0.95
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "丹梓大道排水口被杂物堵塞",
+            "target_event_id": "E07",
+            "target_event_name": "丹梓大道积水严重",
+            "relation_type": "加剧",
+            "evidence": "发现该路段排水口被杂物堵塞导致积水无法流出，民警立即清理堵塞排水口的杂物。",
+            "confidence": 0.9
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "车辆被大树砸到",
+            "target_event_id": "E10",
+            "target_event_name": "司机被大树砸伤",
+            "relation_type": "引发",
+            "evidence": "称其车被大树砸到，其本人被困在车辆并且受伤需到医院救治。",
+            "confidence": 0.95
+          },
+          {
+            "source_event_id": "E11",
+            "source_event_name": "荔景路树木倾倒",
+            "target_event_id": "E12",
+            "target_event_name": "荔景路树木倾倒影响交通",
+            "relation_type": "引发",
+            "evidence": "坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通。",
+            "confidence": 0.95
+          }
+        ],
+        "relations": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "深圳市坪山区暴雨",
+            "target_event_id": "E02",
+            "target_event_name": "坪山区多处出行积水",
+            "relation_type": "引发",
+            "evidence": "近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。",
+            "confidence": 0.95,
+            "relation_id": "R01"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "金碧路下水口被树叶堵塞",
+            "target_event_id": "E03",
+            "target_event_name": "碧岭街道金碧路积水严重",
+            "relation_type": "加剧",
+            "evidence": "经排查，该路段下水口被树叶等杂物堵塞导致积水无法排出。",
+            "confidence": 0.9,
+            "relation_id": "R02"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "车辆被大树砸到",
+            "target_event_id": "E10",
+            "target_event_name": "司机被大树砸伤",
+            "relation_type": "引发",
+            "evidence": "称其车被大树砸到，其本人被困在车辆并且受伤需到医院救治。",
+            "confidence": 0.95,
+            "relation_id": "R03"
+          }
+        ],
+        "invalid_relations": [
+          {
+            "source_event_id": "E05",
+            "source_event_name": "坪山大道路边树木倒地",
+            "target_event_id": "E06",
+            "target_event_name": "坪山大道树木倒地阻碍交通",
+            "relation_type": "引发",
+            "evidence": "狂风暴雨导致坪山大道路边树木倒地，坪山中队警力巡逻到该路面后发现树木倒地阻碍交通通行。",
+            "confidence": 0.95,
+            "validation_errors": [
+              "evidence_not_in_text"
+            ]
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "丹梓大道排水口被杂物堵塞",
+            "target_event_id": "E07",
+            "target_event_name": "丹梓大道积水严重",
+            "relation_type": "加剧",
+            "evidence": "发现该路段排水口被杂物堵塞导致积水无法流出，民警立即清理堵塞排水口的杂物。",
+            "confidence": 0.9,
+            "validation_errors": [
+              "evidence_not_in_text"
+            ]
+          },
+          {
+            "source_event_id": "E11",
+            "source_event_name": "荔景路树木倾倒",
+            "target_event_id": "E12",
+            "target_event_name": "荔景路树木倾倒影响交通",
+            "relation_type": "引发",
+            "evidence": "坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通。",
+            "confidence": 0.95,
+            "validation_errors": [
+              "evidence_not_in_text"
+            ]
+          }
+        ],
+        "validation_errors": {
+          "events": [
+            {
+              "event_id": "E05",
+              "errors": [
+                "evidence_not_in_text"
+              ]
+            },
+            {
+              "event_id": "E06",
+              "errors": [
+                "evidence_not_in_text"
+              ]
+            },
+            {
+              "event_id": "E08",
+              "errors": [
+                "evidence_not_in_text"
+              ]
+            },
+            {
+              "event_id": "E11",
+              "errors": [
+                "evidence_not_in_text"
+              ]
+            },
+            {
+              "event_id": "E12",
+              "errors": [
+                "evidence_not_in_text"
+              ]
+            }
+          ]
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": [\n    {\n      \"event_id\": \"E01\",\n      \"event_text\": \"暴雨\",\n      \"event_name\": \"深圳市坪山区暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"深圳市坪山区\",\n      \"evidence\": \"近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。\",\n      \"sentence_id\": 3,\n      \"paragraph_id\": 3,\n      \"char_start\": 0,\n      \"char_end\": 30,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E02\",\n      \"event_text\": \"积水\",\n      \"event_name\": \"坪山区多处出行积水\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"深圳市坪山区\",\n      \"evidence\": \"近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。\",\n      \"sentence_id\": 3,\n      \"paragraph_id\": 3,\n      \"char_start\": 15,\n      \"char_end\": 30,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E03\",\n      \"event_text\": \"积水\",\n      \"event_name\": \"碧岭街道金碧路积水严重\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\", \"碧岭街道\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"碧岭街道金碧路\",\n      \"evidence\": \"坪山中队警力巡逻至碧岭街道金碧路时，发现该路段积水严重。\",\n      \"sentence_id\": 5,\n      \"paragraph_id\": 4,\n      \"char_start\": 0,\n      \"char_end\": 30,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E04\",\n      \"event_text\": \"排水系统堵塞\",\n      \"event_name\": \"金碧路下水口被树叶堵塞\",\n      \"event_type\": \"Modulator\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\", \"碧岭街道\"],\n      \"attributes\": {\n        \"severity\": \"\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"碧岭街道金碧路\",\n      \"evidence\": \"经排查，该路段下水口被树叶等杂物堵塞导致积水无法排出。\",\n      \"sentence_id\": 6,\n      \"paragraph_id\": 4,\n      \"char_start\": 0,\n      \"char_end\": 30,\n      \"confidence\": 0.9\n    },\n    {\n      \"event_id\": \"E05\",\n      \"event_text\": \"树木倒伏\",\n      \"event_name\": \"坪山大道路边树木倒地\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\", \"坪山大道\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"坪山大道\",\n      \"evidence\": \"狂风暴雨导致坪山大道路边树木倒地，坪山中队警力巡逻到该路面后发现树木倒地阻碍交通通行。\",\n      \"sentence_id\": 8,\n      \"paragraph_id\": 5,\n      \"char_start\": 0,\n      \"char_end\": 40,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E06\",\n      \"event_text\": \"交通受阻\",\n      \"event_name\": \"坪山大道树木倒地阻碍交通\",\n      \"event_type\": \"Impact\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\", \"坪山大道\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"坪山大道\",\n      \"evidence\": \"狂风暴雨导致坪山大道路边树木倒地，坪山中队警力巡逻到该路面后发现树木倒地阻碍交通通行。\",\n      \"sentence_id\": 8,\n      \"paragraph_id\": 5,\n      \"char_start\": 20,\n      \"char_end\": 50,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E07\",\n      \"event_text\": \"积水\",\n      \"event_name\": \"丹梓大道积水严重\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\", \"丹梓大道\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"坪山区丹梓大道\",\n      \"evidence\": \"坪山区丹梓大道路积水严重，车辆缓慢通行。\",\n      \"sentence_id\": 9,\n      \"paragraph_id\": 6,\n      \"char_start\": 0,\n      \"char_end\": 25,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E08\",\n      \"event_text\": \"排水系统堵塞\",\n      \"event_name\": \"丹梓大道排水口被杂物堵塞\",\n      \"event_type\": \"Modulator\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\", \"丹梓大道\"],\n      \"attributes\": {\n        \"severity\": \"\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"丹梓大道\",\n      \"evidence\": \"发现该路段排水口被杂物堵塞导致积水无法流出，民警立即清理堵塞排水口的杂物。\",\n      \"sentence_id\": 11,\n      \"paragraph_id\": 6,\n      \"char_start\": 0,\n      \"char_end\": 30,\n      \"confidence\": 0.9\n    },\n    {\n      \"event_id\": \"E09\",\n      \"event_text\": \"树木倒伏\",\n      \"event_name\": \"车辆被大树砸到\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"坪山区\",\n      \"evidence\": \"坪山大队合成作战室接到报警求助，称其车被大树砸到，其本人被困在车辆并且受伤需到医院救治。\",\n      \"sentence_id\": 12,\n      \"paragraph_id\": 7,\n      \"char_start\": 0,\n      \"char_end\": 40,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E10\",\n      \"event_text\": \"人员受伤\",\n      \"event_name\": \"司机被大树砸伤\",\n      \"event_type\": \"Impact\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"坪山区\",\n      \"evidence\": \"称其车被大树砸到，其本人被困在车辆并且受伤需到医院救治。\",\n      \"sentence_id\": 12,\n      \"paragraph_id\": 7,\n      \"char_start\": 20,\n      \"char_end\": 50,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E11\",\n      \"event_text\": \"树木倒伏\",\n      \"event_name\": \"荔景路树木倾倒\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\", \"荔景路\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"荔景路\",\n      \"evidence\": \"坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通。\",\n      \"sentence_id\": 17,\n      \"paragraph_id\": 8,\n      \"char_start\": 0,\n      \"char_end\": 30,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E12\",\n      \"event_text\": \"交通受阻\",\n      \"event_name\": \"荔景路树木倾倒影响交通\",\n      \"event_type\": \"Impact\",\n      \"city\": \"深圳\",\n      \"date_from\": \"2024-08-23\",\n      \"date_to\": \"2024-08-23\",\n      \"location\": [\"广东省\", \"深圳市\", \"坪山区\", \"荔景路\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": true\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"近期\",\n      \"location_text\": \"荔景路\",\n      \"evidence\": \"坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通。\",\n      \"sentence_id\": 17,\n      \"paragraph_id\": 8,\n      \"char_start\": 20,\n      \"char_end\": 40,\n      \"confidence\": 0.95\n    }\n  ]\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 6613,
+        "completion_tokens": 3159,
+        "total_tokens": 9772,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 3211,
+            "completion_tokens": 2577,
+            "total_tokens": 5788
+          },
+          {
+            "round_index": 1,
+            "stage": "relation_extraction",
+            "relation_chunk_index": 0,
+            "relation_chunks_total": 1,
+            "prompt_tokens": 3402,
+            "completion_tokens": 582,
+            "total_tokens": 3984
+          }
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "article_id": "A001",
+      "publish_date": "2024-08-29",
+      "content_preview": "最新发布：\r\n广州市气象灾害应急指挥部办公室\r\n2024年8月29日20时55分：\r\n据市气象台监测，广州市达到解除气象灾害（暴雨和雷雨大风）应急响应标准。市气象灾害应急指挥部决定从29日20时55分",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E01",
+            "event_text": "中到强雷雨",
+            "event_name": "广州市中到强雷雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": false
+            },
+            "time_text": "今天白天",
+            "location_text": "我市",
+            "evidence": "今天白天我市普遍出现中到强雷雨",
+            "sentence_id": 9,
+            "paragraph_id": 7,
+            "char_start": 201,
+            "char_end": 216,
+            "confidence": 0.95,
+            "article_id": "A001"
+          },
+          {
+            "event_id": "E02",
+            "event_text": "大暴雨",
+            "event_name": "南沙区东涌镇大暴雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "南沙区",
+              "东涌镇"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "截至19时",
+            "location_text": "南沙区东涌镇",
+            "evidence": "局部出现大暴雨，截至19时，南沙区东涌镇录得全市最大雨量187.5毫米",
+            "sentence_id": 9,
+            "paragraph_id": 7,
+            "char_start": 217,
+            "char_end": 252,
+            "confidence": 0.95,
+            "article_id": "A001"
+          },
+          {
+            "event_id": "E03",
+            "event_text": "9级阵风",
+            "event_name": "花都区梯面镇9级阵风",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "花都区",
+              "梯面镇"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "截至19时",
+            "location_text": "花都区梯面镇",
+            "evidence": "花都区梯面镇录得全市最大阵风21.7米/秒(9级)",
+            "sentence_id": 9,
+            "paragraph_id": 7,
+            "char_start": 253,
+            "char_end": 278,
+            "confidence": 0.95,
+            "article_id": "A001"
+          },
+          {
+            "event_id": "E04",
+            "event_text": "高温",
+            "event_name": "广州市白天高温",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "severity": "mild",
+              "time_uncertain": false
+            },
+            "time_text": "白天",
+            "location_text": "各区",
+            "evidence": "白天各区最高气温33～35℃",
+            "sentence_id": 10,
+            "paragraph_id": 7,
+            "char_start": 279,
+            "char_end": 293,
+            "confidence": 0.9,
+            "article_id": "A001"
+          }
+        ],
+        "candidate_pairs": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "广州市中到强雷雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "南沙区东涌镇大暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "广州市中到强雷雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "花都区梯面镇9级阵风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "广州市中到强雷雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "广州市白天高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "南沙区东涌镇大暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "广州市中到强雷雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "南沙区东涌镇大暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "花都区梯面镇9级阵风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "南沙区东涌镇大暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "广州市白天高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "花都区梯面镇9级阵风",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "广州市中到强雷雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "花都区梯面镇9级阵风",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "南沙区东涌镇大暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "花都区梯面镇9级阵风",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "广州市白天高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "广州市白天高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "广州市中到强雷雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "广州市白天高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "南沙区东涌镇大暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "广州市白天高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "花都区梯面镇9级阵风",
+            "target_event_type": "Driver"
+          }
+        ],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": [\n    {\n      \"event_id\": \"E01\",\n      \"event_text\": \"中到强雷雨\",\n      \"event_name\": \"广州市中到强雷雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"今天白天\",\n      \"location_text\": \"我市\",\n      \"evidence\": \"今天白天我市普遍出现中到强雷雨\",\n      \"sentence_id\": 9,\n      \"paragraph_id\": 7,\n      \"char_start\": 0,\n      \"char_end\": 16,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E02\",\n      \"event_text\": \"大暴雨\",\n      \"event_name\": \"南沙区东涌镇大暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"南沙区\", \"东涌镇\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"截至19时\",\n      \"location_text\": \"南沙区东涌镇\",\n      \"evidence\": \"局部出现大暴雨，截至19时，南沙区东涌镇录得全市最大雨量187.5毫米\",\n      \"sentence_id\": 9,\n      \"paragraph_id\": 7,\n      \"char_start\": 16,\n      \"char_end\": 60,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E03\",\n      \"event_text\": \"9级阵风\",\n      \"event_name\": \"花都区梯面镇9级阵风\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"花都区\", \"梯面镇\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"截至19时\",\n      \"location_text\": \"花都区梯面镇\",\n      \"evidence\": \"花都区梯面镇录得全市最大阵风21.7米/秒(9级)\",\n      \"sentence_id\": 9,\n      \"paragraph_id\": 7,\n      \"char_start\": 60,\n      \"char_end\": 100,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E04\",\n      \"event_text\": \"高温\",\n      \"event_name\": \"广州市白天高温\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\"],\n      \"attributes\": {\n        \"severity\": \"mild\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"白天\",\n      \"location_text\": \"各区\",\n      \"evidence\": \"白天各区最高气温33～35℃\",\n      \"sentence_id\": 10,\n      \"paragraph_id\": 7,\n      \"char_start\": 0,\n      \"char_end\": 16,\n      \"confidence\": 0.9\n    }\n  ]\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 4736,
+        "completion_tokens": 854,
+        "total_tokens": 5590,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 2715,
+            "completion_tokens": 847,
+            "total_tokens": 3562
+          },
+          {
+            "round_index": 1,
+            "stage": "relation_extraction",
+            "relation_chunk_index": 0,
+            "relation_chunks_total": 1,
+            "prompt_tokens": 2021,
+            "completion_tokens": 7,
+            "total_tokens": 2028
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "article_id": "A002",
+      "publish_date": "2024-08-29",
+      "content_preview": "根据广州市气象台监测，广州市达到启动气象灾害（暴雨和雷雨大风）Ⅳ级应急响应标准。市气象灾害应急指挥部决定从8月29日17时21分起启动广州市气象灾害（暴雨和雷雨大风）Ⅳ级应急响应。请按照预案规定做好防",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E01",
+            "event_text": "暴雨",
+            "event_name": "南沙黄阁暴雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "南沙区",
+              "黄阁镇"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "南沙黄阁",
+            "evidence": "南沙黄阁、番禺石楼等地发布分镇街暴雨红色预警信号",
+            "sentence_id": 5,
+            "paragraph_id": 2,
+            "char_start": 134,
+            "char_end": 158,
+            "confidence": 0.95,
+            "article_id": "A002"
+          },
+          {
+            "event_id": "E02",
+            "event_text": "暴雨",
+            "event_name": "番禺石楼暴雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "番禺区",
+              "石楼镇"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "番禺石楼",
+            "evidence": "南沙黄阁、番禺石楼等地发布分镇街暴雨红色预警信号",
+            "sentence_id": 5,
+            "paragraph_id": 2,
+            "char_start": 134,
+            "char_end": 158,
+            "confidence": 0.95,
+            "article_id": "A002"
+          },
+          {
+            "event_id": "E03",
+            "event_text": "暴雨",
+            "event_name": "荔湾暴雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "荔湾区"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "荔湾",
+            "evidence": "荔湾发布暴雨橙色预警信号",
+            "sentence_id": 6,
+            "paragraph_id": 2,
+            "char_start": 159,
+            "char_end": 171,
+            "confidence": 0.95,
+            "article_id": "A002"
+          },
+          {
+            "event_id": "E04",
+            "event_text": "暴雨",
+            "event_name": "越秀暴雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "越秀区"
+            ],
+            "attributes": {
+              "severity": "mild",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "越秀",
+            "evidence": "越秀、海珠、天河、白云、增城发布暴雨黄色预警信号",
+            "sentence_id": 7,
+            "paragraph_id": 2,
+            "char_start": 172,
+            "char_end": 196,
+            "confidence": 0.95,
+            "article_id": "A002"
+          },
+          {
+            "event_id": "E05",
+            "event_text": "暴雨",
+            "event_name": "海珠暴雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "海珠区"
+            ],
+            "attributes": {
+              "severity": "mild",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "海珠",
+            "evidence": "越秀、海珠、天河、白云、增城发布暴雨黄色预警信号",
+            "sentence_id": 7,
+            "paragraph_id": 2,
+            "char_start": 172,
+            "char_end": 196,
+            "confidence": 0.95,
+            "article_id": "A002"
+          },
+          {
+            "event_id": "E06",
+            "event_text": "暴雨",
+            "event_name": "天河暴雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "天河区"
+            ],
+            "attributes": {
+              "severity": "mild",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "天河",
+            "evidence": "越秀、海珠、天河、白云、增城发布暴雨黄色预警信号",
+            "sentence_id": 7,
+            "paragraph_id": 2,
+            "char_start": 172,
+            "char_end": 196,
+            "confidence": 0.95,
+            "article_id": "A002"
+          },
+          {
+            "event_id": "E07",
+            "event_text": "暴雨",
+            "event_name": "白云暴雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "白云区"
+            ],
+            "attributes": {
+              "severity": "mild",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "白云",
+            "evidence": "越秀、海珠、天河、白云、增城发布暴雨黄色预警信号",
+            "sentence_id": 7,
+            "paragraph_id": 2,
+            "char_start": 172,
+            "char_end": 196,
+            "confidence": 0.95,
+            "article_id": "A002"
+          },
+          {
+            "event_id": "E08",
+            "event_text": "暴雨",
+            "event_name": "增城暴雨",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市",
+              "增城区"
+            ],
+            "attributes": {
+              "severity": "mild",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "增城",
+            "evidence": "越秀、海珠、天河、白云、增城发布暴雨黄色预警信号",
+            "sentence_id": 7,
+            "paragraph_id": 2,
+            "char_start": 172,
+            "char_end": 196,
+            "confidence": 0.95,
+            "article_id": "A002"
+          },
+          {
+            "event_id": "E09",
+            "event_text": "雷雨大风",
+            "event_name": "广州多区雷雨大风",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "severity": "mild",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "除荔湾和从化外，广州其余各区",
+            "evidence": "除荔湾和从化外，广州其余各区均已发布雷雨大风黄色预警信号",
+            "sentence_id": 8,
+            "paragraph_id": 2,
+            "char_start": 197,
+            "char_end": 225,
+            "confidence": 0.95,
+            "article_id": "A002"
+          },
+          {
+            "event_id": "E10",
+            "event_text": "高温",
+            "event_name": "广州多区高温",
+            "event_type": "Driver",
+            "city": "广州",
+            "date_from": "2024-08-29",
+            "date_to": "2024-08-29",
+            "location": [
+              "广东省",
+              "广州市"
+            ],
+            "attributes": {
+              "severity": "mild",
+              "time_uncertain": false
+            },
+            "time_text": "8月29日17时29分",
+            "location_text": "除南沙外，广州其余各区",
+            "evidence": "除南沙外，广州其余各区维持发布高温黄色预警信号",
+            "sentence_id": 9,
+            "paragraph_id": 2,
+            "char_start": 226,
+            "char_end": 249,
+            "confidence": 0.95,
+            "article_id": "A002"
+          }
+        ],
+        "candidate_pairs": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "南沙黄阁暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "番禺石楼暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "南沙黄阁暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "荔湾暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "南沙黄阁暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "越秀暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "南沙黄阁暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "海珠暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "南沙黄阁暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E06",
+            "target_event_name": "天河暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "南沙黄阁暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E07",
+            "target_event_name": "白云暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "南沙黄阁暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E08",
+            "target_event_name": "增城暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "南沙黄阁暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E09",
+            "target_event_name": "广州多区雷雨大风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "南沙黄阁暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E10",
+            "target_event_name": "广州多区高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "番禺石楼暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "南沙黄阁暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "番禺石楼暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "荔湾暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "番禺石楼暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "越秀暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "番禺石楼暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "海珠暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "番禺石楼暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E06",
+            "target_event_name": "天河暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "番禺石楼暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E07",
+            "target_event_name": "白云暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "番禺石楼暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E08",
+            "target_event_name": "增城暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "番禺石楼暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E09",
+            "target_event_name": "广州多区雷雨大风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "番禺石楼暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E10",
+            "target_event_name": "广州多区高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "荔湾暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "南沙黄阁暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "荔湾暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "番禺石楼暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "荔湾暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "越秀暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "荔湾暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "海珠暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "荔湾暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E06",
+            "target_event_name": "天河暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "荔湾暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E07",
+            "target_event_name": "白云暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "荔湾暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E08",
+            "target_event_name": "增城暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "荔湾暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E09",
+            "target_event_name": "广州多区雷雨大风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "荔湾暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E10",
+            "target_event_name": "广州多区高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "越秀暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "南沙黄阁暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "越秀暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "番禺石楼暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "越秀暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "荔湾暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "越秀暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "海珠暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "越秀暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E06",
+            "target_event_name": "天河暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "越秀暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E07",
+            "target_event_name": "白云暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "越秀暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E08",
+            "target_event_name": "增城暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "越秀暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E09",
+            "target_event_name": "广州多区雷雨大风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "越秀暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E10",
+            "target_event_name": "广州多区高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "海珠暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "南沙黄阁暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "海珠暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "番禺石楼暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "海珠暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "荔湾暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "海珠暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "越秀暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "海珠暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E06",
+            "target_event_name": "天河暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "海珠暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E07",
+            "target_event_name": "白云暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "海珠暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E08",
+            "target_event_name": "增城暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "海珠暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E09",
+            "target_event_name": "广州多区雷雨大风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "海珠暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E10",
+            "target_event_name": "广州多区高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E06",
+            "source_event_name": "天河暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "南沙黄阁暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E06",
+            "source_event_name": "天河暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "番禺石楼暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E06",
+            "source_event_name": "天河暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "荔湾暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E06",
+            "source_event_name": "天河暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "越秀暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E06",
+            "source_event_name": "天河暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "海珠暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E06",
+            "source_event_name": "天河暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E07",
+            "target_event_name": "白云暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E06",
+            "source_event_name": "天河暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E08",
+            "target_event_name": "增城暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E06",
+            "source_event_name": "天河暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E09",
+            "target_event_name": "广州多区雷雨大风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E06",
+            "source_event_name": "天河暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E10",
+            "target_event_name": "广州多区高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "白云暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "南沙黄阁暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "白云暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "番禺石楼暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "白云暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "荔湾暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "白云暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "越秀暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "白云暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "海珠暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "白云暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E06",
+            "target_event_name": "天河暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "白云暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E08",
+            "target_event_name": "增城暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "白云暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E09",
+            "target_event_name": "广州多区雷雨大风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E07",
+            "source_event_name": "白云暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E10",
+            "target_event_name": "广州多区高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "增城暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "南沙黄阁暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "增城暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "番禺石楼暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "增城暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "荔湾暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "增城暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "越秀暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "增城暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "海珠暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "增城暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E06",
+            "target_event_name": "天河暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "增城暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E07",
+            "target_event_name": "白云暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "增城暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E09",
+            "target_event_name": "广州多区雷雨大风",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E08",
+            "source_event_name": "增城暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E10",
+            "target_event_name": "广州多区高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "广州多区雷雨大风",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "南沙黄阁暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "广州多区雷雨大风",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "番禺石楼暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "广州多区雷雨大风",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "荔湾暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "广州多区雷雨大风",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "越秀暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "广州多区雷雨大风",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "海珠暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "广州多区雷雨大风",
+            "source_event_type": "Driver",
+            "target_event_id": "E06",
+            "target_event_name": "天河暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "广州多区雷雨大风",
+            "source_event_type": "Driver",
+            "target_event_id": "E07",
+            "target_event_name": "白云暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "广州多区雷雨大风",
+            "source_event_type": "Driver",
+            "target_event_id": "E08",
+            "target_event_name": "增城暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E09",
+            "source_event_name": "广州多区雷雨大风",
+            "source_event_type": "Driver",
+            "target_event_id": "E10",
+            "target_event_name": "广州多区高温",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E10",
+            "source_event_name": "广州多区高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E01",
+            "target_event_name": "南沙黄阁暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E10",
+            "source_event_name": "广州多区高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "番禺石楼暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E10",
+            "source_event_name": "广州多区高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "荔湾暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E10",
+            "source_event_name": "广州多区高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "越秀暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E10",
+            "source_event_name": "广州多区高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "海珠暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E10",
+            "source_event_name": "广州多区高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E06",
+            "target_event_name": "天河暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E10",
+            "source_event_name": "广州多区高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E07",
+            "target_event_name": "白云暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E10",
+            "source_event_name": "广州多区高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E08",
+            "target_event_name": "增城暴雨",
+            "target_event_type": "Driver"
+          },
+          {
+            "source_event_id": "E10",
+            "source_event_name": "广州多区高温",
+            "source_event_type": "Driver",
+            "target_event_id": "E09",
+            "target_event_name": "广州多区雷雨大风",
+            "target_event_type": "Driver"
+          }
+        ],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": [\n    {\n      \"event_id\": \"E01\",\n      \"event_text\": \"暴雨\",\n      \"event_name\": \"南沙黄阁暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"南沙区\", \"黄阁镇\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"南沙黄阁\",\n      \"evidence\": \"南沙黄阁、番禺石楼等地发布分镇街暴雨红色预警信号\",\n      \"sentence_id\": 5,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E02\",\n      \"event_text\": \"暴雨\",\n      \"event_name\": \"番禺石楼暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"番禺区\", \"石楼镇\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"番禺石楼\",\n      \"evidence\": \"南沙黄阁、番禺石楼等地发布分镇街暴雨红色预警信号\",\n      \"sentence_id\": 5,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E03\",\n      \"event_text\": \"暴雨\",\n      \"event_name\": \"荔湾暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"荔湾区\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"荔湾\",\n      \"evidence\": \"荔湾发布暴雨橙色预警信号\",\n      \"sentence_id\": 6,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E04\",\n      \"event_text\": \"暴雨\",\n      \"event_name\": \"越秀暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"越秀区\"],\n      \"attributes\": {\n        \"severity\": \"mild\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"越秀\",\n      \"evidence\": \"越秀、海珠、天河、白云、增城发布暴雨黄色预警信号\",\n      \"sentence_id\": 7,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E05\",\n      \"event_text\": \"暴雨\",\n      \"event_name\": \"海珠暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"海珠区\"],\n      \"attributes\": {\n        \"severity\": \"mild\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"海珠\",\n      \"evidence\": \"越秀、海珠、天河、白云、增城发布暴雨黄色预警信号\",\n      \"sentence_id\": 7,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E06\",\n      \"event_text\": \"暴雨\",\n      \"event_name\": \"天河暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"天河区\"],\n      \"attributes\": {\n        \"severity\": \"mild\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"天河\",\n      \"evidence\": \"越秀、海珠、天河、白云、增城发布暴雨黄色预警信号\",\n      \"sentence_id\": 7,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E07\",\n      \"event_text\": \"暴雨\",\n      \"event_name\": \"白云暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"白云区\"],\n      \"attributes\": {\n        \"severity\": \"mild\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"白云\",\n      \"evidence\": \"越秀、海珠、天河、白云、增城发布暴雨黄色预警信号\",\n      \"sentence_id\": 7,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E08\",\n      \"event_text\": \"暴雨\",\n      \"event_name\": \"增城暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\", \"增城区\"],\n      \"attributes\": {\n        \"severity\": \"mild\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"增城\",\n      \"evidence\": \"越秀、海珠、天河、白云、增城发布暴雨黄色预警信号\",\n      \"sentence_id\": 7,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E09\",\n      \"event_text\": \"雷雨大风\",\n      \"event_name\": \"广州多区雷雨大风\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\"],\n      \"attributes\": {\n        \"severity\": \"mild\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"除荔湾和从化外，广州其余各区\",\n      \"evidence\": \"除荔湾和从化外，广州其余各区均已发布雷雨大风黄色预警信号\",\n      \"sentence_id\": 8,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E10\",\n      \"event_text\": \"高温\",\n      \"event_name\": \"广州多区高温\",\n      \"event_type\": \"Driver\",\n      \"city\": \"广州\",\n      \"date_from\": \"2024-08-29\",\n      \"date_to\": \"2024-08-29\",\n      \"location\": [\"广东省\", \"广州市\"],\n      \"attributes\": {\n        \"severity\": \"mild\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"8月29日17时29分\",\n      \"location_text\": \"除南沙外，广州其余各区\",\n      \"evidence\": \"除南沙外，广州其余各区维持发布高温黄色预警信号\",\n      \"sentence_id\": 9,\n      \"paragraph_id\": 2,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    }\n  ]\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 12007,
+        "completion_tokens": 2125,
+        "total_tokens": 14132,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 2633,
+            "completion_tokens": 2111,
+            "total_tokens": 4744
+          },
+          {
+            "round_index": 1,
+            "stage": "relation_extraction",
+            "relation_chunk_index": 0,
+            "relation_chunks_total": 2,
+            "prompt_tokens": 5014,
+            "completion_tokens": 7,
+            "total_tokens": 5021
+          },
+          {
+            "round_index": 2,
+            "stage": "relation_extraction",
+            "relation_chunk_index": 1,
+            "relation_chunks_total": 2,
+            "prompt_tokens": 4360,
+            "completion_tokens": 7,
+            "total_tokens": 4367
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "article_id": "A003",
+      "publish_date": "2024-08-30",
+      "content_preview": "无论是城还是乡，各地居民均向往着“水更清”的环境。\r\n党的二十届三中全会提出，“完善精准治污、科学治污、依法治污制度机制，落实以排污许可制为核心的固定污染源监管制度，建立新污染物协同治理和环境风险管控",
+      "extraction": {
+        "events": [],
+        "candidate_pairs": [],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": []\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 4210,
+        "completion_tokens": 7,
+        "total_tokens": 4217,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 4210,
+            "completion_tokens": 7,
+            "total_tokens": 4217
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "article_id": "A004",
+      "publish_date": "2024-09-02",
+      "content_preview": "“蕉岭县是‘世界长寿之乡’，生态优美，土壤肥沃，水土富含硒元素……”一场义卖直播活动上，广州工程技术职业学院九岭突击队成员化身助农小主播，通过现场讲解、试吃分享等形式吸引了粉丝朋友们的大量点赞、留言互",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E01",
+            "event_text": "特大暴雨",
+            "event_name": "6·16特大暴雨",
+            "event_type": "Driver",
+            "city": "梅州",
+            "date_from": "2024-06-16",
+            "date_to": "2024-06-16",
+            "location": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "6·16",
+            "location_text": "蕉岭县",
+            "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "sentence_id": 6,
+            "paragraph_id": 5,
+            "char_start": 401,
+            "char_end": 446,
+            "confidence": 0.95,
+            "article_id": "A004"
+          },
+          {
+            "event_id": "E02",
+            "event_text": "洪涝灾害",
+            "event_name": "蕉岭县严重洪涝灾害",
+            "event_type": "Hazard",
+            "city": "梅州",
+            "date_from": "2024-06-16",
+            "date_to": "2024-06-16",
+            "location": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "6·16",
+            "location_text": "蕉岭县",
+            "evidence": "蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "sentence_id": 6,
+            "paragraph_id": 5,
+            "char_start": 415,
+            "char_end": 446,
+            "confidence": 0.95,
+            "article_id": "A004"
+          },
+          {
+            "event_id": "E03",
+            "event_text": "山洪暴发",
+            "event_name": "蕉岭县山洪暴发",
+            "event_type": "Hazard",
+            "city": "梅州",
+            "date_from": "2024-06-16",
+            "date_to": "2024-06-16",
+            "location": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "6·16",
+            "location_text": "蕉岭县",
+            "evidence": "蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "sentence_id": 6,
+            "paragraph_id": 5,
+            "char_start": 415,
+            "char_end": 446,
+            "confidence": 0.95,
+            "article_id": "A004"
+          },
+          {
+            "event_id": "E04",
+            "event_text": "山体滑坡",
+            "event_name": "蕉岭县山体滑坡",
+            "event_type": "Hazard",
+            "city": "梅州",
+            "date_from": "2024-06-16",
+            "date_to": "2024-06-16",
+            "location": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "6·16",
+            "location_text": "蕉岭县",
+            "evidence": "蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "sentence_id": 6,
+            "paragraph_id": 5,
+            "char_start": 415,
+            "char_end": 446,
+            "confidence": 0.95,
+            "article_id": "A004"
+          },
+          {
+            "event_id": "E05",
+            "event_text": "农作物受灾",
+            "event_name": "蕉岭县乡镇农作物受灾",
+            "event_type": "Impact",
+            "city": "梅州",
+            "date_from": "2024-06-16",
+            "date_to": "2024-06-16",
+            "location": [
+              "广东省",
+              "梅州市",
+              "蕉岭县"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "6·16",
+            "location_text": "蕉岭县",
+            "evidence": "一些乡镇的林地和农作物遭受了巨大损失",
+            "sentence_id": 6,
+            "paragraph_id": 5,
+            "char_start": 447,
+            "char_end": 465,
+            "confidence": 0.9,
+            "article_id": "A004"
+          }
+        ],
+        "candidate_pairs": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "蕉岭县严重洪涝灾害",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E03",
+            "target_event_name": "蕉岭县山洪暴发",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E04",
+            "target_event_name": "蕉岭县山体滑坡",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "source_event_type": "Driver",
+            "target_event_id": "E05",
+            "target_event_name": "蕉岭县乡镇农作物受灾",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "蕉岭县严重洪涝灾害",
+            "source_event_type": "Hazard",
+            "target_event_id": "E03",
+            "target_event_name": "蕉岭县山洪暴发",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "蕉岭县严重洪涝灾害",
+            "source_event_type": "Hazard",
+            "target_event_id": "E04",
+            "target_event_name": "蕉岭县山体滑坡",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "蕉岭县严重洪涝灾害",
+            "source_event_type": "Hazard",
+            "target_event_id": "E05",
+            "target_event_name": "蕉岭县乡镇农作物受灾",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "蕉岭县山洪暴发",
+            "source_event_type": "Hazard",
+            "target_event_id": "E02",
+            "target_event_name": "蕉岭县严重洪涝灾害",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "蕉岭县山洪暴发",
+            "source_event_type": "Hazard",
+            "target_event_id": "E04",
+            "target_event_name": "蕉岭县山体滑坡",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "蕉岭县山洪暴发",
+            "source_event_type": "Hazard",
+            "target_event_id": "E05",
+            "target_event_name": "蕉岭县乡镇农作物受灾",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "蕉岭县山体滑坡",
+            "source_event_type": "Hazard",
+            "target_event_id": "E02",
+            "target_event_name": "蕉岭县严重洪涝灾害",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "蕉岭县山体滑坡",
+            "source_event_type": "Hazard",
+            "target_event_id": "E03",
+            "target_event_name": "蕉岭县山洪暴发",
+            "target_event_type": "Hazard"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "蕉岭县山体滑坡",
+            "source_event_type": "Hazard",
+            "target_event_id": "E05",
+            "target_event_name": "蕉岭县乡镇农作物受灾",
+            "target_event_type": "Impact"
+          }
+        ],
+        "relation_judgments": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "target_event_id": "E02",
+            "target_event_name": "蕉岭县严重洪涝灾害",
+            "relation_type": "引发",
+            "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "confidence": 0.95
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "target_event_id": "E03",
+            "target_event_name": "蕉岭县山洪暴发",
+            "relation_type": "引发",
+            "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "confidence": 0.95
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "target_event_id": "E04",
+            "target_event_name": "蕉岭县山体滑坡",
+            "relation_type": "引发",
+            "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "confidence": 0.95
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "蕉岭县严重洪涝灾害",
+            "target_event_id": "E05",
+            "target_event_name": "蕉岭县乡镇农作物受灾",
+            "relation_type": "引发",
+            "evidence": "一些乡镇的林地和农作物遭受了巨大损失",
+            "confidence": 0.85
+          }
+        ],
+        "relations": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "target_event_id": "E02",
+            "target_event_name": "蕉岭县严重洪涝灾害",
+            "relation_type": "引发",
+            "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "confidence": 0.95,
+            "relation_id": "R01"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "target_event_id": "E03",
+            "target_event_name": "蕉岭县山洪暴发",
+            "relation_type": "引发",
+            "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "confidence": 0.95,
+            "relation_id": "R02"
+          },
+          {
+            "source_event_id": "E01",
+            "source_event_name": "6·16特大暴雨",
+            "target_event_id": "E04",
+            "target_event_name": "蕉岭县山体滑坡",
+            "relation_type": "引发",
+            "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+            "confidence": 0.95,
+            "relation_id": "R03"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "蕉岭县严重洪涝灾害",
+            "target_event_id": "E05",
+            "target_event_name": "蕉岭县乡镇农作物受灾",
+            "relation_type": "引发",
+            "evidence": "一些乡镇的林地和农作物遭受了巨大损失",
+            "confidence": 0.85,
+            "relation_id": "R04"
+          }
+        ],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": [\n    {\n      \"event_id\": \"E01\",\n      \"event_text\": \"特大暴雨\",\n      \"event_name\": \"6·16特大暴雨\",\n      \"event_type\": \"Driver\",\n      \"city\": \"梅州\",\n      \"date_from\": \"2024-06-16\",\n      \"date_to\": \"2024-06-16\",\n      \"location\": [\"广东省\", \"梅州市\", \"蕉岭县\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"6·16\",\n      \"location_text\": \"蕉岭县\",\n      \"evidence\": \"受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情\",\n      \"sentence_id\": 6,\n      \"paragraph_id\": 5,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E02\",\n      \"event_text\": \"洪涝灾害\",\n      \"event_name\": \"蕉岭县严重洪涝灾害\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"梅州\",\n      \"date_from\": \"2024-06-16\",\n      \"date_to\": \"2024-06-16\",\n      \"location\": [\"广东省\", \"梅州市\", \"蕉岭县\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"6·16\",\n      \"location_text\": \"蕉岭县\",\n      \"evidence\": \"蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情\",\n      \"sentence_id\": 6,\n      \"paragraph_id\": 5,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E03\",\n      \"event_text\": \"山洪暴发\",\n      \"event_name\": \"蕉岭县山洪暴发\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"梅州\",\n      \"date_from\": \"2024-06-16\",\n      \"date_to\": \"2024-06-16\",\n      \"location\": [\"广东省\", \"梅州市\", \"蕉岭县\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"6·16\",\n      \"location_text\": \"蕉岭县\",\n      \"evidence\": \"蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情\",\n      \"sentence_id\": 6,\n      \"paragraph_id\": 5,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E04\",\n      \"event_text\": \"山体滑坡\",\n      \"event_name\": \"蕉岭县山体滑坡\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"梅州\",\n      \"date_from\": \"2024-06-16\",\n      \"date_to\": \"2024-06-16\",\n      \"location\": [\"广东省\", \"梅州市\", \"蕉岭县\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"6·16\",\n      \"location_text\": \"蕉岭县\",\n      \"evidence\": \"蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情\",\n      \"sentence_id\": 6,\n      \"paragraph_id\": 5,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E05\",\n      \"event_text\": \"农作物受灾\",\n      \"event_name\": \"蕉岭县乡镇农作物受灾\",\n      \"event_type\": \"Impact\",\n      \"city\": \"梅州\",\n      \"date_from\": \"2024-06-16\",\n      \"date_to\": \"2024-06-16\",\n      \"location\": [\"广东省\", \"梅州市\", \"蕉岭县\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"6·16\",\n      \"location_text\": \"蕉岭县\",\n      \"evidence\": \"一些乡镇的林地和农作物遭受了巨大损失\",\n      \"sentence_id\": 6,\n      \"paragraph_id\": 5,\n      \"char_start\": -1,\n      \"char_end\": -1,\n      \"confidence\": 0.9\n    }\n  ]\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 12859,
+        "completion_tokens": 1515,
+        "total_tokens": 14374,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 8124,
+            "completion_tokens": 1098,
+            "total_tokens": 9222
+          },
+          {
+            "round_index": 1,
+            "stage": "relation_extraction",
+            "relation_chunk_index": 0,
+            "relation_chunks_total": 1,
+            "prompt_tokens": 4735,
+            "completion_tokens": 417,
+            "total_tokens": 5152
+          }
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "article_id": "A005",
+      "publish_date": "2024-09-04",
+      "content_preview": "4日下午17时45分，高州市气象台发布台风蓝色预警。\r\n据悉，台风“摩羯”（台风级，13级），预计将于6日以强台风级或超强台风级在海南万宁到阳江阳西一带沿海登陆。\r\n受台风“摩羯”影响，预计高州5日夜",
+      "extraction": {
+        "events": [],
+        "candidate_pairs": [],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": []\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 2428,
+        "completion_tokens": 7,
+        "total_tokens": 2435,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 2428,
+            "completion_tokens": 7,
+            "total_tokens": 2435
+          }
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "article_id": "A006",
+      "publish_date": "2024-09-04",
+      "content_preview": "鉴于今年第11号台风“摩羯”强度进一步增强，未来几天给广东省带来的风雨影响进一步加大。根据《广东省防汛防旱防风防冻应急预案》和省防总有关规定，广东省防汛防旱防风总指挥部已于9月4日10时将防风Ⅳ级应急",
+      "extraction": {
+        "events": [],
+        "candidate_pairs": [],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": []\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 2324,
+        "completion_tokens": 7,
+        "total_tokens": 2331,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 2324,
+            "completion_tokens": 7,
+            "total_tokens": 2331
+          }
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "article_id": "A007",
+      "publish_date": "2024-09-05",
+      "content_preview": "记者从江门市台山有关部门获悉，台风“摩羯”强度进一步增强，台山市新宁体育馆应急避难场所开放，台山市应急管理局迅速召集避难场所安置小组10名工作人员和市应急救援大队20名队员，到新宁体育馆提前预置床垫、",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E01",
+            "event_text": "台风",
+            "event_name": "台风摩羯",
+            "event_type": "Driver",
+            "city": "江门",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "2024-09-05",
+            "location_text": "江门市台山",
+            "evidence": "记者从江门市台山有关部门获悉，台风“摩羯”强度进一步增强",
+            "sentence_id": 0,
+            "paragraph_id": 0,
+            "char_start": 0,
+            "char_end": 28,
+            "confidence": 0.95,
+            "article_id": "A007"
+          },
+          {
+            "event_id": "E02",
+            "event_text": "停工",
+            "event_name": "台山市交通领域在建项目全面停工",
+            "event_type": "Impact",
+            "city": "江门",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": false
+            },
+            "time_text": "目前",
+            "location_text": "台山市",
+            "evidence": "目前，台山市交通领域6个在建项目实现全面停工",
+            "sentence_id": 3,
+            "paragraph_id": 2,
+            "char_start": 268,
+            "char_end": 290,
+            "confidence": 0.9,
+            "article_id": "A007"
+          },
+          {
+            "event_id": "E03",
+            "event_text": "停航",
+            "event_name": "川岛水路客运航线停航",
+            "event_type": "Impact",
+            "city": "江门",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东省",
+              "江门市",
+              "台山市",
+              "川岛镇"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": false
+            },
+            "time_text": "目前",
+            "location_text": "川岛",
+            "evidence": "川岛水路客运航线停航、客船全部回港避风",
+            "sentence_id": 4,
+            "paragraph_id": 2,
+            "char_start": 382,
+            "char_end": 401,
+            "confidence": 0.9,
+            "article_id": "A007"
+          },
+          {
+            "event_id": "E04",
+            "event_text": "停运",
+            "event_name": "台城至山咀码头等客运班线及高铁列车班次停运",
+            "event_type": "Impact",
+            "city": "江门",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": false
+            },
+            "time_text": "目前",
+            "location_text": "台城至山咀码头、川岛内、台城至香港等",
+            "evidence": "台城至山咀码头、川岛内、台城至香港等客运班线以及湛江、茂名、阳江方向的高铁列车班次停运",
+            "sentence_id": 5,
+            "paragraph_id": 2,
+            "char_start": 412,
+            "char_end": 455,
+            "confidence": 0.9,
+            "article_id": "A007"
+          },
+          {
+            "event_id": "E05",
+            "event_text": "交通管控",
+            "event_name": "省道S386端芬福安至三洞段等路段临时交通管控",
+            "event_type": "Impact",
+            "city": "江门",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东省",
+              "江门市",
+              "台山市"
+            ],
+            "attributes": {
+              "severity": "moderate",
+              "time_uncertain": false
+            },
+            "time_text": "目前",
+            "location_text": "省道S386端芬福安至三洞段、省道S275线上川琴冲至沙堤",
+            "evidence": "及时对省道S386端芬福安至三洞段、省道S275线上川琴冲至沙堤等存在风险隐患路段实施临时交通管控措施",
+            "sentence_id": 6,
+            "paragraph_id": 2,
+            "char_start": 501,
+            "char_end": 552,
+            "confidence": 0.85,
+            "article_id": "A007"
+          }
+        ],
+        "candidate_pairs": [
+          {
+            "source_event_id": "E02",
+            "source_event_name": "台山市交通领域在建项目全面停工",
+            "source_event_type": "Impact",
+            "target_event_id": "E03",
+            "target_event_name": "川岛水路客运航线停航",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "台山市交通领域在建项目全面停工",
+            "source_event_type": "Impact",
+            "target_event_id": "E04",
+            "target_event_name": "台城至山咀码头等客运班线及高铁列车班次停运",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E02",
+            "source_event_name": "台山市交通领域在建项目全面停工",
+            "source_event_type": "Impact",
+            "target_event_id": "E05",
+            "target_event_name": "省道S386端芬福安至三洞段等路段临时交通管控",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "川岛水路客运航线停航",
+            "source_event_type": "Impact",
+            "target_event_id": "E02",
+            "target_event_name": "台山市交通领域在建项目全面停工",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "川岛水路客运航线停航",
+            "source_event_type": "Impact",
+            "target_event_id": "E04",
+            "target_event_name": "台城至山咀码头等客运班线及高铁列车班次停运",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E03",
+            "source_event_name": "川岛水路客运航线停航",
+            "source_event_type": "Impact",
+            "target_event_id": "E05",
+            "target_event_name": "省道S386端芬福安至三洞段等路段临时交通管控",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "台城至山咀码头等客运班线及高铁列车班次停运",
+            "source_event_type": "Impact",
+            "target_event_id": "E02",
+            "target_event_name": "台山市交通领域在建项目全面停工",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "台城至山咀码头等客运班线及高铁列车班次停运",
+            "source_event_type": "Impact",
+            "target_event_id": "E03",
+            "target_event_name": "川岛水路客运航线停航",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E04",
+            "source_event_name": "台城至山咀码头等客运班线及高铁列车班次停运",
+            "source_event_type": "Impact",
+            "target_event_id": "E05",
+            "target_event_name": "省道S386端芬福安至三洞段等路段临时交通管控",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "省道S386端芬福安至三洞段等路段临时交通管控",
+            "source_event_type": "Impact",
+            "target_event_id": "E02",
+            "target_event_name": "台山市交通领域在建项目全面停工",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "省道S386端芬福安至三洞段等路段临时交通管控",
+            "source_event_type": "Impact",
+            "target_event_id": "E03",
+            "target_event_name": "川岛水路客运航线停航",
+            "target_event_type": "Impact"
+          },
+          {
+            "source_event_id": "E05",
+            "source_event_name": "省道S386端芬福安至三洞段等路段临时交通管控",
+            "source_event_type": "Impact",
+            "target_event_id": "E04",
+            "target_event_name": "台城至山咀码头等客运班线及高铁列车班次停运",
+            "target_event_type": "Impact"
+          }
+        ],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": [\n    {\n      \"event_id\": \"E01\",\n      \"event_text\": \"台风\",\n      \"event_name\": \"台风摩羯\",\n      \"event_type\": \"Driver\",\n      \"city\": \"江门\",\n      \"date_from\": \"2024-09-05\",\n      \"date_to\": \"2024-09-05\",\n      \"location\": [\"广东省\", \"江门市\", \"台山市\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"2024-09-05\",\n      \"location_text\": \"江门市台山\",\n      \"evidence\": \"记者从江门市台山有关部门获悉，台风“摩羯”强度进一步增强\",\n      \"sentence_id\": 0,\n      \"paragraph_id\": 0,\n      \"char_start\": 0,\n      \"char_end\": 30,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E02\",\n      \"event_text\": \"停工\",\n      \"event_name\": \"台山市交通领域在建项目全面停工\",\n      \"event_type\": \"Impact\",\n      \"city\": \"江门\",\n      \"date_from\": \"2024-09-05\",\n      \"date_to\": \"2024-09-05\",\n      \"location\": [\"广东省\", \"江门市\", \"台山市\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"目前\",\n      \"location_text\": \"台山市\",\n      \"evidence\": \"目前，台山市交通领域6个在建项目实现全面停工\",\n      \"sentence_id\": 3,\n      \"paragraph_id\": 2,\n      \"char_start\": 0,\n      \"char_end\": 30,\n      \"confidence\": 0.9\n    },\n    {\n      \"event_id\": \"E03\",\n      \"event_text\": \"停航\",\n      \"event_name\": \"川岛水路客运航线停航\",\n      \"event_type\": \"Impact\",\n      \"city\": \"江门\",\n      \"date_from\": \"2024-09-05\",\n      \"date_to\": \"2024-09-05\",\n      \"location\": [\"广东省\", \"江门市\", \"台山市\", \"川岛镇\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"目前\",\n      \"location_text\": \"川岛\",\n      \"evidence\": \"川岛水路客运航线停航、客船全部回港避风\",\n      \"sentence_id\": 4,\n      \"paragraph_id\": 2,\n      \"char_start\": 0,\n      \"char_end\": 25,\n      \"confidence\": 0.9\n    },\n    {\n      \"event_id\": \"E04\",\n      \"event_text\": \"停运\",\n      \"event_name\": \"台城至山咀码头等客运班线及高铁列车班次停运\",\n      \"event_type\": \"Impact\",\n      \"city\": \"江门\",\n      \"date_from\": \"2024-09-05\",\n      \"date_to\": \"2024-09-05\",\n      \"location\": [\"广东省\", \"江门市\", \"台山市\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"目前\",\n      \"location_text\": \"台城至山咀码头、川岛内、台城至香港等\",\n      \"evidence\": \"台城至山咀码头、川岛内、台城至香港等客运班线以及湛江、茂名、阳江方向的高铁列车班次停运\",\n      \"sentence_id\": 5,\n      \"paragraph_id\": 2,\n      \"char_start\": 0,\n      \"char_end\": 50,\n      \"confidence\": 0.9\n    },\n    {\n      \"event_id\": \"E05\",\n      \"event_text\": \"交通管控\",\n      \"event_name\": \"省道S386端芬福安至三洞段等路段临时交通管控\",\n      \"event_type\": \"Impact\",\n      \"city\": \"江门\",\n      \"date_from\": \"2024-09-05\",\n      \"date_to\": \"2024-09-05\",\n      \"location\": [\"广东省\", \"江门市\", \"台山市\"],\n      \"attributes\": {\n        \"severity\": \"moderate\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"目前\",\n      \"location_text\": \"省道S386端芬福安至三洞段、省道S275线上川琴冲至沙堤\",\n      \"evidence\": \"及时对省道S386端芬福安至三洞段、省道S275线上川琴冲至沙堤等存在风险隐患路段实施临时交通管控措施\",\n      \"sentence_id\": 6,\n      \"paragraph_id\": 2,\n      \"char_start\": 30,\n      \"char_end\": 80,\n      \"confidence\": 0.85\n    }\n  ]\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 5706,
+        "completion_tokens": 1154,
+        "total_tokens": 6860,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 3150,
+            "completion_tokens": 1147,
+            "total_tokens": 4297
+          },
+          {
+            "round_index": 1,
+            "stage": "relation_extraction",
+            "relation_chunk_index": 0,
+            "relation_chunks_total": 1,
+            "prompt_tokens": 2556,
+            "completion_tokens": 7,
+            "total_tokens": 2563
+          }
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "article_id": "A008",
+      "publish_date": "2024-09-05",
+      "content_preview": "南都讯 记者蒋臻 深中通道管理中心9月5日发布消息，中山市气象台2024年9月5日17时13分将全市台风预警信号升级为黄色，预计深中通道将于9月5日晚上进入七级风圈，桥面阵风将达到7～9级。\r\n受第1",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E01",
+            "event_text": "台风",
+            "event_name": "第11号台风摩羯",
+            "event_type": "Driver",
+            "city": "中山",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东省",
+              "中山市"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "2024年9月5日",
+            "location_text": "中山市",
+            "evidence": "受第11号台风“摩羯”影响",
+            "sentence_id": 2,
+            "paragraph_id": 2,
+            "char_start": 97,
+            "char_end": 110,
+            "confidence": 0.9,
+            "article_id": "A008"
+          },
+          {
+            "event_id": "E02",
+            "event_text": "强风",
+            "event_name": "深中通道桥面7～9级阵风",
+            "event_type": "Hazard",
+            "city": "中山",
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-05",
+            "location": [
+              "广东省",
+              "中山市",
+              "深中通道"
+            ],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "2024年9月5日晚上",
+            "location_text": "深中通道",
+            "evidence": "预计深中通道将于9月5日晚上进入七级风圈，桥面阵风将达到7～9级",
+            "sentence_id": 1,
+            "paragraph_id": 1,
+            "char_start": 62,
+            "char_end": 94,
+            "confidence": 0.7,
+            "article_id": "A008"
+          }
+        ],
+        "candidate_pairs": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "第11号台风摩羯",
+            "source_event_type": "Driver",
+            "target_event_id": "E02",
+            "target_event_name": "深中通道桥面7～9级阵风",
+            "target_event_type": "Hazard"
+          }
+        ],
+        "relation_judgments": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "第11号台风摩羯",
+            "target_event_id": "E02",
+            "target_event_name": "深中通道桥面7～9级阵风",
+            "relation_type": "引发",
+            "evidence": "受第11号台风“摩羯”影响，预计深中通道将于9月5日晚上进入七级风圈，桥面阵风将达到7～9级",
+            "confidence": 0.95
+          }
+        ],
+        "relations": [],
+        "invalid_relations": [
+          {
+            "source_event_id": "E01",
+            "source_event_name": "第11号台风摩羯",
+            "target_event_id": "E02",
+            "target_event_name": "深中通道桥面7～9级阵风",
+            "relation_type": "引发",
+            "evidence": "受第11号台风“摩羯”影响，预计深中通道将于9月5日晚上进入七级风圈，桥面阵风将达到7～9级",
+            "confidence": 0.95,
+            "validation_errors": [
+              "evidence_not_in_text"
+            ]
+          }
+        ],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": [\n    {\n      \"event_id\": \"E01\",\n      \"event_text\": \"台风\",\n      \"event_name\": \"第11号台风摩羯\",\n      \"event_type\": \"Driver\",\n      \"city\": \"中山\",\n      \"date_from\": \"2024-09-05\",\n      \"date_to\": \"2024-09-05\",\n      \"location\": [\"广东省\", \"中山市\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"2024年9月5日\",\n      \"location_text\": \"中山市\",\n      \"evidence\": \"受第11号台风“摩羯”影响\",\n      \"sentence_id\": 2,\n      \"paragraph_id\": 2,\n      \"char_start\": 0,\n      \"char_end\": 16,\n      \"confidence\": 0.9\n    },\n    {\n      \"event_id\": \"E02\",\n      \"event_text\": \"强风\",\n      \"event_name\": \"深中通道桥面7～9级阵风\",\n      \"event_type\": \"Hazard\",\n      \"city\": \"中山\",\n      \"date_from\": \"2024-09-05\",\n      \"date_to\": \"2024-09-05\",\n      \"location\": [\"广东省\", \"中山市\", \"深中通道\"],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"unknown\",\n      \"time_text\": \"2024年9月5日晚上\",\n      \"location_text\": \"深中通道\",\n      \"evidence\": \"预计深中通道将于9月5日晚上进入七级风圈，桥面阵风将达到7～9级\",\n      \"sentence_id\": 1,\n      \"paragraph_id\": 1,\n      \"char_start\": 38,\n      \"char_end\": 100,\n      \"confidence\": 0.7\n    }\n  ]\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 3468,
+        "completion_tokens": 559,
+        "total_tokens": 4027,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 2506,
+            "completion_tokens": 436,
+            "total_tokens": 2942
+          },
+          {
+            "round_index": 1,
+            "stage": "relation_extraction",
+            "relation_chunk_index": 0,
+            "relation_chunks_total": 1,
+            "prompt_tokens": 962,
+            "completion_tokens": 123,
+            "total_tokens": 1085
+          }
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "article_id": "A009",
+      "publish_date": "2024-09-05",
+      "content_preview": "记者从应急管理部获悉，据气象部门预报，今年第11号台风“摩羯”将于6日下午至夜间在海南琼海到广东电白一带沿海登陆（强台风级或超强台风级，15～17级，50～58米每秒），7日凌晨移入北部湾海面。未来三",
+      "extraction": {
+        "events": [],
+        "candidate_pairs": [],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": []\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 2475,
+        "completion_tokens": 7,
+        "total_tokens": 2482,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 2475,
+            "completion_tokens": 7,
+            "total_tokens": 2482
+          }
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "article_id": "A010",
+      "publish_date": "2024-09-06",
+      "content_preview": "9月6日10时，深中通道管理中心在官方微信公众号发布消息，深中通道已解除临时限速措施，恢复正常通行。\r\n深中通道管理中心提醒，台风“摩羯”对广东的风雨影响仍将继续，过往司乘人员请注意桥面横风和雨天影响",
+      "extraction": {
+        "events": [],
+        "candidate_pairs": [],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": []\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 2302,
+        "completion_tokens": 7,
+        "total_tokens": 2309,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 2302,
+            "completion_tokens": 7,
+            "total_tokens": 2309
+          }
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "article_id": "A011",
+      "publish_date": "2024-09-06",
+      "content_preview": "截至9月6日早晨，今年第11号台风“摩羯”的中心附近最大风力已达17级以上，该风力已达到“爆表等级”。中央气象台预计，9月6日早晨至9月7日早晨，海南、粤西及周边海域将有大风强降水等天气。\r\n9月6日",
+      "extraction": {
+        "events": [
+          {
+            "event_id": "E01",
+            "event_text": "台风",
+            "event_name": "第11号台风“摩羯”",
+            "event_type": "Driver",
+            "city": null,
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "9月5日23时至9月6日早晨",
+            "location_text": "",
+            "evidence": "截至9月6日早晨，今年第11号台风“摩羯”的中心附近最大风力已达17级以上，该风力已达到“爆表等级”。",
+            "sentence_id": 1,
+            "paragraph_id": 1,
+            "char_start": 0,
+            "char_end": 51,
+            "confidence": 0.95,
+            "article_id": "A011"
+          },
+          {
+            "event_id": "E02",
+            "event_text": "强风",
+            "event_name": "台风“摩羯”中心附近17级以上强风",
+            "event_type": "Driver",
+            "city": null,
+            "date_from": "2024-09-05",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "9月5日23时至9月6日早晨",
+            "location_text": "",
+            "evidence": "“摩羯”的中心附近最大风力在9月5日23时达到“17级以上”。",
+            "sentence_id": 8,
+            "paragraph_id": 6,
+            "char_start": 505,
+            "char_end": 536,
+            "confidence": 0.95,
+            "article_id": "A011"
+          },
+          {
+            "event_id": "E03",
+            "event_text": "超强台风",
+            "event_name": "台风“摩羯”超强台风级",
+            "event_type": "Hazard",
+            "city": null,
+            "date_from": "2024-09-06",
+            "date_to": "2024-09-06",
+            "location": [],
+            "attributes": {
+              "severity": "severe",
+              "time_uncertain": false
+            },
+            "time_text": "9月6日8时",
+            "location_text": "海南省文昌市东偏南方向约160公里",
+            "evidence": "中央气象台观测，“摩羯”中心9月6日8时距离海南省文昌市东偏南方向约160公里，继续保持着超强台风级强度。",
+            "sentence_id": 5,
+            "paragraph_id": 3,
+            "char_start": null,
+            "char_end": null,
+            "confidence": 0.95,
+            "article_id": "A011"
+          }
+        ],
+        "candidate_pairs": [],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": [
+            {
+              "event_id": "E03",
+              "errors": [
+                "evidence_not_in_text"
+              ]
+            }
+          ]
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": [\n    {\n      \"event_id\": \"E01\",\n      \"event_text\": \"台风\",\n      \"event_name\": \"第11号台风“摩羯”\",\n      \"event_type\": \"Driver\",\n      \"city\": null,\n      \"date_from\": \"2024-09-05\",\n      \"date_to\": \"2024-09-06\",\n      \"location\": [],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"{article_id}\",\n      \"time_text\": \"9月5日23时至9月6日早晨\",\n      \"location_text\": \"\",\n      \"evidence\": \"截至9月6日早晨，今年第11号台风“摩羯”的中心附近最大风力已达17级以上，该风力已达到“爆表等级”。\",\n      \"sentence_id\": 1,\n      \"paragraph_id\": 1,\n      \"char_start\": 0,\n      \"char_end\": 55,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E02\",\n      \"event_text\": \"强风\",\n      \"event_name\": \"台风“摩羯”中心附近17级以上强风\",\n      \"event_type\": \"Driver\",\n      \"city\": null,\n      \"date_from\": \"2024-09-05\",\n      \"date_to\": \"2024-09-06\",\n      \"location\": [],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"{article_id}\",\n      \"time_text\": \"9月5日23时至9月6日早晨\",\n      \"location_text\": \"\",\n      \"evidence\": \"“摩羯”的中心附近最大风力在9月5日23时达到“17级以上”。\",\n      \"sentence_id\": 8,\n      \"paragraph_id\": 6,\n      \"char_start\": 0,\n      \"char_end\": 35,\n      \"confidence\": 0.95\n    },\n    {\n      \"event_id\": \"E03\",\n      \"event_text\": \"超强台风\",\n      \"event_name\": \"台风“摩羯”超强台风级\",\n      \"event_type\": \"Hazard\",\n      \"city\": null,\n      \"date_from\": \"2024-09-06\",\n      \"date_to\": \"2024-09-06\",\n      \"location\": [],\n      \"attributes\": {\n        \"severity\": \"severe\",\n        \"time_uncertain\": false\n      },\n      \"article_id\": \"{article_id}\",\n      \"time_text\": \"9月6日8时\",\n      \"location_text\": \"海南省文昌市东偏南方向约160公里\",\n      \"evidence\": \"中央气象台观测，“摩羯”中心9月6日8时距离海南省文昌市东偏南方向约160公里，继续保持着超强台风级强度。\",\n      \"sentence_id\": 5,\n      \"paragraph_id\": 3,\n      \"char_start\": 0,\n      \"char_end\": 55,\n      \"confidence\": 0.95\n    }\n  ]\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 3649,
+        "completion_tokens": 668,
+        "total_tokens": 4317,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 3649,
+            "completion_tokens": 668,
+            "total_tokens": 4317
+          }
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "article_id": "A012",
+      "publish_date": "2024-09-06",
+      "content_preview": "广东省气象台预报，台风“摩羯”将于9月6日下午到夜间在广东阳江到海南琼海一带沿海登陆，正面袭击雷州半岛。为有效应对台风“摩羯”对江门造成的影响，江门市消防救援支队提前谋划部署，加强值班战备，严格落实各",
+      "extraction": {
+        "events": [],
+        "candidate_pairs": [],
+        "relation_judgments": [],
+        "relations": [],
+        "invalid_relations": [],
+        "validation_errors": {
+          "events": []
+        },
+        "raw_stage_outputs": {
+          "event_output": "{\n  \"events\": []\n}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 2905,
+        "completion_tokens": 7,
+        "total_tokens": 2912,
+        "rounds": [
+          {
+            "round_index": 0,
+            "stage": "event_extraction",
+            "prompt_tokens": 2905,
+            "completion_tokens": 7,
+            "total_tokens": 2912
+          }
+        ]
+      }
+    }
+  ]
+}

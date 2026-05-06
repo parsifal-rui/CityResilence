@@ -1,0 +1,21 @@
+batch_index: 1
+start_index: 0
+end_index: 13
+total_prompt_tokens: 106755
+total_completion_tokens: 22749
+total_tokens: 129504
+total_runtime_seconds: 371.52
+# per_article: index	article_id	prompt_tokens	completion_tokens	total_tokens	api_rounds
+0	A000	8357	3640	11997	2
+1	A001	7579	2330	9909	2
+2	A002	16901	2776	19677	4
+3	A003	7489	909	8398	2
+4	A004	14699	1853	16552	2
+5	A005	5162	951	6113	2
+6	A006	4767	814	5581	2
+7	A007	8840	1582	10422	2
+8	A008	5068	901	5969	2
+9	A009	7224	2052	9276	2
+10	A010	4693	797	5490	2
+11	A011	10464	3462	13926	2
+12	A012	5512	682	6194	2

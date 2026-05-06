@@ -29,3 +29,5 @@ models/**/sentencepiece*.model
 
 # 完全忽略本地模型目录（含大权重）
 models/
+
+src/apiKey.txt

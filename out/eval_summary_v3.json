@@ -1,0 +1,299 @@
+{
+  "counts": {
+    "articles": 100,
+    "events": 230,
+    "relations": 83
+  },
+  "events": {
+    "evidence_in_text_rate": 0.204348,
+    "schema_ok_rate": 1.0,
+    "evidence_and_schema_ok_rate": 0.204348,
+    "issue_counts": {
+      "event_evidence_not_in_text": 183
+    }
+  },
+  "relations": {
+    "id_and_names_ok_rate": 1.0,
+    "evidence_in_text_rate": 0.156627,
+    "id_names_and_evidence_ok_rate": 0.156627,
+    "issue_counts": {
+      "rel_evidence_not_in_text": 70
+    }
+  },
+  "examples": {
+    "event_evidence_not_in_text": [
+      {
+        "article_id": "A000",
+        "event_id": "E03",
+        "evidence": "坪山中队警力巡逻至碧岭街道金碧路时，发现该路段积水严重。"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E04",
+        "evidence": "经排查，该路段下水口被树叶等杂物堵塞导致积水无法排出。"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E05",
+        "evidence": "狂风暴雨导致坪山大道路边树木倒地，坪山中队警力巡逻到该路面后发现树木倒地阻碍交通通行。"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E06",
+        "evidence": "狂风暴雨导致坪山大道路边树木倒地，坪山中队警力巡逻到该路面后发现树木倒地阻碍交通通行。"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E07",
+        "evidence": "坪山区丹梓大道路积水严重，车辆缓慢通行。"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E08",
+        "evidence": "发现该路段排水口被杂物堵塞导致积水无法流出。"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E09",
+        "evidence": "称其车被大树砸到，其本人被困在车辆并且受伤需到医院救治。"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E10",
+        "evidence": "称其车被大树砸到，其本人被困在车辆并且受伤需到医院救治。"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E11",
+        "evidence": "坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通。"
+      },
+      {
+        "article_id": "A000",
+        "event_id": "E12",
+        "evidence": "坪山大队机训中队民警和队员下班途中在荔景路遇到树木倾倒影响交通。"
+      },
+      {
+        "article_id": "A001",
+        "event_id": "E01",
+        "evidence": "今天白天我市普遍出现中到强雷雨"
+      },
+      {
+        "article_id": "A001",
+        "event_id": "E02",
+        "evidence": "局部出现大暴雨，截至19时，南沙区东涌镇录得全市最大雨量187.5毫米"
+      },
+      {
+        "article_id": "A001",
+        "event_id": "E03",
+        "evidence": "花都区梯面镇录得全市最大阵风21.7米/秒(9级)"
+      },
+      {
+        "article_id": "A001",
+        "event_id": "E04",
+        "evidence": "2024年8月29日，广州市天河区体育东路地铁出口，一男一女出站冒雨小跑"
+      },
+      {
+        "article_id": "A002",
+        "event_id": "E01",
+        "evidence": "南沙黄阁、番禺石楼等地发布分镇街暴雨红色预警信号"
+      }
+    ],
+    "rel_evidence_not_in_text": [
+      {
+        "article_id": "A000",
+        "relation": {
+          "source_event_id": "E04",
+          "source_event_name": "碧岭街道金碧路下水口被树叶等杂物堵塞",
+          "target_event_id": "E03",
+          "target_event_name": "碧岭街道金碧路积水严重",
+          "relation_type": "加剧",
+          "evidence": "经排查，该路段下水口被树叶等杂物堵塞导致积水无法排出。",
+          "confidence": 0.95,
+          "relation_id": "R03"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E01",
+          "source_event_name": "6·16特大暴雨",
+          "target_event_id": "E02",
+          "target_event_name": "蕉岭县严重洪涝灾害",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+          "confidence": 0.95,
+          "relation_id": "R01"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E01",
+          "source_event_name": "6·16特大暴雨",
+          "target_event_id": "E03",
+          "target_event_name": "蕉岭县山洪暴发",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+          "confidence": 0.95,
+          "relation_id": "R02"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E01",
+          "source_event_name": "6·16特大暴雨",
+          "target_event_id": "E04",
+          "target_event_name": "蕉岭县山体滑坡",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情",
+          "confidence": 0.95,
+          "relation_id": "R03"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E01",
+          "source_event_name": "6·16特大暴雨",
+          "target_event_id": "E05",
+          "target_event_name": "蕉岭县乡镇林地遭受巨大损失",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情，一些乡镇的林地和农作物遭受了巨大损失",
+          "confidence": 0.9,
+          "relation_id": "R04"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E01",
+          "source_event_name": "6·16特大暴雨",
+          "target_event_id": "E06",
+          "target_event_name": "蕉岭县乡镇农作物遭受巨大损失",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情，一些乡镇的林地和农作物遭受了巨大损失",
+          "confidence": 0.9,
+          "relation_id": "R05"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E02",
+          "source_event_name": "蕉岭县严重洪涝灾害",
+          "target_event_id": "E05",
+          "target_event_name": "蕉岭县乡镇林地遭受巨大损失",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情，一些乡镇的林地和农作物遭受了巨大损失",
+          "confidence": 0.85,
+          "relation_id": "R06"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E02",
+          "source_event_name": "蕉岭县严重洪涝灾害",
+          "target_event_id": "E06",
+          "target_event_name": "蕉岭县乡镇农作物遭受巨大损失",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情，一些乡镇的林地和农作物遭受了巨大损失",
+          "confidence": 0.85,
+          "relation_id": "R07"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E03",
+          "source_event_name": "蕉岭县山洪暴发",
+          "target_event_id": "E05",
+          "target_event_name": "蕉岭县乡镇林地遭受巨大损失",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情，一些乡镇的林地和农作物遭受了巨大损失",
+          "confidence": 0.8,
+          "relation_id": "R08"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E03",
+          "source_event_name": "蕉岭县山洪暴发",
+          "target_event_id": "E06",
+          "target_event_name": "蕉岭县乡镇农作物遭受巨大损失",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情，一些乡镇的林地和农作物遭受了巨大损失",
+          "confidence": 0.8,
+          "relation_id": "R09"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E04",
+          "source_event_name": "蕉岭县山体滑坡",
+          "target_event_id": "E05",
+          "target_event_name": "蕉岭县乡镇林地遭受巨大损失",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情，一些乡镇的林地和农作物遭受了巨大损失",
+          "confidence": 0.8,
+          "relation_id": "R10"
+        }
+      },
+      {
+        "article_id": "A004",
+        "relation": {
+          "source_event_id": "E04",
+          "source_event_name": "蕉岭县山体滑坡",
+          "target_event_id": "E06",
+          "target_event_name": "蕉岭县乡镇农作物遭受巨大损失",
+          "relation_type": "引发",
+          "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情，一些乡镇的林地和农作物遭受了巨大损失",
+          "confidence": 0.8,
+          "relation_id": "R11"
+        }
+      },
+      {
+        "article_id": "A013",
+        "relation": {
+          "source_event_id": "E01",
+          "source_event_name": "台风摩羯（超强台风级）",
+          "target_event_id": "E02",
+          "target_event_name": "湛徐高速、徐闻港支线9个站点交通管制",
+          "relation_type": "引发",
+          "evidence": "受台风“摩羯 ”影响，目前湛江分公司所辖湛徐、徐闻港支线两条高速公路共9个站点实施交通管制",
+          "confidence": 0.95,
+          "relation_id": "R01"
+        }
+      },
+      {
+        "article_id": "A015",
+        "relation": {
+          "source_event_id": "E01",
+          "source_event_name": "台风“摩羯”在徐闻县角尾乡再次登陆",
+          "target_event_id": "E02",
+          "target_event_name": "东莞全市普遍出现6到7级阵风",
+          "relation_type": "引发",
+          "evidence": "今年第11号台风“摩羯”已于9月6日22时20分前后以超强台风级在徐闻县角尾乡再次登陆，登陆时中心附近最大风力17级（58米/秒），预计其将继续向西偏北方向移动，随后进入北部湾，继续远离东莞。",
+          "confidence": 0.8,
+          "relation_id": "R01"
+        }
+      },
+      {
+        "article_id": "A015",
+        "relation": {
+          "source_event_id": "E01",
+          "source_event_name": "台风“摩羯”在徐闻县角尾乡再次登陆",
+          "target_event_id": "E04",
+          "target_event_name": "东莞连续强降水",
+          "relation_type": "引发",
+          "evidence": "东莞已出现连续强降水，地质灾害气象风险等级较高，请继续做好防御。",
+          "confidence": 0.7,
+          "relation_id": "R02"
+        }
+      }
+    ]
+  }
+}

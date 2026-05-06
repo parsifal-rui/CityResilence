@@ -1,0 +1,185 @@
+{
+    "relations": [
+    {
+    "source_event_id": "A001-E01",
+    "source_event_name": "深圳市坪山区突降暴雨",
+    "target_event_id": "A001-E02",
+    "target_event_name": "坪山区多处出行积水",
+    "relation_type": "引发",
+    "evidence": "近期，深圳市坪山区突降暴雨，导致多处出行积水，阻碍群众出行。",
+    "confidence": 0.95
+    },
+    {
+    "source_event_id": "A001-E02",
+    "source_event_name": "坪山区多处出行积水",
+    "target_event_id": "A001-E03",
+    "target_event_name": "坪山区群众出行受阻",
+    "relation_type": "引发",
+    "evidence": "导致多处出行积水，阻碍群众出行。",
+    "confidence": 0.92
+    },
+    {
+    "source_event_id": "A001-E05",
+    "source_event_name": "金碧路下水口被树叶等杂物堵塞",
+    "target_event_id": "A001-E04",
+    "target_event_name": "金碧路积水严重",
+    "relation_type": "加剧",
+    "evidence": "经排查，该路段下水口被树叶等杂物堵塞导致积水无法排出。",
+    "confidence": 0.93
+    },
+    {
+    "source_event_id": "A001-E01",
+    "source_event_name": "深圳市坪山区突降暴雨",
+    "target_event_id": "A001-E06",
+    "target_event_name": "坪山大道路边树木倒地",
+    "relation_type": "引发",
+    "evidence": "狂风暴雨导致坪山大道路边树木倒地。",
+    "confidence": 0.88
+    },
+    {
+    "source_event_id": "A001-E06",
+    "source_event_name": "坪山大道路边树木倒地",
+    "target_event_id": "A001-E07",
+    "target_event_name": "坪山大道树木倒地阻碍交通通行",
+    "relation_type": "引发",
+    "evidence": "发现树木倒地阻碍交通通行。",
+    "confidence": 0.92
+    },
+    {
+    "source_event_id": "A001-E08",
+    "source_event_name": "丹梓大道路积水严重",
+    "target_event_id": "A001-E09",
+    "target_event_name": "丹梓大道车辆缓慢通行",
+    "relation_type": "引发",
+    "evidence": "坪山区丹梓大道路积水严重，车辆缓慢通行。",
+    "confidence": 0.93
+    },
+    {
+    "source_event_id": "A001-E10",
+    "source_event_name": "丹梓大道排水口被杂物堵塞",
+    "target_event_id": "A001-E08",
+    "target_event_name": "丹梓大道路积水严重",
+    "relation_type": "加剧",
+    "evidence": "发现该路段排水口被杂物堵塞导致积水无法流出。",
+    "confidence": 0.93
+    },
+    {
+    "source_event_id": "A001-E13",
+    "source_event_name": "荔景路树木倾倒",
+    "target_event_id": "A001-E14",
+    "target_event_name": "荔景路树木倾倒影响交通",
+    "relation_type": "引发",
+    "evidence": "在荔景路遇到树木倾倒影响交通。",
+    "confidence": 0.92
+    },
+    {
+    "source_event_id": "A005-E01",
+    "source_event_name": "蕉岭县6·16特大暴雨",
+    "target_event_id": "A005-E02",
+    "target_event_name": "蕉岭县严重洪涝灾害",
+    "relation_type": "引发",
+    "evidence": "受“6·16”特大暴雨影响，蕉岭县发生了严重的洪涝灾害。",
+    "confidence": 0.96
+    },
+    {
+    "source_event_id": "A005-E02",
+    "source_event_name": "蕉岭县严重洪涝灾害",
+    "target_event_id": "A005-E03",
+    "target_event_name": "蕉岭县山洪暴发",
+    "relation_type": "引发",
+    "evidence": "蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情。",
+    "confidence": 0.95
+    },
+    {
+    "source_event_id": "A005-E02",
+    "source_event_name": "蕉岭县严重洪涝灾害",
+    "target_event_id": "A005-E04",
+    "target_event_name": "蕉岭县山体滑坡",
+    "relation_type": "引发",
+    "evidence": "蕉岭县发生了严重的洪涝灾害并引发了山洪暴发、山体滑坡等灾情险情。",
+    "confidence": 0.95
+    },
+    {
+    "source_event_id": "A005-E01",
+    "source_event_name": "蕉岭县6·16特大暴雨",
+    "target_event_id": "A005-E05",
+    "target_event_name": "蕉岭县林地遭受巨大损失",
+    "relation_type": "引发",
+    "evidence": "受“6·16”特大暴雨影响，一些乡镇的林地和农作物遭受了巨大损失。",
+    "confidence": 0.88
+    },
+    {
+    "source_event_id": "A005-E01",
+    "source_event_name": "蕉岭县6·16特大暴雨",
+    "target_event_id": "A005-E06",
+    "target_event_name": "蕉岭县农作物遭受巨大损失",
+    "relation_type": "引发",
+    "evidence": "受“6·16”特大暴雨影响，一些乡镇的林地和农作物遭受了巨大损失。",
+    "confidence": 0.88
+    },
+    {
+    "source_event_id": "A006-E01",
+    "source_event_name": "台风“摩羯”影响高州",
+    "target_event_id": "A006-E02",
+    "target_event_name": "高州暴雨到大暴雨过程",
+    "relation_type": "引发",
+    "evidence": "受台风“摩羯”影响，预计高州5日夜间到7日有一次暴雨到大暴雨。",
+    "confidence": 0.96
+    },
+    {
+    "source_event_id": "A006-E01",
+    "source_event_name": "台风“摩羯”影响高州",
+    "target_event_id": "A006-E03",
+    "target_event_name": "高州局部特大暴雨",
+    "relation_type": "引发",
+    "evidence": "受台风“摩羯”影响，预计高州5日夜间到7日有一次暴雨到大暴雨、局部特大暴雨的降水过程。",
+    "confidence": 0.95
+    },
+    {
+    "source_event_id": "A006-E01",
+    "source_event_name": "台风“摩羯”影响高州",
+    "target_event_id": "A006-E04",
+    "target_event_name": "高州9到10级平均风和11到13级阵风",
+    "relation_type": "引发",
+    "evidence": "受台风“摩羯”影响，预计高州5日夜间到7日有一次暴雨到大暴雨，平均风力9到10级、阵风11到13级。",
+    "confidence": 0.95
+    },
+    {
+    "source_event_id": "A007-E01",
+    "source_event_name": "台风“摩羯”强度增强",
+    "target_event_id": "A007-E02",
+    "target_event_name": "台风“摩羯”对广东风雨影响加大",
+    "relation_type": "增强",
+    "evidence": "鉴于今年第11号台风“摩羯”强度进一步增强，未来几天给广东省带来的风雨影响进一步加大。",
+    "confidence": 0.94
+    },
+    {
+    "source_event_id": "A009-E01",
+    "source_event_name": "台风“摩羯”影响深中通道",
+    "target_event_id": "A009-E03",
+    "target_event_name": "深中通道减速通行",
+    "relation_type": "引发",
+    "evidence": "受第11号台风“摩羯”影响，为确保交通安全，深中通道实行减速通行。",
+    "confidence": 0.88
+    },
+    {
+    "source_event_id": "A012-E01",
+    "source_event_name": "超强台风“摩羯”中心附近风力17级以上",
+    "target_event_id": "A012-E02",
+    "target_event_name": "海南粤西及周边海域大风",
+    "relation_type": "引发",
+    "evidence": "中央气象台预计，9月6日早晨至9月7日早晨，海南、粤西及周边海域将有大风强降水等天气。",
+    "confidence": 0.86
+    },
+    {
+    "source_event_id": "A012-E01",
+    "source_event_name": "超强台风“摩羯”中心附近风力17级以上",
+    "target_event_id": "A012-E03",
+    "target_event_name": "海南粤西及周边海域强降水",
+    "relation_type": "引发",
+    "evidence": "中央气象台预计，9月6日早晨至9月7日早晨，海南、粤西及周边海域将有大风强降水等天气。",
+    "confidence": 0.86
+    }
+    ]
+    }
+    

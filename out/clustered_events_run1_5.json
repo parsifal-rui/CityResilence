@@ -1,0 +1,192 @@
+{
+  "config": {
+    "T_max": 2,
+    "S_max": 200.0,
+    "w_s": 0.3,
+    "w_t": 0.35,
+    "w_p": 0.35,
+    "eps": 0.55,
+    "min_samples": 3,
+    "lating_path": "data/lating.json",
+    "discard_path": "data/discard.txt",
+    "include_members": true
+  },
+  "summary": {
+    "n_input_records": 625,
+    "n_clusters": 2,
+    "n_clustered_records": 6,
+    "noise_records_est": 619,
+    "noise_ratio_est": 0.9904,
+    "avg_cluster_size": 3.0,
+    "median_cluster_size": 3.0,
+    "max_cluster_size": 3,
+    "avg_articles_per_cluster": 1.5,
+    "max_articles_per_cluster": 2
+  },
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "event_texts": [
+        "大暴雨"
+      ],
+      "event_text_counts": {
+        "大暴雨": 3
+      },
+      "cities": [
+        "乐山市",
+        "成都市",
+        "雅安市"
+      ],
+      "date_start": "2024-08-31",
+      "date_end": "2024-08-31",
+      "article_ids": [
+        "A220"
+      ],
+      "n_records": 3,
+      "n_articles": 1,
+      "members": [
+        {
+          "article_id": "A220",
+          "event_id": "E11",
+          "event_text": "大暴雨",
+          "event_name": "四川成都局地大暴雨",
+          "event_type": "Driver",
+          "city": "成都市",
+          "date": "2024-08-31",
+          "location": [
+            "四川省",
+            "成都市"
+          ],
+          "sentence_id": 13,
+          "paragraph_id": 9,
+          "char_start": 736,
+          "char_end": 768,
+          "evidence": "甘肃兰州、广东珠海、海南海口和四川成都、乐山、雅安等局地大暴雨。",
+          "confidence": 0.95
+        },
+        {
+          "article_id": "A220",
+          "event_id": "E12",
+          "event_text": "大暴雨",
+          "event_name": "四川乐山局地大暴雨",
+          "event_type": "Driver",
+          "city": "乐山市",
+          "date": "2024-08-31",
+          "location": [
+            "四川省",
+            "乐山市"
+          ],
+          "sentence_id": 13,
+          "paragraph_id": 9,
+          "char_start": 736,
+          "char_end": 768,
+          "evidence": "甘肃兰州、广东珠海、海南海口和四川成都、乐山、雅安等局地大暴雨。",
+          "confidence": 0.95
+        },
+        {
+          "article_id": "A220",
+          "event_id": "E13",
+          "event_text": "大暴雨",
+          "event_name": "四川雅安局地大暴雨",
+          "event_type": "Driver",
+          "city": "雅安市",
+          "date": "2024-08-31",
+          "location": [
+            "四川省",
+            "雅安市"
+          ],
+          "sentence_id": 13,
+          "paragraph_id": 9,
+          "char_start": 736,
+          "char_end": 768,
+          "evidence": "甘肃兰州、广东珠海、海南海口和四川成都、乐山、雅安等局地大暴雨。",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "event_texts": [
+        "台风登陆",
+        "台风",
+        "强风"
+      ],
+      "event_text_counts": {
+        "台风登陆": 1,
+        "台风": 1,
+        "强风": 1
+      },
+      "cities": [
+        "上海"
+      ],
+      "date_start": "2024-09-16",
+      "date_end": "2024-09-16",
+      "article_ids": [
+        "A376",
+        "A404"
+      ],
+      "n_records": 3,
+      "n_articles": 2,
+      "members": [
+        {
+          "article_id": "A376",
+          "event_id": "E01",
+          "event_text": "台风登陆",
+          "event_name": "第13号台风“贝碧嘉”登陆上海",
+          "event_type": "Hazard",
+          "city": "上海",
+          "date": "2024-09-16",
+          "location": [
+            "上海市"
+          ],
+          "sentence_id": 2,
+          "paragraph_id": 1,
+          "char_start": 23,
+          "char_end": 69,
+          "evidence": "第13号台风“贝碧嘉”，在中秋前夕（16日）登陆上海，成为自1949年以来登陆上海的最强台风",
+          "confidence": 1.0
+        },
+        {
+          "article_id": "A404",
+          "event_id": "E01",
+          "event_text": "台风",
+          "event_name": "台风贝碧嘉登陆上海浦东临港新城",
+          "event_type": "Driver",
+          "city": "上海",
+          "date": "2024-09-16",
+          "location": [
+            "上海市",
+            "浦东新区",
+            "临港新城"
+          ],
+          "sentence_id": 1,
+          "paragraph_id": 1,
+          "char_start": 0,
+          "char_end": 63,
+          "evidence": "9月16日7时30分前后，今年第13号台风“贝碧嘉”以强台风级登陆上海浦东临港新城沿海，成为1949年以来登陆上海的最强台风。",
+          "confidence": 1.0
+        },
+        {
+          "article_id": "A404",
+          "event_id": "E02",
+          "event_text": "强风",
+          "event_name": "上海浦东临港新城14级强风",
+          "event_type": "Driver",
+          "city": "上海",
+          "date": "2024-09-16",
+          "location": [
+            "上海市",
+            "浦东新区",
+            "临港新城"
+          ],
+          "sentence_id": 3,
+          "paragraph_id": 2,
+          "char_start": 167,
+          "char_end": 185,
+          "evidence": "中心附近最大风力14级（42米/秒）",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ]
+}

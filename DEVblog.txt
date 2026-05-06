@@ -32,3 +32,108 @@ eps 是最敏感的参数，建议跑完全局聚类后打印各类型的 cluste
 1. data preprocess去重 
 python ./data/article/deduplicate.py 
 原始数量: 1944, 去重后数量: 1796
+
+5.5
+把relation和event分成两个chat单独处理，token翻倍了，但应该还好。
+之前的问题是基于event id的relation会漂移，于是用了
+
+新 pipeline：
+
+新闻文本
+→ 事件抽取
+→ 事件校验
+→ 生成 candidate event pairs（所有组合，去掉一些明显不符合的）
+→ DeepSeek 只从 candidate pairs 中选择有明确证据的 relation
+→ relation 校验
+→ 保存 events / candidate_pairs / relations / invalid_relations
+→ 后续全局 DBSCAN 聚类
+
+
+关键决策：
+
+1. **事件类型固定四类**
+   `Driver / Modulator / Hazard / Impact`
+2. **不新增 Response 类型**
+   所以不抽取“清理、疏导、救援、送医、巡逻、值守”等人为处置行为。
+3. **relation 类型固定四类**
+   `引发 / 加剧 / 削弱 / 增强`
+4. **relation 不用 NO_RELATION 输出**
+   candidate 只是约束搜索范围，模型只输出有明确关系的边；没关系的 candidate 不输出。
+5. **relation 端点仍然用 event_id**
+   同时保留 `source_event_name / target_event_name` 方便 debug。不要只用事件名称当端点。
+6. **不做 repair relation**
+   第一版 relation 校验失败就放进 `invalid_relations`，不入库。
+7. **不做高置信规则抽取**
+   不用关键词直接抽边；candidate 生成只是辅助约束。
+8. **暂时不做文档内 cluster**
+   后续如果 event 数量太多、candidate pairs 太多，再考虑按段落/地点做局部 cluster。
+
+10. **我们额外保留字段用于工程和后续聚类/debug**
+    包括：
+
+```text
+event_id
+event_name
+time_text
+location_text
+evidence
+sentence_id
+paragraph_id
+char_start
+char_end
+confidence
+```
+所以 event 和 relation schema 都去掉 `trigger`。
+
+12. **evidence 设置长度上限**
+    建议 `MAX_EVIDENCE_CHARS = 120`。
+    evidence 必须来自原文，不能大段摘抄。
+
+13. **candidate pair 的含义**
+    不是让模型每一对都机械判断，而是限制 relation 搜索范围。
+    最终 relation prompt 应该是：
+
+```text
+给定新闻原文、事件列表和候选事件对。
+请只从候选事件对中选择有明确证据支持的关系。
+没有明确关系的候选对不要输出。
+不得输出候选对之外的关系。
+```
+
+14. **candidate 生成初版规则**
+    可以按：
+
+* event type 方向合理；
+* sentence_id 距离较近；
+* 同段落 / 同地点可保留。
+
+15. **最小校验规则**
+    event 校验：
+
+* 必填字段是否存在；
+* event_type 是否在四类中；
+* location 是否为 list；
+* attributes 是否包含 severity / time_uncertain；
+* date_from/date_to 是否为 `YYYY-MM-DD`；
+* evidence 是否存在、是否在原文中、是否 ≤120 字；
+* confidence 是否在 0-1。
+
+relation 校验：
+
+* source/target 是否存在于 events；
+* source != target；
+* relation_type 是否在四类中；
+* evidence 是否在原文中且 ≤120 字；
+* confidence 是否在 0-1。
+
+一句话总结：
+
+> 第一版不要追求复杂修复和自动聪明抽取，而是做一个稳定、可校验、可追溯的最小工程 pipeline：**DeepSeek 抽事件，程序生成候选 pair，DeepSeek 在候选内选关系，程序校验后入库。**
+
+5.6
+有一个小小的坑，
+因为lating json我是直接get children了 临高县就匹配不是临高
+[warn] missing cities in lating.json: [('临高', 9), ('广东', 7), ('香港', 4), 
+('海南', 3), ('河南', 2), ('釜山', 2), ('徐闻', 1), ('澄迈', 1), ('兰州市', 1), 
+('珠海市', 1), ('海口市', 1), ('成都市', 1), ('乐山市', 1), ('雅安市', 1), ('漠河', 1), 
+('昌江', 1), ('广西', 1), ('河内', 1)]
